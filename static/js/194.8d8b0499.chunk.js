@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcharity_run=self.webpackChunkcharity_run||[]).push([[194],{194:(r,e,n)=>{n.r(e),n.d(e,{default:()=>i});var c=n(802),h=n(579);function i(){return(0,h.jsxs)("div",{children:[(0,h.jsx)(c.mg,{children:(0,h.jsx)("title",{children:"Haemato-run"})}),(0,h.jsx)("h1",{children:"Hello Word \ud83d\ude1c"})]})}}}]);
+//# sourceMappingURL=194.8d8b0499.chunk.js.map
