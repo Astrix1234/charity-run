@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from './Layout/Layout';
+import { Layout } from './components/Layout/Layout';
 
-const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
 function App() {
   return (
