@@ -4,12 +4,9 @@ import App from './App.tsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-const basename =
-  window.location.hostname === 'astrix1234.github.io' ? '/charity-run' : '';
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={'/charity-run/'}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
