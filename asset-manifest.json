@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/charity-run/static/css/main.82d0b76b.css",
-    "main.js": "/charity-run/static/js/main.abb8120a.js",
-    "static/js/194.8d8b0499.chunk.js": "/charity-run/static/js/194.8d8b0499.chunk.js",
+    "main.js": "/charity-run/static/js/main.cd5b5442.js",
+    "static/js/56.9b524e48.chunk.js": "/charity-run/static/js/56.9b524e48.chunk.js",
     "static/js/453.751daf5b.chunk.js": "/charity-run/static/js/453.751daf5b.chunk.js",
     "index.html": "/charity-run/index.html",
     "main.82d0b76b.css.map": "/charity-run/static/css/main.82d0b76b.css.map",
-    "main.abb8120a.js.map": "/charity-run/static/js/main.abb8120a.js.map",
-    "194.8d8b0499.chunk.js.map": "/charity-run/static/js/194.8d8b0499.chunk.js.map",
+    "main.cd5b5442.js.map": "/charity-run/static/js/main.cd5b5442.js.map",
+    "56.9b524e48.chunk.js.map": "/charity-run/static/js/56.9b524e48.chunk.js.map",
     "453.751daf5b.chunk.js.map": "/charity-run/static/js/453.751daf5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82d0b76b.css",
-    "static/js/main.abb8120a.js"
+    "static/js/main.cd5b5442.js"
   ]
 }
