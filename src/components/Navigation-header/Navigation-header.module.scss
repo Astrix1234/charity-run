@@ -1,0 +1,109 @@
+.navigation {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+
+    &__item {
+        position: relative;
+        line-height: 24px;
+        font-weight: 500;
+
+        &:hover .navigation__links--hemato-run,
+        &:focus .navigation__links--hemato-run {
+            height: 448px;
+            padding-top: 20px;
+        }
+
+        &:hover .navigation__links--participant-area,
+        &:focus .navigation__links--participant-area {
+            height: 256px;
+            padding-top: 20px;
+        }
+
+        &:hover .navigation__links--please-support,
+        &:focus .navigation__links--please-support {
+            height: 192px;
+            padding-top: 20px;
+        }
+    }
+
+    &__title {
+        height: 133px;
+        display: flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
+
+    &__links {
+        position: absolute;
+        z-index: 100;
+        background-color: #CEEBEC;
+        top: 133px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 299px;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        transition: all 0.3s ease-in-out;
+
+
+        &--hemato-run:hover,
+        &--hemato-run:focus {
+            height: 448px;
+            padding-top: 20px;
+        }
+
+        &--participant-area:hover,
+        &--participant-area:focus {
+            height: 256px;
+            padding-top: 20px;
+        }
+
+        &--please-support:hover,
+        &--please-support:focus {
+            height: 192px;
+            padding-top: 20px;
+        }
+    }
+
+    &__link {
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &--not-logged-in:hover,
+        &--not-logged-in:focus {
+            text-decoration: none;
+        }
+    }
+
+    &__not-logged-in {
+        color: #919191;
+
+        &:hover,
+        &:focus {
+            cursor: not-allowed;
+        }
+    }
+
+    &__logout {
+        border: none;
+        background-color: transparent;
+        font-weight: 500;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
