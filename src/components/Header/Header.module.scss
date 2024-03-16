@@ -17,4 +17,11 @@
         padding-left: 80px;
     }
 
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-left: 32px;
+    }
+
 }
