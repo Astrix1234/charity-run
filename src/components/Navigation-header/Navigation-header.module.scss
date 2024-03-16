@@ -2,6 +2,7 @@
     display: flex;
     gap: 40px;
     margin-left: auto;
+    margin-right: 24px;
 
     &__item {
         position: relative;
@@ -75,6 +76,7 @@
     }
 
     &__link {
+        transition: all 0.3s ease-in-out;
 
         &:hover,
         &:focus {
