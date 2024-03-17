@@ -5,7 +5,7 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from '../../translations';
 
 export const NavigationHeader = () => {
-  const { toggleLanguage, language } = useLanguageStore();
+  const { language } = useLanguageStore();
   const t = translations[language];
 
   const [user, setUser] = useState(true);
