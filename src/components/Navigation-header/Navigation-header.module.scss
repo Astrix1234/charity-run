@@ -3,6 +3,7 @@
     gap: 40px;
     margin-left: auto;
     margin-right: 24px;
+    text-transform: uppercase;
 
     &__item {
         position: relative;
@@ -102,6 +103,7 @@
         border: none;
         background-color: transparent;
         font-weight: 500;
+        text-transform: uppercase;
 
         &:hover,
         &:focus {

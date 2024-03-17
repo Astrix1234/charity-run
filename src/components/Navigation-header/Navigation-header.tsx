@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
 import { useState } from 'react';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from '../../translations';
 
 export const NavigationHeader = () => {
+  const { toggleLanguage, language } = useLanguageStore();
+  const t = translations[language];
+
   const [user, setUser] = useState(true);
 
   const handleLogout = () => {
@@ -12,35 +17,35 @@ export const NavigationHeader = () => {
   return (
     <div className={scss.navigation}>
       <div className={scss.navigation__item}>
-        <p className={scss.navigation__title}>HEMATOBIEG</p>
+        <p className={scss.navigation__title}>{t.hematoRun}</p>
         <ul
           className={`${scss['navigation__links']} ${scss['navigation__links--hemato-run']}`}
         >
           <li className={scss.navigation__link}>
-            <Link to="/">INFORMACJE O BIEGU</Link>
+            <Link to="/">{t.aboutRun}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#about-foundation">O FUNDACJI</Link>
+            <Link to="/#about-foundation">{t.aboutFoundation}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#run">BIEGNIJ GDZIEKOLWIEK JESTEŚ</Link>
+            <Link to="/#run">{t.runAnywhere}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#gallery">GALERIA</Link>
+            <Link to="/#gallery">{t.gallery}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#ambassadors">AMBASADORZY I LIDERZY</Link>
+            <Link to="/#ambassadors">{t.ambassadors}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#partners">PARTNERZY I SPONSORZY</Link>
+            <Link to="/#partners">{t.partners}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#faq">FAQ</Link>
+            <Link to="/#faq">{t.faq}</Link>
           </li>
         </ul>
       </div>
       <div className={scss.navigation__item}>
-        <p className={scss.navigation__title}>STREFA UCZESTNIKA</p>
+        <p className={scss.navigation__title}>{t.participantAreaTitle}</p>
         <ul
           className={`${scss['navigation__links']} ${scss['navigation__links--participant-area']}`}
         >
@@ -53,7 +58,7 @@ export const NavigationHeader = () => {
               className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
               to="/participant-area"
             >
-              MÓJ PROFIL
+              {t.myProfile}
             </Link>
           </li>
           <li
@@ -65,7 +70,7 @@ export const NavigationHeader = () => {
               className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
               to="/participant-area#run-info"
             >
-              INFORMACJE O BIEGU
+              {t.runInfo}
             </Link>
           </li>
           <li
@@ -77,7 +82,7 @@ export const NavigationHeader = () => {
               className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
               to="/participant-area#before-run"
             >
-              TRENING PRZED BIEGIEM
+              {t.beforeRun}
             </Link>
           </li>
           <li className={scss.navigation__link}>
@@ -87,35 +92,33 @@ export const NavigationHeader = () => {
                 type="button"
                 onClick={handleLogout}
               >
-                WYLOGUJ SIĘ
+                {t.logOut}
               </button>
             ) : (
-              <Link to="/login">ZALOGUJ SIĘ</Link>
+              <Link to="/login">{t.logIn}</Link>
             )}
           </li>
         </ul>
       </div>
       <div className={scss.navigation__item}>
-        <p className={scss.navigation__title}>WESPRZYJ</p>
+        <p className={scss.navigation__title}>{t.support}</p>
         <ul
           className={`${scss['navigation__links']} ${scss['navigation__links--please-support']}`}
         >
           <li className={scss.navigation__link}>
-            <Link to="/please-support">ZOSTAŃ SPONSOREM </Link>
+            <Link to="/please-support">{t.becomeSponsor}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/please-support#make-donation">WPŁAĆ DAROWIZNĘ</Link>
+            <Link to="/please-support#make-donation">{t.makeDonation}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/please-support#volunteer-area">
-              STREFA WOLONTARIUSZY
-            </Link>
+            <Link to="/please-support#volunteer-area">{t.volunteerArea}</Link>
           </li>
         </ul>
       </div>
       <div className={scss.navigation__item}>
         <Link to="/contact" className={scss.navigation__title}>
-          KONTAKT
+          {t.contact}
         </Link>
       </div>
     </div>
