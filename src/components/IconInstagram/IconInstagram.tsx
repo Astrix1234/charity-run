@@ -10,7 +10,7 @@ export const IconInstagram = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g id="skill-icons:instagram" clip-path="url(#clip0_857_3875)">
+          <g id="skill-icons:instagram" clipPath="url(#clip0_857_3875)">
             <g id="Group">
               <path
                 id="Vector"
@@ -38,10 +38,10 @@ export const IconInstagram = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(8.76562 36.6187) rotate(-90) scale(33.6965 30.4187)"
             >
-              <stop stop-color="#FFDD55" />
-              <stop offset="0.1" stop-color="#FFDD55" />
-              <stop offset="0.5" stop-color="#FF543E" />
-              <stop offset="1" stop-color="#C837AB" />
+              <stop stopColor="#FFDD55" />
+              <stop offset="0.1" stopColor="#FFDD55" />
+              <stop offset="0.5" stopColor="#FF543E" />
+              <stop offset="1" stopColor="#C837AB" />
             </radialGradient>
             <radialGradient
               id="paint1_radial_857_3875"
@@ -51,9 +51,9 @@ export const IconInstagram = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(-5.52763 2.4492) rotate(79.0057) scale(15.0457 60.3295)"
             >
-              <stop stop-color="#3771C8" />
-              <stop offset="0.128" stop-color="#3771C8" />
-              <stop offset="1" stop-color="#6600FF" stop-opacity="0" />
+              <stop stopColor="#3771C8" />
+              <stop offset="0.128" stopColor="#3771C8" />
+              <stop offset="1" stopColor="#6600FF" stopOpacity="0" />
             </radialGradient>
             <clipPath id="clip0_857_3875">
               <rect width="33" height="34" fill="white" />

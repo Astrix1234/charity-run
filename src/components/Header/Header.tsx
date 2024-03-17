@@ -8,6 +8,8 @@ import scss from './Header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from '../../translations';
 
+import { IconYouTube } from '../IconYouTube/IconYouTube';
+
 export const Header = () => {
   const { toggleLanguage, language } = useLanguageStore();
   const t = translations[language];
@@ -25,6 +27,7 @@ export const Header = () => {
         <div className={scss.header__icons}>
           <IconFacebook />
           <IconInstagram />
+          <IconYouTube />
         </div>
         <div className={scss.header__language}>
           <ButtonPlEng onClick={toggleLanguage} />
