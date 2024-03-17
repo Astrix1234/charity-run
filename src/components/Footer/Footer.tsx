@@ -6,12 +6,18 @@ const StyledFooter = styled.footer`
     margin-inline: auto;
     width: 1400px;
     position: relative;
-    display: flex;
+
     &__header {
-      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
       padding: 10rem 8rem;
+    }
+    &__header h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 3.5rem;
       color: white;
-      line-height: 3rem;
     }
   }
 
@@ -28,9 +34,9 @@ export const Footer = () => {
         <header className="footer__container__header">
           <FoundationLogo />
           <h2>
-            FUNDACJA NA RZECZ
+            FUNDACJA NA RZECZ POMOCY
             <br />
-            <strong>CHORYM NA BIAŁACZKĘ</strong>
+            <strong>CHORYM NA BIAŁACZKI</strong>
           </h2>
         </header>
         <svg
