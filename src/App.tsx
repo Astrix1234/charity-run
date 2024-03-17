@@ -1,7 +1,8 @@
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
+import { useLanguageStore } from './Zustand/useLanguageStore';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -15,6 +16,22 @@ const PleaseSupportPage = lazy(
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
 function App() {
+  const { language, setLanguage } = useLanguageStore(state => ({
+    language: state.language,
+    setLanguage: state.setLanguage,
+  }));
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('language');
+    if (storedLanguage === 'PL' || storedLanguage === 'EN') {
+      setLanguage(storedLanguage);
+    }
+  }, [setLanguage]);
+
   return (
     <HelmetProvider>
       <Routes>
