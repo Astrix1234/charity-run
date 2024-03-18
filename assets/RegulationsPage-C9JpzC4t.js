@@ -1,0 +1,1 @@
+import{j as e,H as s}from"./index-ByV3c3BQ.js";function i(){return e.jsxs("div",{children:[e.jsx(s,{children:e.jsx("title",{children:"Regulations"})}),e.jsx("h1",{children:"Regulations"})]})}export{i as default};
