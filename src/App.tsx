@@ -7,11 +7,26 @@ import { useLanguageStore } from './Zustand/useLanguageStore';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
+const RegulationsPage = lazy(
+  () => import('./pages/RegulationsPage/RegulationsPage')
+);
+const OurAmbassadorsPage = lazy(
+  () => import('./pages/OurAmbassadorsPage/OurAmbassadorsPage')
+);
+const OurSponsorsPage = lazy(
+  () => import('./pages/OurSponsorsPage/OurSponsorsPage')
+);
 const ParticipantAreaPage = lazy(
   () => import('./pages/ParticipantAreaPage/ParticipantAreaPage')
 );
 const PleaseSupportPage = lazy(
-  () => import('./pages/PleaseSupportPage/PleaseSupportPage')
+  () => import('./pages/SupportSponsorsPage/SupportSponsorsPage')
+);
+const SupportDonationPage = lazy(
+  () => import('./pages/SupportDonationPage/SupportDonationPage')
+);
+const SupportVolunteersPage = lazy(
+  () => import('./pages/SupportVolunteersPage/SupportVolunteersPage')
 );
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
@@ -39,8 +54,16 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
+          <Route path="regulations" element={<RegulationsPage />} />
+          <Route path="our-ambassadors" element={<OurAmbassadorsPage />} />
+          <Route path="our-sponsors" element={<OurSponsorsPage />} />
           <Route path="participant-area" element={<ParticipantAreaPage />} />
-          <Route path="please-support" element={<PleaseSupportPage />} />
+          <Route path="support-sponsors" element={<PleaseSupportPage />} />
+          <Route path="support-donation" element={<SupportDonationPage />} />
+          <Route
+            path="support-volunteers"
+            element={<SupportVolunteersPage />}
+          />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
