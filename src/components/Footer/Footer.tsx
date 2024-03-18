@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FoundationLogo } from '../FoundationLogo/FoundationLogo';
 import { Background } from './Background';
+import { FoundationLogotype } from './FoundationLogotype';
 
 const StyledFooter = styled.footer`
   .footer__container {
@@ -10,19 +10,6 @@ const StyledFooter = styled.footer`
     display: grid;
     gap: 5rem;
     padding: 10rem 3rem 0;
-
-    &__header {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-
-      & h2 {
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 3.5rem;
-        color: white;
-      }
-    }
 
     &__main {
       display: flex;
@@ -68,14 +55,7 @@ export const Footer = () => {
   return (
     <StyledFooter as="footer">
       <div className="footer__container">
-        <header className="footer__container__header">
-          <FoundationLogo />
-          <h2>
-            FUNDACJA NA RZECZ POMOCY
-            <br />
-            <strong>CHORYM NA BIAŁACZKI</strong>
-          </h2>
-        </header>
+        <FoundationLogotype />
         <main className="footer__container__main">
           <section className="footer__container__main__kontakt">
             <h3>Kontakt</h3>
