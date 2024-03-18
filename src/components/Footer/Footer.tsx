@@ -62,12 +62,6 @@ const StyledFooter = styled.footer`
       justify-content: center;
     }
   }
-
-  svg {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
 `;
 
 export const Footer = () => {
