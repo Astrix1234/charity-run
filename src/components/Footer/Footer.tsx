@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Background } from './Background';
 import { FoundationLogotype } from './FoundationLogotype';
+import { InformationSection } from './InformationSection';
 
 const StyledFooter = styled.footer`
   .footer__container {
@@ -23,14 +24,6 @@ const StyledFooter = styled.footer`
         min-width: 12rem;
       }
 
-      & p {
-        padding-block: 1rem;
-      }
-
-      & h3 {
-        color: white;
-        margin-bottom: 1rem;
-      }
       &__obserwuj {
         &__strona-fundacji {
         }
@@ -56,50 +49,7 @@ export const Footer = () => {
     <StyledFooter as="footer">
       <div className="footer__container">
         <FoundationLogotype />
-        <main className="footer__container__main">
-          <section className="footer__container__main__kontakt">
-            <h3>Kontakt</h3>
-            <p>
-              Adres:
-              <br />
-              93-513 Łódź,
-              <br />
-              ul. Pabianicka 62
-            </p>
-            <p>E-mail:</p>
-            <a href="#">kontakt@fundacja.hematologiczna.org</a>
-          </section>
-          <section className="footer__container__main__wesprzyj">
-            <h3>Wesprzyj</h3>
-            <p>Konto bankowe</p>
-            <p>
-              PKO BP:
-              <br />
-              31 1020 3352 0000 1202 0241 5990
-            </p>
-            <p>Dopisek: "Darowizna na cele statutowe" KRS: 0000069531</p>
-            <p>NIP: 729-23-25-734</p>
-          </section>
-          <section className="footer__container__main__linki">
-            <h3>Przydatne linki</h3>
-            <p>O fundacja</p>
-            <p>Strefa uczestnika</p>
-            <p>Wolontariat</p>
-          </section>
-          <section className="footer__container__main__obserwuj">
-            <h3>Obserwuj nas</h3>
-            <div className="footer__container__main__obserwuj__strona-fundacji">
-              <img></img>
-              <a href="#">Strona Fundacji</a>
-            </div>
-            <div className="footer__container__main__obserwuj__social-media">
-              <p>F</p>
-              <p>I</p>
-              <p>Y</p>
-              <p>L</p>
-            </div>
-          </section>
-        </main>
+        <InformationSection />
         <footer className="footer__container__footer">
           <a href="#">Regulamin</a>
           <a href="#">Rodo</a>
