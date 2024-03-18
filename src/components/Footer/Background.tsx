@@ -1,6 +1,15 @@
+import styled from 'styled-components';
+
+const StyledBackground = styled.svg`
+  position: absolute;
+  top: 0;
+  z-index: -1;
+`;
+
 export const Background = () => {
   return (
-    <svg
+    <StyledBackground
+      as="svg"
       width="1400"
       height="800"
       viewBox="0 0 1400 800"
@@ -24,6 +33,6 @@ export const Background = () => {
           <stop offset="0.927158" stop-color="white" />
         </linearGradient>
       </defs>
-    </svg>
+    </StyledBackground>
   );
 };
