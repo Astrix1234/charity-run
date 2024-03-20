@@ -1,16 +1,5 @@
-import styled from 'styled-components';
+import { StyledInformation } from './FooterStyles';
 import { Link } from 'react-router-dom';
-
-const StyledInformation = styled.div`
-  h3 {
-    color: white;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    padding-block: 0.5rem;
-  }
-`;
 
 interface InformationProps {
   title: string;

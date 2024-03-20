@@ -1,11 +1,6 @@
-import styled from 'styled-components';
+import { StyledSection } from './FooterStyles';
 import { Information } from './Information';
 import { contactParagraphs, supportParagraphs, usefulLinks } from './text';
-
-const StyledSection = styled.div`
-  display: flex;
-  gap: 4rem;
-`;
 
 export const InformationSection = () => {
   return (

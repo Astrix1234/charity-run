@@ -1,10 +1,4 @@
-import styled from 'styled-components';
-
-const StyledBackground = styled.svg`
-  position: absolute;
-  top: 0;
-  z-index: -1;
-`;
+import { StyledBackground } from './FooterStyles';
 
 export const Background = () => {
   return (
