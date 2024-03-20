@@ -16,6 +16,12 @@ export const StyledSection = styled.div`
   gap: 4rem;
 `;
 
+export const StyledNavigation = styled.ul`
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+`;
+
 export const StyledLogotype = styled.div`
   display: flex;
   align-items: center;

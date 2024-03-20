@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Background } from './Background';
 import { FoundationLogotype } from './FoundationLogotype';
 import { InformationSection } from './InformationSection';
+import { NavigationFooter } from './NavigationFooter';
 
 const StyledFooter = styled.footer`
   .footer__container {
@@ -35,12 +36,6 @@ const StyledFooter = styled.footer`
         }
       }
     }
-
-    &__footer {
-      display: flex;
-      gap: 8rem;
-      justify-content: center;
-    }
   }
 `;
 
@@ -50,12 +45,7 @@ export const Footer = () => {
       <div className="footer__container">
         <FoundationLogotype />
         <InformationSection />
-        <footer className="footer__container__footer">
-          <a href="#">Regulamin</a>
-          <a href="#">Rodo</a>
-          <a href="#">Polityka prywatności</a>
-          <a href="#">Wszelkie prawa zastrzeżone</a>
-        </footer>
+        <NavigationFooter />
         <Background />
       </div>
     </StyledFooter>
