@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const StyledFooter = styled.footer`
+  margin-inline: auto;
+  width: 1400px;
+  position: relative;
+  display: grid;
+  gap: 5rem;
+  padding: 10rem 3rem 0;
+`;
+
 export const StyledInformation = styled.div`
   h3 {
     color: white;
