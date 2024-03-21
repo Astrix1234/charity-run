@@ -2,27 +2,33 @@ import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
   margin-inline: auto;
-  width: 1400px;
+  max-width: 1400px;
   position: relative;
   display: grid;
-  gap: 5rem;
-  padding: 10rem 3rem 0;
+  gap: 2.9rem;
+  padding: 9.25rem 5rem 0;
 `;
 
 export const StyledInformation = styled.div`
+  margin-bottom: 3rem;
   h3 {
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
   }
 
   p {
-    padding-block: 0.5rem;
+    padding-left: 0.2rem;
+    padding-bottom: 0.44rem;
+    line-height: 3rem;
   }
 `;
 
 export const StyledSection = styled.div`
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 31% 31.5% 23.2% 1fr;
 `;
 
 export const StyledNavigation = styled.ul`
@@ -34,12 +40,33 @@ export const StyledNavigation = styled.ul`
 export const StyledLogotype = styled.div`
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 3.8rem;
+  padding-left: 1.4rem;
   h2 {
     font-size: 2.5rem;
     font-weight: 400;
-    line-height: 3.5rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.04rem;
     color: white;
+  }
+`;
+
+export const StyledLogo = styled.div`
+  display: grid;
+  place-items: center;
+  img {
+    position: relative;
+    width: 95px;
+    height: 95px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
   }
 `;
 

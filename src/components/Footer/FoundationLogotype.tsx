@@ -1,5 +1,5 @@
 import { StyledLogotype } from './FooterStyles';
-import { FoundationLogo } from '../FoundationLogo/FoundationLogo';
+import { FoundationLogo } from './FoundationLogo';
 
 export const FoundationLogotype = () => {
   return (

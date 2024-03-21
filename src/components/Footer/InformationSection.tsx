@@ -12,7 +12,7 @@ export const InformationSection = () => {
       />
       <Information title="Wesprzyj" paragraphs={supportParagraphs} />
       <Information title="Przydatne linki" links={usefulLinks} />
-      <Information title="Obserwuj nas" links={{ 'Strona fundacji': '#' }} />
+      <Information title="Obserwuj nas:" links={{ 'Strona fundacji': '#' }} />
     </StyledSection>
   );
 };
