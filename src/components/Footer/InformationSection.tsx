@@ -1,18 +1,16 @@
 import { StyledSection } from './FooterStyles';
-import { Information } from './Information';
-import { contactParagraphs, supportParagraphs, usefulLinks } from './text';
+import { InfoContact } from './InfoContact';
+import { InfoSupport } from './InfoSupport';
+import { InfoLinks } from './InfoLinks';
+import { InfoFollow } from './InfoFollow';
 
 export const InformationSection = () => {
   return (
     <StyledSection>
-      <Information
-        title="Kontakt"
-        paragraphs={contactParagraphs}
-        mail="kontakt@fundacja.hematologiczna.org"
-      />
-      <Information title="Wesprzyj" paragraphs={supportParagraphs} />
-      <Information title="Przydatne linki" links={usefulLinks} />
-      <Information title="Obserwuj nas:" links={{ 'Strona fundacji': '#' }} />
+      <InfoContact />
+      <InfoSupport />
+      <InfoLinks />
+      <InfoFollow />
     </StyledSection>
   );
 };

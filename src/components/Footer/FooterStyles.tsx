@@ -9,7 +9,7 @@ export const StyledFooter = styled.footer`
   padding: 9.25rem 5rem 0;
 `;
 
-export const StyledInformation = styled.div`
+export const StyledInfo = styled.div`
   margin-bottom: 3rem;
   h3 {
     color: white;
