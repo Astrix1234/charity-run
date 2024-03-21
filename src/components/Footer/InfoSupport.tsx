@@ -1,8 +1,8 @@
-import { StyledInfo } from './FooterStyles';
+import { StyledSupport } from './FooterStyles';
 
 export const InfoSupport = () => {
   return (
-    <StyledInfo>
+    <StyledSupport>
       <h3>Wesprzyj</h3>
       <p>Konto bankowe</p>
       <p>
@@ -16,6 +16,6 @@ export const InfoSupport = () => {
         KRS: 0000069531
       </p>
       <p>NIP: 729-23-25-734</p>
-    </StyledInfo>
+    </StyledSupport>
   );
 };

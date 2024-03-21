@@ -9,8 +9,11 @@ export const StyledFooter = styled.footer`
   padding: 9.25rem 5rem 0;
 `;
 
-export const StyledInfo = styled.div`
-  margin-bottom: 3rem;
+export const StyledSection = styled.div`
+  display: grid;
+  grid-template-columns: 31% 31.5% 23.2% 1fr;
+
+  margin-bottom: 2rem;
   h3 {
     color: white;
     margin-bottom: 2.5rem;
@@ -21,15 +24,15 @@ export const StyledInfo = styled.div`
 
   p {
     padding-left: 0.2rem;
-    padding-bottom: 0.44rem;
-    line-height: 3rem;
+    padding-bottom: 1rem;
+    line-height: 1.9;
   }
 `;
 
-export const StyledSection = styled.div`
-  display: grid;
-  grid-template-columns: 31% 31.5% 23.2% 1fr;
-`;
+export const StyledContact = styled.div``;
+export const StyledSupport = styled.div``;
+export const StyledLinks = styled.div``;
+export const StyledFollow = styled.div``;
 
 export const StyledNavigation = styled.ul`
   display: flex;

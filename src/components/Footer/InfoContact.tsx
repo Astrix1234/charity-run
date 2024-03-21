@@ -1,8 +1,8 @@
-import { StyledInfo } from './FooterStyles';
+import { StyledContact } from './FooterStyles';
 
 export const InfoContact = () => {
   return (
-    <StyledInfo>
+    <StyledContact>
       <h3>Kontakt</h3>
       <p>
         Adres
@@ -15,6 +15,6 @@ export const InfoContact = () => {
       <a href="mailto:kontakt@fundacja.hematologiczna.org">
         kontakt@fundacja.hematologiczna.org
       </a>
-    </StyledInfo>
+    </StyledContact>
   );
 };
