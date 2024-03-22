@@ -4,7 +4,8 @@ export const StyledSection = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 1.35em;
+  gap: 2rem;
+  margin-bottom: 1.35rem;
 
   h3 {
     color: white;
@@ -14,6 +15,6 @@ export const StyledSection = styled.div`
   }
 
   p {
-    padding-bottom: 0.33em;
+    padding-bottom: 0.33rem;
   }
 `;
