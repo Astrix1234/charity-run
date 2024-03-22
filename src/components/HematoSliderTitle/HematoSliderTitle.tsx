@@ -12,7 +12,7 @@ export const HematoSliderTitle = () => {
   return (
     <>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={5}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
