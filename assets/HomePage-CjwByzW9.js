@@ -1,0 +1,1 @@
+import{j as e,H as r}from"./index-COgO9L4H.js";function s(){return e.jsxs("div",{children:[e.jsx(r,{children:e.jsx("title",{children:"Haemato-run"})}),e.jsx("h1",{children:"Hello Word 😜"})]})}export{s as default};

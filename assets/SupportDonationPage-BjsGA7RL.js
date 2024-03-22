@@ -1,1 +1,0 @@
-import{j as e,H as t}from"./index-ByV3c3BQ.js";function s(){return e.jsxs("div",{children:[e.jsx(t,{children:e.jsx("title",{children:"Please Support"})}),e.jsx("h1",{children:"Please Support"})]})}export{s as default};
