@@ -1,6 +1,6 @@
-import { StyledContact } from './FooterStyles';
+import { StyledContact } from './StyledFooterContact';
 
-export const InfoContact = () => {
+export const FooterContact = () => {
   return (
     <StyledContact>
       <h3>Kontakt</h3>

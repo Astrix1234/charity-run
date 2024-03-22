@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { StyledNavigation } from './FooterStyles';
+import { StyledNavigation } from './StyledFooterNavigation';
 
-export const NavigationFooter = () => {
+export const FooterNavigation = () => {
   return (
     <StyledNavigation as="ul">
       <li>

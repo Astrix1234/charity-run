@@ -1,7 +1,7 @@
-import { StyledLinks } from './FooterStyles';
+import { StyledLinks } from './StyledFooterLinks';
 import { Link } from 'react-router-dom';
 
-export const InfoLinks = () => {
+export const FooterLinks = () => {
   return (
     <StyledLinks>
       <h3>Przydatne linki</h3>

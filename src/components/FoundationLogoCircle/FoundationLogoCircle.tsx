@@ -1,6 +1,6 @@
-import { StyledLogo } from './FooterStyles';
+import { StyledLogo } from './StyledFoundationLogoCircle';
 
-export const FoundationLogo = () => {
+export const FoundationLogoCircle = () => {
   return (
     <StyledLogo>
       <img src="/charity-run/images/foundation-logo.png"></img>

@@ -1,6 +1,6 @@
-import { StyledSupport } from './FooterStyles';
+import { StyledSupport } from './StyledFooterSuipport';
 
-export const InfoSupport = () => {
+export const FooterSupport = () => {
   return (
     <StyledSupport>
       <h3>Wesprzyj</h3>

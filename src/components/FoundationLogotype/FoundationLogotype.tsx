@@ -1,10 +1,10 @@
-import { StyledLogotype } from './FooterStyles';
-import { FoundationLogo } from './FoundationLogo';
+import { StyledLogotype } from './StyledFoundationLogotype';
+import { FoundationLogoCircle } from '../FoundationLogoCircle/FoundationLogoCircle';
 
 export const FoundationLogotype = () => {
   return (
     <StyledLogotype>
-      <FoundationLogo />
+      <FoundationLogoCircle />
       <h2>
         FUNDACJA NA RZECZ POMOCY
         <br />
