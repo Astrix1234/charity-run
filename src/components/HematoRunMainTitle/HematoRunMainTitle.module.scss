@@ -1,0 +1,80 @@
+.hematoTitles {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    &__giveOthers {
+        font-size: 39px;
+        font-weight: 500;
+        margin-top: 63px;
+        line-height: 46px;
+    }
+
+    &__titleContainer {
+        display: flex;
+        align-items: center;
+        height: 135px;
+        font-size: 90px;
+        font-weight: 800;
+        color: var(--orange);
+    }
+
+    &__title {
+        font-size: 90px;
+        font-weight: 800;
+        color: var(--orange);
+    }
+
+    &__foundation {
+        font-size: 21px;
+    }
+
+    &__date {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 75px;
+        color: var(--orange);
+        margin-top: 8px;
+    }
+
+    &__kmContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 39px;
+        width: 100%;
+        max-width: 336px;
+    }
+
+    &__km {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 75px;
+        color: var(--marine);
+    }
+
+    &__logInContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0 157px 0;
+        font-size: 21px;
+        line-height: 29px;
+        width: 100%;
+        max-width: 285px;
+    }
+
+    &__logIn {
+        color: #1C5CA7;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
