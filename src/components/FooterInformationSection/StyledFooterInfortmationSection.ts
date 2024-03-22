@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledSection = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 1.35em;
 
