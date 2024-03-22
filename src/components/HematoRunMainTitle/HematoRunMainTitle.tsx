@@ -42,7 +42,13 @@ export const HematoRunMainTitle = () => {
             {t.logIn}
           </Link>
         </div>
-        <div className={scss.hematoTitles__IllustrationContainer}></div>
+        <div className={scss.hematoTitles__illustrationContainer}>
+          <div className={scss.hematoTitles__illustration}></div>
+          <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
+          <Link className={scss.hematoTitles__findOutMore} to="">
+            {t.findOutMore}
+          </Link>
+        </div>
         <HematoRunInfo />
       </div>
     </section>

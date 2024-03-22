@@ -31,6 +31,8 @@ const translations = {
     walk: 'SPACER',
     slippers: 'KAPCIE',
     mumsWithChildren: 'MAMY Z DZIEĆMI',
+    runWithAs: 'Pobiegnij z nami, gdziekolwiek jesteś !',
+    findOutMore: 'Find out more',
   },
   EN: {
     signUp: 'Sign up',
@@ -64,6 +66,8 @@ const translations = {
     walk: 'WALK',
     slippers: 'SLIPPERS',
     mumsWithChildren: 'MUMS WITH CHILDREN',
+    runWithAs: 'Run with us, wherever you are !',
+    findOutMore: 'Find out more',
   },
 };
 
