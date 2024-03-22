@@ -9,7 +9,8 @@ export const FooterFollow = () => {
   return (
     <StyledFollow>
       <h3>Obserwuj nas:</h3>
-      <p className="website">
+      <p className="globe-website">
+        <img className="globe" src="/charity-run/images/globe.png"></img>
         <Link to="#">Strona Fundacji</Link>
       </p>
       <div className="social-media">
