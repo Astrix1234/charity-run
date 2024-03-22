@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function PleaseSupportPage() {
+export default function OurSponsorsPage() {
   return (
     <div>
       <Helmet>
-        <title>Please Support</title>
+        <title>Our Sponsors</title>
       </Helmet>
-      <h1>Please Support</h1>
+      <h1>Our Sponsors</h1>
     </div>
   );
 }

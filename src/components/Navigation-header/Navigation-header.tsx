@@ -34,10 +34,10 @@ export const NavigationHeader = () => {
             <Link to="/#gallery">{t.gallery}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#ambassadors">{t.ambassadors}</Link>
+            <Link to="/our-ambassadors">{t.ambassadors}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#partners">{t.partners}</Link>
+            <Link to="/our-sponsors">{t.partners}</Link>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#faq">{t.faq}</Link>
@@ -106,13 +106,13 @@ export const NavigationHeader = () => {
           className={`${scss['navigation__links']} ${scss['navigation__links--please-support']}`}
         >
           <li className={scss.navigation__link}>
-            <Link to="/please-support">{t.becomeSponsor}</Link>
+            <Link to="/support-sponsors">{t.becomeSponsor}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/please-support#make-donation">{t.makeDonation}</Link>
+            <Link to="/support-donation">{t.makeDonation}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/please-support#volunteer-area">{t.volunteerArea}</Link>
+            <Link to="/support-volunteers">{t.volunteerArea}</Link>
           </li>
         </ul>
       </div>
