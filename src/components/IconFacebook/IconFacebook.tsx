@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import scss from './IconFacebook.module.scss';
 
 export const IconFacebook = () => {
   return (
     <>
-      <Link to="https://www.facebook.com/Fundacja.Hematologiczna">
+      <Link
+        className={scss.link}
+        to="https://www.facebook.com/Fundacja.Hematologiczna"
+      >
         <svg
           width="30"
           height="30"

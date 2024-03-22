@@ -3,7 +3,7 @@
     position: sticky;
     top: 0;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px 0px rgba(173, 171, 177, 0.60);
     background-color: var(--light);
     z-index: 50;
 
@@ -19,7 +19,9 @@
     &__icons {
         display: flex;
         align-items: center;
-        gap: 24px;
+        width: 100%;
+        max-width: 87px;
+        justify-content: space-between;
         margin-left: 32px;
     }
 
