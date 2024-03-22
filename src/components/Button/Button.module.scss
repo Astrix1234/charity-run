@@ -32,7 +32,8 @@
 
     &__dashedBorder {
         position: absolute;
-        width: 276px;
+        width: 100%;
+        max-width: 276px;
         height: 64.8px;
         border: 2px dashed var(--dark);
         border-radius: 24px;

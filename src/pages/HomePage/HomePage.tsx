@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRunMainTitle';
 import Gallery from '../../components/Gallery/Gallery';
 
 export default function HomePage() {
@@ -7,7 +8,7 @@ export default function HomePage() {
       <Helmet>
         <title>Haemato-run</title>
       </Helmet>
-      <h1>Hello Word 😜</h1>
+      <HematoRunMainTitle />
       <Gallery />
     </div>
   );
