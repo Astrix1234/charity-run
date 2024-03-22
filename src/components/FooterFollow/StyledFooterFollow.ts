@@ -13,14 +13,9 @@ export const StyledFollow = styled.div`
   }
 
   .social-media {
-    position: relative;
-    left: 0.75em;
-    width: 80%;
     display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 1.8em;
-    column-gap: 0.95em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.8em;
   }
 `;
