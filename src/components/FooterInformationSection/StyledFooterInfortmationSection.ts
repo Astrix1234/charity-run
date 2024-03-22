@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledSection = styled.div`
-  display: grid;
-  grid-template-columns: 28.5% 29% 20.5% 1fr;
-  gap: 2rem;
-  white-space: nowrap;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 1.35em;
 
   h3 {
@@ -12,7 +11,6 @@ export const StyledSection = styled.div`
     margin-bottom: 2.4rem;
     font-size: 1.45rem;
     font-weight: 500;
-    letter-spacing: 0.02rem;
   }
 
   p {
