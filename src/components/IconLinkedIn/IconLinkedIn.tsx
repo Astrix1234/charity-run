@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import scss from './IconLinkedIn.module.scss';
 
 export const IconLinkedIn = () => {
   return (
     <>
-      <Link to="">
+      <Link className={scss.link} to="">
         <svg
           width="31"
           height="30"

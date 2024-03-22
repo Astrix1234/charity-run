@@ -1,0 +1,8 @@
+.link {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+}

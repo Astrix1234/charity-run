@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import scss from './IconYouTube.module.scss';
 
 export const IconYouTube = () => {
   return (
     <>
-      <Link to="">
+      <Link className={scss.link} to="">
         <svg
           width="40"
           height="30"
