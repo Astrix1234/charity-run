@@ -1,0 +1,1 @@
+import{j as e,H as r}from"./index-D4BA6olT.js";function t(){return e.jsxs("div",{children:[e.jsx(r,{children:e.jsx("title",{children:"Register"})}),e.jsx("h1",{children:"Register"})]})}export{t as default};
