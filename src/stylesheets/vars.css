@@ -1,8 +1,11 @@
 :root {
-    --light: #FAFDFD;
-    --dark: #2E2530;
-    --orange: #FD7616;
-    --marine: #1CA2A7;
-    --beige: #F8CEA6;
-    --grey: #CEEAEB;
+  --light: #fafdfd;
+  --dark: #2e2530;
+  --orange: #fd7616;
+  --marine: #1ca2a7;
+  --beige: #f8cea6;
+  --grey: #ceeaeb;
+
+  --titleFontSize: 67px;
+  --mediumFontSize: 21px;
 }

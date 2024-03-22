@@ -1,0 +1,70 @@
+.whyIsItWorth {
+  &__container {
+    max-width: 1440px;
+    height: 1435px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+  }
+
+  &__titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__title {
+    text-align: center;
+    width: 471px;
+    font-size: var(--titleFontSize);
+    font-family: 'DM Serif Display', serif;
+  }
+
+  &__list {
+    position: relative;
+    width: 1022px;
+  }
+
+  &__item {
+    position: absolute;
+
+    > p {
+      text-align: center;
+      font-size: var(--mediumFontSize);
+    }
+
+    &-fundraising {
+      width: 287px;
+      top: 80px;
+      left: 0;
+    }
+
+    &-awareness {
+      width: 284px;
+      top: 302px;
+      right: 0;
+    }
+
+    &-opportunity {
+      width: 284px;
+      top: 465px;
+      left: 0;
+    }
+
+    &-joy {
+      width: 284px;
+      top: 680px;
+      right: 0;
+    }
+
+    &-family {
+      width: 284px;
+      top: 881px;
+      left: 0;
+    }
+  }
+}

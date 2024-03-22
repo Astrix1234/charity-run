@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
 import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRunMainTitle';
+import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       </Helmet>
       <HematoRunMainTitle />
       <HematoRunInfo />
+      <HematoRunWhyIsItWorth />
     </div>
   );
 }
