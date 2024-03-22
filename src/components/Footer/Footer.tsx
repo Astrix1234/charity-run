@@ -6,9 +6,11 @@ import { FooterNavigation } from '../FooterNavigation/FooterNavigation';
 export const Footer = () => {
   return (
     <StyledFooter as="footer">
-      <FoundationLogotype />
-      <FooterInformationSection />
-      <FooterNavigation />
+      <div className="container">
+        <FoundationLogotype />
+        <FooterInformationSection />
+        <FooterNavigation />
+      </div>
     </StyledFooter>
   );
 };
