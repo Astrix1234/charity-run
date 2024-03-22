@@ -1,0 +1,1 @@
+import{j as e,H as i}from"./index-BseU6N0r.js";function r(){return e.jsxs("div",{children:[e.jsx(i,{children:e.jsx("title",{children:"Login"})}),e.jsx("h1",{children:"Login"})]})}export{r as default};
