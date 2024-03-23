@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../IconBloodCell/IconBloodCell';
 import { IconRoad } from '../IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
+import { HematoRunInfo } from '../HematoRunInfo/HematoRunInfo';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
@@ -41,6 +42,14 @@ export const HematoRunMainTitle = () => {
             {t.logIn}
           </Link>
         </div>
+        <div className={scss.hematoTitles__illustrationContainer}>
+          <div className={scss.hematoTitles__illustration}></div>
+          <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
+          <Link className={scss.hematoTitles__findOutMore} to="">
+            {t.findOutMore}
+          </Link>
+        </div>
+        <HematoRunInfo />
       </div>
     </section>
   );
