@@ -3,7 +3,11 @@
   padding: 80px;
 
   &__header {
-    font-size: 50px;
-    font-weight: 500;
+    display: flex;
+    &__text {
+      font-size: 50px;
+      font-weight: 500;
+      margin-right: 20px;
+    }
   }
 }
