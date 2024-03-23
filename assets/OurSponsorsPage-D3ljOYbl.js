@@ -1,0 +1,1 @@
+import{j as r,H as s}from"./index-CrW0_Spu.js";function n(){return r.jsxs("div",{children:[r.jsx(s,{children:r.jsx("title",{children:"Our Sponsors"})}),r.jsx("h1",{children:"Our Sponsors"})]})}export{n as default};
