@@ -3,7 +3,7 @@ import scss from './HematoRunWhyIsItWorth.module.scss';
 // import { useLanguageStore } from '../../Zustand/useLanguageStore';
 // import translations from '../../translations';
 // import { Link } from 'react-router-dom';
-import { IconBloodCell } from '../IconBloodCell/IconBloodCell';
+import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 
 export const HematoRunWhyIsItWorth = () => {
   // const handleClick = () => {

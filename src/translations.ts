@@ -32,7 +32,7 @@ const translations = {
     slippers: 'KAPCIE',
     mumsWithChildren: 'MAMY Z DZIEĆMI',
     runWithAs: 'Pobiegnij z nami, gdziekolwiek jesteś !',
-    findOutMore: 'Find out more',
+    findOutMore: 'Dowiedz się więcej',
   },
   EN: {
     signUp: 'Sign up',

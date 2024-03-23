@@ -1,8 +1,8 @@
 import { NavigationHeader } from '../Navigation-header/Navigation-header';
 import { Button } from '../Button/Button';
 import { FoundationLogo } from '../FoundationLogo/FoundationLogo';
-import { IconInstagram } from '../IconInstagram/IconInstagram';
-import { IconFacebook } from '../IconFacebook/IconFacebook';
+import { IconInstagram } from '../../Icons/IconInstagram/IconInstagram';
+import { IconFacebook } from '../../Icons/IconFacebook/IconFacebook';
 import { ButtonPlEng } from '../ButtonPlEng/ButtonPlEng';
 import scss from './Header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
