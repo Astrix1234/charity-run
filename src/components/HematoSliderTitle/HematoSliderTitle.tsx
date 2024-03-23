@@ -19,6 +19,7 @@ export const HematoSliderTitle = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
+        loop={true}
         className={scss.swiper}
       >
         <SwiperSlide>{t.run}</SwiperSlide>
