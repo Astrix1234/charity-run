@@ -10,4 +10,13 @@
       margin-right: 20px;
     }
   }
+
+  &__mapContainer {
+  }
+
+  &__map {
+    width: 819px;
+    height: 580px;
+    background-image: url('/public/images/hematoRunRoute/hematoRunRoute.webp');
+  }
 }

@@ -11,6 +11,7 @@ export const HematoRunRoute = () => {
           <h2 className={scss.hematoRunRoute__header__text}>Trasa biegu</h2>
           <IconArrow />
         </div>
+        <div className={scss.hematoRunRoute__map}></div>
         <IconCreamyBg />
       </div>
     </>
