@@ -1,0 +1,99 @@
+.whyIsItWorth {
+  padding-top: 80px;
+
+  &__IconBg {
+    position: absolute;
+    top: 337px;
+  }
+
+  &__container {
+    background-image: url('/images/run.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    max-width: 1440px;
+    height: 1435px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+    width: 471px;
+    font-size: 67px;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  &__iconBlood {
+    position: absolute;
+    bottom: -5px;
+    right: -35px;
+  }
+
+  &__list {
+    position: relative;
+    width: 1022px;
+  }
+
+  &__item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    > p {
+      line-height: 1.5;
+      text-align: center;
+      font-size: var(--mediumFontSize);
+    }
+
+    &-fundraising {
+      width: 441px;
+      top: 80px;
+      left: 0;
+    }
+
+    &-awareness {
+      width: 438px;
+      top: 302px;
+      right: 0;
+    }
+
+    &-opportunity {
+      width: 398px;
+      top: 465px;
+      left: 0;
+    }
+
+    &-joy {
+      width: 415px;
+      top: 680px;
+      right: 0;
+    }
+
+    &-family {
+      width: 455px;
+      top: 881px;
+      left: 0;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+  }
+}

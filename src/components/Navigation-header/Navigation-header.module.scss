@@ -35,7 +35,7 @@
         height: 133px;
         display: flex;
         align-items: center;
-        font-size: 21px;
+        font-size: var(--mediumFontSize);
         transition: all 0.3s ease-in-out;
 
         &:hover,
@@ -58,7 +58,7 @@
 
     &__links {
         position: absolute;
-        z-index: 100;
+        z-index: 200;
         background-color: var(--grey);
         top: 133px;
         left: 50%;

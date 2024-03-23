@@ -1,12 +1,11 @@
 import scss from './HematoRunMainTitle.module.scss';
 import { Button } from '../Button/Button';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+import translations from './translations';
 import { Link } from 'react-router-dom';
-import { IconBloodCell } from '../IconBloodCell/IconBloodCell';
-import { IconRoad } from '../IconRoad/IconRoad';
+import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
+import { IconRoad } from '../../Icons/IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
-import { HematoRunInfo } from '../HematoRunInfo/HematoRunInfo';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
@@ -49,7 +48,6 @@ export const HematoRunMainTitle = () => {
             {t.findOutMore}
           </Link>
         </div>
-        <HematoRunInfo />
       </div>
     </section>
   );
