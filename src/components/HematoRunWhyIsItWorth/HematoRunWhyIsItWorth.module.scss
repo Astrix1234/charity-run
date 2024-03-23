@@ -1,5 +1,6 @@
 .whyIsItWorth {
   &__container {
+    position: relative;
     max-width: 1440px;
     height: 1435px;
     width: 100%;
@@ -15,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
   }
 
   &__title {
@@ -22,6 +24,12 @@
     width: 471px;
     font-size: 67px;
     font-family: 'DM Serif Display', serif;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: -5px;
+    right: -25px;
   }
 
   &__list {
@@ -66,5 +74,10 @@
       top: 881px;
       left: 0;
     }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
   }
 }
