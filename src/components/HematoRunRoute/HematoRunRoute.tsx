@@ -1,3 +1,3 @@
 export const HematoRunRoute = () => {
-  return <div>HematoRunRoute </div>;
+  return <div>HematoRunRoute</div>;
 };
