@@ -1,7 +1,7 @@
 import scss from './Slider-header.module.scss';
 
 interface SliderProps {
-  array: string[];
+  array: JSX.Element[];
 }
 
 const Slider = ({ array }: SliderProps) => {
@@ -10,22 +10,14 @@ const Slider = ({ array }: SliderProps) => {
       <div className={scss.slider__wrapper}>
         {array.map((item, index) => (
           <div className={scss.slider__item} key={index}>
-            <img
-              className={scss.slider__img}
-              src={item}
-              alt={`Slider photo ${index + 1}`}
-            />
+            {item}
           </div>
         ))}
       </div>
       <div className={scss.slider__wrapper}>
         {array.map((item, index) => (
           <div className={scss.slider__item} key={index}>
-            <img
-              className={scss.slider__img}
-              src={item}
-              alt={`Slider photo ${index + 1}`}
-            />
+            {item}
           </div>
         ))}
       </div>
