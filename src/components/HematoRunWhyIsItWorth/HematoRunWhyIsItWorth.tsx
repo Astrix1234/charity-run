@@ -1,14 +1,14 @@
 import scss from './HematoRunWhyIsItWorth.module.scss';
-import { Button } from '../Button/Button';
-import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+// import { Button } from '../Button/Button';
+// import { useLanguageStore } from '../../Zustand/useLanguageStore';
+// import translations from '../../translations';
 // import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../IconBloodCell/IconBloodCell';
 
 export const HematoRunWhyIsItWorth = () => {
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
+  // const handleClick = () => {
+  //   console.log('Button clicked');
+  // };
 
   return (
     <section className={scss.whyIsItWorth}>
