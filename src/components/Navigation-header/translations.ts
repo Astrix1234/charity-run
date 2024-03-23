@@ -22,17 +22,6 @@ const translations = {
     makeDonation: 'Wpłać darowiznę',
     volunteerArea: 'Strefa wolontariuszy',
     contact: 'Kontakt',
-    giveOthersPower: 'Podaruj innym MOC!',
-    foundationForHelpingPeopleWithLeukemia:
-      'Fundacji Na Rzecz Pomocy Chorym Na Białaczki',
-    joinUs: 'Dołącz do nas!',
-    alreadyHaveAccount: 'Masz już konto?',
-    run: 'BIEG',
-    walk: 'SPACER',
-    slippers: 'KAPCIE',
-    mumsWithChildren: 'MAMY Z DZIEĆMI',
-    runWithAs: 'Pobiegnij z nami, gdziekolwiek jesteś !',
-    findOutMore: 'Find out more',
   },
   EN: {
     signUp: 'Sign up',
@@ -57,17 +46,6 @@ const translations = {
     makeDonation: 'Make a donation',
     volunteerArea: 'Volunteer area',
     contact: 'Contact',
-    giveOthersPower: 'Give others POWER!',
-    foundationForHelpingPeopleWithLeukemia:
-      'Foundation for Helping People with Leukemia',
-    joinUs: 'Join us!',
-    alreadyHaveAccount: 'Already have an account?',
-    run: 'RUN',
-    walk: 'WALK',
-    slippers: 'SLIPPERS',
-    mumsWithChildren: 'MUMS WITH CHILDREN',
-    runWithAs: 'Run with us, wherever you are !',
-    findOutMore: 'Find out more',
   },
 };
 

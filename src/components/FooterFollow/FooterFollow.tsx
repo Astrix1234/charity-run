@@ -1,9 +1,9 @@
 import { StyledFollow } from './StyledFooterFollow';
 import { Link } from 'react-router-dom';
-import { IconFacebook } from '../IconFacebook/IconFacebook';
-import { IconLinkedIn } from '../IconLinkedIn/IconLinkedIn';
-import { IconInstagram } from '../IconInstagram/IconInstagram';
-import { IconYouTube } from '../IconYouTube/IconYouTube';
+import { IconFacebook } from '../../Icons/IconFacebook/IconFacebook';
+import { IconLinkedIn } from '../../Icons/IconLinkedIn/IconLinkedIn';
+import { IconInstagram } from '../../Icons/IconInstagram/IconInstagram';
+import { IconYouTube } from '../../Icons/IconYouTube/IconYouTube';
 
 export const FooterFollow = () => {
   return (

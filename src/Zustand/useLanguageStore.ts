@@ -7,7 +7,11 @@ interface LanguageState {
 }
 
 export const useLanguageStore = create<LanguageState>(set => ({
-  language: 'PL',
+  language:
+    localStorage.getItem('language') === 'PL' ||
+    localStorage.getItem('language') === 'EN'
+      ? (localStorage.getItem('language') as 'PL' | 'EN')
+      : 'PL',
   toggleLanguage: () =>
     set(state => ({
       language: state.language === 'PL' ? 'EN' : 'PL',

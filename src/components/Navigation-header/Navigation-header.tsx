@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
 import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+import translations from './translations';
 
 export const NavigationHeader = () => {
   const { language } = useLanguageStore();
