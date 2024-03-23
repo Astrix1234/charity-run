@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import OurAmbassadors from '../../components/OurAmbassadors/OurAmbassadors';
 
 export default function OurAmbassadorsPage() {
   return (
@@ -6,7 +7,7 @@ export default function OurAmbassadorsPage() {
       <Helmet>
         <title>Our Ambassadors</title>
       </Helmet>
-      <h1>Our Ambassadors</h1>
+      <OurAmbassadors />
     </div>
   );
 }
