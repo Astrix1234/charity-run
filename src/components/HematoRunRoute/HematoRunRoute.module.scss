@@ -1,3 +1,9 @@
-.example {
-  background-color: black;
+.hematoRunRoute {
+  position: relative;
+  padding: 80px;
+
+  &__header {
+    font-size: 50px;
+    font-weight: 500;
+  }
 }
