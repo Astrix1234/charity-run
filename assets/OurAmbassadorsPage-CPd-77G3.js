@@ -1,0 +1,1 @@
+import{j as s,H as r}from"./index-CdU1O4yB.js";function a(){return s.jsxs("div",{children:[s.jsx(r,{children:s.jsx("title",{children:"Our Ambassadors"})}),s.jsx("h1",{children:"Our Ambassadors"})]})}export{a as default};
