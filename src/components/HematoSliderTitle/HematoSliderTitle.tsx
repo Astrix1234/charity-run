@@ -3,7 +3,7 @@ import 'swiper/css';
 import scss from './HematoSliderTitle.module.scss';
 import { Autoplay } from 'swiper/modules';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+import translations from './translations';
 
 export const HematoSliderTitle = () => {
   const { language } = useLanguageStore();

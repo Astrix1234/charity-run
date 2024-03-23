@@ -6,7 +6,7 @@ import { IconFacebook } from '../../Icons/IconFacebook/IconFacebook';
 import { ButtonPlEng } from '../ButtonPlEng/ButtonPlEng';
 import scss from './Header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+import translations from './translations';
 
 export const Header = () => {
   const { toggleLanguage, language } = useLanguageStore();
