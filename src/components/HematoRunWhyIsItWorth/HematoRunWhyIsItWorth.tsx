@@ -45,7 +45,7 @@ export const HematoRunWhyIsItWorth = () => {
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-awareness']}`}
             >
               <div>
-                <IconNumberTwo />{' '}
+                <IconNumberTwo /> git pull
               </div>
               <p>{t.awareness}</p>
             </li>
