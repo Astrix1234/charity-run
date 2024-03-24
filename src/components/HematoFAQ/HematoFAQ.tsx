@@ -1,5 +1,5 @@
 import scss from './HematoFAQ.module.scss';
-import FAQItemComponent from './FAQItemComponent';
+import FAQItemComponent from '../FAQItem/FAQItem';
 import faqData from './FAQData';
 // import { useLanguageStore } from '../../Zustand/useLanguageStore';
 // import translations from '../../translations';

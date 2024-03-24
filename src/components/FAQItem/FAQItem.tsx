@@ -1,6 +1,8 @@
 import { IconPlus } from '../../Icons/IconPlus/IconPlus';
-import scss from './HematoFAQ.module.scss';
+import scss from './FAQItem.module.scss';
 import React, { useState } from 'react';
+// import { useLanguageStore } from '../../Zustand/useLanguageStore';
+// import translations from '../../translations';
 
 export interface FAQItem {
   question: string;
@@ -11,7 +13,7 @@ interface FAQItemProps {
   item: FAQItem;
 }
 
-const FAQItemComponent: React.FC<FAQItemProps> = ({ item }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIconClick = (e: React.MouseEvent) => {
@@ -36,4 +38,4 @@ const FAQItemComponent: React.FC<FAQItemProps> = ({ item }) => {
   );
 };
 
-export default FAQItemComponent;
+export default FAQItem;
