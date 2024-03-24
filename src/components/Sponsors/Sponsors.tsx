@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { IpsumLogo } from '../../Icons/SponsorsIcons/IpsumLogo';
 import { LogoIpsum } from '../../Icons/SponsorsIcons/LogoIpsum';
@@ -44,6 +45,11 @@ const Sponsors = () => {
         <div className={scss.sponsors__box}>
           <Slider array={sponsorsList} reverse={true} />
         </div>
+      </div>
+      <div className={scss.sponsors__link__container}>
+        <Link className={scss.sponsors__link} to="/our-sponsors">
+          {t.seeSponsors}
+        </Link>
       </div>
     </section>
   );
