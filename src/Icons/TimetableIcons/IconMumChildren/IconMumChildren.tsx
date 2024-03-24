@@ -9,8 +9,8 @@ export const IconMumChildren = () => {
     >
       <g filter="url(#filter0_d_953_2818)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M140.122 10.8592C166.427 16.4748 186.992 33.1489 205.462 52.642C223.204 71.3674 237.269 92.3382 241.41 117.76C246.48 148.878 254.738 187.523 230.79 208.12C206.989 228.591 171.47 202.501 140.122 204.876C103.103 207.68 65.528 243.36 34.5348 222.989C3.01122 202.27 6.7336 155.384 7.57883 117.76C8.39934 81.2359 10.664 40.1218 39.1592 17.1395C66.408 -4.83758 105.846 3.54182 140.122 10.8592Z"
           fill="#1CA2A7"
         />
@@ -27,9 +27,9 @@ export const IconMumChildren = () => {
           width="254"
           height="240.242"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

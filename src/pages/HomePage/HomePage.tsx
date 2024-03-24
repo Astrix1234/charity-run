@@ -4,6 +4,7 @@ import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
 import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
 import GalleryCarousel from '../../components/GalleryCarousel/GalleryCarousel';
 import Sponsors from '../../components/Sponsors/Sponsors';
+import { Timetable } from '../../components/Timetable/Timetable';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HematoRunMainTitle />
       <HematoRunInfo />
       <GalleryCarousel />
+      <Timetable />
       <HematoRunWhyIsItWorth />
       <Sponsors />
     </div>

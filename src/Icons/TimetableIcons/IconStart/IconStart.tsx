@@ -9,8 +9,8 @@ export const IconStart = () => {
     >
       <g filter="url(#filter0_d_953_2786)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M109.317 4.09267C143.328 9.37812 156.419 48.7741 180.505 73.361C204.112 97.4593 244.917 110.872 246.912 144.548C248.932 178.659 215.912 203.058 189.466 224.697C166.278 243.671 139.267 256.289 109.317 257.133C78.4089 258.003 42.4273 254.552 24.5233 229.342C7.482 205.347 31.3895 173.909 29.3604 144.548C26.9969 110.348 -5.02699 76.9566 11.9331 47.1638C30.1879 15.0967 72.8561 -1.57367 109.317 4.09267Z"
           fill="#FD7616"
         />
@@ -27,9 +27,9 @@ export const IconStart = () => {
           width="254"
           height="268.25"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
