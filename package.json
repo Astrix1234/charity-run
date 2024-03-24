@@ -37,5 +37,9 @@
     "gh-pages": "^6.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
