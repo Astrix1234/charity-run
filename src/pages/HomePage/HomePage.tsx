@@ -3,6 +3,7 @@ import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRu
 import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
 import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
 import Gallery from '../../components/Gallery/Gallery';
+import Sponsors from '../../components/Sponsors/Sponsors';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HematoRunInfo />
       <Gallery />
       <HematoRunWhyIsItWorth />
+      <Sponsors />
     </div>
   );
 }

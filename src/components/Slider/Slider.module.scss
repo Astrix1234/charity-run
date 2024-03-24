@@ -1,4 +1,5 @@
-.slider {
+.slider,
+.slider__reverse {
   overflow: hidden;
   position: relative;
   height: 100%;
@@ -48,5 +49,11 @@
   }
   to {
     transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.slider__reverse {
+  .slider__wrapper {
+    animation-direction: reverse;
   }
 }

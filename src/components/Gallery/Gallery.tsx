@@ -35,7 +35,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery">
-      <Slider array={galleryList} />;
+      <Slider array={galleryList} reverse={false} />;
     </section>
   );
 };
