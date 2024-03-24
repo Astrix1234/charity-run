@@ -49,4 +49,27 @@
     justify-content: center;
     align-items: center;
   }
+
+  &__link__container {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 80px;
+    margin-top: 38px;
+    z-index: 1;
+  }
+
+  &__link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: var(--mediumFontSize);
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
