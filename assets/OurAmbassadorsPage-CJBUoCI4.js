@@ -1,1 +1,0 @@
-import{j as s,H as r}from"./index-Dcnut9bs.js";function a(){return s.jsxs("div",{children:[s.jsx(r,{children:s.jsx("title",{children:"Our Ambassadors"})}),s.jsx("h1",{children:"Our Ambassadors"})]})}export{a as default};
