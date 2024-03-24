@@ -14,7 +14,7 @@
 
         &:hover .navigation__links--hemato-run,
         &:focus .navigation__links--hemato-run {
-            height: 448px;
+            height: 512px;
             padding: 20px 0;
         }
 
@@ -128,5 +128,9 @@
         &:focus {
             font-weight: 700;
         }
+    }
+
+    &__website {
+        text-decoration: underline;
     }
 }
