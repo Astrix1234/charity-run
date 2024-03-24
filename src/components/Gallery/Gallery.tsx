@@ -1,17 +1,41 @@
-import {
-  slider1,
-  slider2,
-  slider3,
-  slider4,
-} from '../../../public/images/gallery';
 import Slider from '../Slider/Slider';
+import scss from './Gallery.module.scss';
 
 const Gallery = () => {
-  const galleryList = [slider1, slider2, slider3, slider4];
+  const galleryList = [
+    <div className={scss.gallery__box}>
+      <img
+        className={scss.gallery__img}
+        src="images/gallery/slider1.webp"
+        alt="slider1"
+      />
+    </div>,
+    <div className={scss.gallery__box}>
+      <img
+        className={scss.gallery__img}
+        src="images/gallery/slider2.webp"
+        alt="slider2"
+      />
+    </div>,
+    <div className={scss.gallery__box}>
+      <img
+        className={scss.gallery__img}
+        src="images/gallery/slider3.webp"
+        alt="slider3"
+      />
+    </div>,
+    <div className={scss.gallery__box}>
+      <img
+        className={scss.gallery__img}
+        src="images/gallery/slider4.webp"
+        alt="slider4"
+      />
+    </div>,
+  ];
 
   return (
     <section id="gallery">
-      <Slider array={galleryList} />;
+      <Slider array={galleryList} reverse={false} />;
     </section>
   );
 };
