@@ -25,9 +25,13 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
     <div className={scss.faq__item}>
       <div className={scss.faq__question}>
         <span>{item.question}</span>
-        <div className={scss.faq__icon}>
-          <IconPlus onClick={handleIconClick} />
-        </div>
+        <button
+          className={scss.faq__icon}
+          onClick={handleIconClick}
+          type="button"
+        >
+          <IconPlus />
+        </button>
       </div>
       {isOpen && (
         <div className={`${scss.faq__answer} ${isOpen ? scss.open : ''}`}>

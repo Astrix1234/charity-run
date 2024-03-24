@@ -18,8 +18,8 @@ export default function HomePage() {
       <GalleryCarousel />
       <Timetable />
       <HematoRunWhyIsItWorth />
-      <HematoFAQ />
       <Sponsors />
+      <HematoFAQ />
     </div>
   );
 }
