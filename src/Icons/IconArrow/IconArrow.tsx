@@ -12,10 +12,10 @@ export const IconArrow = () => {
       <path
         fill="none"
         stroke="#1ca2a7"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        stroke-miterlimit="4"
-        stroke-width="0.5079"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        strokeMiterlimit="4"
+        strokeWidth="0.5079"
         d="M21.863 28.127c1.962-11.127-7.831-21.062-20.472-19.727M24.841 25.030l-2.978 3.471-2.694-3.471"
       ></path>
     </svg>
