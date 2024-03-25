@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import scss from './Navigation-header.module.scss';
 import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
@@ -25,7 +26,9 @@ export const NavigationHeader = () => {
             <Link to="/">{t.aboutRun}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#gallery">{t.gallery}</Link>
+            <ScrollLink to="gallery" smooth={true} duration={500}>
+              {t.gallery}
+            </ScrollLink>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#timetable">{t.timeTable}</Link>
