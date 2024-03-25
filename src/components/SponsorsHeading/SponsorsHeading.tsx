@@ -1,21 +1,21 @@
-import HandwrittenLine from '../../Icons/HandwrittenLine/HandwrittenLine';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import scss from './AmbassadorsHeading.module.scss';
+import BecomeSponsorButton from '../BecomeSponsorButton/BecomeSponsorButton';
+import scss from './SponsorsHeading.module.scss';
 import translations from './translations';
 
-function AmbassadorsHeading() {
+function SponsorsHeading() {
   const { language } = useLanguageStore();
   const t = translations[language];
 
   return (
-    <div className={scss.header}>
+    <div className={scss.container}>
       <h1 className={scss.heading}>
         <span className={scss.heading__sub}>{t.sub}</span>
         <span className={scss.heading__main}>{t.main}</span>
       </h1>
-      <HandwrittenLine />
+      <BecomeSponsorButton />
     </div>
   );
 }
 
-export default AmbassadorsHeading;
+export default SponsorsHeading;

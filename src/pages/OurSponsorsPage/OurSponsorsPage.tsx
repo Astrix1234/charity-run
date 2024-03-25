@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet-async';
+import OurSponsors from '../../components/OurSponsors/OurSponsors';
 
 export default function OurSponsorsPage() {
   return (
     <div>
       <Helmet>
-        <title>Our Sponsors</title>
+        <title>Sponsorzy i Partnerzy</title>
       </Helmet>
-      <h1>Our Sponsors</h1>
+      <OurSponsors />
     </div>
   );
 }
