@@ -1,9 +1,6 @@
-import scss from './IconBgDeco.module.scss';
-
 export const IconBgDeco = () => {
   return (
     <svg
-      className={scss.icon}
       xmlns="http://www.w3.org/2000/svg"
       width="286"
       height="789"

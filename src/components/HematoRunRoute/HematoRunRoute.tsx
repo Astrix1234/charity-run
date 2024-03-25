@@ -12,7 +12,7 @@ export const HematoRunRoute = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <>
+    <section>
       <div className={scss.header}>
         <h2 className={scss.header__text}>{t.heading}</h2>
         <IconArrow />
@@ -21,8 +21,10 @@ export const HematoRunRoute = () => {
         <div className={scss.map__container}>
           <img className={scss.map} src={runRoute} about="run route" />
         </div>
+        <div className={scss.backgroundIcon}>
+          <IconBgDeco />
+        </div>
       </div>
-      <IconBgDeco />
-    </>
+    </section>
   );
 };
