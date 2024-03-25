@@ -13,17 +13,13 @@ export const HematoRunRoute = () => {
   const t = translations[language];
   return (
     <>
-      <div className={scss.hematoRunRoute__header}>
-        <h2 className={scss.hematoRunRoute__header__text}>{t.heading}</h2>
+      <div className={scss.header}>
+        <h2 className={scss.header__text}>{t.heading}</h2>
         <IconArrow />
       </div>
-      <div className={scss.hematoRunRoute__background}>
-        <div className={scss.hematoRunRoute__mapContainer}>
-          <img
-            className={scss.hematoRunRoute__map}
-            src={runRoute}
-            about="run route"
-          />
+      <div className={scss.background}>
+        <div className={scss.map__container}>
+          <img className={scss.map} src={runRoute} about="run route" />
         </div>
       </div>
       <IconBgDeco />
