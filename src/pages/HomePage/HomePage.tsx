@@ -15,10 +15,10 @@ export default function HomePage() {
         <title>Haemato-run</title>
       </Helmet>
       <HematoRunMainTitle />
-      <HematoRunRoute />
       <HematoRunInfo />
       <GalleryCarousel />
       <Timetable />
+      <HematoRunRoute />
       <HematoRunWhyIsItWorth />
       <Sponsors />
       <HematoFAQ />
