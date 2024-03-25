@@ -22,6 +22,13 @@ const Slider = ({ array, reverse }: SliderProps) => {
           </div>
         ))}
       </div>
+      <div className={scss.slider__wrapper} aria-hidden="true">
+        {array.map((item, index) => (
+          <div className={scss.slider__item} key={index}>
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
