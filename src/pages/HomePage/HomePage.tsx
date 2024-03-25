@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRunMainTitle';
+import { HematoRunRoute } from '../../components/HematoRunRoute/HematoRunRoute';
 import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
 import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
 import HematoFAQ from '../../components/HematoFAQ/HematoFAQ';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <HematoRunInfo />
       <GalleryCarousel />
       <Timetable />
+      <HematoRunRoute />
       <HematoRunWhyIsItWorth />
       <Sponsors />
       <HematoFAQ />
