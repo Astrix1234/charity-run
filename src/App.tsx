@@ -3,7 +3,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { useLanguageStore } from './Zustand/useLanguageStore';
-import { useLocationStore } from './Zustand/useLocationStore';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -37,7 +36,6 @@ function App() {
     setLanguage: state.setLanguage,
   }));
   const location = useLocation();
-  const { setPath } = useLocationStore();
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -49,10 +47,6 @@ function App() {
       setLanguage(storedLanguage);
     }
   }, [setLanguage]);
-
-  useEffect(() => {
-    setPath(location.pathname + location.hash);
-  }, [location, setPath]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
