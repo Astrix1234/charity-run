@@ -1,1 +1,0 @@
-import{j as e,H as r}from"./index-Ca7TEUH-.js";function t(){return e.jsxs("div",{children:[e.jsx(r,{children:e.jsx("title",{children:"Please Support"})}),e.jsx("h1",{children:"Please Support"})]})}export{t as default};
