@@ -31,7 +31,7 @@ export const NavigationHeader = () => {
             </ScrollLink>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#timetable">{t.timeTable}</Link>
+            <ScrollLink to="timetable">{t.timeTable}</ScrollLink>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#attractions">{t.attractions}</Link>
@@ -40,10 +40,10 @@ export const NavigationHeader = () => {
             <Link to="/our-ambassadors">{t.ambassadors}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#our-sponsors">{t.partners}</Link>
+            <ScrollLink to="our-sponsors">{t.partners}</ScrollLink>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#faq">{t.faq}</Link>
+            <ScrollLink to="faq">{t.faq}</ScrollLink>
           </li>
           <li
             className={`${scss.navigation__link} ${scss.navigation__website}`}

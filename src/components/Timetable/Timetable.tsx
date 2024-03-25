@@ -20,7 +20,7 @@ export const Timetable = () => {
   ];
 
   return (
-    <section className={scss.timetable}>
+    <section id="timetable" className={scss.timetable}>
       <div className={scss.timetable__container}>
         <div className={scss.timetable__titleContainer}>
           <div className={scss.timetable__titleIcon}>
