@@ -15,7 +15,7 @@ export const HematoRunMainTitle = () => {
     console.log('Button clicked');
   };
   return (
-    <section className={scss.hematoTitles}>
+    <section id="home" className={scss.hematoTitles}>
       <div className={scss.hematoTitles__container}>
         <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
         <div className={scss.hematoTitles__titleContainer}>

@@ -7,7 +7,7 @@ import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 
 const HematoFAQ: React.FC = () => {
   return (
-    <section className={scss.faq}>
+    <section id="faq" className={scss.faq}>
       <div className={scss.faq__container}>
         <div>
           <h1 className={scss.faq__title}>
