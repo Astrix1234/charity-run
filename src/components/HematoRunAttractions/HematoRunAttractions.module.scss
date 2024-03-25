@@ -2,7 +2,12 @@
   &__section {
     display: block;
     padding: 80px;
+    background-image: url('/images/attractions/background-attractions.png');
+    background-repeat: no-repeat;
+    background-position: right 0px top 70px;
+    background-size: auto;
   }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
