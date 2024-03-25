@@ -6,7 +6,6 @@ import scss from './HematoRunRoute.module.scss';
 
 import { IconArrow } from '../../Icons/IconArrow/IconArrow';
 import { IconBgDeco } from '../../Icons/IconBgDeco/IconBgDeco';
-import runRoute from '../../assets/Images/hematoRunRoute/hematoRunRoute.webp';
 
 export const HematoRunRoute = () => {
   const { language } = useLanguageStore();
@@ -19,7 +18,11 @@ export const HematoRunRoute = () => {
       </div>
       <div className={scss.background}>
         <div className={scss.map__container}>
-          <img className={scss.map} src={runRoute} about="run route" />
+          <img
+            className={scss.map}
+            src="images/hematoRunRoute.webp"
+            about="run route"
+          />
         </div>
         <div className={scss.backgroundIcon}>
           <IconBgDeco />
