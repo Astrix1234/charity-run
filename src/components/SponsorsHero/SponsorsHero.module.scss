@@ -1,0 +1,12 @@
+.section {
+  position: relative;
+  padding: 128px 0 70px;
+
+  & > svg {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-54%);
+    z-index: -1;
+  }
+}
