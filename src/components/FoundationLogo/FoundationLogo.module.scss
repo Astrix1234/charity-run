@@ -1,8 +1,4 @@
 .foundationLogo {
-  position: relative;
-  z-index: 0;
-  display: grid;
-  place-items: center;
   width: 70px;
   height: 70px;
 
@@ -13,14 +9,4 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-}
-
-.foundationLogo::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  background-color: white;
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
 }
