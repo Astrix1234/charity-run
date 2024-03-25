@@ -1,12 +1,16 @@
-import scss from './Button.module.scss';
+import scss from './ButtonOrange.module.scss';
 
-interface ButtonProps {
+interface ButtonOrangeProps {
   content: string;
   onClick: () => void;
   icon?: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ content, onClick, icon }) => {
+export const ButtonOrange: React.FC<ButtonOrangeProps> = ({
+  content,
+  onClick,
+  icon,
+}) => {
   return (
     <div className={scss.button}>
       <button onClick={onClick} className={scss.button__button}>
