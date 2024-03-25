@@ -1,0 +1,76 @@
+.attractions {
+  &__section {
+    display: block;
+    padding: 80px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 326px;
+  }
+
+  &__title {
+    padding-bottom: 140px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.attraction {
+  &__block {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 32px;
+    background-color: #ceeaeb;
+    padding: 40px;
+  }
+
+  &__image {
+    width: 364px;
+    height: 364px;
+    border-radius: 50%;
+    position: absolute;
+    top: 116px;
+    left: 69px;
+    order: 2;
+  }
+
+  &__idImage {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 138px;
+    height: 138px;
+  }
+
+  &__name {
+    color: var #2e2530;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+    left: 218px;
+    top: 43px;
+    text-align: left;
+  }
+}
+
+h1 {
+  height: 87px;
+  color: #2e2530;
+  text-align: center;
+  font-family: 'DM Serif Display';
+  font-size: 67px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
