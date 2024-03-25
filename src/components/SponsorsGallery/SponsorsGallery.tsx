@@ -1,6 +1,8 @@
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import BecomeSponsorButton from '../BecomeSponsorButton/BecomeSponsorButton';
 import SponsorsList from '../SponsorsList/SponsorsList';
 import scss from './SponsorsGallery.module.scss';
+import translations from './translations';
 
 const sponsorsList = [
   { name: 'Biesiada Catering', url: './images/sponsors/sponsor-1.png' },
@@ -16,12 +18,20 @@ const partnersList = [
 ];
 
 function SponsorsGallery() {
+  const { language } = useLanguageStore();
+  const t = translations[language];
   return (
     <section className={scss.section}>
-      <h2 className={scss.heading}>Nasi sponsorzy i partnerzy</h2>
+      <h2 className={scss.heading}>{t.heading}</h2>
       <div className={scss.lists}>
-        <SponsorsList list={sponsorsList} heading="sponsorzy" />
-        <SponsorsList list={partnersList} heading="partnerzy" />
+        <SponsorsList
+          list={sponsorsList}
+          heading={language === 'PL' ? 'sponsorzy' : 'sponsors'}
+        />
+        <SponsorsList
+          list={partnersList}
+          heading={language === 'PL' ? 'partnerzy' : 'partners'}
+        />
       </div>
       <BecomeSponsorButton />
     </section>

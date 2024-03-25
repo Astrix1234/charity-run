@@ -1,29 +1,24 @@
 import CurvedArrowDonwLeft from '../../Icons/CurvedArrowDownLeft/CurvedArrowDonwLeft';
 import HandwrittenLineMini from '../../Icons/HandwrittenLineMini/HandwrittenLineMini';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import scsss from './SponsorsHeroText.module.scss';
+import translations from './translations';
 
 function SponsorsHeroText() {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+
   return (
     <div className={scsss.container}>
       <p className={scsss.text}>
-        Chcemy z całego serca podziękować Wam za Wasze wsparcie <br /> i
-        zaangażowanie w organizację tego wyjątkowego wydarzenia. Wasza hojność i
-        <br />
-        wsparcie finansowe sprawiły, że{' '}
+        {t.paragraph1}
         <span className={scsss.underline}>
-          Hematobieg
+          {t.name}
           <HandwrittenLineMini />
-        </span>{' '}
-        stał się możliwy,
-        <br /> a jego cel jeszcze bardziej osiągalny.
+        </span>
+        {t.paragraph2}
       </p>
-      <p className={scsss.text}>
-        Dzięki Waszemu wsparciu będziemy w stanie pomóc tym, którzy tego
-        potrzebują,
-        <br /> zwiększając świadomość na temat chorób krwi oraz wspierając
-        badania i leczenie w<br /> tym obszarze. Wasza dobroczynność naprawdę
-        czyni różnicę i daje nadzieję tysiącom osób.
-      </p>
+      <p className={scsss.text}>{t.paragraph3}</p>
       <CurvedArrowDonwLeft />
     </div>
   );
