@@ -13,8 +13,8 @@ export const IconCloseModal = () => {
         x2="24.8729"
         y2="24.5773"
         stroke="#2E2530"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
       />
       <line
         x1="10"
@@ -22,8 +22,8 @@ export const IconCloseModal = () => {
         x2="24.8492"
         y2="9.99965"
         stroke="#2E2530"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
       />
     </svg>
   );

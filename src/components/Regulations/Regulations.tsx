@@ -4,6 +4,7 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { TogetherToTheGoal } from '../TogetherToTheGoal/TogetherToTheGoal';
 import { IconAgree } from '../../Icons/IconAgree/IconAgree';
+import { IconCloseModal } from '../../Icons/IconCloseModal/IconCloseModal';
 
 export const Regulations = () => {
   const { language } = useLanguageStore();
@@ -18,6 +19,7 @@ export const Regulations = () => {
       <div className={scss.regulations__container}>
         <TogetherToTheGoal />
         <div className={scss.regulations__modal}>
+          <IconCloseModal />
           <div className={scss.regulations__info}>
             <h4 className={scss.regulations__title}>
               {t.processingInformation}
