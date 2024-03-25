@@ -1,0 +1,38 @@
+.regulations {
+  padding: 40px 0;
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  &__modal {
+    padding: 64px 69px;
+    width: 1248px;
+    height: 1074px;
+    border: 1px solid #b7fcff;
+    border-radius: 32px;
+    box-shadow: 0px 4px 7px 0px #a4a4a4a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  &__info {
+    padding: 22px 32px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
