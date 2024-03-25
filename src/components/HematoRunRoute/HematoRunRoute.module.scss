@@ -1,7 +1,13 @@
 .hematoRunRoute {
   &__header {
+    top: 150px;
+    position: relative;
     display: flex;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     padding: 0 80px;
+
     &__text {
       font-size: 50px;
       font-weight: 500;
@@ -10,8 +16,8 @@
   }
   &__background {
     background-image: url(../../assets/Images/hematoRunRoute/hematoRunRouteBackground.webp);
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: 100% 100%;
+    margin-bottom: 140px;
   }
   &__mapContainer {
     margin: auto;

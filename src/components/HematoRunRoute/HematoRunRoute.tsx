@@ -1,9 +1,9 @@
 import scss from './HematoRunRoute.module.scss';
 
 import { IconArrow } from '../../Icons/IconArrow/IconArrow';
+import { IconBgDeco } from '../../Icons/IconBgDeco/IconBgDeco';
 
 import runRoute from '../../assets/Images/hematoRunRoute/hematoRunRoute.webp';
-import background from '../../assets/Images/hematoRunRoute/hematoRunRouteBackground.webp';
 
 export const HematoRunRoute = () => {
   return (
@@ -21,6 +21,7 @@ export const HematoRunRoute = () => {
           />
         </div>
       </div>
+      <IconBgDeco />
     </>
   );
 };
