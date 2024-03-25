@@ -1,31 +1,24 @@
-import scss from './Slider-header.module.scss';
+import scss from './Slider.module.scss';
 
 interface SliderProps {
-  array: string[];
+  array: JSX.Element[];
+  reverse: boolean;
 }
 
-const Slider = ({ array }: SliderProps) => {
+const Slider = ({ array, reverse }: SliderProps) => {
   return (
-    <div className={scss.slider}>
+    <div className={reverse ? scss.slider__reverse : scss.slider}>
       <div className={scss.slider__wrapper}>
         {array.map((item, index) => (
           <div className={scss.slider__item} key={index}>
-            <img
-              className={scss.slider__img}
-              src={item}
-              alt={`Slider photo ${index + 1}`}
-            />
+            {item}
           </div>
         ))}
       </div>
-      <div className={scss.slider__wrapper}>
+      <div className={scss.slider__wrapper} aria-hidden="true">
         {array.map((item, index) => (
           <div className={scss.slider__item} key={index}>
-            <img
-              className={scss.slider__img}
-              src={item}
-              alt={`Slider photo ${index + 1}`}
-            />
+            {item}
           </div>
         ))}
       </div>

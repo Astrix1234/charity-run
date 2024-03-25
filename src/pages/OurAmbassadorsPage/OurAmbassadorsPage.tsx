@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet-async';
+import OurAmbassadors from '../../components/OurAmbassadors/OurAmbassadors';
 
 export default function OurAmbassadorsPage() {
   return (
     <div>
       <Helmet>
-        <title>Our Ambassadors</title>
+        <title>Ambasadorzy</title>
       </Helmet>
-      <h1>Our Ambassadors</h1>
+      <OurAmbassadors />
     </div>
   );
 }
