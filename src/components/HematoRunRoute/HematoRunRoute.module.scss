@@ -1,19 +1,21 @@
 .hematoRunRoute {
-  position: relative;
-  padding: 120px 80px;
-
   &__header {
     display: flex;
+    padding: 0 80px;
     &__text {
       font-size: 50px;
       font-weight: 500;
       margin-right: 20px;
     }
   }
-  &__container {
+  &__background {
+    background-image: url(../../assets/Images/hematoRunRoute/hematoRunRouteBackground.webp);
+    background-size: contain;
+    background-repeat: repeat;
+  }
+  &__mapContainer {
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding: 200px 0;
     max-width: 819px;
   }
   &__map {
