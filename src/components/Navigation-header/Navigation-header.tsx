@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
 import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
@@ -8,10 +8,23 @@ export const NavigationHeader = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
+  const navigate = useNavigate();
+
   const [user, setUser] = useState(true);
 
   const handleLogout = () => {
     setUser(false);
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
   };
 
   return (
@@ -22,7 +35,7 @@ export const NavigationHeader = () => {
           className={`${scss['navigation__links']} ${scss['navigation__links--hemato-run']}`}
         >
           <li className={scss.navigation__link}>
-            <Link to="/">{t.aboutRun}</Link>
+            <a onClick={e => handleLinkClick(e)}>{t.aboutRun}</a>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#gallery">{t.gallery}</Link>

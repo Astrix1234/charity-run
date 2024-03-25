@@ -1,5 +1,5 @@
 .whyIsItWorth {
-  padding: 80px 0;
+  padding: 0 0 80px 0;
 
   &__IconBg {
     position: absolute;
@@ -66,7 +66,7 @@
     align-items: center;
     gap: 16px;
 
-    > p {
+    >p {
       line-height: 1.5;
       text-align: center;
       font-size: var(--mediumFontSize);

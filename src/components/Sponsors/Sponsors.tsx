@@ -28,7 +28,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <section id="sponsor" className={scss.sponsors}>
+    <section id="our-sponsors" className={scss.sponsors}>
       <div aria-hidden="true" className={scss.sponsors__background}>
         <Wave />
       </div>
