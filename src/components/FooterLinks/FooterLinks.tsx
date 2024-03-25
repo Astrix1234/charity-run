@@ -16,7 +16,7 @@ export const FooterLinks = () => {
         <Link to="/participant-area">{t.link2}</Link>
       </p>
       <p>
-        <Link to="#">{t.link3}</Link>
+        <Link to="/support-volunteers">{t.link3}</Link>
       </p>
     </StyledLinks>
   );
