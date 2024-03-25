@@ -30,6 +30,8 @@
     animation: slide 30s linear infinite;
     flex-shrink: 0;
     display: flex;
+    justify-content: space-around;
+    min-width: 50%;
   }
 
   &__item {
