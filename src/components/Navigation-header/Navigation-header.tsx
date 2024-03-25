@@ -37,7 +37,7 @@ export const NavigationHeader = () => {
             <Link to="/our-ambassadors">{t.ambassadors}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/our-sponsors">{t.partners}</Link>
+            <Link to="/#our-sponsors">{t.partners}</Link>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#faq">{t.faq}</Link>

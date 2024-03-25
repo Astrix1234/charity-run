@@ -1,4 +1,4 @@
-import DotsSquare from '../DotsSquare/DotsSquare';
+import DotsSquare from '../../Icons/DotsSquare/DotsSquare';
 import scss from './AmbassadorsItem.module.scss';
 
 type AmbassadorsItemProps = {
