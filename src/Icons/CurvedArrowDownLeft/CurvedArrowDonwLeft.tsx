@@ -10,9 +10,9 @@ function CurvedArrowDonwLeft() {
       <path
         d="M69.1513 173.233C130.661 162.786 154.155 53.0551 101.712 18.1904M88.9514 185.942L67.7713 173.392L83.3235 152.83"
         stroke="#FD7616"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
