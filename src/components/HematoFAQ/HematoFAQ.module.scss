@@ -1,0 +1,29 @@
+.faq {
+  &__container {
+    display: inline-flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+  }
+
+  &__title {
+    width: 249px;
+    color: #17181a;
+    text-align: center;
+    font-family: 'DM Serif Display';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 10px;
+    display: flex;
+  }
+  &__listContainer {
+    gap: 16px;
+  }
+}

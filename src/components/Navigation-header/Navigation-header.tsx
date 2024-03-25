@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
 import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from '../../translations';
+import translations from './translations';
 
 export const NavigationHeader = () => {
   const { language } = useLanguageStore();
@@ -25,22 +25,29 @@ export const NavigationHeader = () => {
             <Link to="/">{t.aboutRun}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/#about-foundation">{t.aboutFoundation}</Link>
-          </li>
-          <li className={scss.navigation__link}>
-            <Link to="/#run">{t.runAnywhere}</Link>
-          </li>
-          <li className={scss.navigation__link}>
             <Link to="/#gallery">{t.gallery}</Link>
+          </li>
+          <li className={scss.navigation__link}>
+            <Link to="/#timetable">{t.timeTable}</Link>
+          </li>
+          <li className={scss.navigation__link}>
+            <Link to="/#attractions">{t.attractions}</Link>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/our-ambassadors">{t.ambassadors}</Link>
           </li>
           <li className={scss.navigation__link}>
-            <Link to="/our-sponsors">{t.partners}</Link>
+            <Link to="/#our-sponsors">{t.partners}</Link>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/#faq">{t.faq}</Link>
+          </li>
+          <li
+            className={`${scss.navigation__link} ${scss.navigation__website}`}
+          >
+            <Link to="https://fundacja.hematologiczna.org/" target="_blanc">
+              {t.aboutFoundation}
+            </Link>
           </li>
         </ul>
       </div>
