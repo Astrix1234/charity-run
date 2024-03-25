@@ -5,7 +5,7 @@ export default function OurAmbassadorsPage() {
   return (
     <div>
       <Helmet>
-        <title>Our Ambassadors</title>
+        <title>Ambasadorzy</title>
       </Helmet>
       <OurAmbassadors />
     </div>
