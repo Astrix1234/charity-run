@@ -1,0 +1,19 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0 180px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 67px;
+  font-family: 'DM Serif Display';
+  margin: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.lists {
+  margin-bottom: 46px;
+}
