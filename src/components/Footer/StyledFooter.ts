@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
 
   .container {
     margin-inline: auto;
-    width: clamp(800px, 100vw, 1440px);
+    max-width: 1440px;
     display: grid;
     gap: 3rem;
     padding: 15em 80px 2em 80px;
