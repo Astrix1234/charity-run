@@ -10,13 +10,19 @@ export const FooterLinks = () => {
     <StyledLinks>
       <h3>{t.links}</h3>
       <p>
-        <Link to="#">{t.link1}</Link>
+        <Link to="/participant-area">{t.link1}</Link>
       </p>
       <p>
-        <Link to="/participant-area">{t.link2}</Link>
+        <Link to="/support-volunteers">{t.link2}</Link>
       </p>
       <p>
-        <Link to="/support-volunteers">{t.link3}</Link>
+        <Link
+          className="gala"
+          to="https://gala.fundacja.hematologiczna.org/gala/"
+          target="_blanc"
+        >
+          {t.link3}
+        </Link>
       </p>
     </StyledLinks>
   );
