@@ -3,12 +3,13 @@
   padding-top: 80px;
   padding-bottom: 80px;
   width: 100%;
+  margin-bottom: 140px;
 }
 
 .background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 90%;
   z-index: -100;
 }
 
@@ -23,7 +24,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 80px;
   &__text {
     font-size: 39px;
     font-weight: 500;
@@ -35,7 +36,7 @@
   max-width: 100%;
   &__container {
     margin: auto;
-    padding: 25px 0;
+    padding-bottom: 40px;
     max-width: 566px;
   }
 }
