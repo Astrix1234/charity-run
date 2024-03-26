@@ -31,7 +31,7 @@
     flex-shrink: 0;
     display: flex;
     justify-content: space-around;
-    min-width: 100%;
+    min-width: 50%;
   }
 
   &__item {
@@ -48,7 +48,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - 1rem));
+    transform: translateX(-100%);
   }
 }
 

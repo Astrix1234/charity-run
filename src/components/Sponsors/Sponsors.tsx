@@ -28,30 +28,33 @@ const Sponsors = () => {
   ];
 
   return (
-    <section id="our-sponsors" className={scss.sponsors}>
-      <div aria-hidden="true" className={scss.sponsors__background}>
-        <Wave />
-      </div>
-      <div className={scss.sponsors__container}>
-        <h2 className={scss.sponsors__title}>{t.sponsorsTitle}</h2>
-        <div className={scss.sponsors__iconBlood}>
-          <IconBloodCell />
+    <>
+      <section className={scss.padding} id="our-sponsors"></section>
+      <section className={scss.sponsors}>
+        <div aria-hidden="true" className={scss.sponsors__background}>
+          <Wave />
         </div>
-      </div>
-      <div className={scss.sponsors__wrapper}>
-        <div className={scss.sponsors__box}>
-          <Slider array={sponsorsList} reverse={false} />
+        <div className={scss.sponsors__container}>
+          <h2 className={scss.sponsors__title}>{t.sponsorsTitle}</h2>
+          <div className={scss.sponsors__iconBlood}>
+            <IconBloodCell />
+          </div>
         </div>
-        <div className={scss.sponsors__box}>
-          <Slider array={sponsorsList} reverse={true} />
+        <div className={scss.sponsors__wrapper}>
+          <div className={scss.sponsors__box}>
+            <Slider array={sponsorsList} reverse={false} />
+          </div>
+          <div className={scss.sponsors__box}>
+            <Slider array={sponsorsList} reverse={true} />
+          </div>
         </div>
-      </div>
-      <div className={scss.sponsors__link__container}>
-        <Link className={scss.sponsors__link} to="/our-sponsors">
-          {t.seeSponsors}
-        </Link>
-      </div>
-    </section>
+        <div className={scss.sponsors__link__container}>
+          <Link className={scss.sponsors__link} to="/our-sponsors">
+            {t.seeSponsors}
+          </Link>
+        </div>
+      </section>
+    </>
   );
 };
 
