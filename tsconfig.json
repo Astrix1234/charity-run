@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "public/images/attractions"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
