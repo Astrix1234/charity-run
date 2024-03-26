@@ -13,4 +13,14 @@ export const StyledFooter = styled.footer`
     gap: 3rem;
     padding: 15em 80px 2em 80px;
   }
+
+  a,
+  Link {
+    transition: text-shadow 400ms;
+  }
+
+  a:hover,
+  Link:hover {
+    text-shadow: 1px 0;
+  }
 `;
