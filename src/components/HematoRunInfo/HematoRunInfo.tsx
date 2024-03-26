@@ -13,7 +13,7 @@ export const HematoRunInfo = () => {
   };
 
   return (
-    <section className={scss.runInfo}>
+    <section id="run-description" className={scss.runInfo}>
       <div className={scss.runInfo__container}>
         <div className={scss.runInfo__titleContainer}>
           <p className={scss.runInfo__comment}>//{t.charityRun}</p>
