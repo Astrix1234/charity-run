@@ -3,11 +3,11 @@ import OurSponsors from '../../components/OurSponsors/OurSponsors';
 
 export default function OurSponsorsPage() {
   return (
-    <div>
+    <>
       <Helmet>
-        <title>Sponsorzy i Partnerzy</title>
+        <title>Our Sponsors</title>
       </Helmet>
       <OurSponsors />
-    </div>
+    </>
   );
 }

@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>Haemato-run</title>
+        <title>Hemato Run</title>
       </Helmet>
       <HematoRunMainTitle />
       <HematoRunInfo />
