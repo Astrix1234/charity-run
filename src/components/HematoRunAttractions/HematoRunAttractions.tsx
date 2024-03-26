@@ -1,6 +1,6 @@
 import React from 'react';
 import scss from './HematoRunAttractions.module.scss';
-import IdNumber from '../IdNumber/IdNumber';
+import NumberCircle from '../NumberCircle/NumberCircle';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
@@ -48,7 +48,7 @@ const Attractions: React.FC = () => {
               alt={`${t.attractionNames[index]}`}
               className={scss.attraction__image}
             />
-            <IdNumber number={attraction.id} />
+            <NumberCircle number={attraction.id} />
             <div className={scss.attraction__name}>
               {t.attractionNames[index]}
             </div>
