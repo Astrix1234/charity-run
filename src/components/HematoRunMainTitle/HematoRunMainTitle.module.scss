@@ -1,5 +1,4 @@
 .hematoTitles {
-    width: 100vw;
     background-image: url('/images/background.png');
     background-size: 200% 200%;
     background-repeat: no-repeat;
@@ -47,14 +46,12 @@
     &__kmContainer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 39px;
-        width: 100%;
-        max-width: 336px;
+        gap: 10px;
     }
 
     &__km {
-        font-size: 50px;
+        font-size: var(--largeFontSize);
         font-weight: 500;
         line-height: 75px;
         color: var(--marine);
@@ -107,7 +104,7 @@
         color: var(--orange);
         font-weight: 700;
         font-size: var(--mediumFontSize);
-        line-height: 32px;
+        line-height: 24px;
         transition: all 0.3s ease-in-out;
 
         &:hover,
