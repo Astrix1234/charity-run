@@ -1,1 +1,0 @@
-import{j as t,H as e}from"./index-D4NpgaUr.js";function r(){return t.jsxs("div",{children:[t.jsx(e,{children:t.jsx("title",{children:"Contact"})}),t.jsx("h1",{children:"Contact"})]})}export{r as default};
