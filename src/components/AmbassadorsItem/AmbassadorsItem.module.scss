@@ -11,7 +11,7 @@
 }
 
 .text {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--black);
   margin-bottom: 14px;
@@ -22,12 +22,9 @@
   margin-bottom: 6px;
 }
 
-.role {
-}
-
 .photo {
   width: 100%;
-  max-width: 364px;
+  max-width: 330px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
@@ -41,18 +38,8 @@
 
 .pos {
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 140px;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--light);
-  font-size: 96px;
-  font-family: 'DM Serif Display';
-  border-radius: 50%;
-  background-color: var(--orange);
+  top: 7%;
+  left: 7%;
 }
 
 .dots {
