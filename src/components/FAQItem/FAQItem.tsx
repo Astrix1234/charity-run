@@ -3,6 +3,7 @@ import scss from './FAQItem.module.scss';
 import React, { useState } from 'react';
 // import { useLanguageStore } from '../../Zustand/useLanguageStore';
 // import translations from '../../translations';
+import { IconMinus } from '../../Icons/IconMinus/IconMinus';
 
 export interface FAQItem {
   question: string;
@@ -30,7 +31,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
           onClick={handleIconClick}
           type="button"
         >
-          <IconPlus />
+          {isOpen ? <IconMinus /> : <IconPlus />}
         </button>
       </div>
       {isOpen && (
