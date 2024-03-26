@@ -4,16 +4,16 @@
     padding: 80px;
     background-image: url('/images/attractions/background-attractions.png');
     background-repeat: no-repeat;
-    background-position: right 0px top 70px;
+    background-position: right 0px top 140px;
     background-size: auto;
   }
 
   &__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 32px;
     justify-content: center;
-    padding-bottom: 326px;
+    padding-bottom: 140px;
   }
 
   &__title {
