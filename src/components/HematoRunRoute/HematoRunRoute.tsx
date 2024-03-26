@@ -12,7 +12,7 @@ export const HematoRunRoute = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <section className={scss.section}>
+    <section id="runroute" className={scss.section}>
       <div aria-hidden="true" className={scss.background}>
         <WaveCreme />
       </div>
