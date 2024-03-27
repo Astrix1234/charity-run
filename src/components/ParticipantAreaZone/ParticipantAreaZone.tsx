@@ -9,7 +9,11 @@ export const ParticipantAreaZone = () => {
   const t = translations[language];
   return (
     <StyledZone>
-      <RunnerMan />
+      <div className="photo">
+        <RunnerMan />
+        <p>{t.addPhoto}</p>
+      </div>
+
       <ParticipantAreaProfile />
     </StyledZone>
   );
