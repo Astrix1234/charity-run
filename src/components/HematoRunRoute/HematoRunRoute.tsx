@@ -1,9 +1,6 @@
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-
 import translations from './translations';
-
 import scss from './HematoRunRoute.module.scss';
-
 import { IconArrow } from '../../Icons/IconArrow/IconArrow';
 import { IconBgDeco } from '../../Icons/IconBgDeco/IconBgDeco';
 import { WaveCreme } from '../../Icons/WaveCremeBackground/WaveCreme';

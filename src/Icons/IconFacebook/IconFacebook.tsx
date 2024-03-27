@@ -7,6 +7,7 @@ export const IconFacebook = () => {
       <Link
         className={scss.link}
         to="https://www.facebook.com/Fundacja.Hematologiczna"
+        target="_blank"
       >
         <svg
           width="34"
