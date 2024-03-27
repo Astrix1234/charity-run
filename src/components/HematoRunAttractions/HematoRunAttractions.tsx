@@ -4,6 +4,7 @@ import NumberCircle from '../NumberCircle/NumberCircle';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { IconBgAttractions } from '../../Icons/IconBgAttractions/IconBgAttractions';
 
 const attractions = [
   {
@@ -33,27 +34,32 @@ const Attractions: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section className={scss.attractions__section}>
-      <div className={scss.attractions__title}>
-        <h1>{t.attractionsTitle}</h1>
-        <div>
-          <IconBloodCell />
+    <section id="attractions" className={scss.attractions}>
+      <div className={scss.attractions__container}>
+        <div className={scss.attractions__title}>
+          <h1>{t.attractionsTitle}</h1>
+          <div>
+            <IconBloodCell />
+          </div>
+        </div>
+        <div className={scss.attractions__containerItems}>
+          {attractions.map((attraction, index) => (
+            <div className={scss.attraction__block} key={attraction.id}>
+              <img
+                src={attraction.url}
+                alt={`${t.attractionNames[index]}`}
+                className={scss.attraction__image}
+              />
+              <NumberCircle number={attraction.id} />
+              <div className={scss.attraction__name}>
+                {t.attractionNames[index]}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className={scss.attractions__container}>
-        {attractions.map((attraction, index) => (
-          <div className={scss.attraction__block} key={attraction.id}>
-            <img
-              src={attraction.url}
-              alt={`${t.attractionNames[index]}`}
-              className={scss.attraction__image}
-            />
-            <NumberCircle number={attraction.id} />
-            <div className={scss.attraction__name}>
-              {t.attractionNames[index]}
-            </div>
-          </div>
-        ))}
+      <div className={scss.attractions__backgroundIcon}>
+        <IconBgAttractions />
       </div>
     </section>
   );

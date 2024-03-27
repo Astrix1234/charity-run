@@ -48,7 +48,8 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; /* 36px */
+    line-height: 150%;
+    /* 36px */
   }
 
   &__text {
@@ -104,6 +105,7 @@
   &__socials {
     display: flex;
     gap: 40px;
+    align-items: center;
   }
 
   &__support {

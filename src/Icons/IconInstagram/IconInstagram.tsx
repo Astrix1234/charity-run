@@ -4,7 +4,7 @@ import scss from './IconInstagram.module.scss';
 export const IconInstagram = () => {
   return (
     <>
-      <Link className={scss.link} to="">
+      <Link className={scss.link} to="" target="_blank">
         <svg
           width="33"
           height="34"

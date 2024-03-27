@@ -6,14 +6,10 @@ import { HematoRunRoute } from '../../components/HematoRunRoute/HematoRunRoute';
 import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
 import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
 import HematoFAQ from '../../components/HematoFAQ/HematoFAQ';
-
 import Attractions from '../../components/HematoRunAttractions/HematoRunAttractions';
-
-
 import GalleryCarousel from '../../components/GalleryCarousel/GalleryCarousel';
 import Sponsors from '../../components/Sponsors/Sponsors';
 import { Timetable } from '../../components/Timetable/Timetable';
-
 
 export default function HomePage() {
   const { hash } = useLocation();
@@ -39,11 +35,8 @@ export default function HomePage() {
       <Timetable />
       <HematoRunRoute />
       <HematoRunWhyIsItWorth />
-
       <Attractions />
-
       <Sponsors />
-
       <HematoFAQ />
     </div>
   );

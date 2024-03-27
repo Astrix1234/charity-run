@@ -4,7 +4,7 @@ import scss from './IconYouTube.module.scss';
 export const IconYouTube = () => {
   return (
     <>
-      <Link className={scss.link} to="">
+      <Link className={scss.link} to="" target="_blank">
         <svg
           width="40"
           height="30"
