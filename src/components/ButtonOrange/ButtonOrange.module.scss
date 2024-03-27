@@ -48,4 +48,8 @@
     z-index: 100;
     pointer-events: none;
   }
+
+  &__disabled {
+    cursor: not-allowed;
+  }
 }

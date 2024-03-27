@@ -8,9 +8,9 @@ function DonationContainer() {
   const t = translations[language];
   return (
     <div className={scss.container}>
-      <p className={scss.info}></p>
+      <p className={scss.info}>{t.info}</p>
       <DonationBox />
-      <p className={scss.thanks}></p>
+      <p className={scss.thanks}>{t.thanks}</p>
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  width: 161px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 3px solid var(--orange);
+  background-color: var(--light);
+  color: var(--TEAL, #1ca2a7);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--orange);
+    color: var(--light);
+    outline: none;
+  }
+}
+
+.active {
+  background-color: var(--orange);
+  color: var(--light);
+  transform: translateY(-6px);
+}
