@@ -2,13 +2,13 @@ const translations = {
   PL: {
     run: 'BIEG',
     walk: 'SPACER',
-    slippers: 'KAPCIE',
+    slippers: 'BIEG W KAPCIACH',
     mumsWithChildren: 'MAMY Z DZIEĆMI',
   },
   EN: {
     run: 'RUN',
     walk: 'WALK',
-    slippers: 'SLIPPERS',
+    slippers: 'SLIPPER RUN',
     mumsWithChildren: 'MUMS WITH CHILDREN',
   },
 };

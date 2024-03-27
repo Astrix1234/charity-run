@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { IconRoad } from '../../Icons/IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
-import { HematoRunInfo } from '../HematoRunInfo/HematoRunInfo';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
@@ -16,7 +15,7 @@ export const HematoRunMainTitle = () => {
     console.log('Button clicked');
   };
   return (
-    <section className={scss.hematoTitles}>
+    <section id="home" className={scss.hematoTitles}>
       <div className={scss.hematoTitles__container}>
         <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
         <div className={scss.hematoTitles__titleContainer}>
@@ -45,11 +44,13 @@ export const HematoRunMainTitle = () => {
         <div className={scss.hematoTitles__illustrationContainer}>
           <div className={scss.hematoTitles__illustration}></div>
           <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
-          <Link className={scss.hematoTitles__findOutMore} to="">
+          <Link
+            className={scss.hematoTitles__findOutMore}
+            to="/#run-description"
+          >
             {t.findOutMore}
           </Link>
         </div>
-        <HematoRunInfo />
       </div>
     </section>
   );

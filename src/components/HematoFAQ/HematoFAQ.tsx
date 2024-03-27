@@ -1,5 +1,5 @@
 import scss from './HematoFAQ.module.scss';
-import FAQItemComponent from './FAQItemComponent';
+import FAQItemComponent from '../FAQItem/FAQItem';
 import faqData from './FAQData';
 // import { useLanguageStore } from '../../Zustand/useLanguageStore';
 // import translations from '../../translations';
@@ -7,7 +7,7 @@ import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 
 const HematoFAQ: React.FC = () => {
   return (
-    <section className={scss.faq}>
+    <section id="faq" className={scss.faq}>
       <div className={scss.faq__container}>
         <div>
           <h1 className={scss.faq__title}>

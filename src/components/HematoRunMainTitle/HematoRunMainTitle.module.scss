@@ -1,4 +1,10 @@
 .hematoTitles {
+    background-image: url('/images/background.png');
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-top: 63px;
+
     &__container {
         position: relative;
         max-width: 1440px;
@@ -8,9 +14,8 @@
     }
 
     &__giveOthers {
-        font-size: 39px;
+        font-size: var(--largeFontSize);
         font-weight: 500;
-        margin-top: 63px;
         line-height: 46px;
     }
 
@@ -41,14 +46,12 @@
     &__kmContainer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 39px;
-        width: 100%;
-        max-width: 336px;
+        gap: 10px;
     }
 
     &__km {
-        font-size: 50px;
+        font-size: var(--largeFontSize);
         font-weight: 500;
         line-height: 75px;
         color: var(--marine);
@@ -59,7 +62,7 @@
         gap: 8px;
         align-items: center;
         margin: 16px 0 157px 0;
-        font-size: 21px;
+        font-size: var(--mediumFontSize);
         line-height: 29px;
     }
 
@@ -91,7 +94,7 @@
     }
 
     &__runWithUs {
-        font-size: 39px;
+        font-size: var(--largeFontSize);
         font-weight: 500;
         color: var(--orange);
         line-height: 59px;
@@ -100,8 +103,8 @@
     &__findOutMore {
         color: var(--orange);
         font-weight: 700;
-        font-size: 21px;
-        line-height: 32px;
+        font-size: var(--mediumFontSize);
+        line-height: 24px;
         transition: all 0.3s ease-in-out;
 
         &:hover,

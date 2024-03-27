@@ -1,0 +1,42 @@
+.section {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-bottom: 140px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  z-index: -100;
+}
+
+.backgroundIcon {
+  position: absolute;
+  top: 540px;
+}
+
+.header {
+  top: 150px;
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+  &__text {
+    font-size: 39px;
+    font-weight: 500;
+    margin-right: 20px;
+  }
+}
+
+.map {
+  max-width: 100%;
+  &__container {
+    margin: auto;
+    padding-bottom: 40px;
+    max-width: 566px;
+  }
+}

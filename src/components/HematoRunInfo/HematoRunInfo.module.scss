@@ -1,0 +1,84 @@
+.runInfo {
+    padding: 140px 0 0 0;
+
+    &__container {
+        position: relative;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    &__titleContainer {
+        position: relative;
+    }
+
+    &__comment {
+        font-size: var(--mediumFontSize);
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 64px;
+        margin-bottom: 53px;
+    }
+
+    &__underlines {
+        width: 382px;
+        height: 17px;
+        background-image: url('/images/underlines.png');
+        background-size: cover;
+        position: absolute;
+        top: 115px
+    }
+
+    &__text {
+        position: relative;
+        width: 100%;
+        max-width: 923px;
+        font-size: var(--mediumFontSize);
+        text-align: justify;
+        line-height: 1.5;
+        height: 485px;
+        overflow: hidden;
+    }
+
+    &__developed {
+        height: 1105px;
+    }
+
+    &__paragraph {
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--orange);
+        font-weight: 700;
+        font-size: var(--mediumFontSize);
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__runningHelp {
+        position: absolute;
+        width: 270px;
+        height: 538px;
+        background-image: url('/images/running-help.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 80px;
+        top: 50px;
+    }
+}

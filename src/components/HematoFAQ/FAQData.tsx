@@ -1,4 +1,4 @@
-import { FAQItem } from './FAQItemComponent';
+import { FAQItem } from '../FAQItem/FAQItem';
 
 const faqData: FAQItem[] = [
   {

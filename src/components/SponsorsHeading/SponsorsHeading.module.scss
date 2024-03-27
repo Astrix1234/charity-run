@@ -1,0 +1,24 @@
+.container {
+  margin-bottom: 460px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 48px;
+
+  &__sub {
+    margin-bottom: 16px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__main {
+    font-size: 90px;
+    font-weight: 800;
+    color: var(--orange);
+    text-transform: uppercase;
+  }
+}

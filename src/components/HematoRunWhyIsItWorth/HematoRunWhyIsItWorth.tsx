@@ -1,23 +1,33 @@
 import scss from './HematoRunWhyIsItWorth.module.scss';
-// import { Button } from '../Button/Button';
-// import { useLanguageStore } from '../../Zustand/useLanguageStore';
-// import translations from '../../translations';
-// import { Link } from 'react-router-dom';
+import { Button } from '../Button/Button';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from './translations';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
+import { IconNumberOne } from '../../Icons/IconNumbers/IconNumberOne/IconNumberOne';
+import { IconNumberTwo } from '../../Icons/IconNumbers/IconNumberTwo/IconNumberTwo';
+import { IconNumberThree } from '../../Icons/IconNumbers/IconNumberThree/IconNumberThree';
+import { IconNumberFour } from '../../Icons/IconNumbers/IconNumberFour/IconNumberFour';
+import { IconNumberFive } from '../../Icons/IconNumbers/IconNumberFive/IconNumberFive';
+import { IconWavyArrowDown } from '../../Icons/IconWavyArrowDown/IconWavyArrowDown';
 
 export const HematoRunWhyIsItWorth = () => {
-  // const handleClick = () => {
-  //   console.log('Button clicked');
-  // };
+  const { language } = useLanguageStore();
+  const t = translations[language];
+
+  const handleClick = () => {
+    console.log('Button clicked');
+  };
 
   return (
     <section className={scss.whyIsItWorth}>
       <div className={scss.whyIsItWorth__container}>
+        <div className={scss.whyIsItWorth__IconBg}>
+          {' '}
+          <IconWavyArrowDown />
+        </div>
         <div className={scss.whyIsItWorth__titleContainer}>
-          <h2 className={scss.whyIsItWorth__title}>
-            Dlaczego warto wziąć udział?
-          </h2>
-          <div>
+          <h2 className={scss.whyIsItWorth__title}>{t.title}</h2>
+          <div className={scss.whyIsItWorth__iconBlood}>
             <IconBloodCell />
           </div>
         </div>
@@ -26,45 +36,50 @@ export const HematoRunWhyIsItWorth = () => {
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-fundraising']}`}
             >
-              <p>
-                Twój udział przyczyni się do zebrania funduszy na badania,
-                leczenie i wsparcie dla osób z białaczkami.
-              </p>
+              <p>{t.fundraising}</p>
+              <div>
+                <IconNumberOne />
+              </div>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-awareness']}`}
             >
-              <p>
-                Pomożesz nam zwiększyć świadomość społeczną na temat białaczek
-                oraz innych chorób krwi.
-              </p>
+              <div>
+                <IconNumberTwo />
+              </div>
+              <p>{t.awareness}</p>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-opportunity']}`}
             >
-              <p>
-                Udział w biegu to doskonała okazja do aktywności fizycznej i
-                zadbania o swoje zdrowie.
-              </p>
+              <p>{t.opportunity}</p>
+              <div>
+                {' '}
+                <IconNumberThree />
+              </div>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-joy']}`}
             >
-              <p>
-                Poczujesz radość z pomagania innym, co przyniesie Ci ogromną
-                satysfakcję
-              </p>
+              <div>
+                {' '}
+                <IconNumberFour />
+              </div>{' '}
+              <p>{t.joy}</p>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-family']}`}
             >
-              <p>
-                Spędzisz miło i aktywnie czas z rodziną i ludźmi o podobnych
-                wartościach i dobrym sercu.{' '}
-              </p>
+              <p>{t.family}</p>
+              <div>
+                <IconNumberFive />
+              </div>
             </li>
           </ul>
         </div>
+        <div className={scss.whyIsItWorth__button}>
+          <Button onClick={handleClick} content={t.button} />
+        </div>{' '}
       </div>
     </section>
   );

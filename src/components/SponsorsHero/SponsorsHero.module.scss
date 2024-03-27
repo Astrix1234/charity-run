@@ -1,0 +1,14 @@
+.section {
+  position: relative;
+  padding: 128px 80px 70px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  & > svg {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-52%);
+    z-index: -1;
+  }
+}

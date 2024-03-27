@@ -1,0 +1,130 @@
+.timetable {
+    padding: 150px 0 0 0;
+    height: 2780px;
+
+    &__container {
+        position: relative;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    &__titleContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__titleIcon {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        height: 92px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 67px;
+    }
+
+    &__time {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__line {
+        position: absolute;
+        max-width: 1280px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        left: 80px;
+        top: 120px;
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-transform: uppercase;
+        position: absolute;
+    }
+
+    &__element0 {
+        top: 230px;
+        left: 80px;
+    }
+
+    &__element1 {
+        top: 380px;
+        right: 80px;
+    }
+
+    &__element2 {
+        top: 900px;
+        left: 400px;
+    }
+
+    &__element3 {
+        top: 1450px;
+        right: 160px;
+    }
+
+    &__element4 {
+        top: 1625px;
+        left: 80px;
+    }
+
+    &__element5 {
+        top: 2095px;
+        right: 80px;
+    }
+
+    &__comment,
+    &__time {
+        font-size: var(--mediumFontSize);
+        font-weight: 400;
+    }
+
+    &__place,
+    &__address,
+    &__hours {
+        font-size: var(--largeFontSize);
+        font-weight: 500;
+    }
+
+    &__icon0 {
+        position: absolute;
+        top: 140px;
+        left: 430px;
+    }
+
+    &__icon1 {
+        position: absolute;
+        top: 700px;
+        left: 630px;
+    }
+
+    &__icon2 {
+        position: absolute;
+        top: 1100px;
+        left: 940px;
+        transform: rotate(30deg);
+    }
+
+    &__icon3 {
+        position: absolute;
+        top: 1600px;
+        left: 600px;
+        transform: rotate(60deg);
+    }
+
+    &__icon4 {
+        position: absolute;
+        top: 2130px;
+        left: 810px;
+        transform: rotate(15deg);
+    }
+}

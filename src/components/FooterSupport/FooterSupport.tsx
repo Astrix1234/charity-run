@@ -1,19 +1,23 @@
 import { StyledSupport } from './StyledFooterSuipport';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from './translations';
 
 export const FooterSupport = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
   return (
     <StyledSupport>
-      <h3>Wesprzyj</h3>
-      <p className="bank">Konto bankowe</p>
+      <h3>{t.support}</h3>
+      <p className="bank">{t.bankAccount}</p>
       <div className="account">
-        <p>PKO BP:</p>
-        <p>31 1020 3352 0000 1202 0241 5990</p>
+        <p>{t.bank}</p>
+        <p>{t.accountNo}</p>
       </div>
       <div className="footnote">
-        <p>Dopisek: "Darowizna na cele statutowe"</p>
-        <p>KRS: 0000069531</p>
+        <p>{t.footnote}</p>
+        <p>{t.krs}</p>
       </div>
-      <p>NIP: 729-23-25-734</p>
+      <p>{t.nip}</p>
     </StyledSupport>
   );
 };

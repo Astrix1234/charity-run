@@ -1,0 +1,16 @@
+.togetherToTheGoal {
+  &__together {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-size: 90px;
+    font-weight: 800;
+    color: var(--orange);
+  }
+
+  &__foundation {
+    font-size: 21px;
+  }
+}

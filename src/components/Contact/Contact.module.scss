@@ -1,0 +1,113 @@
+.contact {
+  background-image: url('/images/contact-background.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: left;
+  padding-top: 80px;
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &__qr {
+      gap: 12px;
+    }
+
+    &__inline {
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    color: var(--dark);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+  }
+
+  &__text {
+    color: var(--dark);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__link {
+    color: var(--orange);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    display: flex;
+    width: 24px;
+    align-items: center;
+  }
+
+  &__email {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    &__link {
+      color: var(--dark);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__support {
+    margin-top: 140px;
+    margin-bottom: 70px;
+  }
+}

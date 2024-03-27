@@ -1,0 +1,43 @@
+.waves {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.parallax {
+  & > use {
+    animation: move-forever 5s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    animation-direction: alternate;
+  }
+
+  & > use:nth-child(1),
+  & > use:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  & > use:nth-child(3),
+  & > use:nth-child(4) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  & > use:nth-child(5),
+  & > use:nth-child(6) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  & > use:nth-child(7),
+  & > use:nth-child(8) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(150px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-150px, 0, 0);
+  }
+}
