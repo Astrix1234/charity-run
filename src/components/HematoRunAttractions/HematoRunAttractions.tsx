@@ -37,7 +37,7 @@ const Attractions: React.FC = () => {
     <section id="attractions" className={scss.attractions}>
       <div className={scss.attractions__container}>
         <div className={scss.attractions__title}>
-          <h1>{t.attractionsTitle}</h1>
+          <h1 className={scss.attractions__header}>{t.attractionsTitle}</h1>
           <div>
             <IconBloodCell />
           </div>
