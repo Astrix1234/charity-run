@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
 
 export default function ParticipantAreaPage() {
   return (
@@ -6,7 +7,7 @@ export default function ParticipantAreaPage() {
       <Helmet>
         <title>Participant Area</title>
       </Helmet>
-      <h1>Participant Area</h1>
+      <ParticipantArea />
     </div>
   );
 }
