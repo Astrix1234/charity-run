@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    contact: 'Kontakt',
+    hematorun: 'HEMATOBIEG',
   },
   EN: {
-    contact: 'Contact',
+    hematorun: 'HEMATORUN',
   },
 };
 

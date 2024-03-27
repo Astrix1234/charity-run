@@ -8,7 +8,7 @@ export const ParticipantAreaHeading = () => {
   const t = translations[language];
   return (
     <StyledHeading>
-      <h1>HEMATOBIEG</h1>
+      <h1>{t.hematorun}</h1>
       <TrippleArrowDown />
     </StyledHeading>
   );
