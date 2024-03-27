@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet-async';
+import SupportDonation from '../../components/SupportDonation/SupportDonation';
 
 export default function SupportDonationPage() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Please Support</title>
       </Helmet>
-      <h1>Please Support</h1>
-    </div>
+      <SupportDonation />
+    </>
   );
 }

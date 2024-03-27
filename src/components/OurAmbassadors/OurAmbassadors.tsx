@@ -29,8 +29,10 @@ const ambassadorsList = [
 function OurAmbassadors() {
   return (
     <section className={scss.container}>
-      <AmbassadorsHeading />
-      <TrippleArrowDown />
+      <div className={scss.heading}>
+        <AmbassadorsHeading />
+        <TrippleArrowDown />
+      </div>
       <AmbassadorsList list={ambassadorsList} />
     </section>
   );
