@@ -1,6 +1,7 @@
 import { StyledHeading } from './StyledParticipantAreaHeading';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import TrippleArrowDown from '../../Icons/TrippleArrowDown/TrippleArrowDown';
 
 export const ParticipantAreaHeading = () => {
   const { language } = useLanguageStore();
@@ -8,6 +9,7 @@ export const ParticipantAreaHeading = () => {
   return (
     <StyledHeading>
       <h1>HEMATOBIEG</h1>
+      <TrippleArrowDown />
     </StyledHeading>
   );
 };
