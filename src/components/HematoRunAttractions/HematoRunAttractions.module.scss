@@ -9,7 +9,6 @@
     padding: 0 80px;
   }
 
-
   &__containerItems {
     display: flex;
     flex-wrap: wrap;
@@ -77,8 +76,7 @@
   }
 }
 
-h1 {
-  height: 87px;
+.attractions__header {
   color: #2e2530;
   text-align: center;
   font-family: 'DM Serif Display';
