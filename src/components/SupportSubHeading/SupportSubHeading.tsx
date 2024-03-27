@@ -11,10 +11,10 @@ function SupportSubHeading({ subText, mainText }: SupportSubHeadingProps) {
   const languageString = language === 'PL' ? 'pl' : 'eng';
 
   return (
-    <h2 className={scss.heading}>
+    <h3 className={scss.heading}>
       <span className={scss.sub}>{subText[languageString]}</span>
       <span className={scss.main}>{mainText[languageString]}</span>
-    </h2>
+    </h3>
   );
 }
 

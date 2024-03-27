@@ -9,10 +9,10 @@ function AmbassadorsHeading() {
 
   return (
     <div className={scss.header}>
-      <h1 className={scss.heading}>
+      <h2 className={scss.heading}>
         <span className={scss.heading__sub}>{t.sub}</span>
         <span className={scss.heading__main}>{t.main}</span>
-      </h1>
+      </h2>
       <HandwrittenLine />
     </div>
   );
