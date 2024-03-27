@@ -8,7 +8,7 @@ type SponsorsListProps = {
 function SponsorsList({ list, heading }: SponsorsListProps) {
   return (
     <div className={scss.container}>
-      <h3 className={scss.heading}>{heading}</h3>
+      <h4 className={scss.heading}>{heading}</h4>
       <ul className={scss.list}>
         {list.map((item, i) => (
           <div key={i} className={scss.sponsor}>

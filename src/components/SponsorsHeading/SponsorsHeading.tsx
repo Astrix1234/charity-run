@@ -9,10 +9,10 @@ function SponsorsHeading() {
 
   return (
     <div className={scss.container}>
-      <h1 className={scss.heading}>
+      <h2 className={scss.heading}>
         <span className={scss.heading__sub}>{t.sub}</span>
         <span className={scss.heading__main}>{t.main}</span>
-      </h1>
+      </h2>
       <BecomeSponsorButton />
     </div>
   );

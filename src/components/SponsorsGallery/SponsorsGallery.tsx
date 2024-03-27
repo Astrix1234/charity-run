@@ -22,7 +22,7 @@ function SponsorsGallery() {
   const t = translations[language];
   return (
     <section className={scss.section}>
-      <h2 className={scss.heading}>{t.heading}</h2>
+      <h3 className={scss.heading}>{t.heading}</h3>
       <div className={scss.lists}>
         <SponsorsList
           list={sponsorsList}
