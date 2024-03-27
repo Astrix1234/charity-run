@@ -1,1 +1,0 @@
-import{j as e,H as s}from"./index-pKwZfrOf.js";import{R as t}from"./Regulations-Bwr9RND9.js";function n(){return e.jsxs("div",{children:[e.jsx(s,{children:e.jsx("title",{children:"Regulations"})}),e.jsx(t,{})]})}export{n as default};
