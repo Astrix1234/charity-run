@@ -1,0 +1,20 @@
+.support {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__arrow {
+    position: absolute;
+    transform: rotate(287deg) scaleX(-1);
+
+    & > svg {
+      stroke: var(--orange);
+    }
+  }
+
+}

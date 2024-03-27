@@ -11,7 +11,6 @@ export const IconArrow = () => {
       <title>arrow</title>
       <path
         fill="none"
-        stroke="#1ca2a7"
         strokeLinejoin="round"
         strokeLinecap="round"
         strokeMiterlimit="4"

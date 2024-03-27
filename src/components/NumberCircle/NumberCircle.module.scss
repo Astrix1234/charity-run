@@ -1,0 +1,11 @@
+.number {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  font-size: 86px;
+  font-family: 'DM Serif Display';
+  border-radius: 50%;
+  background-color: var(--orange);
+}
