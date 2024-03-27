@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import scss from './Register.module.scss';
 // import { Button } from '../Button/Button';
-import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from './translations';
+// import { useLanguageStore } from '../../Zustand/useLanguageStore';
+// import translations from './translations';
 import { TogetherToTheGoal } from '../TogetherToTheGoal/TogetherToTheGoal';
 import { Regulations } from '../Regulations/Regulations';
 import { FormRegister } from '../FormRegister/FormRegister';
 
 export const Register = () => {
-  const { language } = useLanguageStore();
-  const t = translations[language];
+  // const { language } = useLanguageStore();
+  // const t = translations[language];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,13 +17,13 @@ export const Register = () => {
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
+  // const handleClick = () => {
+  //   console.log('Button clicked');
+  // };
 
   return (
     <section className={scss.register}>
