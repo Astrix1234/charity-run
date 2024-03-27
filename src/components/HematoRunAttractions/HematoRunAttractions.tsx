@@ -50,7 +50,9 @@ const Attractions: React.FC = () => {
                 alt={`${t.attractionNames[index]}`}
                 className={scss.attraction__image}
               />
-              <NumberCircle number={attraction.id} />
+              <div className={scss.attraction__idImage}>
+                <NumberCircle number={attraction.id} />
+              </div>
               <div className={scss.attraction__name}>
                 {t.attractionNames[index]}
               </div>
