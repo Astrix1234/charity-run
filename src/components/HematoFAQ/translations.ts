@@ -52,6 +52,7 @@ const translations = {
           'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
       },
     ],
+    support: 'Wesprzyj',
   },
   EN: {
     faqItems: [
@@ -106,6 +107,7 @@ const translations = {
           'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
       },
     ],
+    support: 'Support',
   },
 };
 
