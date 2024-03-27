@@ -8,11 +8,13 @@ import { ParticipantAreaPrepare } from '../ParticipantAreaPrepare/ParticipantAre
 export const ParticipantArea = () => {
   return (
     <StyledParticipant>
-      <ParticipantAreaHeading />
-      <ParticipantAreaZone />
-      <ParticipantAreaRun />
-      <Timetable />
-      <ParticipantAreaPrepare />
+      <div className="container">
+        <ParticipantAreaHeading />
+        <ParticipantAreaZone />
+        <ParticipantAreaRun />
+        <Timetable />
+        <ParticipantAreaPrepare />
+      </div>
     </StyledParticipant>
   );
 };
