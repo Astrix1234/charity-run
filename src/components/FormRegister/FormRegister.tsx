@@ -26,7 +26,7 @@ export const FormRegister = () => {
   return (
     <div className={scss.formRegister__container}>
       <form className={scss.formRegister__form}>
-        <p>{t.register}</p>
+        <p className={scss.formRegister__sectionTitle}>{t.register}</p>
         <label htmlFor="name" className={scss.formRegister__label}>
           {t.name}
           <input
@@ -115,7 +115,7 @@ export const FormRegister = () => {
             // value={formik.values.tshirt}
             // onBlur={formik.handleBlur}
           >
-            <option value="" disabled hidden></option>
+            {/* <option value="" hidden disabled defaultValue></option> */}
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
@@ -169,7 +169,20 @@ export const FormRegister = () => {
           <span className={scss.formRegister__link}>Zaloguj się</span>
         </p>
       </form>
-      <div className={scss.formRegister__regulations}> </div>
+      <div className={scss.formRegister__regulations}>
+        <p className={scss.formRegister__sectionTitle}>{t.statement}</p>
+        <h3 className={scss.formRegister__regulationsTitle}>
+          {t.statementTitle}
+        </h3>
+        <p>{t.statementIDo}</p>
+        <ol className={scss.formRegister__statementList}>
+          {' '}
+          <li>1. {t.statementItem1}</li>
+          <li>2. {t.statementItem2}</li>
+          <li>3. {t.statementItem3}</li>
+          <li>4. {t.statementItem4}</li>
+        </ol>
+      </div>
     </div>
   );
 };
