@@ -1,1 +1,0 @@
-import{j as t}from"./index-C8o8n1tA.js";const m="_number_qrg4o_1",u={number:m};function i({number:r=0,sizePx:e=124,fontSizePx:n=86,color:s=""}){const o={width:`${e}px`,fontSie:`${n}px`,backgroundColor:`${s}`};return t.jsx("div",{style:o,className:u.number,children:r})}export{i as N};
