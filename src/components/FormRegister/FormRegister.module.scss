@@ -1,0 +1,95 @@
+.formRegister {
+  &__container {
+    margin-top: 40px;
+    width: 1245px;
+    height: 1012px;
+    display: flex;
+    gap: 48px;
+  }
+
+  &__form {
+    line-height: 1.5;
+    background: #ffffff4d;
+    border: 1px solid var(--marine);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 24px;
+    width: 600px;
+  }
+
+  &__sectionTitle {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__input,
+  &__select {
+    background-color: white;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 552px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--marine);
+  }
+
+  &__radioList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__radio {
+    margin-right: 10px;
+  }
+
+  &__login {
+    font-weight: 500;
+  }
+
+  &__link {
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--marine);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__regulations {
+    background: #ffffff4d;
+    border: 1px solid var(--marine);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    width: 597px;
+    height: 728px;
+    line-height: 1.5;
+  }
+
+  &__regulationsTitle {
+    margin-top: 24px;
+  }
+
+  &__statementList {
+    list-style: decimal;
+  }
+}
