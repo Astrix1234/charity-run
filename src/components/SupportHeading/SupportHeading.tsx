@@ -11,9 +11,9 @@ function SupportHeading({ headingText }: SupportHeadingProps) {
 
   return (
     <div className={scss.container}>
-      <h1 className={scss.heading}>
+      <h2 className={scss.heading}>
         {headingText[language === 'PL' ? 'pl' : 'eng']}
-      </h1>
+      </h2>
       <MiniTripleOrangeWave />
     </div>
   );

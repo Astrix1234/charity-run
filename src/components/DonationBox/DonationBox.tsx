@@ -16,7 +16,7 @@ function DonationBox() {
 
   return (
     <div className={scss.container}>
-      <h3 className={scss.heading}>{t.support}</h3>
+      <h4 className={scss.heading}>{t.support}</h4>
       <p className={scss.join}>{t.join}</p>
       <p className={scss.choose}>{t.choose}</p>
       <div className={scss.row}>
