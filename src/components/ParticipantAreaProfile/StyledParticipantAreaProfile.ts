@@ -1,3 +1,3 @@
 import styled from 'styled-components';
 
-export const StyledZone = styled.div``;
+export const StyledProfile = styled.div``;
