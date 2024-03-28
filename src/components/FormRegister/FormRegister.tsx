@@ -1,5 +1,5 @@
 import scss from './FormRegister.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
@@ -19,6 +19,20 @@ export const FormRegister = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [consent, setConsent] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event: WindowEventMap['keydown']) => {
+      if (event.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
