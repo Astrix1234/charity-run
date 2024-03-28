@@ -1,14 +1,25 @@
 import scss from './FormRegister.module.scss';
-// import React, { useState } from 'react';
+import { useState } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
+import { Regulations } from '../Regulations/Regulations';
 
 // import { useFormik } from 'formik';
 
 export const FormRegister = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleClick = () => {
     console.log('Button clicked');
@@ -22,6 +33,10 @@ export const FormRegister = () => {
   //       passwordConfirm: '',
   //     },
   //   });
+
+  if (isModalOpen) {
+    return <Regulations onClose={closeModal} />;
+  }
 
   return (
     <div className={scss.formRegister__container}>
@@ -177,10 +192,26 @@ export const FormRegister = () => {
         <p>{t.statementIDo}</p>
         <ol className={scss.formRegister__statementList}>
           {' '}
-          <li>1. {t.statementItem1}</li>
-          <li>2. {t.statementItem2}</li>
-          <li>3. {t.statementItem3}</li>
-          <li>4. {t.statementItem4}</li>
+          <li className={scss.formRegister__statementItem}>
+            {t.statementItem1part1}
+            <span onClick={openModal} className={scss.formRegister__highlights}>
+              {t.span1}
+            </span>
+            {t.statementItem1part2}
+            <span onClick={openModal} className={scss.formRegister__highlights}>
+              {t.span2}
+            </span>
+            {t.statementItem1part3}
+          </li>
+          <li className={scss.formRegister__statementItem}>
+            {t.statementItem2}
+          </li>
+          <li className={scss.formRegister__statementItem}>
+            {t.statementItem3}
+          </li>
+          <li className={scss.formRegister__statementItem}>
+            {t.statementItem4}
+          </li>
         </ol>
       </div>
     </div>

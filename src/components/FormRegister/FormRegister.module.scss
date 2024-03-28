@@ -1,6 +1,6 @@
 .formRegister {
   &__container {
-    margin-top: 40px;
+    margin: 40px auto;
     width: 1245px;
     height: 1012px;
     display: flex;
@@ -72,17 +72,28 @@
   }
 
   &__regulations {
+    padding-top: 124px;
     background: #ffffff4d;
     border: 1px solid var(--marine);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 24px;
     width: 597px;
     height: 728px;
     line-height: 1.5;
+    overflow-y: auto;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #1d9ea8;
+      border-radius: 32px;
+    }
   }
 
   &__regulationsTitle {
@@ -90,6 +101,19 @@
   }
 
   &__statementList {
+    padding: 0 24px;
     list-style: decimal;
+    list-style-type: lower-roman;
+  }
+
+  &__statementItem {
+    list-style: decimal;
+  }
+
+  &__highlights {
+    font-weight: 700;
+    cursor: pointer;
+    color: #1300ec;
+    text-decoration: underline;
   }
 }
