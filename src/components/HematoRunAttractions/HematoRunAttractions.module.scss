@@ -9,16 +9,15 @@
     padding: 0 80px;
   }
 
-
   &__containerItems {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 29px;
     justify-content: center;
   }
 
   &__title {
-    padding-bottom: 100px;
+    padding-bottom: 140px;
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -34,8 +33,8 @@
 
 .attraction {
   &__block {
-    width: 500px;
-    height: 500px;
+    width: 452px;
+    height: 452px;
     position: relative;
     display: flex;
     align-items: center;
@@ -46,39 +45,36 @@
   }
 
   &__image {
-    width: 364px;
-    height: 364px;
+    width: 329px;
+    height: 329px;
     border-radius: 50%;
     position: absolute;
-    top: 116px;
-    left: 69px;
+    top: 104px;
+    left: 62px;
     order: 2;
   }
 
   &__idImage {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 138px;
-    height: 138px;
+    top: 39px;
+    left: 39px;
   }
 
   &__name {
     color: var #2e2530;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     position: absolute;
-    left: 218px;
-    top: 43px;
+    left: 197px;
+    top: 38px;
     text-align: left;
   }
 }
 
-h1 {
-  height: 87px;
+.attractions__header {
   color: #2e2530;
   text-align: center;
   font-family: 'DM Serif Display';

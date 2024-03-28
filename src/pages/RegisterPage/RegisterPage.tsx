@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { Register } from '../../components/Register/Register';
 
 export default function RegisterPage() {
   return (
@@ -6,7 +7,7 @@ export default function RegisterPage() {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <h1>Register</h1>
+      <Register />
     </div>
   );
 }

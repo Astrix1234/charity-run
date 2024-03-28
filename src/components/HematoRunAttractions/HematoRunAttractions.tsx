@@ -1,10 +1,10 @@
 import React from 'react';
 import scss from './HematoRunAttractions.module.scss';
-import NumberCircle from '../NumberCircle/NumberCircle';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { IconBgAttractions } from '../../Icons/IconBgAttractions/IconBgAttractions';
+import ItemSquare from '../ItemSquare/ItemSquare';
 
 const attractions = [
   {
@@ -37,24 +37,33 @@ const Attractions: React.FC = () => {
     <section id="attractions" className={scss.attractions}>
       <div className={scss.attractions__container}>
         <div className={scss.attractions__title}>
-          <h1>{t.attractionsTitle}</h1>
+          <h1 className={scss.attractions__header}>{t.attractionsTitle}</h1>
           <div>
             <IconBloodCell />
           </div>
         </div>
         <div className={scss.attractions__containerItems}>
           {attractions.map((attraction, index) => (
-            <div className={scss.attraction__block} key={attraction.id}>
-              <img
-                src={attraction.url}
-                alt={`${t.attractionNames[index]}`}
-                className={scss.attraction__image}
-              />
-              <NumberCircle number={attraction.id} />
-              <div className={scss.attraction__name}>
-                {t.attractionNames[index]}
-              </div>
-            </div>
+            <ItemSquare
+              pos={attraction.id}
+              heading={attraction.name}
+              contentType={{ type: 'image', src: attraction.url, alt: '' }}
+              backgroundColor="grey"
+              key={index}
+            />
+            // <div className={scss.attraction__block} key={attraction.id}>
+            //   <img
+            //     src={attraction.url}
+            //     alt={`${t.attractionNames[index]}`}
+            //     className={scss.attraction__image}
+            //   />
+            //   <div className={scss.attraction__idImage}>
+            //     <NumberCircle number={attraction.id} />
+            //   </div>
+            //   <div className={scss.attraction__name}>
+            //     {t.attractionNames[index]}
+            //   </div>
+            // </div>
           ))}
         </div>
       </div>
