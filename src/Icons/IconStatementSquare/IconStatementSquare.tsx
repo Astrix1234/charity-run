@@ -14,7 +14,7 @@ export const IconStatementSquare = () => {
         height="14"
         rx="2"
         stroke="#1CA2A7"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );

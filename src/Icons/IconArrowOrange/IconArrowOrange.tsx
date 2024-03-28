@@ -10,9 +10,9 @@ export const IconArrowOrange = () => {
       <path
         d="M116.908 149.248C47.9684 165.967 -25.8135 61.9824 13.3231 2.0403M101.928 171.405L118.421 148.795L92.9482 134.316"
         stroke="#FD7616"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
