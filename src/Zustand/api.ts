@@ -147,7 +147,7 @@ export const getCurrentUser = async () => {
 
 export const updateUserDetails = async (userDetails: UserUpdateData) => {
   try {
-    const response = await axios.put(
+    const response = await axios.patch(
       `${apiUrl}/users/`,
       userDetails,
       getConfig()
@@ -168,7 +168,7 @@ export const updateUserDetails = async (userDetails: UserUpdateData) => {
 
 export const userParticipation = async (userData: RaceParticipant) => {
   try {
-    const response = await axios.put(
+    const response = await axios.patch(
       `${apiUrl}/users/participate`,
       userData,
       getConfig()
