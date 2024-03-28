@@ -7,9 +7,6 @@ import { useLanguageStore } from './Zustand/useLanguageStore';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
-const RegulationsPage = lazy(
-  () => import('./pages/RegulationsPage/RegulationsPage')
-);
 const OurAmbassadorsPage = lazy(
   () => import('./pages/OurAmbassadorsPage/OurAmbassadorsPage')
 );
@@ -71,7 +68,6 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
-          <Route path="regulations" element={<RegulationsPage />} />
           <Route path="our-ambassadors" element={<OurAmbassadorsPage />} />
           <Route path="our-sponsors" element={<OurSponsorsPage />} />
           <Route path="participant-area" element={<ParticipantAreaPage />} />
