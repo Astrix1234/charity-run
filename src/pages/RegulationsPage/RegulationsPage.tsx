@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Regulations } from '../../components/Regulations/Regulations';
+// import { Regulations } from '../../components/Regulations/Regulations';
 
 export default function RegulationsPage() {
   return (
@@ -7,7 +7,7 @@ export default function RegulationsPage() {
       <Helmet>
         <title>Regulations</title>
       </Helmet>
-      <Regulations />
+      {/* <Regulations /> */}
     </div>
   );
 }

@@ -66,6 +66,7 @@ axios.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
 const getToken = () => {
   const token = localStorage.getItem('token');
   if (!token) {
@@ -205,7 +206,7 @@ export const userAvatar = async (avatar: File) => {
       },
     };
 
-    const response = await axios.post(
+    const response = await axios.put(
       `${apiUrl}/users/avatars`,
       formData,
       config
