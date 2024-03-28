@@ -16,8 +16,11 @@ const translations = {
     statementTitle:
       'OŚWIADCZENIE GOŚCIA/UCZESTNIKA/ZWYCIĘZCY ZE ZGODĄ NA PRZETWARZANIE DANYCH OSOBOWYCH W POSTACI WIZERUNKU',
     statementIDo: 'oświadczam, iż:',
-    statementItem1:
-      'Zapoznałem/am się z Informacją o przetwarzaniu danych osobowych oraz Klauzulą informacyjną i przyjmuję ją do wiadomości.',
+    statementItem1part1: 'Zapoznałem/am się z ',
+    span1: 'Informacją o przetwarzaniu danych osobowych',
+    statementItem1part2: ' oraz ',
+    span2: 'Klauzulą informacyjną',
+    statementItem1part3: ' i przyjmuję ją do wiadomości.',
     statementItem2:
       'Treść Informacji i Klauzuli jest dla mnie zrozumiała i jasna, a wszelkie wątpliwości zostały mi wyjaśnione przez osobę upoważnioną przez Fundację w sposób wyczerpujący.',
     statementItem3:
@@ -43,8 +46,11 @@ const translations = {
     statementTitle:
       'GUEST/PARTICIPANT/WINNER STATEMENT WITH CONSENT TO PROCESS PERSONAL DATA IN THE FORM OF IMAGE',
     statementIDo: 'I hereby declare that:',
-    statementItem1:
-      'I have read the Personal Data Processing Information and the Information Clause, and I acknowledge it.',
+    statementItem1part1: 'I have read the ',
+    span1: 'Personal Data Processing Information',
+    statementItem1part2: ' and the ',
+    span2: 'Information Clause',
+    statementItem1part3: ', and I acknowledge it.',
     statementItem2:
       'The content of the Information and Clause is clear and understandable to me, and any doubts have been fully explained to me by a person authorized by the Foundation.',
     statementItem3:

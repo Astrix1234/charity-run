@@ -5,20 +5,20 @@ import translations from './translations';
 import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { IconCloseModal } from '../../Icons/IconCloseModal/IconCloseModal';
 
-export const Regulations = () => {
+interface RegulationsProps {
+  onClose: () => void;
+}
+
+export const Regulations: React.FC<RegulationsProps> = ({ onClose }) => {
   const { language } = useLanguageStore();
   const t = translations[language];
-
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
 
   return (
     <section className={scss.regulations}>
       <div className={scss.regulations__container}>
         <div className={scss.regulations__modal}>
           <div className={scss.regulations__modalCloseIcon}>
-            <IconCloseModal />
+            <IconCloseModal onClick={onClose} />
           </div>
           <div className={scss.regulations__info}>
             <h4 className={scss.regulations__title}>
@@ -37,11 +37,7 @@ export const Regulations = () => {
             </p>
           </div>
           <div className={scss.regulations__button}>
-            <Button
-              onClick={handleClick}
-              content={t.button}
-              icon={<IconAgree />}
-            />
+            <Button onClick={onClose} content={t.button} icon={<IconAgree />} />
           </div>
         </div>
       </div>
