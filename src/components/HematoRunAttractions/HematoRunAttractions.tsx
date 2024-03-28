@@ -42,7 +42,7 @@ const Attractions: React.FC = () => {
             <IconBloodCell />
           </div>
         </div>
-        <div className={scss.attractions__containerItems}>
+        <ul className={scss.attractions__containerItems}>
           {attractions.map((attraction, index) => (
             <ItemSquare
               pos={attraction.id}
@@ -51,21 +51,8 @@ const Attractions: React.FC = () => {
               backgroundColor="grey"
               key={index}
             />
-            // <div className={scss.attraction__block} key={attraction.id}>
-            //   <img
-            //     src={attraction.url}
-            //     alt={`${t.attractionNames[index]}`}
-            //     className={scss.attraction__image}
-            //   />
-            //   <div className={scss.attraction__idImage}>
-            //     <NumberCircle number={attraction.id} />
-            //   </div>
-            //   <div className={scss.attraction__name}>
-            //     {t.attractionNames[index]}
-            //   </div>
-            // </div>
           ))}
-        </div>
+        </ul>
       </div>
       <div className={scss.attractions__backgroundIcon}>
         <IconBgAttractions />
