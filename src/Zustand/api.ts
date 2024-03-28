@@ -1,30 +1,37 @@
 import axios from 'axios';
 
-interface UserData {
+export interface UserData {
   name: string;
   surname: string;
   phone: number;
   email: string;
   password: string;
   language: string;
+  raceParticipants: RaceParticipant[] | null;
 }
 
-interface UserUpdateData {
+export interface RaceParticipant {
+  _id: string;
+  userId: string;
+  familyNr: number;
+  raceID: string;
+  _v: number;
+  km: string;
+  time: string;
+  paid: boolean;
+  participationID: string;
+  payment: null;
+  shirt: string;
+  shirtGender: string;
+  status: string;
+}
+
+export interface UserUpdateData {
   name?: string;
   surname?: string;
   phone?: number;
   language?: string;
-}
-
-interface UserParticipationData {
-  name: string;
-  surname: string;
-  phone: number;
-  email: string;
-  language: string;
-  shoe?: number;
-  shirt: string;
-  shirtGender: string;
+  password?: string;
 }
 
 const apiUrl = 'http://localhost:3000/api/';
@@ -140,7 +147,7 @@ export const getCurrentUser = async () => {
 
 export const updateUserDetails = async (userDetails: UserUpdateData) => {
   try {
-    const response = await axios.patch(
+    const response = await axios.put(
       `${apiUrl}/users/`,
       userDetails,
       getConfig()
@@ -159,9 +166,9 @@ export const updateUserDetails = async (userDetails: UserUpdateData) => {
   }
 };
 
-export const userParticipation = async (userData: UserParticipationData) => {
+export const userParticipation = async (userData: RaceParticipant) => {
   try {
-    const response = await axios.post(
+    const response = await axios.put(
       `${apiUrl}/users/participate`,
       userData,
       getConfig()
@@ -176,19 +183,6 @@ export const userParticipation = async (userData: UserParticipationData) => {
     } else {
       console.error('Error with user participation:', error);
     }
-    throw error;
-  }
-};
-
-export const getUserParticipation = async () => {
-  try {
-    const response = await axios.get(
-      `${apiUrl}/users/participation`,
-      getConfig()
-    );
-    return response.data;
-  } catch (error) {
-    console.error('Error getting user participation:', error);
     throw error;
   }
 };
