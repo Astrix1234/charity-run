@@ -1,0 +1,1 @@
+import{j as r,H as t}from"./index-hQyyEfHx.js";function i(){return r.jsxs("div",{children:[r.jsx(t,{children:r.jsx("title",{children:"Participant Area"})}),r.jsx("h1",{children:"Participant Area"})]})}export{i as default};
