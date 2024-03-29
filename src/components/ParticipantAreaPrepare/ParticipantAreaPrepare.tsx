@@ -13,29 +13,41 @@ export const ParticipantAreaPrepare = () => {
         <>
           <h1>{t.train}</h1>
           <p>{t.trainLinks}</p>
-          <Link to="#">{t.trainPlans}</Link>
-          <Link to="#">{t.trainStart}</Link>
+          <p>
+            <Link to="#">{t.trainPlans}</Link>
+          </p>
+          <p>
+            <Link to="#">{t.trainStart}</Link>
+          </p>
         </>
       </ItemSquare>
       <ItemSquare heading="" pos={2}>
         <>
           <h1>{t.diet}</h1>
           <p>{t.dietLinks}</p>
-          <Link to="#">{t.dietEat}</Link>
-          <Link to="#">{t.dietRunner}</Link>
+          <p>
+            <Link to="#">{t.dietEat}</Link>
+          </p>
+          <p>
+            <Link to="#">{t.dietRunner}</Link>
+          </p>
         </>
       </ItemSquare>
       <ItemSquare heading="" pos={3}>
         <>
           <h1>{t.hydration}</h1>
-          <Link to="#">{t.hydrationRun}</Link>
+          <p>
+            <Link to="#">{t.hydrationRun}</Link>
+          </p>
           <p>{t.hydrationAdvice}</p>
         </>
       </ItemSquare>
       <ItemSquare heading="" pos={4}>
         <>
           <h1>{t.run}</h1>
-          <Link to="#">{t.runRoute}</Link>
+          <p>
+            <Link to="#">{t.runRoute}</Link>
+          </p>
         </>
       </ItemSquare>
     </StyledPrepare>
