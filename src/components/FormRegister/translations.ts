@@ -1,6 +1,6 @@
 const translations = {
   PL: {
-    register: 'Zarejestruj się na bieg',
+    register: 'Zarejestruj się',
     name: 'Imię:',
     lastName: 'Nazwisko:',
     number: 'Numer telefonu:',
@@ -33,7 +33,7 @@ const translations = {
   },
 
   EN: {
-    register: 'Register for a run',
+    register: 'Register',
     name: 'Name:',
     lastName: 'Last name:',
     number: 'Phone number:',

@@ -2,15 +2,17 @@ import scss from './ButtonOrange.module.scss';
 
 interface ButtonOrangeProps {
   content: string;
-  onClick: () => void;
+  onClick?: () => void;
   icon?: React.ReactNode;
   disabled?: boolean;
+  type?: 'submit' | 'reset' | 'button' | undefined;
 }
 
 export const ButtonOrange: React.FC<ButtonOrangeProps> = ({
   content,
   onClick,
   icon,
+  type,
   disabled = false,
 }) => {
   return (
@@ -21,6 +23,7 @@ export const ButtonOrange: React.FC<ButtonOrangeProps> = ({
         className={`${scss.button__button} ${
           disabled ? scss.button__disabled : ''
         }`}
+        type={type}
       >
         {icon && <span className={scss.button__icon}>{icon}</span>}
         {content}
