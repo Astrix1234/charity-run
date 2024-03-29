@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import 'react-responsive-modal/styles.css';
+
 import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import './custom-styling.css';
 
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
@@ -33,7 +35,14 @@ export const HematoRunRoute = () => {
           about="run route"
           onClick={onOpenModal}
         />
-        <Modal open={open} onClose={onCloseModal} center>
+        <Modal
+          open={open}
+          onClose={onCloseModal}
+          classNames={{
+            modal: 'customModal',
+          }}
+          center
+        >
           <img
             className={scss.map__modal}
             src="images/hematoRunRoute.webp"
