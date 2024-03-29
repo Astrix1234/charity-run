@@ -3,17 +3,18 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { useLanguageStore } from './Zustand/useLanguageStore';
+
 import RegistrationForRun from './components/RegistrationForRun/RegistrationForRun';
+
+import { Loader } from './components/Loader/Loader';
+import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
+
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
-const RegisterForRunPage = lazy(
-  () => import('./pages/RegistrationForRunPage/RegistrationForRunPage')
-);
-const RegulationsPage = lazy(
-  () => import('./pages/RegulationsPage/RegulationsPage')
-);
+
+
 const OurAmbassadorsPage = lazy(
   () => import('./pages/OurAmbassadorsPage/OurAmbassadorsPage')
 );
@@ -39,6 +40,7 @@ function App() {
     language: state.language,
     setLanguage: state.setLanguage,
   }));
+  const { isLoading } = useIsLoadingStore();
   const location = useLocation();
 
   useEffect(() => {
@@ -69,28 +71,32 @@ function App() {
   }, [location.hash]);
 
   return (
-    <HelmetProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="registration-for-run" element={<RegistrationForRun />} />
-          <Route path="regulations" element={<RegulationsPage />} />
-          <Route path="our-ambassadors" element={<OurAmbassadorsPage />} />
-          <Route path="our-sponsors" element={<OurSponsorsPage />} />
-          <Route path="participant-area" element={<ParticipantAreaPage />} />
-          <Route path="support-sponsors" element={<PleaseSupportPage />} />
-          <Route path="support-donation" element={<SupportDonationPage />} />
-          <Route
-            path="support-volunteers"
-            element={<SupportVolunteersPage />}
-          />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="*" element={<HomePage />} />
-        </Route>
-      </Routes>
-    </HelmetProvider>
+
+
+    <>
+      {isLoading && <Loader />}
+      <HelmetProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="our-ambassadors" element={<OurAmbassadorsPage />} />
+            <Route path="our-sponsors" element={<OurSponsorsPage />} />
+            <Route path="participant-area" element={<ParticipantAreaPage />} />
+            <Route path="support-sponsors" element={<PleaseSupportPage />} />
+            <Route path="support-donation" element={<SupportDonationPage />} />
+            <Route
+              path="support-volunteers"
+              element={<SupportVolunteersPage />}
+            />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="*" element={<HomePage />} />
+          </Route>
+        </Routes>
+      </HelmetProvider>
+    </>
+
   );
 }
 
