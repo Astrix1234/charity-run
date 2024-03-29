@@ -1,7 +1,7 @@
 .formRegister {
   &__container {
     max-width: 1440px;
-    // height: 1435px;
+    padding: 0 80px;
     width: 100%;
     margin: 40px auto;
     display: flex;
@@ -11,9 +11,10 @@
   }
 
   &__windows {
-    width: 1245px;
+
+    width: 1280px;
     display: flex;
-    gap: 48px;
+    justify-content: space-between;
   }
 
   &__form {
@@ -27,7 +28,8 @@
     justify-content: center;
     padding: 24px;
     gap: 24px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.60);
   }
 
@@ -104,7 +106,8 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    width: 597px;
+    width: 100%;
+    max-width: 597px;
     line-height: 1.5;
     position: relative;
     height: 780px;
