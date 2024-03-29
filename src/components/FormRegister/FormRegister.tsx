@@ -211,7 +211,7 @@ export const FormRegister = () => {
           <Button
             type="submit"
             content={t.button}
-            disabled={!formik.isValid || !formik.dirty}
+            disabled={!formik.isValid || !formik.dirty || !consent}
           />
           <p className={scss.formRegister__login}>
             {t.account}
