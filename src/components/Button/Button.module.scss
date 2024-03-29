@@ -3,10 +3,6 @@
   width: 276px;
   height: 65px;
 
-  &:hover .button__dashedBorder {
-    display: none;
-  }
-
   &__button {
     width: 100%;
     height: 100%;
@@ -46,5 +42,18 @@
     left: 5.5px;
     z-index: 100;
     pointer-events: none;
+  }
+
+  &__disabled {
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background-color: var(--marine);
+      transform: translate(0, -0);
+      box-shadow: none;
+      background: linear-gradient(180deg, #1ca2a7 11.28%, #1e8fa7 100%);
+      border: none;
+    }
   }
 }
