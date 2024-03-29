@@ -5,5 +5,9 @@ import translations from './translations';
 export const ParticipantAreaData = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
-  return <StyledData></StyledData>;
+  return (
+    <StyledData>
+      <h1>{t.myData}</h1>
+    </StyledData>
+  );
 };

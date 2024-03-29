@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    contact: 'Kontakt',
+    myData: 'Moje dane:',
   },
   EN: {
-    contact: 'Contact',
+    myData: 'My data:',
   },
 };
 
