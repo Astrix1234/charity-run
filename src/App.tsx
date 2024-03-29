@@ -3,12 +3,18 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { useLanguageStore } from './Zustand/useLanguageStore';
+
+import RegistrationForRun from './components/RegistrationForRun/RegistrationForRun';
+
 import { Loader } from './components/Loader/Loader';
 import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
+
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
+
+
 const OurAmbassadorsPage = lazy(
   () => import('./pages/OurAmbassadorsPage/OurAmbassadorsPage')
 );
@@ -65,6 +71,8 @@ function App() {
   }, [location.hash]);
 
   return (
+
+
     <>
       {isLoading && <Loader />}
       <HelmetProvider>
@@ -88,6 +96,7 @@ function App() {
         </Routes>
       </HelmetProvider>
     </>
+
   );
 }
 
