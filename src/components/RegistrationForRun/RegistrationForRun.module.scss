@@ -1,0 +1,41 @@
+.registration {
+  &__background {
+    width: 100vw;
+    padding-top: 63px;
+
+    background-image: url('/images/background.png');
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1440px;
+    // height: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  &__title {
+    display: flex;
+    height: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: var(--BLACK, var(--BLACK, #2e2530));
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+  }
+
+  &__radioList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+}

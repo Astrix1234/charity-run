@@ -5,7 +5,7 @@ export default function SupportDonationPage() {
   return (
     <>
       <Helmet>
-        <title>Support by donation</title>
+        <title>Please Support</title>
       </Helmet>
       <SupportDonation />
     </>
