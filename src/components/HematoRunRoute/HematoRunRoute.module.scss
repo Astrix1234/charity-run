@@ -34,9 +34,14 @@
 
 .map {
   max-width: 100%;
+  cursor: pointer;
   &__container {
     margin: auto;
     padding-bottom: 40px;
     max-width: 566px;
+  }
+  &__modal {
+    width: 100vw;
+    min-height: 100%;
   }
 }
