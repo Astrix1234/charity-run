@@ -1,7 +1,7 @@
 .formRegister {
   &__container {
     max-width: 1440px;
-    // height: 1435px;
+    padding: 0 80px;
     width: 100%;
     margin: 40px auto;
     display: flex;
@@ -11,10 +11,10 @@
   }
 
   &__windows {
-    width: 1245px;
-    height: 1012px;
+
+    width: 1280px;
     display: flex;
-    gap: 48px;
+    justify-content: space-between;
   }
 
   &__form {
@@ -28,7 +28,9 @@
     justify-content: center;
     padding: 24px;
     gap: 24px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.60);
   }
 
   &__titleContainer {
@@ -43,20 +45,31 @@
   &__label {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    position: relative;
+    width: 100%;
+    max-width: 552px;
     font-size: 24px;
     font-weight: 500;
+
+    &:hover .formRegister__input,
+    &:focus .formRegister__input {
+      border: 1px solid blue;
+    }
   }
 
   &__input,
   &__select {
-    background-color: white;
-    padding: 0 10px;
-    font-size: 20px;
-    width: 552px;
-    height: 40px;
-    border-radius: 10px;
+    font-size: var(--mediumFontSize);
     border: 1px solid var(--marine);
+    border-radius: 10px;
+    background-color: var(--light);
+    outline: none;
+    width: 100%;
+    max-width: 552px;
+    height: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    transition: border 0.3s ease-in-out;
   }
 
   &__radioList {
@@ -93,21 +106,13 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    width: 597px;
-    max-height: 728px;
+    width: 100%;
+    max-width: 597px;
     line-height: 1.5;
-    overflow-y: auto;
     position: relative;
+    height: 780px;
+    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.60);
 
-    &::-webkit-scrollbar {
-      width: 12px;
-      background-color: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: #1d9ea8;
-      border-radius: 32px;
-    }
   }
 
   &__regulationsTitle {
@@ -182,4 +187,17 @@
     left: -80px;
     bottom: 5px;
   }
+}
+
+.formikMessage {
+  position: absolute;
+  right: 0;
+  top: 85px;
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.error {
+  border: 1px solid red;
 }
