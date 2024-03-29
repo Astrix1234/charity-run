@@ -7,23 +7,16 @@ export interface UserData {
   email: string;
   password: string;
   language: string;
-  raceParticipants: RaceParticipant[] | null;
 }
 
-export interface RaceParticipant {
-  _id: string;
-  userId: string;
-  familyNr: number;
-  raceID: string;
-  _v: number;
-  km: string;
-  time: string;
-  paid: boolean;
-  participationID: string;
-  payment: null;
+export interface raceParticipantUserData {
+  name: string;
+  surname: string;
+  phone: number;
+  email: string;
+  language: string;
   shirt: string;
   shirtGender: string;
-  status: string;
 }
 
 export interface UserUpdateData {
@@ -166,9 +159,9 @@ export const updateUserDetails = async (userDetails: UserUpdateData) => {
   }
 };
 
-export const userParticipation = async (userData: RaceParticipant) => {
+export const userParticipation = async (userData: raceParticipantUserData) => {
   try {
-    const response = await axios.patch(
+    const response = await axios.post(
       `${apiUrl}/users/participate`,
       userData,
       getConfig()
