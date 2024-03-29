@@ -1,0 +1,23 @@
+.row {
+  font-size: 18px;
+}
+
+.text {
+  font-weight: 400;
+}
+
+.btn {
+  color: var(--marine);
+  font-weight: 700;
+  text-decoration-line: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    transform: scale(1.02);
+  }
+}

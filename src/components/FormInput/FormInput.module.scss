@@ -1,0 +1,44 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 552px;
+  font-size: 24px;
+  font-weight: 500;
+
+  input {
+    font-size: var(--mediumFontSize);
+    border: 1px solid var(--marine);
+    border-radius: 10px;
+    background-color: var(--light);
+    outline: none;
+    width: 100%;
+    max-width: 552px;
+    height: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    transition: border 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    input {
+      border: 1px solid blue;
+    }
+  }
+}
+
+.error {
+  input {
+    border: 1px solid red;
+  }
+}
+
+.formikMessage {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  color: red;
+  font-size: 14px;
+}
