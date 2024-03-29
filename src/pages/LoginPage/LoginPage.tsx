@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import LoginComponent from '../../components/LoginComponent/LoginComponent';
 
 export default function LoginPage() {
   return (
@@ -6,7 +7,7 @@ export default function LoginPage() {
       <Helmet>
         <title>Login</title>
       </Helmet>
-      <h1>Login</h1>
+      <LoginComponent />
     </div>
   );
 }
