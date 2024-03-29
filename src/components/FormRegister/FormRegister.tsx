@@ -74,6 +74,7 @@ export const FormRegister = () => {
       const { passwordConfirm, ...userData } = values;
       console.log(passwordConfirm);
       console.log(userData);
+      formik.resetForm();
     },
   });
 
@@ -207,7 +208,11 @@ export const FormRegister = () => {
             ) : null}
           </label>
 
-          <Button onClick={handleClick} content={t.button} />
+          <Button
+            type="submit"
+            content={t.button}
+            disabled={!formik.isValid || !formik.dirty}
+          />
           <p className={scss.formRegister__login}>
             {t.account}
             <span className={scss.formRegister__link}>{t.login}</span>

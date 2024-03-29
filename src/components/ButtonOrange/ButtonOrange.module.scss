@@ -3,9 +3,6 @@
   width: 276px;
   height: 65px;
 
-  &:hover .button__dashedBorder {
-    display: none;
-  }
 
   &__button {
     width: 100%;
@@ -51,5 +48,14 @@
 
   &__disabled {
     cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background-color: var(--orange);
+      transform: translate(0, -0);
+      box-shadow: none;
+      background: linear-gradient(180deg, #fd7616 11.28%, #f28505 100%);
+      border: none;
+    }
   }
 }

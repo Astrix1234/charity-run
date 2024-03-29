@@ -2,10 +2,10 @@ import scss from './ButtonOrange.module.scss';
 
 interface ButtonOrangeProps {
   content: string;
-  onClick: () => void;
+  onClick?: () => void;
   icon?: React.ReactNode;
   disabled?: boolean;
-  type?: 'submit' | 'button';
+  type?: 'submit' | 'reset' | 'button' | undefined;
 }
 
 export const ButtonOrange: React.FC<ButtonOrangeProps> = ({

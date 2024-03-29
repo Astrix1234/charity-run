@@ -7,13 +7,15 @@ import { ButtonPlEng } from '../ButtonPlEng/ButtonPlEng';
 import scss from './Header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { useNavigate } from 'react-router';
 
 export const Header = () => {
   const { toggleLanguage, language } = useLanguageStore();
   const t = translations[language];
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log('Button clicked');
+    navigate('/register');
   };
 
   return (
