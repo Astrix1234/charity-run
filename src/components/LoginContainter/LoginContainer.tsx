@@ -1,4 +1,4 @@
-import { useFormik } from 'formik';
+import { FormikProps, FormikValues, useFormik } from 'formik';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import AccountCta from '../AccountCta/AccountCta';
 import { Button } from '../Button/Button';
@@ -33,9 +33,14 @@ function LoginContainer() {
     <div className={scss.container}>
       <form className={scss.form} onSubmit={formik.handleSubmit}>
         <h2 className={scss.heading}>{t.heading}</h2>
-        <Input formik={formik} label={t.email} id="login-email" name="email" />
         <Input
-          formik={formik}
+          formik={formik as unknown as FormikProps<FormikValues>}
+          label={t.email}
+          id="login-email"
+          name="email"
+        />
+        <Input
+          formik={formik as unknown as FormikProps<FormikValues>}
           label={t.password}
           id="login-password"
           name="password"
