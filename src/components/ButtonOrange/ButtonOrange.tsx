@@ -5,12 +5,14 @@ interface ButtonOrangeProps {
   onClick: () => void;
   icon?: React.ReactNode;
   disabled?: boolean;
+  type?: 'submit' | 'button';
 }
 
 export const ButtonOrange: React.FC<ButtonOrangeProps> = ({
   content,
   onClick,
   icon,
+  type,
   disabled = false,
 }) => {
   return (
@@ -21,6 +23,7 @@ export const ButtonOrange: React.FC<ButtonOrangeProps> = ({
         className={`${scss.button__button} ${
           disabled ? scss.button__disabled : ''
         }`}
+        type={type}
       >
         {icon && <span className={scss.button__icon}>{icon}</span>}
         {content}

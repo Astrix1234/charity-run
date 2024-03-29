@@ -3,7 +3,7 @@ import axios from 'axios';
 export interface UserData {
   name: string;
   surname: string;
-  phone: number;
+  phone: string;
   email: string;
   password: string;
   language: string;

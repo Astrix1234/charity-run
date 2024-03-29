@@ -9,8 +9,13 @@ import { IconArrowOrange } from '../../Icons/IconArrowOrange/IconArrowOrange';
 import { IconHandHeart } from '../../Icons/IconHandHeart/IconHandHeart';
 import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStatementSquare';
 import { IconAgree } from '../../Icons/IconAgree/IconAgree';
+import { validationSchema } from './validationSchema';
+import { useFormik } from 'formik';
+import { UserData } from '../../Zustand/api';
 
-// import { useFormik } from 'formik';
+interface FormValues extends UserData {
+  passwordConfirm: string;
+}
 
 export const FormRegister = () => {
   const { language } = useLanguageStore();
@@ -51,17 +56,26 @@ export const FormRegister = () => {
   };
 
   const consentClass = consent
-    ? `&{scss.formRegister__consent} ${scss.formRegister__consentFilled}`
+    ? `${scss.formRegister__consent} ${scss.formRegister__consentFilled}`
     : scss.formRegister__consent;
 
-  //   const formik = useFormik({
-  //     initialValues: {
-  //       name: '',
-  //       email: '',
-  //       password: '',
-  //       passwordConfirm: '',
-  //     },
-  //   });
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      surname: '',
+      phone: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
+      language: language,
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values: FormValues) => {
+      const { passwordConfirm, ...userData } = values;
+      console.log(passwordConfirm);
+      console.log(userData);
+    },
+  });
 
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
@@ -70,146 +84,129 @@ export const FormRegister = () => {
   return (
     <div className={scss.formRegister__container}>
       <div className={scss.formRegister__windows}>
-        <form className={scss.formRegister__form}>
+        <form
+          className={scss.formRegister__form}
+          onSubmit={formik.handleSubmit}
+        >
           <div className={scss.formRegister__titleContainer}>
             <p className={scss.formRegister__sectionTitle}>{t.register}</p>
           </div>
-          <label htmlFor="name" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="name">
             {t.name}
             <input
               id="name"
-              className={scss.formRegister__input}
+              className={`${scss.formRegister__input} ${
+                formik.touched.name && formik.errors.name ? scss.error : ''
+              }`}
               type="text"
               name="name"
-              // onChange={Formik.handleChange}
-              // value={formik.values.name}
-              // onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
             />
+            {formik.touched.name && formik.errors.name ? (
+              <div className={scss.formikMessage}>{formik.errors.name}</div>
+            ) : null}
           </label>
 
-          <label htmlFor="lastName" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="surname">
             {t.lastName}
             <input
-              id="lastName"
-              className={scss.formRegister__input}
+              id="surname"
+              className={`${scss.formRegister__input} ${
+                formik.touched.surname && formik.errors.surname
+                  ? scss.error
+                  : ''
+              }`}
               type="text"
-              name="lastName"
-              // onChange={Formik.handleChange}
-              // value={formik.values.lastName}
-              // onBlur={formik.handleBlur}
+              name="surname"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.surname}
             />
+            {formik.touched.surname && formik.errors.surname ? (
+              <div className={scss.formikMessage}>{formik.errors.surname}</div>
+            ) : null}
           </label>
 
-          <label htmlFor="number" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="phone">
             {t.number}
             <input
-              id="number"
-              className={scss.formRegister__input}
+              id="phone"
+              className={`${scss.formRegister__input} ${
+                formik.touched.phone && formik.errors.phone ? scss.error : ''
+              }`}
               type="text"
-              name="number"
-              // onChange={Formik.handleChange}
-              // value={formik.values.number}
-              // onBlur={formik.handleBlur}
+              name="phone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.phone}
             />
+            {formik.touched.phone && formik.errors.phone ? (
+              <div className={scss.formikMessage}>{formik.errors.phone}</div>
+            ) : null}
           </label>
 
-          <label htmlFor="email" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="email">
             {t.email}
             <input
               id="email"
-              className={scss.formRegister__input}
-              type="email"
+              className={`${scss.formRegister__input} ${
+                formik.touched.email && formik.errors.email ? scss.error : ''
+              }`}
+              type="text"
               name="email"
-              // onChange={Formik.handleChange}
-              // value={formik.values.email}
-              // onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
             />
+            {formik.touched.email && formik.errors.email ? (
+              <div className={scss.formikMessage}>{formik.errors.email}</div>
+            ) : null}
           </label>
 
-          <label htmlFor="password" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="password">
             {t.password}
             <input
               id="password"
-              className={scss.formRegister__input}
-              type="password"
+              className={`${scss.formRegister__input} ${
+                formik.touched.password && formik.errors.password
+                  ? scss.error
+                  : ''
+              }`}
+              type="text"
               name="password"
-              // onChange={Formik.handleChange}
-              // value={formik.values.password}
-              // onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
             />
+            {formik.touched.password && formik.errors.password ? (
+              <div className={scss.formikMessage}>{formik.errors.password}</div>
+            ) : null}
           </label>
 
-          <label htmlFor="passwordConfirm" className={scss.formRegister__label}>
+          <label className={scss.formRegister__label} htmlFor="passwordConfirm">
             {t.passwordConfirm}
             <input
               id="passwordConfirm"
-              className={scss.formRegister__input}
-              type="password"
+              className={`${scss.formRegister__input} ${
+                formik.touched.passwordConfirm && formik.errors.passwordConfirm
+                  ? scss.error
+                  : ''
+              }`}
+              type="text"
               name="passwordConfirm"
-              // onChange={Formik.handleChange}
-              // value={formik.values.passwordConfirm}
-              // onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.passwordConfirm}
             />
+            {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
+              <div className={scss.formikMessage}>
+                {formik.errors.passwordConfirm}
+              </div>
+            ) : null}
           </label>
 
-          <label htmlFor="tshirt" className={scss.formRegister__label}>
-            {t.tshirt}
-            <select
-              id="tshirt"
-              className={scss.formRegister__select}
-              name="tshirt"
-              // onChange={Formik.handleChange}
-              // value={formik.values.tshirt}
-              // onBlur={formik.handleBlur}
-            >
-              {/* <option value="" hidden disabled defaultValue></option> */}
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-            </select>
-          </label>
-
-          <div className={scss.formRegister__radioList}>
-            <div>
-              <input
-                id="tshirtTypeFemale"
-                className={scss.formRegister__radio}
-                type="radio"
-                name="tshirtType"
-                value={t.tshirtTypeFemale}
-                // onChange={Formik.handleChange}
-                // checked={formik.values.tshirtType === t.tshirtTypeFemale}
-                // onBlur={formik.handleBlur}
-              />
-              <label htmlFor="tshirtTypeFemale">{t.tshirtTypeFemale}</label>
-            </div>
-            <div>
-              <input
-                id="tshirtTypeMale"
-                className={scss.formRegister__radio}
-                type="radio"
-                name="tshirtType"
-                value={t.tshirtTypeMale}
-                // onChange={Formik.handleChange}
-                // checked={formik.values.tshirtType === t.tshirtTypeMale}
-                // onBlur={formik.handleBlur}
-              />
-              <label htmlFor="tshirtTypeMale">{t.tshirtTypeMale}</label>
-            </div>
-            <div>
-              <input
-                id="tshirtTypeChild"
-                className={scss.formRegister__radio}
-                type="radio"
-                name="tshirtType"
-                value={t.tshirtTypeChild}
-                // onChange={Formik.handleChange}
-                // checked={formik.values.tshirtType === t.tshirtTypeChild}
-                // onBlur={formik.handleBlur}
-              />
-              <label htmlFor="tshirtTypeChild">{t.tshirtTypeChild}</label>
-            </div>
-          </div>
           <Button onClick={handleClick} content={t.button} />
           <p className={scss.formRegister__login}>
             {t.account}
