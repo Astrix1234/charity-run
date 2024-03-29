@@ -9,5 +9,8 @@ export const StyledParticipant = styled.div`
     max-width: 1440px;
     padding-inline: 80px;
     margin-inline: auto;
+    display: flex;
+    flex-flow: column;
+    gap: 5rem;
   }
 `;
