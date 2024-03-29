@@ -1,6 +1,16 @@
 .formRegister {
   &__container {
+    max-width: 1440px;
+    // height: 1435px;
+    width: 100%;
     margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px;
+  }
+
+  &__windows {
     width: 1245px;
     height: 1012px;
     display: flex;
@@ -19,6 +29,10 @@
     padding: 24px;
     gap: 24px;
     width: 600px;
+  }
+
+  &__titleContainer {
+    width: 100%;
   }
 
   &__sectionTitle {
@@ -80,7 +94,7 @@
     flex-direction: column;
     padding: 24px;
     width: 597px;
-    height: 728px;
+    max-height: 728px;
     line-height: 1.5;
     overflow-y: auto;
     position: relative;
@@ -98,6 +112,34 @@
 
   &__regulationsTitle {
     margin-top: 24px;
+    position: relative;
+  }
+
+  &__consent {
+    margin-right: 10px;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__consentFilled svg {
+    margin-right: 6px;
+    fill: #1ca2a7;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__iconAgree svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -2px;
+    top: 2px;
   }
 
   &__statementList {
@@ -115,5 +157,29 @@
     cursor: pointer;
     color: #1300ec;
     text-decoration: underline;
+  }
+
+  &__donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+  }
+
+  &__donateIllustration {
+    background-image: url('/images/heart-in-jar.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 488px;
+    height: 377px;
+  }
+
+  &__donateIcon {
+    position: absolute;
+    left: -80px;
+    bottom: 5px;
   }
 }

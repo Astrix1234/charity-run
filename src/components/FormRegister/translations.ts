@@ -12,6 +12,8 @@ const translations = {
     tshirtTypeMale: 'Męska',
     tshirtTypeChild: 'Dziecięca',
     button: 'Zarejestruj się',
+    account: 'Masz już konto? ',
+    login: 'Zaloguj się',
     statement: 'Oświadczenie',
     statementTitle:
       'OŚWIADCZENIE GOŚCIA/UCZESTNIKA/ZWYCIĘZCY ZE ZGODĄ NA PRZETWARZANIE DANYCH OSOBOWYCH W POSTACI WIZERUNKU',
@@ -27,6 +29,7 @@ const translations = {
       'W sposób całkowicie dobrowolny, wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas imprezy noworocznej dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przez Fundację. Zostałem/am poinformowany/a, że moje dane osobowe przetwarzane są na podstawie wyrażonej przeze mnie dobrowolnej zgody oraz, że przysługuje mi prawo do jej cofnięcia w każdym czasie, przy czym cofnięcie zgody wywołuje skutki prawne od momentu jego złożenia i będzie pozostawało bez wpływu na przetwarzanie moich danych osobowych dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przed złożeniem oświadczenia o cofnięciu zgody.',
     statementItem4:
       '  W trybie art. 81 ust.1 ustawy o prawie autorskim i prawach pokrewnych wyrażam zgodę na rozpowszechnianie mojego wizerunku przez Fundację utrwalonego w toku Gali, dla celów',
+    donation: 'Wesprzyj',
   },
 
   EN: {
@@ -42,6 +45,8 @@ const translations = {
     tshirtTypeMale: 'Male',
     tshirtTypeChild: 'Child',
     button: 'Register',
+    account: 'Already registered? ',
+    login: 'Log in',
     statement: 'Statement',
     statementTitle:
       'GUEST/PARTICIPANT/WINNER STATEMENT WITH CONSENT TO PROCESS PERSONAL DATA IN THE FORM OF IMAGE',
@@ -57,6 +62,7 @@ const translations = {
       "I voluntarily consent to the processing of my personal data regarding my image recorded during the New Year's event for the purposes of internal and external communication and marketing activities conducted by the Foundation. I have been informed that my personal data is processed based on my voluntary consent, and I have the right to withdraw it at any time, with the withdrawal of consent having legal effects from the moment of its submission and not affecting the processing of my personal data for the purposes of internal and external communication and marketing activities prior to the submission of the consent withdrawal statement.",
     statementItem4:
       'Pursuant to Article 81(1) of the Act on Copyright and Related Rights, I consent to the dissemination of my image recorded during the Gala by the Foundation, for the purposes',
+    donation: 'Support',
   },
 };
 
