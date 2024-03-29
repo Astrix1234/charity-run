@@ -4,24 +4,18 @@ interface ButtonProps {
   content: string;
   onClick: () => void;
   icon?: React.ReactNode;
-  disabled?: boolean;
+  type?: 'submit' | 'reset' | 'button' | undefined;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   content,
   onClick,
   icon,
-  disabled = false,
+  type = 'button',
 }) => {
   return (
     <div className={scss.button}>
-      <button
-        disabled={disabled}
-        onClick={onClick}
-        className={`${scss.button__button} ${
-          disabled ? scss.button__disabled : ''
-        }`}
-      >
+      <button type={type} onClick={onClick} className={scss.button__button}>
         {icon && <span className={scss.button__icon}>{icon}</span>}
         {content}
       </button>
