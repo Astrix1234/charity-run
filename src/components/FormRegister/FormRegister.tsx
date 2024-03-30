@@ -184,7 +184,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -204,7 +204,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="passwordConfirm"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

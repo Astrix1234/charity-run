@@ -6,6 +6,7 @@ import { useLanguageStore } from './Zustand/useLanguageStore';
 import { Loader } from './components/Loader/Loader';
 import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -81,6 +82,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        style={{ marginTop: '150px' }}
       />
       <HelmetProvider>
         <Routes>

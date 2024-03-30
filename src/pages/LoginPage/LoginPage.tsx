@@ -11,9 +11,7 @@ export default function LoginPage() {
     const searchParams = new URLSearchParams(location.search);
     const verified = searchParams.get('verified');
     if (verified === 'true') {
-      toast.success(
-        'Your account has been successfully verified. Please log in.'
-      );
+      toast.info('Your account has been successfully verified. Please log in.');
     } else if (verified === 'false') {
       toast.error(
         'Account verification failed. Please try again or contact support.'
