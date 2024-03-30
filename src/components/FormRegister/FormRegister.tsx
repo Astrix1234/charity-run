@@ -12,6 +12,7 @@ import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
+import { register } from '../../Zustand/api';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -74,6 +75,14 @@ export const FormRegister = () => {
       const { passwordConfirm, ...userData } = values;
       console.log(passwordConfirm);
       console.log(userData);
+      const registerUser = async () => {
+        try {
+          await register(userData);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      registerUser();
       formik.resetForm();
     },
   });
