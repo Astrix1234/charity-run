@@ -27,6 +27,14 @@ export interface UserUpdateData {
   password?: string;
 }
 
+interface AxiosError extends Error {
+  response?: {
+    data: unknown;
+    status: number;
+    headers: unknown;
+  };
+}
+
 const apiUrl = 'http://localhost:3000/api/';
 
 axios.defaults.withCredentials = true;
@@ -39,9 +47,10 @@ export const register = async (userData: UserData) => {
 
     return response.data;
   } catch (error) {
-    console.error('Error registering user:', error);
-    console.error('Error response:', error.response);
-    throw error;
+    const err = error as AxiosError;
+    console.error('Error registering user:', err);
+    console.error('Error response:', err.response);
+    throw err;
   }
 };
 
