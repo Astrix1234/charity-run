@@ -278,11 +278,13 @@ export const FormRegister = () => {
         <div className={scss.formRegister__donateIcon}>
           <IconArrowOrange />
         </div>
-        <ButtonOrange
-          onClick={handleClick}
-          icon={<IconHandHeart />}
-          content={t.donation}
-        />
+        <div className={scss.formRegister__buttonOrange}>
+          <ButtonOrange
+            onClick={handleClick}
+            icon={<IconHandHeart />}
+            content={t.donation}
+          />
+        </div>
       </div>
     </div>
   );
