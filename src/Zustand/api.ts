@@ -56,10 +56,12 @@ export const register = async (userData: UserData) => {
 
 export const login = async (email: string, password: string) => {
   try {
+    axios.defaults.withCredentials = false;
     const response = await axios.post(`${apiUrl}/users/login`, {
       email,
       password,
     });
+    axios.defaults.withCredentials = true;
     return response.data;
   } catch (error) {
     console.error('Error logging in:', error);
