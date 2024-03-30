@@ -1,14 +1,12 @@
 import { FormikProps, FormikValues } from 'formik';
 import scss from './SelectInput.module.scss';
-import { useState, useEffect } from 'react';
 
 interface SelectInputProps {
   label: string;
   id: string;
   name: string;
   formik: FormikProps<FormikValues>;
-  options: { value: string; label: string }[];
-  shirtType?: 'Damska' | 'Męska' | 'Dziecięca';
+  shirtGender: 'Damska' | 'Męska' | 'Dziecięca'; // Usunięto opcjonalność
 }
 
 const sizes = {
@@ -41,17 +39,8 @@ export const SelectInput = ({
   id,
   name,
   formik,
-  shirtType,
+  shirtGender,
 }: SelectInputProps) => {
-  const [currentOptions, setCurrentOptions] = useState<
-    { value: string; label: string }[]
-  >([]);
-
-  useEffect(() => {
-    const newOptions = shirtType ? sizes[shirtType as keyof typeof sizes] : [];
-    setCurrentOptions(newOptions);
-  }, [shirtType]);
-
   return (
     <label className={scss.SelectInput__label} htmlFor={id}>
       {label}
@@ -65,11 +54,10 @@ export const SelectInput = ({
         onBlur={formik.handleBlur}
         value={formik.values[name]}
       >
-        {currentOptions.map(option => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
+        {shirtGender &&
+          sizes[shirtGender].map(option => (
+            <option key={option.value}>{option.label}</option>
+          ))}
       </select>
       {formik.touched[name] && formik.errors[name] && (
         <div className={scss.SelectInput__errorMsg}>
