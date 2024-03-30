@@ -1,11 +1,54 @@
-const translations = {
+interface ShirtGenderMap {
+  Damska: string;
+  Męska: string;
+  Dziecięca: string;
+}
+interface Translation {
+  shirtSizes: string;
+  register: string;
+  name: string;
+  lastName: string;
+  number: string;
+  email: string;
+  shirt: string;
+  tshirtTypeFemale: string;
+  tshirtTypeMale: string;
+  tshirtTypeChild: string;
+  button: string;
+  paymentMethod: string;
+  paymentMethodCard: string;
+  paymentMethodTransfer: string;
+  paymentMethodGooglePay: string;
+  paymentMethodBLIK: string;
+  statement: string;
+  statementTitle: string;
+  statementIDo: string;
+  statementItem1part1: string;
+  span1: string;
+  statementItem1part2: string;
+  span2: string;
+  statementItem1part3: string;
+  statementItem2: string;
+  statementItem3: string;
+  statementItem4: string;
+  [key: string]: string | { [key: string]: string } | ShirtGenderMap;
+  shirtGenderMap: ShirtGenderMap;
+}
+
+interface Translations {
+  PL: Translation;
+  EN: Translation;
+}
+
+const translations: Translations = {
   PL: {
+    shirtSizes: 'Rozmiar koszulki',
     register: 'Zarejestruj się',
     name: 'Imię:',
     lastName: 'Nazwisko:',
     number: 'Numer telefonu:',
     email: 'Adres e-mail:',
-    size: 'Rozmiar koszulki:',
+    shirt: 'Rozmiar koszulki:',
     tshirtTypeFemale: 'Damska',
     tshirtTypeMale: 'Męska',
     tshirtTypeChild: 'Dziecięca',
@@ -13,8 +56,8 @@ const translations = {
     paymentMethod: 'Wybierz metodę płatności',
     paymentMethodCard: 'Karta płatnicza',
     paymentMethodTransfer: 'Przelew tradycyjny',
-    paymentMethodGoogle: 'Google Pay',
-    paymentMethodBlik: 'BLIK',
+    paymentMethodGooglePay: 'Google Pay',
+    paymentMethodBLIK: 'BLIK',
     statement: 'Oświadczenie',
     statementTitle:
       'OŚWIADCZENIE GOŚCIA/UCZESTNIKA/ZWYCIĘZCY ZE ZGODĄ NA PRZETWARZANIE DANYCH OSOBOWYCH W POSTACI WIZERUNKU',
@@ -30,15 +73,21 @@ const translations = {
       'W sposób całkowicie dobrowolny, wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas imprezy noworocznej dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przez Fundację. Zostałem/am poinformowany/a, że moje dane osobowe przetwarzane są na podstawie wyrażonej przeze mnie dobrowolnej zgody oraz, że przysługuje mi prawo do jej cofnięcia w każdym czasie, przy czym cofnięcie zgody wywołuje skutki prawne od momentu jego złożenia i będzie pozostawało bez wpływu na przetwarzanie moich danych osobowych dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przed złożeniem oświadczenia o cofnięciu zgody.',
     statementItem4:
       '  W trybie art. 81 ust.1 ustawy o prawie autorskim i prawach pokrewnych wyrażam zgodę na rozpowszechnianie mojego wizerunku przez Fundację utrwalonego w toku Gali, dla celów',
+    shirtGenderMap: {
+      Damska: 'Damska',
+      Męska: 'Męska',
+      Dziecięca: 'Dziecięca',
+    },
   },
 
   EN: {
+    shirtSizes: 'Shirt Size',
     register: 'Register',
     name: 'Name:',
     lastName: 'Last name:',
     number: 'Phone number:',
     email: 'E-mail address:',
-    size: 'T-shirt size:',
+    shirt: 'T-shirt size:',
     tshirtTypeFemale: 'Female',
     tshirtTypeMale: 'Male',
     tshirtTypeChild: 'Child',
@@ -46,8 +95,8 @@ const translations = {
     paymentMethod: 'Choose payment method',
     paymentMethodCard: 'Credit Card',
     paymentMethodTransfer: 'Bank Transfer',
-    paymentMethodGoogle: 'Google Pay',
-    paymentMethodBlik: 'BLIK',
+    paymentMethodGooglePay: 'Google Pay',
+    paymentMethodBLIK: 'BLIK',
     statement: 'Statement',
     statementTitle:
       'GUEST/PARTICIPANT/WINNER STATEMENT WITH CONSENT TO PROCESS PERSONAL DATA IN THE FORM OF IMAGE',
@@ -63,6 +112,11 @@ const translations = {
       "I voluntarily consent to the processing of my personal data regarding my image recorded during the New Year's event for the purposes of internal and external communication and marketing activities conducted by the Foundation. I have been informed that my personal data is processed based on my voluntary consent, and I have the right to withdraw it at any time, with the withdrawal of consent having legal effects from the moment of its submission and not affecting the processing of my personal data for the purposes of internal and external communication and marketing activities prior to the submission of the consent withdrawal statement.",
     statementItem4:
       'Pursuant to Article 81(1) of the Act on Copyright and Related Rights, I consent to the dissemination of my image recorded during the Gala by the Foundation, for the purposes',
+    shirtGenderMap: {
+      Damska: 'Female',
+      Męska: 'Male',
+      Dziecięca: 'Child',
+    },
   },
 };
 

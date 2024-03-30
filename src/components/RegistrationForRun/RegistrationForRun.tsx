@@ -14,29 +14,31 @@ import { useFormik } from 'formik';
 import { raceParticipantUserData } from '../../Zustand/api';
 
 type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';
+
 interface FormValues extends raceParticipantUserData {
-  size: string;
   shirtGender: ShirtGender;
   paymentMethod: string;
 }
 
 export const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
-const paymentMethods = [
-  'Karta płatnicza',
-  'Przelew tradycyjny',
-  'BLIK',
-  'Google Pay',
-];
-
 const setShirtGenderValue = (value: string): ShirtGender | undefined => {
   const allowedValues: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
   return allowedValues.find(type => type === value);
 };
 
+const paymentMethodKeys = [
+  'paymentMethodCard',
+  'paymentMethodTransfer',
+  'paymentMethodBLIK',
+  'paymentMethodGooglePay',
+];
+
 export const RegisterForRun = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+
+  const genderMap = t.shirtGenderMap;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -79,7 +81,7 @@ export const RegisterForRun = () => {
       phone: '',
       email: '',
       language: language,
-      size: '',
+      shirt: '',
       shirtGender: 'Damska',
       paymentMethod: 'BLIK',
     },
@@ -170,30 +172,31 @@ export const RegisterForRun = () => {
               </label>
               <div className={scss.registration__sizeList}>
                 <SelectInput
-                  label={t.size}
-                  id="size"
-                  name="size"
+                  label={t.shirt}
+                  id="shirt"
+                  name="shirt"
                   formik={formik as unknown as FormikProps<FormikValues>}
                   shirtGender={formik.values.shirtGender}
                 />
               </div>
               <div className={scss.registration__radioList}>
-                {shirtGenders.map(type => (
-                  <label>
+                {shirtGenders.map(gender => (
+                  <label key={gender}>
                     <input
                       type="radio"
                       name="shirtGender"
-                      checked={formik.values.shirtGender === type}
+                      value={gender}
+                      checked={formik.values.shirtGender === gender}
                       onChange={e => {
                         const newValue = setShirtGenderValue(e.target.value);
                         if (newValue) {
                           formik.setFieldValue('shirtGender', newValue);
                         } else {
-                          console.warn('Nieprawidłowa wartość dla shirtGender');
+                          console.warn('Invalid value for shirtGender');
                         }
                       }}
                     />
-                    {type}
+                    {genderMap[gender]}
                   </label>
                 ))}{' '}
               </div>
@@ -214,9 +217,9 @@ export const RegisterForRun = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.paymentMethod}
                 >
-                  {paymentMethods.map(method => (
-                    <option key={method} value={method}>
-                      {method}
+                  {paymentMethodKeys.map(key => (
+                    <option key={key} value={t[key] as string}>
+                      {t[key] as string}
                     </option>
                   ))}
                 </select>

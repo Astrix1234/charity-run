@@ -15,7 +15,7 @@ export interface raceParticipantUserData {
   phone: string;
   email: string;
   language: string;
-  size: string;
+  shirt: string;
   // shirtGender: string;
 }
 

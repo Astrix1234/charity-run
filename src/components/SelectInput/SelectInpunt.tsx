@@ -1,15 +1,22 @@
 import { FormikProps, FormikValues } from 'formik';
 import scss from './SelectInput.module.scss';
+import translations from './translations';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+
+interface Option {
+  value: string;
+  label: string;
+}
 
 interface SelectInputProps {
   label: string;
   id: string;
   name: string;
   formik: FormikProps<FormikValues>;
-  shirtGender: 'Damska' | 'Męska' | 'Dziecięca'; // Usunięto opcjonalność
+  shirtGender: 'Damska' | 'Męska' | 'Dziecięca';
 }
 
-const sizes = {
+const shirts = {
   Damska: [
     { value: 'rozmiar 36 (S)', label: 'rozmiar 36 (S)' },
     { value: 'rozmiar 38 (M)', label: 'rozmiar 38 (M)' },
@@ -18,10 +25,10 @@ const sizes = {
   ],
 
   Męska: [
-    { value: 'rozmiar S', label: 'Small' },
-    { value: 'rozmiar M', label: 'Medium' },
-    { value: 'rozmiar L', label: 'Large' },
-    { value: 'rozmiar XL', label: 'XLarge' },
+    { value: 'rozmiar S', label: 'rozmiar S' },
+    { value: 'rozmiar M', label: 'rozmiar M' },
+    { value: 'rozmiar L', label: 'rozmiar L' },
+    { value: 'rozmiar XL', label: 'rozmiar XL' },
   ],
 
   Dziecięca: [
@@ -34,13 +41,21 @@ const sizes = {
   ],
 };
 
-export const SelectInput = ({
+export const SelectInput: React.FC<SelectInputProps> = ({
   label,
   id,
   name,
   formik,
   shirtGender,
-}: SelectInputProps) => {
+}) => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+  const shirtSizes = t.shirtSizes;
+
+  const options = shirts[shirtGender].map(option => ({
+    value: option.value,
+    label: shirtSizes[option.label] || option.label, // Używaj tłumaczonej etykiety, jeśli dostępna
+  }));
   return (
     <label className={scss.SelectInput__label} htmlFor={id}>
       {label}
@@ -54,10 +69,11 @@ export const SelectInput = ({
         onBlur={formik.handleBlur}
         value={formik.values[name]}
       >
-        {shirtGender &&
-          sizes[shirtGender].map(option => (
-            <option key={option.value}>{option.label}</option>
-          ))}
+        {options.map((option: Option) => (
+          <option key={option.value} value={option.value}>
+            {t.shirtSizes[option.label] || option.label}
+          </option>
+        ))}
       </select>
       {formik.touched[name] && formik.errors[name] && (
         <div className={scss.SelectInput__errorMsg}>
