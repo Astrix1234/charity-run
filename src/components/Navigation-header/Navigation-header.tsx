@@ -1,19 +1,18 @@
 import { Link, useNavigate } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
-import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 
 export const NavigationHeader = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { isLogin, setIsLogin } = useIsLoginStore();
 
   const navigate = useNavigate();
 
-  const [user, setUser] = useState(true);
-
   const handleLogout = () => {
-    setUser(false);
+    setIsLogin(false);
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -71,11 +70,13 @@ export const NavigationHeader = () => {
         >
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
             <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
+              className={` ${
+                !isLogin ? scss['navigation__not-logged-in'] : ''
+              }`}
               to="/participant-area"
             >
               {t.myProfile}
@@ -83,11 +84,13 @@ export const NavigationHeader = () => {
           </li>
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
             <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
+              className={` ${
+                !isLogin ? scss['navigation__not-logged-in'] : ''
+              }`}
               to="/participant-area#run-info"
             >
               {t.runInfo}
@@ -95,18 +98,20 @@ export const NavigationHeader = () => {
           </li>
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
             <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
+              className={` ${
+                !isLogin ? scss['navigation__not-logged-in'] : ''
+              }`}
               to="/participant-area#before-run"
             >
               {t.beforeRun}
             </Link>
           </li>
           <li className={scss.navigation__link}>
-            {user ? (
+            {isLogin ? (
               <button
                 className={scss.navigation__logout}
                 type="button"

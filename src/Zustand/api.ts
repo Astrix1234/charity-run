@@ -7,6 +7,7 @@ export interface UserData {
   email: string;
   password: string;
   language: string;
+  avatarURL?: string;
   raceParticipants?: raceParticipantUserData[] | null;
 }
 
@@ -28,6 +29,7 @@ export interface UserUpdateData {
   phone?: number;
   language?: string;
   password?: string;
+  avatarURL?: string;
 }
 
 interface AxiosError extends Error {
