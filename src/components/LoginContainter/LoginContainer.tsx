@@ -6,10 +6,14 @@ import scss from './LoginContainer.module.scss';
 import translations from './translations';
 import { validationSchema } from './Schema';
 import FormInput from '../FormInput/FormInput';
+import { useNavigate } from 'react-router';
 
 function LoginContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
+
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: { email: '', password: '' },
     onSubmit: (values, actions) => {
@@ -21,6 +25,10 @@ function LoginContainer() {
 
   console.log(formik.errors.email);
   console.log(formik.touched.email);
+
+  const handleNavigate = () => {
+    navigate('/register');
+  };
 
   return (
     <div className={scss.container}>
@@ -77,7 +85,7 @@ function LoginContainer() {
 
         <Button type="submit" content={t.button} onClick={() => {}} />
       </form>
-      <AccountCta type="register" />
+      <AccountCta type="register" onClick={handleNavigate} />
     </div>
   );
 }

@@ -8,14 +8,16 @@ import scss from './Header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { useNavigate } from 'react-router';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 
 export const Header = () => {
   const { toggleLanguage, language } = useLanguageStore();
+  const { isLogin } = useIsLoginStore();
   const t = translations[language];
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/register');
+    isLogin ? navigate('/run-registration') : navigate('/login');
   };
 
   return (

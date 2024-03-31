@@ -6,6 +6,6 @@ interface LoginState {
 }
 
 export const useIsLoginStore = create<LoginState>(set => ({
-  isLogin: false,
+  isLogin: true,
   setIsLogin: (isLogin: boolean) => set(() => ({ isLogin })),
 }));
