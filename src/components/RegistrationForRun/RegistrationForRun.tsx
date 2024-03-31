@@ -12,15 +12,13 @@ import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { raceParticipantUserData } from '../../Zustand/api';
-
-type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';
+import { ShirtGender } from '../../Zustand/api';
 
 interface FormValues extends raceParticipantUserData {
-  shirtGender: ShirtGender;
   paymentMethod: string;
 }
 
-export const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
+const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
 const setShirtGenderValue = (value: string): ShirtGender | undefined => {
   const allowedValues: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];

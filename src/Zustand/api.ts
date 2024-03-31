@@ -7,6 +7,7 @@ export interface UserData {
   email: string;
   password: string;
   language: string;
+  raceParticipants?: raceParticipantUserData[] | null;
 }
 
 export interface raceParticipantUserData {
@@ -16,8 +17,10 @@ export interface raceParticipantUserData {
   email: string;
   language: string;
   shirt: string;
-  shirtGender: string;
+  shirtGender: ShirtGender;
 }
+
+export type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';
 
 export interface UserUpdateData {
   name?: string;
