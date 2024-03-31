@@ -10,4 +10,10 @@ export const StyledZone = styled.div`
     text-align: right;
     gap: 1rem;
   }
+
+  .addPhoto {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 `;
