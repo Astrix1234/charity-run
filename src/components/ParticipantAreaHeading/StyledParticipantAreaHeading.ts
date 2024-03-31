@@ -13,5 +13,6 @@ export const StyledHeading = styled.div`
   h2 {
     font-size: 4.1875rem;
     font-weight: 400;
+    padding-bottom: 0;
   }
 `;
