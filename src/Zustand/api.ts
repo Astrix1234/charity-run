@@ -16,7 +16,7 @@ export interface raceParticipantUserData {
   email: string;
   language: string;
   shirt: string;
-  // shirtGender: string;
+  shirtGender: string;
 }
 
 export interface UserUpdateData {
