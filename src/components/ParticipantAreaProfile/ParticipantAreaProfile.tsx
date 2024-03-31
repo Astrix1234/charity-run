@@ -10,11 +10,21 @@ export const ParticipantAreaProfile = () => {
     <StyledProfile>
       <h1>{t.participantArea}</h1>
       <h2>{t.myProfile}</h2>
-      <Link to="/participant-area/#myData">{t.myData} /01</Link>
-      <Link to="/participant-area/#myData">{t.myResult} /02</Link>
-      <Link to="/participant-area/#timetable">{t.timetable} /03</Link>
-      <Link to="/participant-area/#prepare">{t.getReady} /04</Link>
-      <Link to="#">{t.logout} /05</Link>
+      <p>
+        <Link to="/participant-area/#myData">{t.myData} /01</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#myData">{t.myResult} /02</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#timetable">{t.timetable} /03</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#prepare">{t.getReady} /04</Link>
+      </p>
+      <p>
+        <Link to="#">{t.logout} /05</Link>
+      </p>
     </StyledProfile>
   );
 };
