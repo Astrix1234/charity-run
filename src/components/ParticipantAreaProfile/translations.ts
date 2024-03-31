@@ -1,7 +1,7 @@
 const translations = {
   PL: {
-    participantArea: 'Strefa uczestnika',
     myProfile: '/Mój profil',
+    navigation: '/nawigacja',
     myData: 'Moje dane',
     myResult: 'Moje wyniki',
     timetable: 'Rozkład jazdy',
@@ -9,8 +9,8 @@ const translations = {
     logout: 'Wyloguj',
   },
   EN: {
-    participantArea: 'Participant area',
     myProfile: '/My profile',
+    navigation: '/navigation',
     myData: 'My data',
     myResult: 'My results',
     timetable: 'Timetable',
