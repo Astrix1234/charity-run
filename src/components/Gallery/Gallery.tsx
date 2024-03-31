@@ -10,7 +10,22 @@ const Gallery = () => {
     <section className={scss.background}>
       <div className={scss.container}>
         <h2 className={scss.heading}>{t.heading}</h2>
-        <div>Gallery Container</div>
+        <div className={scss.gallery}>
+          <ul className={scss.gallery__list}>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+            <li className={scss.gallery__item}></li>
+          </ul>
+        </div>
       </div>
     </section>
   );
