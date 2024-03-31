@@ -13,7 +13,7 @@ export interface UserData {
 export interface raceParticipantUserData {
   name: string;
   surname: string;
-  phone: number;
+  phone: string;
   email: string;
   language: string;
   shirt: string;
