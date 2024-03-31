@@ -12,6 +12,7 @@ import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
+import { register } from '../../Zustand/api';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -74,6 +75,14 @@ export const FormRegister = () => {
       const { passwordConfirm, ...userData } = values;
       console.log(passwordConfirm);
       console.log(userData);
+      const registerUser = async () => {
+        try {
+          await register(userData);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      registerUser();
       formik.resetForm();
     },
   });
@@ -175,7 +184,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -195,7 +204,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="passwordConfirm"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -211,7 +220,7 @@ export const FormRegister = () => {
           <Button
             type="submit"
             content={t.button}
-            disabled={!formik.isValid || !formik.dirty}
+            disabled={!formik.isValid || !formik.dirty || !consent}
           />
           <p className={scss.formRegister__login}>
             {t.account}
@@ -269,11 +278,13 @@ export const FormRegister = () => {
         <div className={scss.formRegister__donateIcon}>
           <IconArrowOrange />
         </div>
-        <ButtonOrange
-          onClick={handleClick}
-          icon={<IconHandHeart />}
-          content={t.donation}
-        />
+        <div className={scss.formRegister__buttonOrange}>
+          <ButtonOrange
+            onClick={handleClick}
+            icon={<IconHandHeart />}
+            content={t.donation}
+          />
+        </div>
       </div>
     </div>
   );
