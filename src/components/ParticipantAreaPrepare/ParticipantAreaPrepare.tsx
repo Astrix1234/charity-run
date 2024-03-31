@@ -3,6 +3,7 @@ import { StyledPrepare } from './StyledParticipantAreaPrepare';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import ItemSquare from '../ItemSquare/ItemSquare';
+import { IconFoot } from '../../Icons/TimetableIcons/IconFoot/IconFoot';
 
 export const ParticipantAreaPrepare = () => {
   const { language } = useLanguageStore();
@@ -50,6 +51,18 @@ export const ParticipantAreaPrepare = () => {
           </p>
         </>
       </ItemSquare>
+      <div className="foots foot0">
+        <IconFoot />
+      </div>
+      <div className="foots foot1">
+        <IconFoot />
+      </div>
+      <div className="foots foot2">
+        <IconFoot />
+      </div>
+      <div className="foots foot3">
+        <IconFoot />
+      </div>
     </StyledPrepare>
   );
 };
