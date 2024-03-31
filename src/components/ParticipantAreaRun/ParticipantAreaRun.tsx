@@ -4,7 +4,7 @@ import { StyledRun } from './StyledParticipantAreaRun';
 
 export const ParticipantAreaRun = () => {
   return (
-    <StyledRun id="myData">
+    <StyledRun as="section" id="myData">
       <ParticipantAreaData />
       <ParticipantAreaResults />
     </StyledRun>

@@ -7,7 +7,7 @@ export const ParticipantAreaHeading = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledHeading>
+    <StyledHeading as="section">
       <h1>{t.hematorun}</h1>
       <TrippleArrowDown />
     </StyledHeading>

@@ -8,7 +8,7 @@ export const ParticipantAreaZone = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledZone id="participantZone">
+    <StyledZone as="section" id="participantZone">
       <div className="photo">
         <RunnerMan />
         <p>{t.addPhoto}</p>
