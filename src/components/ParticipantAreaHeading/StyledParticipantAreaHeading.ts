@@ -9,4 +9,9 @@ export const StyledHeading = styled.div`
     font-size: 5.625rem;
     font-weight: 800;
   }
+
+  h2 {
+    font-size: 4.1875rem;
+    font-weight: 400;
+  }
 `;

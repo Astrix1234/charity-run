@@ -9,6 +9,7 @@ export const ParticipantAreaHeading = () => {
   return (
     <StyledHeading as="section">
       <h1>{t.hematorun}</h1>
+      <h2>{t.participantArea}</h2>
       <TrippleArrowDown />
     </StyledHeading>
   );
