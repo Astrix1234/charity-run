@@ -7,6 +7,7 @@ export interface UserData {
   email: string;
   password: string;
   language: string;
+  raceParticipants?: raceParticipantUserData[] | null;
 }
 
 export interface raceParticipantUserData {
