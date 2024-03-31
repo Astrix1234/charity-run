@@ -29,4 +29,11 @@ export const StyledProfile = styled.div`
     font-size: 1.25rem;
     font-weight: 600;
   }
+
+  p {
+    transition: color 400ms;
+  }
+  p:hover {
+    color: orange;
+  }
 `;

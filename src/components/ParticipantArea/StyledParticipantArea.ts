@@ -17,5 +17,12 @@ export const StyledParticipant = styled.div`
     #participantZone {
       padding-top: 50px;
     }
+
+    Link {
+      transition: color 400ms;
+    }
+    Link:hover {
+      color: orange;
+    }
   }
 `;
