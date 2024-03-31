@@ -8,7 +8,7 @@ export const ParticipantAreaPrepare = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledPrepare>
+    <StyledPrepare id="prepare">
       <ItemSquare heading="" pos={1}>
         <>
           <h1>{t.train}</h1>
