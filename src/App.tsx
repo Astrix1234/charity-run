@@ -5,6 +5,10 @@ import { Layout } from './components/Layout/Layout';
 import { useLanguageStore } from './Zustand/useLanguageStore';
 import { Loader } from './components/Loader/Loader';
 import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useIsLoginStore } from './Zustand/useIsLoginStore';
+import Cookies from 'js-cookie';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -38,6 +42,8 @@ function App() {
     setLanguage: state.setLanguage,
   }));
   const { isLoading } = useIsLoadingStore();
+  const { setIsLogin } = useIsLoginStore();
+
   const location = useLocation();
 
   useEffect(() => {
@@ -67,9 +73,28 @@ function App() {
     }
   }, [location.hash]);
 
+  useEffect(() => {
+    const accessToken = Cookies.get('jwt');
+    if (accessToken) {
+      setIsLogin(true);
+    }
+  }, [setIsLogin]);
+
   return (
     <>
       {isLoading && <Loader />}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ marginTop: '150px' }}
+      />
       <HelmetProvider>
         <Routes>
           <Route path="/" element={<Layout />}>

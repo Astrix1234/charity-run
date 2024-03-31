@@ -12,6 +12,11 @@ import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
+import { register } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { toast } from 'react-toastify';
+import AccountCta from '../AccountCta/AccountCta';
+import { useNavigate } from 'react-router';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -19,11 +24,14 @@ interface FormValues extends UserData {
 
 export const FormRegister = () => {
   const { language } = useLanguageStore();
+  const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [consent, setConsent] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleKeyDown = (event: WindowEventMap['keydown']) => {
@@ -74,6 +82,21 @@ export const FormRegister = () => {
       const { passwordConfirm, ...userData } = values;
       console.log(passwordConfirm);
       console.log(userData);
+      const registerUser = async () => {
+        try {
+          setIsLoading(true);
+          await register(userData);
+          toast.info(
+            'Registration successful! Please check your email to verify your account.'
+          );
+        } catch (error) {
+          console.error(error);
+          toast.error('An error occurred. Please try again.');
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      registerUser();
       formik.resetForm();
     },
   });
@@ -81,6 +104,10 @@ export const FormRegister = () => {
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
   }
+
+  const handleNavigate = () => {
+    navigate('/login');
+  };
 
   return (
     <div className={scss.formRegister__container}>
@@ -175,7 +202,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -195,7 +222,7 @@ export const FormRegister = () => {
                   ? scss.error
                   : ''
               }`}
-              type="text"
+              type="password"
               name="passwordConfirm"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -213,10 +240,8 @@ export const FormRegister = () => {
             content={t.button}
             disabled={!formik.isValid || !formik.dirty || !consent}
           />
-          <p className={scss.formRegister__login}>
-            {t.account}
-            <span className={scss.formRegister__link}>{t.login}</span>
-          </p>
+
+          <AccountCta type="login" onClick={handleNavigate} />
         </form>
         <div className={scss.formRegister__regulations}>
           <p className={scss.formRegister__sectionTitle}>{t.statement}</p>
@@ -269,11 +294,13 @@ export const FormRegister = () => {
         <div className={scss.formRegister__donateIcon}>
           <IconArrowOrange />
         </div>
-        <ButtonOrange
-          onClick={handleClick}
-          icon={<IconHandHeart />}
-          content={t.donation}
-        />
+        <div className={scss.formRegister__buttonOrange}>
+          <ButtonOrange
+            onClick={handleClick}
+            icon={<IconHandHeart />}
+            content={t.donation}
+          />
+        </div>
       </div>
     </div>
   );

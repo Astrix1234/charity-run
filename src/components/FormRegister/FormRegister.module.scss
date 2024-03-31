@@ -1,7 +1,6 @@
 .formRegister {
   &__container {
-    max-width: 1440px;
-    padding: 0 80px;
+    max-width: 1280px;
     width: 100%;
     margin: 40px auto;
     display: flex;
@@ -11,8 +10,7 @@
   }
 
   &__windows {
-
-    width: 1280px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -83,20 +81,7 @@
     margin-right: 10px;
   }
 
-  &__login {
-    font-weight: 500;
-  }
 
-  &__link {
-    font-weight: 700;
-    text-decoration: underline;
-    color: var(--marine);
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-    }
-  }
 
   &__regulations {
     padding-top: 124px;
