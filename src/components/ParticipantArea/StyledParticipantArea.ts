@@ -18,10 +18,11 @@ export const StyledParticipant = styled.div`
       padding-top: 50px;
     }
 
-    Link {
+    a {
       transition: color 400ms;
     }
-    Link:hover {
+
+    a:hover {
       color: orange;
     }
   }

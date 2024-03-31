@@ -1,4 +1,5 @@
 import { StyledZone } from './StyledParticipantAreaZone';
+import { Link } from 'react-router-dom';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import RunnerMan from '../../Icons/RunnerMan/RunnerMan';
@@ -11,7 +12,9 @@ export const ParticipantAreaZone = () => {
     <StyledZone as="section" id="participantZone">
       <div className="photo">
         <RunnerMan />
-        <p>{t.addPhoto}</p>
+        <p>
+          <Link to="#">{t.addPhoto}</Link>
+        </p>
       </div>
 
       <ParticipantAreaProfile />

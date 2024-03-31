@@ -7,5 +7,7 @@ export const StyledZone = styled.div`
   .photo {
     display: grid;
     place-content: center;
+    text-align: right;
+    gap: 1rem;
   }
 `;
