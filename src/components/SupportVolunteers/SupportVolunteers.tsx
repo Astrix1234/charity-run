@@ -1,31 +1,29 @@
 import SupportHeading from '../SupportHeading/SupportHeading';
 import SupportSubHeading from '../SupportSubHeading/SupportSubHeading';
-import SupportSponsorText from '../SupportSponsorText/SupportSponsorText';
-import scss from './SupportSponsor.module.scss';
+import scss from './SupportVolunteers.module.scss';
 
 
-function SupportSponsor() {
+function SupportVolunteers() {
     return (
         <section className={scss.section}>
             <div className={scss.container}>
                 <div className={scss.heading}>
                 <SupportHeading
-                    headingText={{
-                        pl: 'Wesprzyj Fundację i zostań Sponsorem',
-                        eng: 'Support the Foundation and become a Sponsor',
-                    }}
+                headingText={{
+                    pl: 'Wesprzyj Fundację i zostań wolontariuszem',
+                    eng: 'Support the foundation and become a volunteer',
+                }}
                 /></div>
                 <SupportSubHeading
                 subText={{
-                    pl: 'Pomóż nam w realizacji celów Fundacji oraz wesprzyj organizacje',
+                    pl: 'Pomóż nam w realizacji celów Fundacji oraz wesprzyj organizację',
                     eng: 'Help us achieve the goals of the Foundation and support the organization',
                 }}
                 mainText={{ pl: 'Hematobiegu', eng: 'Hematorun' }}
                 />
             </div>
-            <SupportSponsorText />
-            </section>
-        );
-    }
+        </section>
+    );
+}
 
-export default SupportSponsor;
+    export default SupportVolunteers;
