@@ -8,7 +8,8 @@ import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
-import Cookies from 'js-cookie';
+import { getCurrentUser } from './Zustand/api';
+import { useUserDataStore } from './Zustand/useUserDataStore';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -43,6 +44,7 @@ function App() {
   }));
   const { isLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
+  const { setUserData, userData } = useUserDataStore();
 
   const location = useLocation();
 
@@ -74,11 +76,21 @@ function App() {
   }, [location.hash]);
 
   useEffect(() => {
-    const accessToken = Cookies.get('jwt');
-    if (accessToken) {
-      setIsLogin(true);
-    }
-  }, [setIsLogin]);
+    const checkLogin = async () => {
+      try {
+        const response = await getCurrentUser();
+        console.log('Response:', response);
+        if (response) {
+          setIsLogin(true);
+          setUserData(response);
+        }
+      } catch (error) {
+        console.error('Error checking login:', error);
+      }
+    };
+
+    checkLogin();
+  }, [setIsLogin, setUserData]);
 
   return (
     <>

@@ -3,12 +3,10 @@ import axios from 'axios';
 export interface UserData {
   name: string;
   surname: string;
-  phone: string;
   email: string;
   password: string;
   language: string;
-  avatarURL?: string;
-  raceParticipants?: raceParticipantUserData[] | null;
+  raceParticipants?: raceParticipantUserData[];
 }
 
 export interface raceParticipantUserData {
@@ -26,10 +24,8 @@ export type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';
 export interface UserUpdateData {
   name?: string;
   surname?: string;
-  phone?: number;
   language?: string;
   password?: string;
-  avatarURL?: string;
 }
 
 interface AxiosError extends Error {
@@ -46,10 +42,7 @@ axios.defaults.withCredentials = true;
 
 export const register = async (userData: UserData) => {
   try {
-    axios.defaults.withCredentials = false;
     const response = await axios.post(`${apiUrl}/users/signup`, userData);
-    axios.defaults.withCredentials = true;
-
     return response.data;
   } catch (error) {
     const err = error as AxiosError;
@@ -61,12 +54,10 @@ export const register = async (userData: UserData) => {
 
 export const login = async (email: string, password: string) => {
   try {
-    axios.defaults.withCredentials = false;
     const response = await axios.post(`${apiUrl}/users/login`, {
       email,
       password,
     });
-    axios.defaults.withCredentials = true;
     return response.data;
   } catch (error) {
     console.error('Error logging in:', error);
