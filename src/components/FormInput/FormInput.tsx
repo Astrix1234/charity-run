@@ -9,7 +9,6 @@ type FormInputProps = {
 };
 
 function FormInput({ id, label, error, children }: FormInputProps) {
-  console.log(error);
   return (
     <label
       className={`${scss.label} ${error.condition ? scss.error : ''}`}

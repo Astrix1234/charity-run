@@ -4,9 +4,7 @@ import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
 import { Regulations } from '../Regulations/Regulations';
-import { ButtonOrange } from '../ButtonOrange/ButtonOrange';
 import { IconArrowOrange } from '../../Icons/IconArrowOrange/IconArrowOrange';
-import { IconHandHeart } from '../../Icons/IconHandHeart/IconHandHeart';
 import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStatementSquare';
 import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
@@ -17,6 +15,8 @@ import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { toast } from 'react-toastify';
 import AccountCta from '../AccountCta/AccountCta';
 import { useNavigate } from 'react-router';
+import SupportHand from '../SupportHand/SupportHand';
+import { Statements } from '../Statements/Statements';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -55,10 +55,6 @@ export const FormRegister = () => {
     setIsModalOpen(false);
   };
 
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
-
   const handleIconClick = () => {
     setConsent(!consent);
   };
@@ -71,7 +67,6 @@ export const FormRegister = () => {
     initialValues: {
       name: '',
       surname: '',
-      phone: '',
       email: '',
       password: '',
       passwordConfirm: '',
@@ -157,24 +152,6 @@ export const FormRegister = () => {
             ) : null}
           </label>
 
-          <label className={scss.formRegister__label} htmlFor="phone">
-            {t.number}
-            <input
-              id="phone"
-              className={`${scss.formRegister__input} ${
-                formik.touched.phone && formik.errors.phone ? scss.error : ''
-              }`}
-              type="text"
-              name="phone"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phone}
-            />
-            {formik.touched.phone && formik.errors.phone ? (
-              <div className={scss.formikMessage}>{formik.errors.phone}</div>
-            ) : null}
-          </label>
-
           <label className={scss.formRegister__label} htmlFor="email">
             {t.email}
             <input
@@ -243,64 +220,18 @@ export const FormRegister = () => {
 
           <AccountCta type="login" onClick={handleNavigate} />
         </form>
-        <div className={scss.formRegister__regulations}>
-          <p className={scss.formRegister__sectionTitle}>{t.statement}</p>
-          <h3 className={scss.formRegister__regulationsTitle}>
-            <span className={consentClass} onClick={handleIconClick}>
-              <IconStatementSquare />
-              {consent && (
-                <span className={scss.formRegister__iconAgree}>
-                  {' '}
-                  <IconAgree />
-                </span>
-              )}
-            </span>
-            {t.statementTitle}
-          </h3>
-          <p>{t.statementIDo}</p>
-          <ol className={scss.formRegister__statementList}>
-            {' '}
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem1part1}
-              <span
-                onClick={openModal}
-                className={scss.formRegister__highlights}
-              >
-                {t.span1}
-              </span>
-              {t.statementItem1part2}
-              <span
-                onClick={openModal}
-                className={scss.formRegister__highlights}
-              >
-                {t.span2}
-              </span>
-              {t.statementItem1part3}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem2}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem3}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem4}
-            </li>
-          </ol>
-        </div>
+        <Statements
+          consent={consent}
+          handleIconClick={handleIconClick}
+          openModal={openModal}
+        />
       </div>
+
       <div className={scss.formRegister__donate}>
-        <div className={scss.formRegister__donateIllustration} />
         <div className={scss.formRegister__donateIcon}>
           <IconArrowOrange />
         </div>
-        <div className={scss.formRegister__buttonOrange}>
-          <ButtonOrange
-            onClick={handleClick}
-            icon={<IconHandHeart />}
-            content={t.donation}
-          />
-        </div>
+        <SupportHand />
       </div>
     </div>
   );

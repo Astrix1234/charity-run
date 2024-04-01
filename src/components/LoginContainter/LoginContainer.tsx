@@ -4,27 +4,62 @@ import AccountCta from '../AccountCta/AccountCta';
 import { Button } from '../Button/Button';
 import scss from './LoginContainer.module.scss';
 import translations from './translations';
-import { validationSchema } from './Schema';
+import { validationSchema } from './validationSchema';
 import FormInput from '../FormInput/FormInput';
 import { useNavigate } from 'react-router';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import { login } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { toast } from 'react-toastify';
 
 function LoginContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { setIsLoading } = useIsLoadingStore();
+  const { setIsLogin } = useIsLoginStore();
 
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
-    onSubmit: (values, actions) => {
-      console.log('onSumbit', values);
-      actions.resetForm();
-    },
     validationSchema: validationSchema,
+    onSubmit: values => {
+      const { email, password } = values;
+      const loginUser = async () => {
+        try {
+          setIsLoading(true);
+          await login(email, password);
+          console.log('Login successful!');
+          toast.info('Login successful!');
+          setIsLogin(true);
+          navigate('/');
+        } catch (error: unknown) {
+          if (
+            typeof error === 'object' &&
+            error !== null &&
+            'response' in error &&
+            typeof error.response === 'object' &&
+            error.response !== null &&
+            'status' in error.response &&
+            'data' in error.response
+          ) {
+            const axiosError = error as {
+              response: { status: number; data: { message: string } };
+            };
+            if (axiosError.response.status === 401) {
+              toast.error(axiosError.response.data.message);
+            } else {
+              toast.error('An error occurred during login.');
+            }
+          }
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      loginUser();
+      formik.resetForm();
+    },
   });
-
-  console.log(formik.errors.email);
-  console.log(formik.touched.email);
 
   const handleNavigate = () => {
     navigate('/register');

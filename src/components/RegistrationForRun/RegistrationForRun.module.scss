@@ -1,6 +1,7 @@
 .registration {
   position: relative;
   margin: 0 auto;
+
   &__background {
     width: 100vw;
     padding-top: 63px;
@@ -11,8 +12,14 @@
     background-repeat: no-repeat;
     background-position: left bottom;
   }
-  &__container {
+
+  &__containerMain {
     max-width: 1440px;
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  &__container {
     width: 100%;
     margin-top: 40px;
     display: flex;
@@ -22,9 +29,9 @@
   }
 
   &__windows {
-    width: 1245px;
+    width: 100%;
     display: flex;
-    gap: 48px;
+    justify-content: space-between;
   }
 
   &__sectionTitle {
@@ -38,7 +45,8 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
+    line-height: 150%;
+    /* 36px */
   }
 
   &__form {
@@ -52,7 +60,8 @@
     justify-content: center;
     padding: 24px;
     gap: 24px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
     margin-bottom: 143px;
   }
