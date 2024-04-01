@@ -44,7 +44,7 @@ function App() {
   }));
   const { isLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
-  const { setUserData, userData } = useUserDataStore();
+  const { setUserData } = useUserDataStore();
 
   const location = useLocation();
 

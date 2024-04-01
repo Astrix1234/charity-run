@@ -5,8 +5,6 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
 import { Regulations } from '../Regulations/Regulations';
 import { IconArrowOrange } from '../../Icons/IconArrowOrange/IconArrowOrange';
-import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStatementSquare';
-import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
@@ -58,10 +56,6 @@ export const FormRegister = () => {
   const handleIconClick = () => {
     setConsent(!consent);
   };
-
-  const consentClass = consent
-    ? `${scss.formRegister__consent} ${scss.formRegister__consentFilled}`
-    : scss.formRegister__consent;
 
   const formik = useFormik({
     initialValues: {

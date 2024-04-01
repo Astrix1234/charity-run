@@ -7,8 +7,6 @@ import { useState, useEffect } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Regulations } from '../Regulations/Regulations';
-import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStatementSquare';
-import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { raceParticipantUserData } from '../../Zustand/api';
