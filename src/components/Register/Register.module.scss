@@ -1,12 +1,11 @@
 .register {
-  &__background {
-    width: 100vw;
-    padding-top: 63px;
-    background-image: url('/images/background.png');
-    background-size: 200% 200%;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-  }
+  width: 100vw;
+  padding-top: 63px;
+  background-image: url('/images/background.png');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
 
   &__container {
     position: relative;
