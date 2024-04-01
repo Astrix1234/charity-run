@@ -9,13 +9,17 @@ import { IconNumberThree } from '../../Icons/IconNumbers/IconNumberThree/IconNum
 import { IconNumberFour } from '../../Icons/IconNumbers/IconNumberFour/IconNumberFour';
 import { IconNumberFive } from '../../Icons/IconNumbers/IconNumberFive/IconNumberFive';
 import { IconWavyArrowDown } from '../../Icons/IconWavyArrowDown/IconWavyArrowDown';
+import { useNavigate } from 'react-router';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 
 export const HematoRunWhyIsItWorth = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const navigate = useNavigate();
+  const { isLogin } = useIsLoginStore();
 
   const handleClick = () => {
-    console.log('Button clicked');
+    isLogin ? navigate('/run-registration') : navigate('/login');
   };
 
   return (
@@ -79,7 +83,7 @@ export const HematoRunWhyIsItWorth = () => {
         </div>
         <div className={scss.whyIsItWorth__button}>
           <Button onClick={handleClick} content={t.button} />
-        </div>{' '}
+        </div>
       </div>
     </section>
   );
