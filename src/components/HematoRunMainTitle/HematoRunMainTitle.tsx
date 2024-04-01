@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { IconRoad } from '../../Icons/IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
+import { useNavigate } from 'react-router';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const navigate = useNavigate();
+  const { isLogin } = useIsLoginStore();
 
   const handleClick = () => {
-    console.log('Button clicked');
+    isLogin ? navigate('/run-registration') : navigate('/register');
   };
   return (
     <section id="home" className={scss.hematoTitles}>
