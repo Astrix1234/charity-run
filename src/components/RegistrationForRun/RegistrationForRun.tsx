@@ -14,23 +14,12 @@ import { ShirtGender } from '../../Zustand/api';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { Statements } from '../Statements/Statements';
 
-// interface FormValues extends raceParticipantUserData {
-//   paymentMethod: string;
-// }
-
 const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
 const setShirtGenderValue = (value: string): ShirtGender | undefined => {
   const allowedValues: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
   return allowedValues.find(type => type === value);
 };
-
-// const paymentMethodKeys = [
-//   'paymentMethodCard',
-//   'paymentMethodTransfer',
-//   'paymentMethodBLIK',
-//   'paymentMethodGooglePay',
-// ];
 
 export const RegisterForRun = () => {
   const { language } = useLanguageStore();
@@ -78,7 +67,6 @@ export const RegisterForRun = () => {
       language: language,
       shirt: '',
       shirtGender: 'Damska',
-      // paymentMethod: 'BLIK',
     },
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
@@ -201,42 +189,13 @@ export const RegisterForRun = () => {
                     </label>
                   ))}{' '}
                 </div>
-                {/* <label
-                htmlFor="paymentMethod"
-                className={scss.registration__label}
-              >
-                {t.paymentMethod}
-                <select
-                  id="paymentMethod"
-                  name="paymentMethod"
-                  className={`${scss.registration__input} ${
-                    formik.touched.paymentMethod && formik.errors.paymentMethod
-                      ? scss.error
-                      : ''
-                  }`}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.paymentMethod}
-                >
-                  {paymentMethodKeys.map(key => (
-                    <option key={key} value={t[key] as string}>
-                      {t[key] as string}
-                    </option>
-                  ))}
-                </select>
-                {formik.touched.paymentMethod &&
-                  formik.errors.paymentMethod && (
-                    <div className={scss.registration__errorMsg}>
-                      {formik.errors.paymentMethod}
-                    </div>
-                  )}
-              </label> */}
-
-                <Button
-                  type="submit"
-                  content="Zapisz się na bieg"
-                  disabled={!formik.isValid || !formik.dirty}
-                />
+                <div className={scss.buttonContainer}>
+                  <Button
+                    type="submit"
+                    content="Zapisz się na bieg"
+                    disabled={!formik.isValid || !formik.dirty}
+                  />
+                </div>
               </form>
               <Statements
                 consent={consent}

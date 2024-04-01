@@ -1,73 +1,72 @@
 .regulations {
-    padding-top: 124px;
-    background: #ffffff4d;
-    border: 1px solid var(--marine);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    width: 100%;
-    max-width: 597px;
-    line-height: 1.5;
+  padding-top: 124px;
+  background: #ffffff4d;
+  border: 1px solid var(--marine);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 100%;
+  max-width: 597px;
+  line-height: 1.5;
+  position: relative;
+  height: 780px;
+  box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
+
+  &__sectionTitle {
+    font-size: 24px;
+  }
+
+  &__regulationsTitle {
+    margin-top: 24px;
     position: relative;
-    height: 780px;
-    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.60);
+  }
 
-    &__sectionTitle {
-        font-size: 24px;
+  &__consent {
+    margin-right: 10px;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
     }
+  }
 
+  &__consentFilled svg {
+    fill: #1ca2a7;
 
-    &__regulationsTitle {
-        margin-top: 24px;
-        position: relative;
+    &:focus,
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    &__consent {
-        margin-right: 10px;
+  &__iconAgree svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: 2px;
+  }
 
-        &:focus,
-        &:hover {
-            cursor: pointer;
-        }
+  &__statementList {
+    padding: 0 24px;
+    list-style: decimal;
+    list-style-type: lower-roman;
+  }
+
+  &__statementItem {
+    list-style: decimal;
+  }
+
+  &__highlights {
+    font-weight: 700;
+    cursor: pointer;
+    color: #1300ec;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
-
-    &__consentFilled svg {
-        fill: #1ca2a7;
-
-        &:focus,
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    &__iconAgree svg {
-        width: 20px;
-        height: 20px;
-        display: block;
-        position: absolute;
-        left: -2px;
-        top: 2px;
-    }
-
-    &__statementList {
-        padding: 0 24px;
-        list-style: decimal;
-        list-style-type: lower-roman;
-    }
-
-    &__statementItem {
-        list-style: decimal;
-    }
-
-    &__highlights {
-        font-weight: 700;
-        cursor: pointer;
-        color: #1300ec;
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
-    }
+  }
 }

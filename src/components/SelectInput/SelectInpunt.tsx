@@ -54,7 +54,7 @@ export const SelectInput: React.FC<SelectInputProps> = ({
 
   const options = shirts[shirtGender].map(option => ({
     value: option.value,
-    label: shirtSizes[option.label] || option.label, // Używaj tłumaczonej etykiety, jeśli dostępna
+    label: shirtSizes[option.label] || option.label,
   }));
   return (
     <label className={scss.SelectInput__label} htmlFor={id}>
