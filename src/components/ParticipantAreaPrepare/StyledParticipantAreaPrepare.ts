@@ -23,6 +23,11 @@ export const StyledPrepare = styled.div`
 
   p {
     font-size: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  a {
+    text-decoration-line: underline;
   }
 
   .foots {
