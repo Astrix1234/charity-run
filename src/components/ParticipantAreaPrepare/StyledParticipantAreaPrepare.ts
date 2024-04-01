@@ -8,6 +8,8 @@ export const StyledPrepare = styled.div`
   gap: 2rem;
   position: relative;
 
+  padding-bottom: 5rem;
+
   h1,
   p {
     font-weight: 600;
