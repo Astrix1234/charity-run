@@ -1,21 +1,17 @@
 .registration {
-  position: relative;
-  margin: 0 auto;
+  width: 100vw;
+  padding-top: 63px;
+  background-image: url('/images/background.png');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 
-  &__background {
-    width: 100vw;
-    padding-top: 63px;
-    padding-left: 100px;
 
-    background-image: url('/images/background.png');
-    background-size: 200% 200%;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-  }
 
   &__containerMain {
     max-width: 1440px;
     width: 100%;
+    margin: 0 auto;
     padding: 0 80px;
   }
 
@@ -40,8 +36,6 @@
     flex-direction: column;
     justify-content: center;
     align-self: stretch;
-    color: var(--BLACK);
-    font-family: Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -120,69 +114,6 @@
     transition: border 0.3s ease-in-out;
   }
 
-  &__regulations {
-    padding-top: 124px;
-    background: #ffffff4d;
-    border: 1px solid var(--marine);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    width: 597px;
-    line-height: 1.5;
-    position: relative;
-    height: 780px;
-    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
-  }
-
-  &__regulationsTitle {
-    margin-top: 24px;
-    position: relative;
-  }
-
-  &__consent {
-    margin-right: 10px;
-
-    &:focus,
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &__consentFilled svg {
-    margin-right: 6px;
-    fill: #1ca2a7;
-
-    &:focus,
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &__iconAgree svg {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: -2px;
-    top: 2px;
-  }
-
-  &__statementList {
-    padding: 0 24px;
-    list-style: decimal;
-    list-style-type: lower-roman;
-  }
-
-  &__statementItem {
-    list-style: decimal;
-  }
-
-  &__highlights {
-    font-weight: 700;
-    cursor: pointer;
-    color: #1300ec;
-    text-decoration: underline;
-  }
 }
 
 .formikMessage {
