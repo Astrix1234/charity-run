@@ -3,16 +3,32 @@ import scss from './Navigation-header.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import { logout } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 export const NavigationHeader = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   const { isLogin, setIsLogin } = useIsLoginStore();
+  const { setIsLoading } = useIsLoadingStore();
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    const logoutUser = async () => {
+      try {
+        setIsLoading(true);
+        await logout();
+        setIsLogin(false);
+        navigate('/');
+      } catch (error) {
+        console.error('Error logging out:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
     setIsLogin(false);
+    logoutUser();
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
