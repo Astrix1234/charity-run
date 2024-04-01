@@ -25,6 +25,7 @@ export const StyledPrepare = styled.div`
 
   .foots {
     position: absolute;
+    z-index: -4;
   }
 
   .foot0 {
@@ -41,13 +42,13 @@ export const StyledPrepare = styled.div`
 
   .foot2 {
     rotate: -90deg;
-    right: 1%;
+    right: 2%;
     top: 18%;
   }
 
   .foot3 {
     rotate: -100deg;
-    right: -3%;
+    right: 0;
     top: 10%;
   }
 `;
