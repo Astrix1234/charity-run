@@ -5,13 +5,13 @@ export const StyledLogo = styled.div`
   place-items: center;
   img {
     position: relative;
-    width: 95px;
+    min-width: 95px;
     height: 95px;
+    z-index: 1;
   }
 
-  &::before {
+  .whiteCircle {
     position: absolute;
-    content: '';
     background-color: white;
     width: 130px;
     height: 130px;
