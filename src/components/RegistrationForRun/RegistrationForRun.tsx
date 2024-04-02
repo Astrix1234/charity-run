@@ -25,6 +25,7 @@ const setShirtGenderValue = (value: string): ShirtGender | undefined => {
 
 export const RegisterForRun = () => {
   const { language } = useLanguageStore();
+  const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
   const { userData } = useUserDataStore();
 
@@ -75,10 +76,13 @@ export const RegisterForRun = () => {
     onSubmit: (values: raceParticipantUserData) => {
       const registerUserOnRun = async () => {
         try {
+          setIsLoading(true);
           await userParticipation(values);
           console.log('User registered for the run!');
         } catch (error: unknown) {
-          console.error('Error registering user for the run:', error);
+          console.error(error);
+        } finally {
+          setIsLoading(false);
         }
       };
       registerUserOnRun();
