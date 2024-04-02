@@ -7,6 +7,7 @@ export interface UserData {
   password: string;
   language: string;
   raceParticipants?: [];
+  avatarURL?: string;
 }
 
 export interface raceParticipantUserData {
