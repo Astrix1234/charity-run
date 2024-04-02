@@ -2,11 +2,10 @@
   &__container {
     max-width: 1280px;
     width: 100%;
-    margin: 40px auto;
+    margin: 40px auto 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 140px;
+    gap: 80px;
   }
 
   &__windows {
@@ -28,7 +27,7 @@
     gap: 24px;
     width: 100%;
     max-width: 600px;
-    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.60);
+    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
   }
 
   &__titleContainer {
@@ -70,33 +69,42 @@
     transition: border 0.3s ease-in-out;
   }
 
-  &__radioList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-
-  &__radio {
-    margin-right: 10px;
-  }
-
-
-  &__donate {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  &__password {
     position: relative;
   }
 
-
-
-  &__donateIcon {
+  &__iconCheckPassword {
     position: absolute;
-    left: -80px;
-    bottom: 5px;
+    bottom: 0;
+    right: 15px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__instructions {
+    width: 776px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__instructionsTitle {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  &__instructionsText {
+    font-size: 21px;
+  }
+
+  &__instructionsTextHighlighted {
+    font-size: 21px;
+    color: var(--orange);
   }
 }
 
