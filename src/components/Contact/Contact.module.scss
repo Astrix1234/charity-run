@@ -111,5 +111,8 @@
   &__support {
     margin-top: 140px;
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
