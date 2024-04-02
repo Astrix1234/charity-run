@@ -204,9 +204,10 @@ export const RegisterForRun = () => {
                   ))}{' '}
                 </div>
                 <div className={scss.buttonContainer}>
+                  <p>{t.statementPayment}</p>
                   <Button
                     type="submit"
-                    content="Zapisz się na bieg"
+                    content={t.button}
                     disabled={!formik.isValid || !formik.dirty || !consent}
                   />
                 </div>
