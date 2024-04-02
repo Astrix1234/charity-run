@@ -11,7 +11,7 @@ const translations = {
     tshirtTypeMale: 'Męska',
     tshirtTypeChild: 'Dziecięca',
     statementPayment:
-      'Klikając „Zapisz się na bieg”, wyrażasz zgodę na przekierowanie do systemu płatności Przelewy24.',
+      'Klikając „Zapisz się na bieg”,zostaniesz przekierowany/a do systemu płatności Przelewy24.',
     button: 'Zapisz się na bieg',
     shirtGenderMap: {
       Damska: 'Damska',
@@ -32,7 +32,7 @@ const translations = {
     tshirtTypeMale: 'Male',
     tshirtTypeChild: 'Child',
     statementPayment:
-      'By clicking "Sign up for the run", you consent to being redirected to the Przelewy24 payment system.',
+      'By clicking "Sign up for the run", you will be redirected to the Przelewy24 payment system.',
     button: 'Sign up for run',
     shirtGenderMap: {
       Damska: 'Female',
