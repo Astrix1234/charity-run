@@ -10,11 +10,12 @@
 
   &__arrow {
     position: absolute;
-    transform: rotate(287deg) scaleX(-1);
+    transform: rotate(275deg) scaleX(-1);
+    left: -100px;
+    bottom: 0;
 
     & > svg {
       stroke: var(--orange);
     }
   }
-
 }
