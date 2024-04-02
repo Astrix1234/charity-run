@@ -6,7 +6,7 @@ export interface UserData {
   email: string;
   password: string;
   language: string;
-  raceParticipants?: raceParticipantUserData[];
+  raceParticipants?: [];
 }
 
 export interface raceParticipantUserData {
@@ -16,6 +16,7 @@ export interface raceParticipantUserData {
   email: string;
   language: string;
   shirt: string;
+  km: string;
   shirtGender: ShirtGender;
 }
 
@@ -118,16 +119,6 @@ export const userAvatar = async (avatar: File) => {
   }
 };
 
-export const verificationEmail = async (email: string) => {
-  try {
-    const response = await axios.post(`${apiUrl}/users/verify`, { email });
-    return response.data;
-  } catch (error) {
-    console.error('Error verifying email:', error);
-    throw error;
-  }
-};
-
 export const resetPassword = async (email: string) => {
   try {
     const response = await axios.post(`${apiUrl}/users/reset-password`, {
@@ -136,18 +127,6 @@ export const resetPassword = async (email: string) => {
     return response.data;
   } catch (error) {
     console.error('Error resetting password:', error);
-    throw error;
-  }
-};
-
-export const verifyAccount = async (verificationToken: string) => {
-  try {
-    const response = await axios.get(
-      `${apiUrl}/users/verify/${verificationToken}`
-    );
-    return response.data;
-  } catch (error) {
-    console.error('Error verifying account:', error);
     throw error;
   }
 };

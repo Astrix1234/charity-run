@@ -13,6 +13,8 @@ import { raceParticipantUserData } from '../../Zustand/api';
 import { ShirtGender } from '../../Zustand/api';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { Statements } from '../Statements/Statements';
+import { userParticipation } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
@@ -65,13 +67,21 @@ export const RegisterForRun = () => {
       phone: '',
       email: userData ? userData.email : '',
       language: language,
-      shirt: '',
+      km: '0',
+      shirt: 'rozmiar 36 (S)',
       shirtGender: 'Damska',
     },
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
-      const { ...raceParticipantUserData } = values;
-      console.log(raceParticipantUserData);
+      const registerUserOnRun = async () => {
+        try {
+          await userParticipation(values);
+          console.log('User registered for the run!');
+        } catch (error: unknown) {
+          console.error('Error registering user for the run:', error);
+        }
+      };
+      registerUserOnRun();
       formik.resetForm();
     },
   });
@@ -193,7 +203,7 @@ export const RegisterForRun = () => {
                   <Button
                     type="submit"
                     content="Zapisz się na bieg"
-                    disabled={!formik.isValid || !formik.dirty}
+                    disabled={!formik.isValid || !formik.dirty || !consent}
                   />
                 </div>
               </form>
