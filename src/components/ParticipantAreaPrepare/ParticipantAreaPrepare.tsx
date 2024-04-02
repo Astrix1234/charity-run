@@ -10,7 +10,7 @@ export const ParticipantAreaPrepare = () => {
   const t = translations[language];
   return (
     <StyledPrepare as="section" id="prepare">
-      <ItemSquare heading="" pos={1}>
+      <ItemSquare pos={1}>
         <>
           <h1>{t.train}</h1>
           <p>{t.trainLinks}</p>
@@ -22,7 +22,7 @@ export const ParticipantAreaPrepare = () => {
           </p>
         </>
       </ItemSquare>
-      <ItemSquare heading="" pos={2}>
+      <ItemSquare pos={2}>
         <>
           <h1>{t.diet}</h1>
           <p>{t.dietLinks}</p>
@@ -34,7 +34,7 @@ export const ParticipantAreaPrepare = () => {
           </p>
         </>
       </ItemSquare>
-      <ItemSquare heading="" pos={3}>
+      <ItemSquare pos={3}>
         <>
           <h1>{t.hydration}</h1>
           <p>
@@ -43,7 +43,7 @@ export const ParticipantAreaPrepare = () => {
           <p>{t.hydrationAdvice}</p>
         </>
       </ItemSquare>
-      <ItemSquare heading="" pos={4}>
+      <ItemSquare pos={4}>
         <>
           <h1>{t.run}</h1>
           <p>
