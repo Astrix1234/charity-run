@@ -89,43 +89,35 @@ export const NavigationHeader = () => {
               !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${
-                !isLogin ? scss['navigation__not-logged-in'] : ''
-              }`}
-              to="/participant-area"
-            >
-              {t.myProfile}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.myProfile}</p>
+            ) : (
+              <Link to="/participant-area">{t.myProfile}</Link>
+            )}
           </li>
           <li
             className={`${scss['navigation__link']} ${
               !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${
-                !isLogin ? scss['navigation__not-logged-in'] : ''
-              }`}
-              to="/participant-area#run-info"
-            >
-              {t.runInfo}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.runInfo}</p>
+            ) : (
+              <Link to="/participant-area">{t.runInfo}</Link>
+            )}
           </li>
           <li
             className={`${scss['navigation__link']} ${
               !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${
-                !isLogin ? scss['navigation__not-logged-in'] : ''
-              }`}
-              to="/participant-area#before-run"
-            >
-              {t.beforeRun}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.beforeRun}</p>
+            ) : (
+              <Link to="/participant-area">{t.beforeRun}</Link>
+            )}
           </li>
+
           <li className={scss.navigation__link}>
             {isLogin ? (
               <button

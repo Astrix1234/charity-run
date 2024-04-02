@@ -1,0 +1,55 @@
+.sponsorship {
+    font-family: 'Poppins';
+    max-width: 1440px;
+    padding: 0 80px;
+    margin: 0 auto;
+    margin-top: 32px;
+
+    .title {
+        color: #2E2530;
+        font-size: 39px;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-top: 32px;
+    }
+
+    .subtitle {
+        color: #2E2530;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word;
+        margin-top: 32px;
+    }
+
+    .content {
+        color: #2E2530;
+        font-size: 24px;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-top: 32px;
+
+        p {
+            margin: 0;
+            margin-top: 32px;
+        }
+    }
+
+    .benefits span {
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    .contactEmail {
+        margin-bottom: 32px;
+    }
+    .contactLink {
+        color: #FD7616;
+        font-size: 24px;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .contactEmail {
+        margin-top: 50px;
+    }
+}

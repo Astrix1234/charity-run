@@ -13,10 +13,8 @@ import { raceParticipantUserData } from '../../Zustand/api';
 import { ShirtGender } from '../../Zustand/api';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { Statements } from '../Statements/Statements';
-
-// interface FormValues extends raceParticipantUserData {
-//   paymentMethod: string;
-// }
+import { userParticipation } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
@@ -25,15 +23,9 @@ const setShirtGenderValue = (value: string): ShirtGender | undefined => {
   return allowedValues.find(type => type === value);
 };
 
-// const paymentMethodKeys = [
-//   'paymentMethodCard',
-//   'paymentMethodTransfer',
-//   'paymentMethodBLIK',
-//   'paymentMethodGooglePay',
-// ];
-
 export const RegisterForRun = () => {
   const { language } = useLanguageStore();
+  const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
   const { userData } = useUserDataStore();
 
@@ -76,14 +68,24 @@ export const RegisterForRun = () => {
       phone: '',
       email: userData ? userData.email : '',
       language: language,
-      shirt: '',
+      km: '0',
+      shirt: 'rozmiar 36 (S)',
       shirtGender: 'Damska',
-      // paymentMethod: 'BLIK',
     },
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
-      const { ...raceParticipantUserData } = values;
-      console.log(raceParticipantUserData);
+      const registerUserOnRun = async () => {
+        try {
+          setIsLoading(true);
+          await userParticipation(values);
+          console.log('User registered for the run!');
+        } catch (error: unknown) {
+          console.error(error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      registerUserOnRun();
       formik.resetForm();
     },
   });
@@ -201,42 +203,13 @@ export const RegisterForRun = () => {
                     </label>
                   ))}{' '}
                 </div>
-                {/* <label
-                htmlFor="paymentMethod"
-                className={scss.registration__label}
-              >
-                {t.paymentMethod}
-                <select
-                  id="paymentMethod"
-                  name="paymentMethod"
-                  className={`${scss.registration__input} ${
-                    formik.touched.paymentMethod && formik.errors.paymentMethod
-                      ? scss.error
-                      : ''
-                  }`}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.paymentMethod}
-                >
-                  {paymentMethodKeys.map(key => (
-                    <option key={key} value={t[key] as string}>
-                      {t[key] as string}
-                    </option>
-                  ))}
-                </select>
-                {formik.touched.paymentMethod &&
-                  formik.errors.paymentMethod && (
-                    <div className={scss.registration__errorMsg}>
-                      {formik.errors.paymentMethod}
-                    </div>
-                  )}
-              </label> */}
-
-                <Button
-                  type="submit"
-                  content="Zapisz się na bieg"
-                  disabled={!formik.isValid || !formik.dirty}
-                />
+                <div className={scss.buttonContainer}>
+                  <Button
+                    type="submit"
+                    content="Zapisz się na bieg"
+                    disabled={!formik.isValid || !formik.dirty || !consent}
+                  />
+                </div>
               </form>
               <Statements
                 consent={consent}

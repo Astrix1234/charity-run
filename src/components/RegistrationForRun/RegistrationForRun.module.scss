@@ -6,8 +6,6 @@
   background-repeat: no-repeat;
   background-position: left bottom;
 
-
-
   &__containerMain {
     max-width: 1440px;
     width: 100%;
@@ -38,7 +36,6 @@
     align-self: stretch;
     font-size: 24px;
     line-height: 150%;
-    /* 36px */
   }
 
   &__form {
@@ -49,13 +46,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 24px;
     gap: 24px;
     width: 100%;
     max-width: 600px;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
     margin-bottom: 143px;
+    height: 780px;
   }
 
   &__titleContainer {
@@ -88,8 +86,8 @@
     font-size: 24px;
     font-weight: 500;
 
-    &:hover .formRegister__input,
-    &:focus .formRegister__input {
+    &:hover .registration__input,
+    &:focus .registration__input {
       border: 1px solid blue;
     }
   }
@@ -107,7 +105,6 @@
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
   }
-
 }
 
 .formikMessage {
@@ -125,4 +122,8 @@
 
 input[type='radio'] {
   margin-right: 12px;
+}
+
+.buttonContainer {
+  padding-top: 35px;
 }

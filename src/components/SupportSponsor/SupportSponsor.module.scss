@@ -1,0 +1,32 @@
+.section {
+    padding: 80px 0 260px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -200px;
+        right: -1400px;
+        width: 2060px;
+        height: 1993px;
+        background-image: url('/images/background.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        transform: rotate(75deg);
+        z-index: -2;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 80px;
+    margin: 0 auto;
+    word-wrap: break-word;
+
+    .heading {
+        max-width: 72%;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
