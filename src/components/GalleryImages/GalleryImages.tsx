@@ -11,7 +11,6 @@ function GalleryImages() {
 
   return (
     <div className={scss.gallery}>
-      <h1>Current Page is {page}</h1>
       <Pagination count={pageCount} onChange={handleChange} page={page} />
       <ul className={scss.gallery__list}>
         {displayedImages.map((image, index) => (
