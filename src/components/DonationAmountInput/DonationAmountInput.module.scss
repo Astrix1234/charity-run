@@ -8,6 +8,21 @@
   border-radius: 24px;
   border: 3px solid var(--orange);
   background: var(--light);
+  transition: all 0.3s ease-in-out;
+}
+.active {
+  background-color: var(--orange);
+  color: var(--light);
+  transform: translateY(-6px);
+
+  .text {
+    color: var(--light);
+  }
+
+  .input {
+    border-color: var(--light);
+    color: var(--light);
+  }
 }
 
 .input {

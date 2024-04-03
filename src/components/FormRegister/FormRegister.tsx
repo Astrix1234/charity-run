@@ -13,7 +13,6 @@ import { toast } from 'react-toastify';
 import AccountCta from '../AccountCta/AccountCta';
 import { useNavigate } from 'react-router';
 import { Statements } from '../Statements/Statements';
-import { IconCheckPassword } from '../../Icons/IconCheckPassword/IconCheckPassword';
 import FormInput from '../FormInput/FormInput';
 import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
 
@@ -29,7 +28,7 @@ export const FormRegister = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [consent, setConsent] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -70,9 +69,7 @@ export const FormRegister = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values: FormValues) => {
-      const { passwordConfirm, ...userData } = values;
-      console.log(passwordConfirm);
-      console.log(userData);
+      const { ...userData } = values;
       const registerUser = async () => {
         try {
           setIsLoading(true);
@@ -205,7 +202,7 @@ export const FormRegister = () => {
           >
             <>
               <input
-                type={passwordVisible ? 'text' : 'password'}
+                type={confirmPasswordVisible ? 'text' : 'password'}
                 name="passwordConfirm"
                 id="passwordConfirm"
                 onChange={formik.handleChange}
@@ -213,8 +210,10 @@ export const FormRegister = () => {
                 value={formik.values.passwordConfirm}
               />
               <TogglePasswordVisibilityButton
-                isVisible={passwordVisible}
-                toggleVisibility={() => setPasswordVisible(prev => !prev)}
+                isVisible={confirmPasswordVisible}
+                toggleVisibility={() =>
+                  setConfirmPasswordVisible(prev => !prev)
+                }
                 password={formik.values.passwordConfirm}
               />
             </>
