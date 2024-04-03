@@ -1,4 +1,4 @@
-import GalleryPagination from '../GalleryPagination/GalleryPagination';
+import GalleryImages from '../GalleryImages/GalleryImages';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 
 import translations from './translations';
@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
     <section className={scss.background}>
       <div className={scss.container}>
         <h2 className={scss.heading}>{t.heading}</h2>
-        <GalleryPagination />
+        <GalleryImages />
       </div>
     </section>
   );

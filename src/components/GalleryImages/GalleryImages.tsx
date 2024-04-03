@@ -1,8 +1,8 @@
 import { Pagination } from '@mui/material';
 import { useGalleryStore } from '../../Zustand/useGalleryStore';
-import scss from './GalleryPagination.module.scss';
+import scss from './GalleryImages.module.scss';
 
-function GalleryPagination() {
+function GalleryImages() {
   const { page, pageCount, displayedImages, setPage } = useGalleryStore();
 
   const handleChange = (_event: React.ChangeEvent<unknown>, page: number) => {
@@ -29,4 +29,4 @@ function GalleryPagination() {
   );
 }
 
-export default GalleryPagination;
+export default GalleryImages;
