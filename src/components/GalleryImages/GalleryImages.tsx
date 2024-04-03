@@ -11,7 +11,9 @@ function GalleryImages() {
 
   return (
     <div className={scss.gallery}>
-      <Pagination count={pageCount} onChange={handleChange} page={page} />
+      <div className={scss.gallery__pagination}>
+        <Pagination count={pageCount} onChange={handleChange} page={page} />
+      </div>
       <ul className={scss.gallery__list}>
         {displayedImages.map((image, index) => (
           <li key={index}>
@@ -23,7 +25,9 @@ function GalleryImages() {
           </li>
         ))}
       </ul>
-      <Pagination count={pageCount} onChange={handleChange} page={page} />
+      <div className={scss.gallery__pagination}>
+        <Pagination count={pageCount} onChange={handleChange} page={page} />
+      </div>
     </div>
   );
 }

@@ -5,9 +5,14 @@
 
 .gallery {
   max-width: 1248px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__pagination {
+    margin: 20px 0;
+  }
   &__list {
-    margin-top: 80px;
-    margin-bottom: 130px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
