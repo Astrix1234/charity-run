@@ -4,7 +4,6 @@ import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
 import { Regulations } from '../Regulations/Regulations';
-import { IconArrowOrange } from '../../Icons/IconArrowOrange/IconArrowOrange';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
@@ -13,8 +12,8 @@ import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { toast } from 'react-toastify';
 import AccountCta from '../AccountCta/AccountCta';
 import { useNavigate } from 'react-router';
-import SupportHand from '../SupportHand/SupportHand';
 import { Statements } from '../Statements/Statements';
+import { IconCheckPassword } from '../../Icons/IconCheckPassword/IconCheckPassword';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -26,8 +25,9 @@ export const FormRegister = () => {
   const t = translations[language];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [consent, setConsent] = useState(false);
+  const [passwordShown, setPasswordShown] = useState(false);
+  const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
 
   const navigate = useNavigate();
 
@@ -96,6 +96,14 @@ export const FormRegister = () => {
 
   const handleNavigate = () => {
     navigate('/login');
+  };
+
+  const togglePasswordVisibility = (field: string) => {
+    if (field === 'password') {
+      setPasswordShown(!passwordShown);
+    } else if (field === 'confirmPassword') {
+      setConfirmPasswordShown(!confirmPasswordShown);
+    }
   };
 
   return (
@@ -169,16 +177,26 @@ export const FormRegister = () => {
             <input
               id="password"
               className={`${scss.formRegister__input} ${
+                scss.formRegister__password
+              } ${
                 formik.touched.password && formik.errors.password
                   ? scss.error
                   : ''
               }`}
-              type="password"
+              type={passwordShown ? 'text' : 'password'}
               name="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
             />
+            <div
+              className={scss.formRegister__iconCheckPassword}
+              onClick={() => togglePasswordVisibility('password')}
+            >
+              {' '}
+              <IconCheckPassword />
+            </div>
+
             {formik.touched.password && formik.errors.password ? (
               <div className={scss.formikMessage}>{formik.errors.password}</div>
             ) : null}
@@ -189,16 +207,25 @@ export const FormRegister = () => {
             <input
               id="passwordConfirm"
               className={`${scss.formRegister__input} ${
+                scss.formRegister__password
+              } ${
                 formik.touched.passwordConfirm && formik.errors.passwordConfirm
                   ? scss.error
                   : ''
               }`}
-              type="password"
+              type={confirmPasswordShown ? 'text' : 'password'}
               name="passwordConfirm"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.passwordConfirm}
-            />
+            />{' '}
+            <div
+              className={scss.formRegister__iconCheckPassword}
+              onClick={() => togglePasswordVisibility('confirmPassword')}
+            >
+              {' '}
+              <IconCheckPassword />
+            </div>
             {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
               <div className={scss.formikMessage}>
                 {formik.errors.passwordConfirm}
@@ -221,11 +248,26 @@ export const FormRegister = () => {
         />
       </div>
 
-      <div className={scss.formRegister__donate}>
-        <div className={scss.formRegister__donateIcon}>
-          <IconArrowOrange />
-        </div>
-        <SupportHand />
+      <div className={scss.formRegister__instructions}>
+        <h4 className={scss.formRegister__instructionsTitle}>
+          {t.instructionsTitle}
+        </h4>
+        <p className={scss.formRegister__instructionsText}>
+          {t.instructionsCost}
+        </p>
+        <p className={scss.formRegister__instructionsText}>
+          <span className={scss.formRegister__instructionsTextHighlighted}>
+            {t.cost1}
+          </span>
+          {t.costAdult}
+        </p>
+        <p className={scss.formRegister__instructionsText}>
+          <span className={scss.formRegister__instructionsTextHighlighted}>
+            {t.cost2}
+          </span>
+          {t.costChild}
+        </p>
+        <p className={scss.formRegister__instructionsText}>{t.costGeneral}</p>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ export const IconArrow = () => {
       viewBox="0 0 28 32"
       className={scss.icon}
     >
-      <title>arrow</title>
       <path
         fill="none"
         strokeLinejoin="round"

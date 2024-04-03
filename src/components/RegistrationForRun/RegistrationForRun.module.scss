@@ -1,5 +1,5 @@
 .registration {
-  width: 100vw;
+  width: 100%;
   padding-top: 63px;
   background-image: url('/images/background.png');
   background-size: 200% 200%;
@@ -125,5 +125,11 @@ input[type='radio'] {
 }
 
 .buttonContainer {
-  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  font-size: 16px;
+  gap: 24px;
 }

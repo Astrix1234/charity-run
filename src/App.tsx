@@ -37,6 +37,8 @@ const SupportVolunteersPage = lazy(
 );
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
+const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
+
 function App() {
   const { language, setLanguage } = useLanguageStore(state => ({
     language: state.language,
@@ -127,6 +129,7 @@ function App() {
               element={<SupportVolunteersPage />}
             />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="gallery" element={<GalleryPage />} />
             <Route path="*" element={<HomePage />} />
           </Route>
         </Routes>
