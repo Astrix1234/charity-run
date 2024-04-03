@@ -14,7 +14,7 @@ export const StyledParticipant = styled.div`
       padding-top: 150px;
     }
 
-    #participantZone {
+    #participantMain {
       padding-top: 50px;
     }
 

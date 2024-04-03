@@ -10,7 +10,7 @@ export const ParticipantAreaMain = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledMain as="section" id="participantZone">
+    <StyledMain as="section" id="participantMain">
       <div className="photo">
         <RunnerMan />
         <p className="addPhoto">
