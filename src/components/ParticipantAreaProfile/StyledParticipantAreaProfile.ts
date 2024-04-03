@@ -16,12 +16,4 @@ export const StyledProfile = styled.div`
     font-weight: 600;
     padding-bottom: 2.5rem;
   }
-
-  p:nth-child(2n + 1) {
-    color: black;
-  }
-
-  p:nth-child(2n) {
-    font-weight: 800;
-  }
 `;
