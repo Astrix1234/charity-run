@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
 
 export default function ParticipantAreaPage() {
   const { hash } = useLocation();
@@ -20,7 +21,7 @@ export default function ParticipantAreaPage() {
       <Helmet>
         <title>Participant Area</title>
       </Helmet>
-      <h1>Participant Area</h1>
+      <ParticipantArea />
     </div>
   );
 }
