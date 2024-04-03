@@ -29,12 +29,13 @@ function DonationBox() {
           />
         ))}
         <DonationAmountInput
+          isActive={!amounts.includes(currentAmount)}
           value={currentAmount}
           handleChange={e => setCurrentAmount(e)}
         />
       </div>
       <SupportButton
-        disabled={!currentAmount}
+        disabled={!currentAmount || currentAmount < 0}
         handleClick={() => console.log(currentAmount)}
       />
     </div>
