@@ -1,5 +1,4 @@
-import { Pagination } from '@mui/material';
-
+import GalleryPagination from '../Pagination/GalleryPagination';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 
 import { images } from './Images';
@@ -15,6 +14,7 @@ const Gallery: React.FC = () => {
       <div className={scss.container}>
         <h2 className={scss.heading}>{t.heading}</h2>
         <div className={scss.gallery}>
+          <GalleryPagination />
           <ul className={scss.gallery__list}>
             {images.map((image, index) => (
               <li key={index}>
@@ -26,6 +26,7 @@ const Gallery: React.FC = () => {
               </li>
             ))}
           </ul>
+          <GalleryPagination />
         </div>
       </div>
     </section>
