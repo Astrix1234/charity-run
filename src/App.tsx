@@ -1,4 +1,4 @@
-import { lazy, useEffect } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
+import { useParticipantUserDataStore } from './Zustand/useParticipantUserDataStore';
+import { getUserParticipation } from './Zustand/api';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -46,7 +48,11 @@ function App() {
   }));
   const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
-  const { setUserData } = useUserDataStore();
+  const { setUserData, userData } = useUserDataStore();
+  const { setParticipantUserData, participantUserData } =
+    useParticipantUserDataStore();
+  const [hasFetchedParticipantData, setHasFetchedParticipantData] =
+    useState(false);
 
   const location = useLocation();
 
@@ -95,7 +101,37 @@ function App() {
     };
 
     checkLogin();
-  }, [setIsLogin, setUserData, setIsLoading]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const fetchUserParticipation = async () => {
+      try {
+        setIsLoading(true);
+        const response = await getUserParticipation();
+        console.log('Response:', response);
+        console.log('ok');
+        if (response) {
+          setParticipantUserData(response);
+          setHasFetchedParticipantData(true);
+        }
+      } catch (error) {
+        console.error('Error checking participation:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    if (userData && !hasFetchedParticipantData) {
+      fetchUserParticipation();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userData]);
+
+  useEffect(() => {
+    console.log('userData:', userData);
+    console.log('participantUserData:', participantUserData);
+  }, [userData, participantUserData]);
 
   return (
     <>
