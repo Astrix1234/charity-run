@@ -13,7 +13,8 @@ import { toast } from 'react-toastify';
 import AccountCta from '../AccountCta/AccountCta';
 import { useNavigate } from 'react-router';
 import { Statements } from '../Statements/Statements';
-import { IconCheckPassword } from '../../Icons/IconCheckPassword/IconCheckPassword';
+import FormInput from '../FormInput/FormInput';
+import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -26,8 +27,8 @@ export const FormRegister = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [consent, setConsent] = useState(false);
-  const [passwordShown, setPasswordShown] = useState(false);
-  const [confirmPasswordShown, setConfirmPasswordShown] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -68,9 +69,7 @@ export const FormRegister = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values: FormValues) => {
-      const { passwordConfirm, ...userData } = values;
-      console.log(passwordConfirm);
-      console.log(userData);
+      const { ...userData } = values;
       const registerUser = async () => {
         try {
           setIsLoading(true);
@@ -98,14 +97,6 @@ export const FormRegister = () => {
     navigate('/login');
   };
 
-  const togglePasswordVisibility = (field: string) => {
-    if (field === 'password') {
-      setPasswordShown(!passwordShown);
-    } else if (field === 'confirmPassword') {
-      setConfirmPasswordShown(!confirmPasswordShown);
-    }
-  };
-
   return (
     <div className={scss.formRegister__container}>
       <div className={scss.formRegister__windows}>
@@ -116,7 +107,118 @@ export const FormRegister = () => {
           <div className={scss.formRegister__titleContainer}>
             <p className={scss.formRegister__sectionTitle}>{t.register}</p>
           </div>
-          <label className={scss.formRegister__label} htmlFor="name">
+          <FormInput
+            error={{
+              condition: Boolean(formik.touched.name && formik.errors.name),
+              message: String(formik.errors.name),
+            }}
+            label={t.name}
+            id="name"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+            />
+          </FormInput>
+
+          <FormInput
+            error={{
+              condition: Boolean(
+                formik.touched.surname && formik.errors.surname
+              ),
+              message: String(formik.errors.surname),
+            }}
+            label={t.lastName}
+            id="surname"
+          >
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.surname}
+            />
+          </FormInput>
+
+          <FormInput
+            error={{
+              condition: Boolean(formik.touched.email && formik.errors.email),
+              message: String(formik.errors.email),
+            }}
+            label={t.email}
+            id="email"
+          >
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+          </FormInput>
+
+          <FormInput
+            error={{
+              condition: Boolean(
+                formik.touched.password && formik.errors.password
+              ),
+              message: String(formik.errors.password),
+            }}
+            label={t.password}
+            id="password"
+          >
+            <>
+              <input
+                type={passwordVisible ? 'text' : 'password'}
+                name="password"
+                id="password"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+              />
+              <TogglePasswordVisibilityButton
+                isVisible={passwordVisible}
+                toggleVisibility={() => setPasswordVisible(prev => !prev)}
+                password={formik.values.password}
+              />
+            </>
+          </FormInput>
+
+          <FormInput
+            error={{
+              condition: Boolean(
+                formik.touched.passwordConfirm && formik.errors.passwordConfirm
+              ),
+              message: String(formik.errors.passwordConfirm),
+            }}
+            label={t.passwordConfirm}
+            id="passwordConfirm"
+          >
+            <>
+              <input
+                type={confirmPasswordVisible ? 'text' : 'password'}
+                name="passwordConfirm"
+                id="passwordConfirm"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.passwordConfirm}
+              />
+              <TogglePasswordVisibilityButton
+                isVisible={confirmPasswordVisible}
+                toggleVisibility={() =>
+                  setConfirmPasswordVisible(prev => !prev)
+                }
+                password={formik.values.passwordConfirm}
+              />
+            </>
+          </FormInput>
+          {/* <label className={scss.formRegister__label} htmlFor="name">
             {t.name}
             <input
               id="name"
@@ -231,7 +333,7 @@ export const FormRegister = () => {
                 {formik.errors.passwordConfirm}
               </div>
             ) : null}
-          </label>
+          </label> */}
 
           <Button
             type="submit"
