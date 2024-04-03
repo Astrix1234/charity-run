@@ -11,12 +11,16 @@ import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { login } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { toast } from 'react-toastify';
+import ForgotPassword from '../ForgotPassword/ForgotPassword';
+import { useState } from 'react';
+import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
 
 function LoginContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
   const { setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
+  const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
@@ -96,28 +100,23 @@ function LoginContainer() {
             message: String(formik.errors.password),
           }}
         >
-          <input
-            type="text"
-            name="password"
-            id="login-password"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.password}
-          />
+          <>
+            <input
+              type={passwordVisible ? 'text' : 'password'}
+              name="password"
+              id="login-password"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+            />
+            <TogglePasswordVisibilityButton
+              password={formik.values.password}
+              isVisible={passwordVisible}
+              toggleVisibility={() => setPasswordVisible(prev => !prev)}
+            />
+          </>
         </FormInput>
-        {/* <Input
-          formik={formik as unknown as FormikProps<FormikValues>}
-          label={t.email}
-          id="login-email"
-          name="email"
-        /> */}
-        {/* <Input
-          formik={formik as unknown as FormikProps<FormikValues>}
-          label={t.password}
-          id="login-password"
-          name="password"
-        /> */}
-
+        <ForgotPassword />
         <Button type="submit" content={t.button} onClick={() => {}} />
       </form>
       <AccountCta type="register" onClick={handleNavigate} />
