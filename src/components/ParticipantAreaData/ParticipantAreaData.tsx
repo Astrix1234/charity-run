@@ -28,14 +28,14 @@ export const ParticipantAreaData = () => {
           {userData && <p>{userData.email}</p>}
           <p>/02</p>
         </div>
-        {participantUserData && (
+        {participantUserData && participantUserData.length > 0 && (
           <div>
             <p>{t.phoneNumber}</p>
             <p>{participantUserData[0].phone}</p>
             <p>/03</p>
           </div>
         )}
-        {participantUserData && (
+        {participantUserData && participantUserData.length > 0 && (
           <div>
             <p>{t.phoneNumber}</p>
             <p>{participantUserData[0].shirt}</p>
