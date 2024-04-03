@@ -1,16 +1,16 @@
-import { StyledZone } from './StyledParticipantAreaZone';
+import { StyledMain } from './StyledParticipantAreaMain';
 import { Link } from 'react-router-dom';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import RunnerMan from '../../Icons/RunnerMan/RunnerMan';
-import { ParticipantAreaProfile } from '../ParticipantAreaProfile/ParticipantAreaProfile';
+import { ParticipantAreaNavigation } from '../ParticipantAreaNavigation/ParticipantAreaNavigation';
 import { IconPencil } from '../../Icons/IconPencil/IconPlus';
 
-export const ParticipantAreaZone = () => {
+export const ParticipantAreaMain = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledZone as="section" id="participantZone">
+    <StyledMain as="section" id="participantZone">
       <div className="photo">
         <RunnerMan />
         <p className="addPhoto">
@@ -19,7 +19,7 @@ export const ParticipantAreaZone = () => {
         </p>
       </div>
 
-      <ParticipantAreaProfile />
-    </StyledZone>
+      <ParticipantAreaNavigation />
+    </StyledMain>
   );
 };

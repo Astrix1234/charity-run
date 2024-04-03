@@ -1,7 +1,7 @@
 import { StyledParticipant } from './StyledParticipantArea';
 import { ParticipantAreaHeading } from '../ParticipantAreaHeading/ParticipantAreaHeading';
-import { ParticipantAreaZone } from '../ParticipantAreaZone/ParticipantAreaZone';
-import { ParticipantAreaRun } from '../ParticipantAreaRun/ParticipantAreaRun';
+import { ParticipantAreaMain } from '../ParticipantAreaMain/ParticipantAreaMain';
+import { ParticipantAreaProfile } from '../ParticipantAreaProfile/ParticipantAreaProfile';
 import { Timetable } from '../Timetable/Timetable';
 import { ParticipantAreaPrepare } from '../ParticipantAreaPrepare/ParticipantAreaPrepare';
 
@@ -10,8 +10,8 @@ export const ParticipantArea = () => {
     <StyledParticipant>
       <div className="container">
         <ParticipantAreaHeading />
-        <ParticipantAreaZone />
-        <ParticipantAreaRun />
+        <ParticipantAreaMain />
+        <ParticipantAreaProfile />
         <Timetable />
         <ParticipantAreaPrepare />
       </div>

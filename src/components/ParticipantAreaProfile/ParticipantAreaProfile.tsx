@@ -1,30 +1,12 @@
+import { ParticipantAreaData } from '../ParticipantAreaData/ParticipantAreaData';
+import { ParticipantAreaResults } from '../ParticipantAreaResults/ParticipantAreaResults';
 import { StyledProfile } from './StyledParticipantAreaProfile';
-import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from './translations';
-import { Link } from 'react-router-dom';
 
 export const ParticipantAreaProfile = () => {
-  const { language } = useLanguageStore();
-  const t = translations[language];
   return (
-    <StyledProfile>
-      <h1>{t.myProfile}</h1>
-      <h2>{t.navigation}</h2>
-      <p>
-        <Link to="/participant-area/#myData">{t.myData} /01</Link>
-      </p>
-      <p>
-        <Link to="/participant-area/#myData">{t.myResult} /02</Link>
-      </p>
-      <p>
-        <Link to="/participant-area/#timetable">{t.timetable} /03</Link>
-      </p>
-      <p>
-        <Link to="/participant-area/#prepare">{t.getReady} /04</Link>
-      </p>
-      <p>
-        <Link to="#">{t.logout} /05</Link>
-      </p>
+    <StyledProfile as="section" id="myData">
+      <ParticipantAreaData />
+      <ParticipantAreaResults />
     </StyledProfile>
   );
 };
