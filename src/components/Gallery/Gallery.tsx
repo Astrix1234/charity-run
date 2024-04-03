@@ -1,4 +1,4 @@
-import GalleryPagination from '../Pagination/GalleryPagination';
+import GalleryPagination from '../GalleryPagination/GalleryPagination';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 
 import { images } from './Images';
