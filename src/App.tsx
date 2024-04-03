@@ -44,7 +44,7 @@ function App() {
     language: state.language,
     setLanguage: state.setLanguage,
   }));
-  const { isLoading } = useIsLoadingStore();
+  const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
   const { setUserData } = useUserDataStore();
 
@@ -80,6 +80,7 @@ function App() {
   useEffect(() => {
     const checkLogin = async () => {
       try {
+        setIsLoading(true);
         const response = await getCurrentUser();
         console.log('Response:', response);
         if (response) {
@@ -88,11 +89,13 @@ function App() {
         }
       } catch (error) {
         console.error('Error checking login:', error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     checkLogin();
-  }, [setIsLogin, setUserData]);
+  }, [setIsLogin, setUserData, setIsLoading]);
 
   return (
     <>
