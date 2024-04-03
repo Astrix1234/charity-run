@@ -8,6 +8,7 @@ import scss from './SupportDonation.module.scss';
 function SupportDonation() {
   return (
     <section className={scss.section}>
+      <div className={scss.background} />
       <div className={scss.container}>
         <SupportHeading
           headingText={{
