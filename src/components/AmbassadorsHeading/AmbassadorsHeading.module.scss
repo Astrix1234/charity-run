@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 64px 80px 40px;
+  padding: 64px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -14,15 +14,23 @@
   align-items: center;
   text-align: center;
   color: var(--dark);
-  gap: 24px;
+  gap: clamp(6px, 0.5vw, 24px);
 
   &__sub {
     font-size: 50px;
     font-weight: 500;
+    font-size: clamp(16px, 5vw, 50px);
   }
 
   &__main {
     font-size: 90px;
     font-weight: 800;
+    font-size: clamp(36px, 9vw, 90px);
+  }
+}
+
+.line {
+  svg {
+    width: clamp(240px, 60vw, 800px);
   }
 }

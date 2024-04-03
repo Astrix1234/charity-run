@@ -14,8 +14,8 @@ function NumberCircle({
   color = '',
 }: NumberCircleProps) {
   const numberStyle = {
-    width: `${sizePx}px`,
-    fontSie: `${fontSizePx}px`,
+    width: `clamp(72px, 22vw, ${sizePx}px)`,
+    fontSize: `clamp(48px, 14vw, ${fontSizePx}px)`,
     backgroundColor: `${color}`,
   };
 

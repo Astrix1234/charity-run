@@ -13,7 +13,9 @@ function AmbassadorsHeading() {
         <span className={scss.heading__sub}>{t.sub}</span>
         <span className={scss.heading__main}>{t.main}</span>
       </h2>
-      <HandwrittenLine />
+      <div className={scss.line}>
+        <HandwrittenLine />
+      </div>
     </div>
   );
 }
