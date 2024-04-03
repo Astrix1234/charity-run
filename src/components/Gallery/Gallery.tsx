@@ -1,3 +1,5 @@
+import { Pagination } from '@mui/material';
+
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 
 import { images } from './Images';
