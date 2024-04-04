@@ -122,7 +122,7 @@ export const userAvatar = async (avatar: File) => {
   formData.append('avatar', avatar);
 
   try {
-    const response = await axios.put(`${apiUrl}/users/avatars`, formData);
+    const response = await axios.patch(`${apiUrl}/users/avatars`, formData);
     return response.data;
   } catch (error) {
     console.error('Error updating user avatar:', error);
