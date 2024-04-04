@@ -15,7 +15,7 @@ export const StyledParticipant = styled.div`
 
     #participantMain,
     #myData,
-    #prepare {
+    #before-run {
       padding-top: 150px;
     }
 
