@@ -14,6 +14,7 @@ import { toast } from 'react-toastify';
 import ForgotPassword from '../ForgotPassword/ForgotPassword';
 import { useState } from 'react';
 import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
+import InputColContainer from '../InputColContainer/InputColContainer';
 
 function LoginContainer() {
   const { language } = useLanguageStore();
@@ -70,7 +71,7 @@ function LoginContainer() {
   };
 
   return (
-    <div className={scss.container}>
+    <InputColContainer>
       <form className={scss.form} onSubmit={formik.handleSubmit}>
         <h2 className={scss.heading}>{t.heading}</h2>
         <FormInput
@@ -120,7 +121,7 @@ function LoginContainer() {
         <Button type="submit" content={t.button} onClick={() => {}} />
       </form>
       <AccountCta type="register" onClick={handleNavigate} />
-    </div>
+    </InputColContainer>
   );
 }
 
