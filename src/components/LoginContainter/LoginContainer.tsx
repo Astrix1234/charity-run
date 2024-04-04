@@ -23,7 +23,7 @@ function LoginContainer() {
   const t = translations[language];
   const { setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
-  const { setShowConsent } = useCookieConsentStore();
+  const { setShowConsent, resetConsent } = useCookieConsentStore();
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
   const navigate = useNavigate();
@@ -33,7 +33,9 @@ function LoginContainer() {
     validationSchema: validationSchema,
     onSubmit: values => {
       const { email, password } = values;
-      if (!Cookies.get('CookieConsent')) {
+      const consentGiven = Cookies.get('CookieConsent');
+      if (!consentGiven || consentGiven !== 'true') {
+        resetConsent();
         setShowConsent(true);
         toast.info('Please accept cookies before logging in.');
         return;
