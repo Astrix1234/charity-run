@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
+import CookiesBanner from './components/CookiesBanner/CookiesBanner.tsx';
 
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
@@ -103,6 +104,7 @@ function App() {
 
   return (
     <>
+      <CookiesBanner />
       {isLoading && <Loader />}
       <ToastContainer
         position="top-right"
