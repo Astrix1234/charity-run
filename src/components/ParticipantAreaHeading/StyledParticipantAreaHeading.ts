@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledHeading = styled.div`
-  padding-top: 2rem;
   display: grid;
   justify-items: center;
   gap: 2rem;
