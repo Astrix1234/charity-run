@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState } from 'react';
+import { lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
