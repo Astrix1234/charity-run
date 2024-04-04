@@ -5,67 +5,67 @@ export interface Image {
 
 export const images: Image[] = [
   {
-    src: 'images/galleryPage/placeholder.webp',
+    src: 'images/gallery/slider1.webp',
     alt: 'placeholder',
   },
   {
-    src: 'images/galleryPage/placeholder2.webp',
+    src: 'images/gallery/slider2.webp',
     alt: 'placeholder2',
   },
   {
-    src: 'images/galleryPage/placeholder3.webp',
+    src: 'images/gallery/slider3.webp',
     alt: 'placeholder3',
   },
   {
-    src: 'images/galleryPage/placeholder4.webp',
+    src: 'images/gallery/slider4.webp',
     alt: 'placeholder4',
   },
   {
-    src: 'images/galleryPage/placeholder5.webp',
+    src: 'images/gallery/placeholder5.webp',
     alt: 'placeholder5',
   },
   {
-    src: 'images/galleryPage/placeholder6.webp',
+    src: 'images/gallery/placeholder6.webp',
     alt: 'placeholder6',
   },
   {
-    src: 'images/galleryPage/placeholder7.webp',
+    src: 'images/gallery/placeholder7.webp',
     alt: 'placeholder7',
   },
   {
-    src: 'images/galleryPage/placeholder8.webp',
+    src: 'images/gallery/placeholder8.webp',
     alt: 'placeholder8',
   },
   {
-    src: 'images/galleryPage/placeholder9.webp',
+    src: 'images/gallery/placeholder9.webp',
     alt: 'placeholder9',
   },
   {
-    src: 'images/galleryPage/placeholder10.webp',
+    src: 'images/gallery/placeholder10.webp',
     alt: 'placeholder10',
   },
   {
-    src: 'images/galleryPage/placeholder11.webp',
+    src: 'images/gallery/placeholder11.webp',
     alt: 'placeholder11',
   },
   {
-    src: 'images/galleryPage/placeholder12.webp',
+    src: 'images/gallery/placeholder12.webp',
     alt: 'placeholder12',
   },
   {
-    src: 'images/galleryPage/placeholder13.webp',
+    src: 'images/gallery/placeholder13.webp',
     alt: 'placeholder13',
   },
   {
-    src: 'images/galleryPage/placeholder14.webp',
+    src: 'images/gallery/placeholder14.webp',
     alt: 'placeholder14',
   },
   {
-    src: 'images/galleryPage/placeholder15.webp',
+    src: 'images/gallery/placeholder15.webp',
     alt: 'placeholder15',
   },
   {
-    src: 'images/galleryPage/placeholder16.webp',
+    src: 'images/gallery/placeholder16.webp',
     alt: 'placeholder16',
   },
 ];

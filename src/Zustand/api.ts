@@ -107,6 +107,16 @@ export const userParticipation = async (userData: raceParticipantUserData) => {
   }
 };
 
+export const getUserParticipation = async () => {
+  try {
+    const response = await axios.get(`${apiUrl}/users/participant`);
+    return response.data;
+  } catch (error) {
+    console.error('Error getting current user:', error);
+    throw error;
+  }
+};
+
 export const userAvatar = async (avatar: File) => {
   const formData = new FormData();
   formData.append('avatar', avatar);
