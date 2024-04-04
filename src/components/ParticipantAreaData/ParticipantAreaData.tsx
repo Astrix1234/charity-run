@@ -15,7 +15,6 @@ export const ParticipantAreaData = () => {
     <StyledData>
       <h1>{t.myData}</h1>
       <div>
-        <Link to="/new-password">edit password</Link>
         <div>
           <p>01/ {t.nameSurname}</p>
           <p>Januszator Kowalewuszewuski</p>
@@ -44,6 +43,7 @@ export const ParticipantAreaData = () => {
             <p>{participantUserData[0].shirt}</p>
           )}
         </div>
+        <Link to="/new-password">edit password</Link>
       </div>
     </StyledData>
   );
