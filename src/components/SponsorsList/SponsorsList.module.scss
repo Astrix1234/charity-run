@@ -1,16 +1,17 @@
 .container {
   width: 100%;
-  gap: 40px;
 }
 
 .heading {
   font-size: 28px;
+  font-size: clamp(12px, 4vw, 28px);
   font-weight: 500;
-  margin-bottom: 28px;
+  margin-bottom: clamp(16px, 3vw, 28px);
 }
 
 .list {
   display: flex;
   align-items: center;
   gap: 45px;
+  gap: clamp(10px, 3vw, 45px);
 }

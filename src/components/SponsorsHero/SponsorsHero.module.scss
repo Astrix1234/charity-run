@@ -1,14 +1,45 @@
 .section {
   position: relative;
   padding: 64px 80px 70px;
+  padding: 64px clamp(24px, 4vw, 80px) clamp(24px, 8vw, 70px);
   max-width: 1440px;
   margin: 0 auto;
+  overflow-x: clip;
+}
 
+.line {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  top: -10%;
+  transform: translateX(-56%);
+  z-index: -1;
+  width: 100%;
   & > svg {
-    position: absolute;
-    top: -10%;
-    left: 50%;
-    transform: translateX(-56%);
-    z-index: -1;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1240px) {
+    top: -2%;
+    left: 0%;
+    transform: translateX(0%);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    top: -12%;
+    left: 0%;
+    transform: translateX(0%);
+  }
+
+  @media only screen and (max-width: 820px) {
+    top: -18%;
+  }
+
+  @media only screen and (max-width: 680px) {
+    top: -26%;
+  }
+
+  @media only screen and (max-width: 440px) {
+    top: -30%;
   }
 }

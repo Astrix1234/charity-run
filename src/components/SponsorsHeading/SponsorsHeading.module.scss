@@ -1,5 +1,6 @@
 .container {
   margin-bottom: 420px;
+  margin-bottom: clamp(240px, 40vw, 420px);
 }
 
 .heading {
@@ -11,12 +12,14 @@
   &__sub {
     margin-bottom: 16px;
     font-size: 28px;
-    text-align: center;
+    font-size: clamp(14px, 3vw, 28px);
+    line-height: 1.5;
     font-weight: 500;
+    max-width: 56vw;
   }
 
   &__main {
-    font-size: 90px;
+    font-size: clamp(32px, 9vw, 90px);
     font-weight: 800;
     color: var(--orange);
     text-transform: uppercase;
