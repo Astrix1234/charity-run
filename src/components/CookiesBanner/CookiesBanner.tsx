@@ -1,6 +1,6 @@
 import CookieConsent from 'react-cookie-consent';
 
-const Cookie = () => {
+const CookieBanner = () => {
   return (
     <CookieConsent
       enableDeclineButton
@@ -18,4 +18,4 @@ const Cookie = () => {
   );
 };
 
-export default Cookie;
+export default CookieBanner;
