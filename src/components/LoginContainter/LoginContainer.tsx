@@ -66,10 +66,6 @@ function LoginContainer() {
     },
   });
 
-  const handleNavigate = () => {
-    navigate('/register');
-  };
-
   return (
     <InputColContainer>
       <form className={scss.form} onSubmit={formik.handleSubmit}>
@@ -120,7 +116,7 @@ function LoginContainer() {
         <ForgotPassword />
         <Button type="submit" content={t.button} onClick={() => {}} />
       </form>
-      <AccountCta type="register" onClick={handleNavigate} />
+      <AccountCta type="register" />
     </InputColContainer>
   );
 }

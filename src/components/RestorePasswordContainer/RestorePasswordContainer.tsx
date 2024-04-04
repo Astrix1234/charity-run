@@ -6,6 +6,7 @@ import translations from './translations';
 import { validationSchema } from './validationSchema';
 import { Button } from '../Button/Button';
 import InputColContainer from '../InputColContainer/InputColContainer';
+import { toast } from 'react-toastify';
 
 function RestorePasswordContainer() {
   const { language } = useLanguageStore();
@@ -18,6 +19,8 @@ function RestorePasswordContainer() {
     validationSchema: validationSchema,
     onSubmit: (values: FormikValues) => {
       console.log(values.email);
+      toast.success(t.toast);
+      formik.resetForm();
     },
   });
   return (
@@ -42,7 +45,14 @@ function RestorePasswordContainer() {
             value={formik.values.email}
           />
         </FormInput>
-        <Button type="submit" content={t.button} />
+        <Button
+          disabled={
+            !formik.values.email ||
+            Boolean(formik.touched.email && formik.errors.email)
+          }
+          type="submit"
+          content={t.button}
+        />
       </form>
     </InputColContainer>
   );
