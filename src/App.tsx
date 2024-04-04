@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
+
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
 
@@ -46,7 +47,7 @@ function App() {
     language: state.language,
     setLanguage: state.setLanguage,
   }));
-  const { isLoading } = useIsLoadingStore();
+  const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
   const { setUserData } = useUserDataStore();
 
@@ -82,6 +83,7 @@ function App() {
   useEffect(() => {
     const checkLogin = async () => {
       try {
+        setIsLoading(true);
         const response = await getCurrentUser();
         console.log('Response:', response);
         if (response) {
@@ -90,11 +92,14 @@ function App() {
         }
       } catch (error) {
         console.error('Error checking login:', error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     checkLogin();
-  }, [setIsLogin, setUserData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>

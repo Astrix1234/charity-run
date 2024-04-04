@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import Slider from '../Slider/Slider';
 import scss from './GalleryCarousel.module.scss';
@@ -45,9 +46,9 @@ const GalleryCarousel = () => {
   return (
     <section id="gallery" className={scss.gallery}>
       <Slider array={galleryList} reverse={false} />
-      <div className={scss.gallery__link}>
+      <Link className={scss.gallery__link} to="/gallery">
         <p className={scss.gallery__placeholder}>{t.seeGallery}</p>
-      </div>
+      </Link>
     </section>
   );
 };

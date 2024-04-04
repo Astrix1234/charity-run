@@ -42,6 +42,19 @@ export const NavigationHeader = () => {
     }
   };
 
+  const handleLinkClickParticipant = (
+    e: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    if (location.pathname !== '/participant-area') {
+      navigate('/participant-area');
+    }
+  };
+
   return (
     <div className={scss.navigation}>
       <div className={scss.navigation__item}>
@@ -92,7 +105,7 @@ export const NavigationHeader = () => {
             {!isLogin ? (
               <p className={scss['navigation__not-logged-in']}>{t.myProfile}</p>
             ) : (
-              <Link to="/participant-area">{t.myProfile}</Link>
+              <a onClick={e => handleLinkClickParticipant(e)}>{t.myProfile}</a>
             )}
           </li>
           <li
