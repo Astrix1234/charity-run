@@ -15,7 +15,6 @@
   }
 
   &__form {
-    line-height: 1.5;
     background: #ffffff4d;
     border: 1px solid var(--marine);
     border-radius: 32px;
@@ -37,40 +36,6 @@
   &__sectionTitle {
     font-size: 24px;
     font-weight: 400;
-  }
-
-  &__label {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    max-width: 552px;
-    font-size: 24px;
-    font-weight: 500;
-
-    &:hover .formRegister__input,
-    &:focus .formRegister__input {
-      border: 1px solid blue;
-    }
-  }
-
-  &__input,
-  &__select {
-    font-size: var(--mediumFontSize);
-    border: 1px solid var(--marine);
-    border-radius: 10px;
-    background-color: var(--light);
-    outline: none;
-    width: 100%;
-    max-width: 552px;
-    height: 40px;
-    margin-top: 8px;
-    padding-left: 15px;
-    transition: border 0.3s ease-in-out;
-  }
-
-  &__password {
-    position: relative;
   }
 
   &__iconCheckPassword {
@@ -108,15 +73,4 @@
   }
 }
 
-.formikMessage {
-  position: absolute;
-  right: 0;
-  top: 85px;
-  color: red;
-  font-size: 14px;
-  font-weight: 400;
-}
 
-.error {
-  border: 1px solid red;
-}

@@ -10,8 +10,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
+
+import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
+import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
+
 import { useParticipantUserDataStore } from './Zustand/useParticipantUserDataStore';
 import { getUserParticipation } from './Zustand/api';
+
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -154,6 +159,8 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
+            <Route path="restore-password" element={<RestorePasswordPage />} />
+            <Route path="new-password" element={<NewPasswordPage />} />
             <Route
               path="run-registration"
               element={<RegistrationForRunPage />}
