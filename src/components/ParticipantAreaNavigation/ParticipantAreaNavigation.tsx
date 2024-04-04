@@ -11,10 +11,10 @@ export const ParticipantAreaNavigation = () => {
       <h1>{t.myProfile}</h1>
       <h2>{t.navigation}</h2>
       <p>
-        <Link to="/participant-area/#myData">{t.myData} /01</Link>
+        <Link to="/participant-area/#my-data">{t.myData} /01</Link>
       </p>
       <p>
-        <Link to="/participant-area/#myData">{t.myResult} /02</Link>
+        <Link to="/participant-area/#my-data">{t.myResult} /02</Link>
       </p>
       <p>
         <Link to="/participant-area/#timetable">{t.timetable} /03</Link>

@@ -7,10 +7,16 @@ import { validationSchema } from './validationSchema';
 import { Button } from '../Button/Button';
 import InputColContainer from '../InputColContainer/InputColContainer';
 import { toast } from 'react-toastify';
+import { resetPassword } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { useNavigate } from 'react-router';
 
 function RestorePasswordContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { setIsLoading } = useIsLoadingStore();
+
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -18,8 +24,22 @@ function RestorePasswordContainer() {
     },
     validationSchema: validationSchema,
     onSubmit: (values: FormikValues) => {
-      console.log(values.email);
-      toast.success(t.toast);
+      const resetUserPassword = async () => {
+        try {
+          setIsLoading(true);
+          await resetPassword(values.email);
+          toast.info(
+            'Congratulations! Our message should appear in your inbox shortly.'
+          );
+          navigate('/login');
+        } catch (error: unknown) {
+          toast.error('Incorrect email address. Please try again.');
+          console.error('Error resetting password:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      resetUserPassword();
       formik.resetForm();
     },
   });
