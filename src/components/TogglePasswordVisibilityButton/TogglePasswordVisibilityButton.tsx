@@ -13,9 +13,10 @@ function TogglePasswordVisibilityButton({
   isVisible,
   toggleVisibility,
 }: TogglePasswordVisibilityButtonProps) {
+  if (!password) return null;
   return (
     <button type="button" onClick={toggleVisibility} className={scss.btn}>
-      {password ? isVisible ? <IconEye /> : <IconEyeSlash /> : null}
+      {isVisible ? <IconEye /> : <IconEyeSlash />}
     </button>
   );
 }

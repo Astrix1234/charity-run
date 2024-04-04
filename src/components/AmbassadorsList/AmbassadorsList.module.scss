@@ -1,8 +1,10 @@
 .list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
-  padding: 64px 80px 140px;
+  padding: clamp(32px, 4vw, 64px) clamp(32px, 10vw, 80px)
+    clamp(40px, 4vw, 140px);
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;

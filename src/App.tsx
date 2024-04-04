@@ -10,6 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
+
+import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
+import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
+
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
 
