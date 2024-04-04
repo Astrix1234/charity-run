@@ -5,6 +5,7 @@ export const StyledData = styled.div`
 
   p:nth-child(2n + 1) {
     color: black;
+    padding-bottom: 1rem;
   }
 
   p:nth-child(2n) {
