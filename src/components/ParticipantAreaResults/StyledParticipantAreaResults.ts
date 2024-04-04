@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledResults = styled.div`
+  border-left: 2px solid black;
   text-align: right;
   padding-left: 2rem;
 

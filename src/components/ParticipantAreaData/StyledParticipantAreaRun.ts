@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledData = styled.div`
   padding-right: 2rem;
-  border-right: 2px solid black;
 
   div div {
     display: flex;
