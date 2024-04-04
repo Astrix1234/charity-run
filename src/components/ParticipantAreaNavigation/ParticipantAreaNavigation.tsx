@@ -17,10 +17,10 @@ export const ParticipantAreaNavigation = () => {
         <Link to="/participant-area/#my-data">{t.myResult} /02</Link>
       </p>
       <p>
-        <Link to="/participant-area/#timetable">{t.timetable} /03</Link>
+        <Link to="/participant-area/#run-info">{t.timetable} /03</Link>
       </p>
       <p>
-        <Link to="/participant-area/#prepare">{t.getReady} /04</Link>
+        <Link to="/participant-area/#before-run">{t.getReady} /04</Link>
       </p>
       <p>
         <Link to="#">{t.logout} /05</Link>

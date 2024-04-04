@@ -12,7 +12,9 @@ export const ParticipantArea = () => {
         <ParticipantAreaHeading />
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
-        <Timetable />
+        <div id="run-info">
+          <Timetable />
+        </div>
         <ParticipantAreaPrepare />
       </div>
     </StyledParticipant>
