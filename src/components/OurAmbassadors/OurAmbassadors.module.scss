@@ -14,3 +14,10 @@
   background-size: 200% 200%;
   width: 100%;
 }
+
+.arrow {
+  svg {
+    width: clamp(32px, 10vw, 80px);
+    height: 100%;
+  }
+}

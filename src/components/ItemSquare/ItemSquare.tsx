@@ -46,7 +46,9 @@ function ItemSquare({
         )}
         {contentType.type === 'text' && children}
       </div>
-      <DotsSquare />
+      <div className={scss.dots}>
+        <DotsSquare />
+      </div>
     </li>
   );
 }

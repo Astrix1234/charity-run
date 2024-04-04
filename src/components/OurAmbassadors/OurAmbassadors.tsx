@@ -31,7 +31,9 @@ function OurAmbassadors() {
     <section className={scss.container}>
       <div className={scss.heading}>
         <AmbassadorsHeading />
-        <TrippleArrowDown />
+        <div className={scss.arrow}>
+          <TrippleArrowDown />
+        </div>
       </div>
       <AmbassadorsList list={ambassadorsList} />
     </section>
