@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    addPhoto: 'Dodaj swoje zdjęcie',
+    addPhoto: 'Edytuj swoje zdjęcie',
   },
   EN: {
-    addPhoto: 'Add your photo',
+    addPhoto: 'Edit your photo',
   },
 };
 
