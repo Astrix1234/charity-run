@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
-import { useParticipantUserDataStore } from './Zustand/useParticipantUserDataStore';
-import { getUserParticipation } from './Zustand/api';
+import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
+import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -49,10 +49,6 @@ function App() {
   const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
   const { setUserData, userData } = useUserDataStore();
-  const { setParticipantUserData, participantUserData } =
-    useParticipantUserDataStore();
-  const [hasFetchedParticipantData, setHasFetchedParticipantData] =
-    useState(false);
 
   const location = useLocation();
 
@@ -104,35 +100,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    const fetchUserParticipation = async () => {
-      try {
-        setIsLoading(true);
-        const response = await getUserParticipation();
-        console.log('Response:', response);
-        console.log('ok');
-        if (response) {
-          setParticipantUserData(response);
-          setHasFetchedParticipantData(true);
-        }
-      } catch (error) {
-        console.error('Error checking participation:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (userData && !hasFetchedParticipantData) {
-      fetchUserParticipation();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userData]);
-
-  useEffect(() => {
-    console.log('userData:', userData);
-    console.log('participantUserData:', participantUserData);
-  }, [userData, participantUserData]);
-
   return (
     <>
       {isLoading && <Loader />}
@@ -154,6 +121,8 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
+            <Route path="restore-password" element={<RestorePasswordPage />} />
+            <Route path="new-password" element={<NewPasswordPage />} />
             <Route
               path="run-registration"
               element={<RegistrationForRunPage />}
