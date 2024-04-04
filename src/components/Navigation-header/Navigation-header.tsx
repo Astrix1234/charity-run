@@ -1,19 +1,34 @@
 import { Link, useNavigate } from 'react-router-dom';
 import scss from './Navigation-header.module.scss';
-import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import { logout } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 export const NavigationHeader = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { isLogin, setIsLogin } = useIsLoginStore();
+  const { setIsLoading } = useIsLoadingStore();
 
   const navigate = useNavigate();
 
-  const [user, setUser] = useState(true);
-
   const handleLogout = () => {
-    setUser(false);
+    const logoutUser = async () => {
+      try {
+        setIsLoading(true);
+        await logout();
+        setIsLogin(false);
+        navigate('/');
+      } catch (error) {
+        console.error('Error logging out:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    setIsLogin(false);
+    logoutUser();
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -24,6 +39,19 @@ export const NavigationHeader = () => {
     });
     if (location.pathname !== '/') {
       navigate('/');
+    }
+  };
+
+  const handleLinkClickParticipant = (
+    e: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    if (location.pathname !== '/participant-area') {
+      navigate('/participant-area');
     }
   };
 
@@ -71,42 +99,40 @@ export const NavigationHeader = () => {
         >
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
-              to="/participant-area"
-            >
-              {t.myProfile}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.myProfile}</p>
+            ) : (
+              <a onClick={e => handleLinkClickParticipant(e)}>{t.myProfile}</a>
+            )}
           </li>
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
-              to="/participant-area#run-info"
-            >
-              {t.runInfo}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.runInfo}</p>
+            ) : (
+              <Link to="/participant-area#run-info">{t.runInfo}</Link>
+            )}
           </li>
           <li
             className={`${scss['navigation__link']} ${
-              !user ? scss['navigation__link--not-logged-in'] : ''
+              !isLogin ? scss['navigation__link--not-logged-in'] : ''
             }`}
           >
-            <Link
-              className={` ${!user ? scss['navigation__not-logged-in'] : ''}`}
-              to="/participant-area#before-run"
-            >
-              {t.beforeRun}
-            </Link>
+            {!isLogin ? (
+              <p className={scss['navigation__not-logged-in']}>{t.beforeRun}</p>
+            ) : (
+              <Link to="/participant-area#before-run">{t.beforeRun}</Link>
+            )}
           </li>
+
           <li className={scss.navigation__link}>
-            {user ? (
+            {isLogin ? (
               <button
                 className={scss.navigation__logout}
                 type="button"

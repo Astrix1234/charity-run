@@ -5,6 +5,16 @@ import { Layout } from './components/Layout/Layout';
 import { useLanguageStore } from './Zustand/useLanguageStore';
 import { Loader } from './components/Loader/Loader';
 import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useIsLoginStore } from './Zustand/useIsLoginStore';
+import { getCurrentUser } from './Zustand/api';
+import { useUserDataStore } from './Zustand/useUserDataStore';
+import CookiesBanner from './components/CookiesBanner/CookiesBanner.tsx';
+import { useCookieConsentStore } from './Zustand/useCookieConsentStore.ts';
+
+import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
+import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
@@ -32,12 +42,18 @@ const SupportVolunteersPage = lazy(
 );
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
+const GalleryPage = lazy(() => import('./pages/GalleryPage/GalleryPage'));
+
 function App() {
   const { language, setLanguage } = useLanguageStore(state => ({
     language: state.language,
     setLanguage: state.setLanguage,
   }));
-  const { isLoading } = useIsLoadingStore();
+  const { isLoading, setIsLoading } = useIsLoadingStore();
+  const { setIsLogin } = useIsLoginStore();
+  const { setUserData } = useUserDataStore();
+  const { showConsent } = useCookieConsentStore();
+
   const location = useLocation();
 
   useEffect(() => {
@@ -67,15 +83,51 @@ function App() {
     }
   }, [location.hash]);
 
+  useEffect(() => {
+    const checkLogin = async () => {
+      try {
+        setIsLoading(true);
+        const response = await getCurrentUser();
+        console.log('Response:', response);
+        if (response) {
+          setIsLogin(true);
+          setUserData(response);
+        }
+      } catch (error) {
+        console.error('Error checking login:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    checkLogin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
+      {showConsent && <CookiesBanner />}
       {isLoading && <Loader />}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ marginTop: '150px' }}
+      />
       <HelmetProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
+            <Route path="restore-password" element={<RestorePasswordPage />} />
+            <Route path="new-password" element={<NewPasswordPage />} />
             <Route
               path="run-registration"
               element={<RegistrationForRunPage />}
@@ -90,6 +142,7 @@ function App() {
               element={<SupportVolunteersPage />}
             />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="gallery" element={<GalleryPage />} />
             <Route path="*" element={<HomePage />} />
           </Route>
         </Routes>

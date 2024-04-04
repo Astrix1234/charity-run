@@ -13,16 +13,23 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.14",
     "axios": "^1.6.8",
     "formik": "^2.4.5",
+    "js-cookie": "^3.0.5",
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-loader-spinner": "^6.1.6",
     "react-responsive-modal": "^6.4.2",
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
+    "react-select": "^5.8.0",
+    "react-toastify": "^10.0.5",
     "sass": "^1.72.0",
     "spinner": "^0.3.4",
     "styled-components": "^6.1.8",
@@ -31,6 +38,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20.11.28",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",

@@ -9,7 +9,6 @@
 .btn {
   color: var(--marine);
   font-weight: 700;
-  text-decoration-line: underline;
   cursor: pointer;
   background: none;
   border: none;
@@ -18,6 +17,6 @@
   &:focus,
   &:hover {
     outline: none;
-    transform: scale(1.02);
+    text-decoration-line: underline;
   }
 }

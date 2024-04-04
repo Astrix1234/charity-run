@@ -4,7 +4,11 @@ import scss from './IconInstagram.module.scss';
 export const IconInstagram = () => {
   return (
     <>
-      <Link className={scss.link} to="" target="_blank">
+      <Link
+        className={scss.link}
+        to="https://www.instagram.com/fundacja.hematologiczna/"
+        target="_blank"
+      >
         <svg
           width="33"
           height="34"

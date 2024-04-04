@@ -1,0 +1,14 @@
+.container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  width: 95%;
+  border-radius: 32px;
+  border: 1px solid var(--marine);
+  background: rgba(251, 255, 255, 0.2);
+  box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
+  backdrop-filter: blur(25px);
+  padding: 24px;
+}

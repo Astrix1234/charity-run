@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  background: white url('/charity-run/images/footer-background.png') no-repeat
-    top;
+  background: url('/charity-run/images/footer-background.png') no-repeat top;
   background-size: cover;
   background-size: 100% 100%;
 

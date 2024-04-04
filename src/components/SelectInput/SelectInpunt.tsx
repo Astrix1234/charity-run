@@ -1,17 +1,22 @@
 import { FormikProps, FormikValues } from 'formik';
 import scss from './SelectInput.module.scss';
-import { useState, useEffect } from 'react';
+import translations from './translations';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+
+interface Option {
+  value: string;
+  label: string;
+}
 
 interface SelectInputProps {
   label: string;
   id: string;
   name: string;
   formik: FormikProps<FormikValues>;
-  options: { value: string; label: string }[];
-  shirtType?: 'Damska' | 'Męska' | 'Dziecięca';
+  shirtGender: 'Damska' | 'Męska' | 'Dziecięca';
 }
 
-const sizes = {
+const shirts = {
   Damska: [
     { value: 'rozmiar 36 (S)', label: 'rozmiar 36 (S)' },
     { value: 'rozmiar 38 (M)', label: 'rozmiar 38 (M)' },
@@ -20,10 +25,10 @@ const sizes = {
   ],
 
   Męska: [
-    { value: 'rozmiar S', label: 'Small' },
-    { value: 'rozmiar M', label: 'Medium' },
-    { value: 'rozmiar L', label: 'Large' },
-    { value: 'rozmiar XL', label: 'XLarge' },
+    { value: 'rozmiar S', label: 'rozmiar S' },
+    { value: 'rozmiar M', label: 'rozmiar M' },
+    { value: 'rozmiar L', label: 'rozmiar L' },
+    { value: 'rozmiar XL', label: 'rozmiar XL' },
   ],
 
   Dziecięca: [
@@ -36,22 +41,21 @@ const sizes = {
   ],
 };
 
-export const SelectInput = ({
+export const SelectInput: React.FC<SelectInputProps> = ({
   label,
   id,
   name,
   formik,
-  shirtType,
-}: SelectInputProps) => {
-  const [currentOptions, setCurrentOptions] = useState<
-    { value: string; label: string }[]
-  >([]);
+  shirtGender,
+}) => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+  const shirtSizes = t.shirtSizes;
 
-  useEffect(() => {
-    const newOptions = shirtType ? sizes[shirtType as keyof typeof sizes] : [];
-    setCurrentOptions(newOptions);
-  }, [shirtType]);
-
+  const options = shirts[shirtGender].map(option => ({
+    value: option.value,
+    label: shirtSizes[option.label] || option.label,
+  }));
   return (
     <label className={scss.SelectInput__label} htmlFor={id}>
       {label}
@@ -65,9 +69,9 @@ export const SelectInput = ({
         onBlur={formik.handleBlur}
         value={formik.values[name]}
       >
-        {currentOptions.map(option => (
+        {options.map((option: Option) => (
           <option key={option.value} value={option.value}>
-            {option.label}
+            {t.shirtSizes[option.label] || option.label}
           </option>
         ))}
       </select>

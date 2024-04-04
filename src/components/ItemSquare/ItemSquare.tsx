@@ -6,7 +6,7 @@ import scss from './ItemSquare.module.scss';
 type ItemSquareProps = {
   contentType?: { type: 'image'; src: string; alt: string } | { type: 'text' };
   children?: ReactNode;
-  heading: string;
+  heading?: string;
   pos: number;
   backgroundColor?: 'beige' | 'grey';
 };
@@ -46,7 +46,9 @@ function ItemSquare({
         )}
         {contentType.type === 'text' && children}
       </div>
-      <DotsSquare />
+      <div className={scss.dots}>
+        <DotsSquare />
+      </div>
     </li>
   );
 }

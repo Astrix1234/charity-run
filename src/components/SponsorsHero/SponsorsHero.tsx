@@ -8,7 +8,9 @@ function SponsorsHero() {
   return (
     <section className={scss.section}>
       <SponsorsHeading />
-      <SponsorsDashedLine />
+      <div className={scss.line}>
+        <SponsorsDashedLine />
+      </div>
       <SponsorsRunnersImages />
       <SponsorsHeroText />
     </section>

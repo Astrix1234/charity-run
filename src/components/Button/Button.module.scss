@@ -1,7 +1,9 @@
 .button {
   position: relative;
   width: 276px;
+  width: clamp(230px, 34vw, 276px);
   height: 65px;
+  height: clamp(54px, 12vw, 65px);
 
   &__button {
     width: 100%;
@@ -16,6 +18,7 @@
     background: linear-gradient(180deg, #1ca2a7 11.28%, #1e8fa7 100%);
     color: var(--light);
     font-size: 24px;
+    font-size: clamp(16px, 2.5vw, 24px);
     font-weight: 600;
     cursor: pointer;
     outline: none;
@@ -35,7 +38,8 @@
     position: absolute;
     width: 100%;
     max-width: 276px;
-    height: 64.8px;
+    height: clamp(54px, 12vw, 64.8px);
+
     border: 2px dashed var(--dark);
     border-radius: 24px;
     top: -7px;

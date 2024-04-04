@@ -1,16 +1,23 @@
 import scss from './DonationAmountInput.module.scss';
 
 type DonationAmountInputProps = {
+  isActive: boolean;
   value: number;
   handleChange: (e: number) => void;
 };
 
 function DonationAmountInput({
+  isActive,
   value,
   handleChange,
 }: DonationAmountInputProps) {
   return (
-    <label className={scss.label} htmlFor="donation-amount">
+    <label
+      className={`${scss.label} ${
+        isActive && value && value > 0 ? scss.active : ''
+      }`}
+      htmlFor="donation-amount"
+    >
       <input
         className={scss.input}
         id="donation-amount"
@@ -18,7 +25,7 @@ function DonationAmountInput({
         type="number"
         onChange={e => {
           if (isNaN(parseInt(e.target.value))) {
-            if (!e.target.value) handleChange(0);
+            if (e.target.value === '') handleChange(0);
             return;
           }
 

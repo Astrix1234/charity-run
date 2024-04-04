@@ -4,7 +4,11 @@ import scss from './IconYouTube.module.scss';
 export const IconYouTube = () => {
   return (
     <>
-      <Link className={scss.link} to="" target="_blank">
+      <Link
+        className={scss.link}
+        to="https://www.youtube.com/@FundacjaHematologiczna"
+        target="_blank"
+      >
         <svg
           width="40"
           height="30"

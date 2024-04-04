@@ -14,7 +14,9 @@ function SponsorsHeroText() {
         {t.paragraph1}
         <span className={scsss.underline}>
           {t.name}
-          <HandwrittenLineMini />
+          <span className={scsss.icon}>
+            <HandwrittenLineMini />
+          </span>
         </span>
         {t.paragraph2}
       </p>

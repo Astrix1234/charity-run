@@ -4,14 +4,16 @@ import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
 import { Regulations } from '../Regulations/Regulations';
-import { ButtonOrange } from '../ButtonOrange/ButtonOrange';
-import { IconArrowOrange } from '../../Icons/IconArrowOrange/IconArrowOrange';
-import { IconHandHeart } from '../../Icons/IconHandHeart/IconHandHeart';
-import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStatementSquare';
-import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
+import { register } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { toast } from 'react-toastify';
+import AccountCta from '../AccountCta/AccountCta';
+import { Statements } from '../Statements/Statements';
+import FormInput from '../FormInput/FormInput';
+import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -19,11 +21,13 @@ interface FormValues extends UserData {
 
 export const FormRegister = () => {
   const { language } = useLanguageStore();
+  const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [consent, setConsent] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (event: WindowEventMap['keydown']) => {
@@ -47,23 +51,14 @@ export const FormRegister = () => {
     setIsModalOpen(false);
   };
 
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
-
   const handleIconClick = () => {
     setConsent(!consent);
   };
-
-  const consentClass = consent
-    ? `${scss.formRegister__consent} ${scss.formRegister__consentFilled}`
-    : scss.formRegister__consent;
 
   const formik = useFormik({
     initialValues: {
       name: '',
       surname: '',
-      phone: '',
       email: '',
       password: '',
       passwordConfirm: '',
@@ -73,7 +68,21 @@ export const FormRegister = () => {
     onSubmit: (values: FormValues) => {
       const { passwordConfirm, ...userData } = values;
       console.log(passwordConfirm);
-      console.log(userData);
+      const registerUser = async () => {
+        try {
+          setIsLoading(true);
+          await register(userData);
+          toast.info(
+            'Registration successful! Please check your email to verify your account.'
+          );
+        } catch (error) {
+          console.error(error);
+          toast.error('An error occurred. Please try again.');
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      registerUser();
       formik.resetForm();
     },
   });
@@ -92,188 +101,152 @@ export const FormRegister = () => {
           <div className={scss.formRegister__titleContainer}>
             <p className={scss.formRegister__sectionTitle}>{t.register}</p>
           </div>
-          <label className={scss.formRegister__label} htmlFor="name">
-            {t.name}
+          <FormInput
+            error={{
+              condition: Boolean(formik.touched.name && formik.errors.name),
+              message: String(formik.errors.name),
+            }}
+            label={t.name}
+            id="name"
+          >
             <input
-              id="name"
-              className={`${scss.formRegister__input} ${
-                formik.touched.name && formik.errors.name ? scss.error : ''
-              }`}
               type="text"
               name="name"
+              id="name"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.name}
             />
-            {formik.touched.name && formik.errors.name ? (
-              <div className={scss.formikMessage}>{formik.errors.name}</div>
-            ) : null}
-          </label>
+          </FormInput>
 
-          <label className={scss.formRegister__label} htmlFor="surname">
-            {t.lastName}
-            <input
-              id="surname"
-              className={`${scss.formRegister__input} ${
+          <FormInput
+            error={{
+              condition: Boolean(
                 formik.touched.surname && formik.errors.surname
-                  ? scss.error
-                  : ''
-              }`}
+              ),
+              message: String(formik.errors.surname),
+            }}
+            label={t.lastName}
+            id="surname"
+          >
+            <input
               type="text"
               name="surname"
+              id="surname"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.surname}
             />
-            {formik.touched.surname && formik.errors.surname ? (
-              <div className={scss.formikMessage}>{formik.errors.surname}</div>
-            ) : null}
-          </label>
+          </FormInput>
 
-          <label className={scss.formRegister__label} htmlFor="phone">
-            {t.number}
+          <FormInput
+            error={{
+              condition: Boolean(formik.touched.email && formik.errors.email),
+              message: String(formik.errors.email),
+            }}
+            label={t.email}
+            id="email"
+          >
             <input
-              id="phone"
-              className={`${scss.formRegister__input} ${
-                formik.touched.phone && formik.errors.phone ? scss.error : ''
-              }`}
-              type="text"
-              name="phone"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phone}
-            />
-            {formik.touched.phone && formik.errors.phone ? (
-              <div className={scss.formikMessage}>{formik.errors.phone}</div>
-            ) : null}
-          </label>
-
-          <label className={scss.formRegister__label} htmlFor="email">
-            {t.email}
-            <input
-              id="email"
-              className={`${scss.formRegister__input} ${
-                formik.touched.email && formik.errors.email ? scss.error : ''
-              }`}
               type="text"
               name="email"
+              id="email"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
             />
-            {formik.touched.email && formik.errors.email ? (
-              <div className={scss.formikMessage}>{formik.errors.email}</div>
-            ) : null}
-          </label>
+          </FormInput>
 
-          <label className={scss.formRegister__label} htmlFor="password">
-            {t.password}
-            <input
-              id="password"
-              className={`${scss.formRegister__input} ${
+          <FormInput
+            error={{
+              condition: Boolean(
                 formik.touched.password && formik.errors.password
-                  ? scss.error
-                  : ''
-              }`}
-              type="text"
-              name="password"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.password}
-            />
-            {formik.touched.password && formik.errors.password ? (
-              <div className={scss.formikMessage}>{formik.errors.password}</div>
-            ) : null}
-          </label>
+              ),
+              message: String(formik.errors.password),
+            }}
+            label={t.password}
+            id="password"
+          >
+            <>
+              <input
+                type={passwordVisible ? 'text' : 'password'}
+                name="password"
+                id="password"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+              />
+              <TogglePasswordVisibilityButton
+                isVisible={passwordVisible}
+                toggleVisibility={() => setPasswordVisible(prev => !prev)}
+                password={formik.values.password}
+              />
+            </>
+          </FormInput>
 
-          <label className={scss.formRegister__label} htmlFor="passwordConfirm">
-            {t.passwordConfirm}
-            <input
-              id="passwordConfirm"
-              className={`${scss.formRegister__input} ${
+          <FormInput
+            error={{
+              condition: Boolean(
                 formik.touched.passwordConfirm && formik.errors.passwordConfirm
-                  ? scss.error
-                  : ''
-              }`}
-              type="text"
-              name="passwordConfirm"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.passwordConfirm}
-            />
-            {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
-              <div className={scss.formikMessage}>
-                {formik.errors.passwordConfirm}
-              </div>
-            ) : null}
-          </label>
-
+              ),
+              message: String(formik.errors.passwordConfirm),
+            }}
+            label={t.passwordConfirm}
+            id="passwordConfirm"
+          >
+            <>
+              <input
+                type={confirmPasswordVisible ? 'text' : 'password'}
+                name="passwordConfirm"
+                id="passwordConfirm"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.passwordConfirm}
+              />
+              <TogglePasswordVisibilityButton
+                isVisible={confirmPasswordVisible}
+                toggleVisibility={() =>
+                  setConfirmPasswordVisible(prev => !prev)
+                }
+                password={formik.values.passwordConfirm}
+              />
+            </>
+          </FormInput>
           <Button
             type="submit"
             content={t.button}
             disabled={!formik.isValid || !formik.dirty || !consent}
           />
-          <p className={scss.formRegister__login}>
-            {t.account}
-            <span className={scss.formRegister__link}>{t.login}</span>
-          </p>
+
+          <AccountCta type="login" />
         </form>
-        <div className={scss.formRegister__regulations}>
-          <p className={scss.formRegister__sectionTitle}>{t.statement}</p>
-          <h3 className={scss.formRegister__regulationsTitle}>
-            <span className={consentClass} onClick={handleIconClick}>
-              <IconStatementSquare />
-              {consent && (
-                <span className={scss.formRegister__iconAgree}>
-                  {' '}
-                  <IconAgree />
-                </span>
-              )}
-            </span>
-            {t.statementTitle}
-          </h3>
-          <p>{t.statementIDo}</p>
-          <ol className={scss.formRegister__statementList}>
-            {' '}
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem1part1}
-              <span
-                onClick={openModal}
-                className={scss.formRegister__highlights}
-              >
-                {t.span1}
-              </span>
-              {t.statementItem1part2}
-              <span
-                onClick={openModal}
-                className={scss.formRegister__highlights}
-              >
-                {t.span2}
-              </span>
-              {t.statementItem1part3}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem2}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem3}
-            </li>
-            <li className={scss.formRegister__statementItem}>
-              {t.statementItem4}
-            </li>
-          </ol>
-        </div>
-      </div>
-      <div className={scss.formRegister__donate}>
-        <div className={scss.formRegister__donateIllustration} />
-        <div className={scss.formRegister__donateIcon}>
-          <IconArrowOrange />
-        </div>
-        <ButtonOrange
-          onClick={handleClick}
-          icon={<IconHandHeart />}
-          content={t.donation}
+        <Statements
+          consent={consent}
+          handleIconClick={handleIconClick}
+          openModal={openModal}
         />
+      </div>
+
+      <div className={scss.formRegister__instructions}>
+        <h4 className={scss.formRegister__instructionsTitle}>
+          {t.instructionsTitle}
+        </h4>
+        <p className={scss.formRegister__instructionsText}>
+          {t.instructionsCost}
+        </p>
+        <p className={scss.formRegister__instructionsText}>
+          <span className={scss.formRegister__instructionsTextHighlighted}>
+            {t.cost1}
+          </span>
+          {t.costAdult}
+        </p>
+        <p className={scss.formRegister__instructionsText}>
+          <span className={scss.formRegister__instructionsTextHighlighted}>
+            {t.cost2}
+          </span>
+          {t.costChild}
+        </p>
+        <p className={scss.formRegister__instructionsText}>{t.costGeneral}</p>
       </div>
     </div>
   );
