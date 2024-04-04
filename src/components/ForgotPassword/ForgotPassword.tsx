@@ -7,7 +7,7 @@ function ForgotPassword() {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <Link to="/forgot-password" className={scss.btn}>
+    <Link to="/restore-password" className={scss.btn}>
       {t.text}
     </Link>
   );

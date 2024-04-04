@@ -3,6 +3,7 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { useParticipantUserDataStore } from '../../Zustand/useParticipantUserDataStore';
+import { Link } from 'react-router-dom';
 
 export const ParticipantAreaData = () => {
   const { language } = useLanguageStore();
@@ -42,6 +43,7 @@ export const ParticipantAreaData = () => {
             <p>/04</p>
           </div>
         )}
+        <Link to="/new-password">edit password</Link>
       </div>
     </StyledData>
   );

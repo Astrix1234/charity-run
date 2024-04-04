@@ -4,7 +4,7 @@ import { StyledProfile } from './StyledParticipantAreaProfile';
 
 export const ParticipantAreaProfile = () => {
   return (
-    <StyledProfile as="section" id="myData">
+    <StyledProfile as="section" id="my-data">
       <ParticipantAreaData />
       <ParticipantAreaResults />
     </StyledProfile>

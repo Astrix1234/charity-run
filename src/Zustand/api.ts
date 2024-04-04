@@ -132,7 +132,7 @@ export const userAvatar = async (avatar: File) => {
 
 export const resetPassword = async (email: string) => {
   try {
-    const response = await axios.post(`${apiUrl}/users/reset-password`, {
+    const response = await axios.patch(`${apiUrl}/users/reset-password`, {
       email,
     });
     return response.data;

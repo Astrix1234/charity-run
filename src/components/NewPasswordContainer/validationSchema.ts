@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 
 export const validationSchema = yup.object().shape({
-  oldPassword: yup.string().required('Required field'),
+  password: yup.string().required('Required field'),
   newPassword: yup
     .string()
     .required('Required field')

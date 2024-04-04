@@ -10,10 +10,15 @@ import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/To
 import { Button } from '../Button/Button';
 import AccountCta from '../AccountCta/AccountCta';
 import { toast } from 'react-toastify';
+import { updateUserDetails } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { useNavigate } from 'react-router-dom';
 
 function NewPasswordContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { setIsLoading } = useIsLoadingStore();
+  const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState<{
     new: boolean;
     old: boolean;
@@ -26,14 +31,32 @@ function NewPasswordContainer() {
 
   const formik = useFormik({
     initialValues: {
-      oldPassword: '',
+      password: '',
       newPassword: '',
       confirmNewPassword: '',
     },
     validationSchema: validationSchema,
-    onSubmit: () => {
+    onSubmit: values => {
+      const userDetails = {
+        oldPassword: values.password,
+        password: values.newPassword,
+      };
+      const updateUserPassword = async () => {
+        try {
+          setIsLoading(true);
+          await updateUserDetails(userDetails);
+          console.log('Password updated successfully!');
+          toast.info('Password updated successfully!');
+          navigate('/participant-area/#my-data');
+        } catch (error: unknown) {
+          console.error('Error updating user password:', error);
+          toast.error('An error occurred while updating your password.');
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      updateUserPassword();
       formik.resetForm();
-      toast.success(t.toast);
     },
   });
 
@@ -46,22 +69,22 @@ function NewPasswordContainer() {
           label={t.oldPassword}
           error={{
             condition: Boolean(
-              formik.touched.oldPassword && formik.errors.oldPassword
+              formik.touched.password && formik.errors.password
             ),
-            message: String(formik.errors.oldPassword),
+            message: String(formik.errors.password),
           }}
         >
           <>
             <input
               type={passwordVisible.old ? 'text' : 'password'}
-              name="oldPassword"
+              name="password"
               id="oldPassword"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.oldPassword}
+              value={formik.values.password}
             />
             <TogglePasswordVisibilityButton
-              password={formik.values.oldPassword}
+              password={formik.values.password}
               isVisible={passwordVisible.old}
               toggleVisibility={() =>
                 setPasswordVisible(prev => {
@@ -132,7 +155,11 @@ function NewPasswordContainer() {
             />
           </>
         </FormInput>
-        <Button type="submit" content={t.button} />
+        <Button
+          type="submit"
+          content={t.button}
+          disabled={!formik.isValid || !formik.dirty}
+        />
       </form>
       <AccountCta type="register" />
     </InputColContainer>

@@ -116,7 +116,7 @@ export const NavigationHeader = () => {
             {!isLogin ? (
               <p className={scss['navigation__not-logged-in']}>{t.runInfo}</p>
             ) : (
-              <Link to="/participant-area">{t.runInfo}</Link>
+              <Link to="/participant-area#run-info">{t.runInfo}</Link>
             )}
           </li>
           <li
@@ -127,7 +127,7 @@ export const NavigationHeader = () => {
             {!isLogin ? (
               <p className={scss['navigation__not-logged-in']}>{t.beforeRun}</p>
             ) : (
-              <Link to="/participant-area">{t.beforeRun}</Link>
+              <Link to="/participant-area#before-run">{t.beforeRun}</Link>
             )}
           </li>
 

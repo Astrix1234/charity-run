@@ -73,6 +73,10 @@ export default function ParticipantAreaPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
+  useEffect(() => {
+    console.log('Participant data:', userData);
+  }, [userData]);
+
   return (
     <div>
       <Helmet>
