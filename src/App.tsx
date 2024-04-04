@@ -14,9 +14,6 @@ import { useUserDataStore } from './Zustand/useUserDataStore';
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
 
-import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
-import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
-
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
@@ -52,7 +49,7 @@ function App() {
   }));
   const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
-  const { setUserData, userData } = useUserDataStore();
+  const { setUserData } = useUserDataStore();
 
   const location = useLocation();
 
