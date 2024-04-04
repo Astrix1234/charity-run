@@ -15,12 +15,15 @@ import ForgotPassword from '../ForgotPassword/ForgotPassword';
 import { useState } from 'react';
 import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
 import InputColContainer from '../InputColContainer/InputColContainer';
+import { useCookieConsentStore } from '../../Zustand/useCookieConsentStore';
+import Cookies from 'js-cookie';
 
 function LoginContainer() {
   const { language } = useLanguageStore();
   const t = translations[language];
   const { setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
+  const { setShowConsent } = useCookieConsentStore();
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
   const navigate = useNavigate();
@@ -30,6 +33,11 @@ function LoginContainer() {
     validationSchema: validationSchema,
     onSubmit: values => {
       const { email, password } = values;
+      if (!Cookies.get('CookieConsent')) {
+        setShowConsent(true);
+        toast.info('Please accept cookies before logging in.');
+        return;
+      }
       const loginUser = async () => {
         try {
           setIsLoading(true);

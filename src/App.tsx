@@ -11,6 +11,7 @@ import { useIsLoginStore } from './Zustand/useIsLoginStore';
 import { getCurrentUser } from './Zustand/api';
 import { useUserDataStore } from './Zustand/useUserDataStore';
 import CookiesBanner from './components/CookiesBanner/CookiesBanner.tsx';
+import { useCookieConsentStore } from './Zustand/useCookieConsentStore.ts';
 
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
@@ -51,6 +52,7 @@ function App() {
   const { isLoading, setIsLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
   const { setUserData } = useUserDataStore();
+  const { showConsent } = useCookieConsentStore();
 
   const location = useLocation();
 
@@ -104,7 +106,7 @@ function App() {
 
   return (
     <>
-      <CookiesBanner />
+      {showConsent && <CookiesBanner />}
       {isLoading && <Loader />}
       <ToastContainer
         position="top-right"
