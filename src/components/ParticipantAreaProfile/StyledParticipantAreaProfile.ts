@@ -1,8 +1,22 @@
 import styled from 'styled-components';
 
 export const StyledProfile = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+
+  & > * {
+    min-width: 50%;
+  }
+
+  @media screen and (max-width: 1310px) {
+    flex-wrap: wrap;
+    gap: 4rem;
+    text-align: center;
+    justify-content: center;
+
+    & > * {
+      max-width: 80%;
+    }
+  }
 
   h1 {
     font-size: 3.125rem;

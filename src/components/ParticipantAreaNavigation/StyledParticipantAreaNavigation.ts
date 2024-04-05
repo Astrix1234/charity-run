@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledNavigation = styled.div`
-  height: 75vh;
   width: calc(100% + 80px);
   background-color: #ceeaeb;
   border-radius: 2rem;
   text-align: right;
   position: relative;
   right: 0px;
-  padding: 5rem 5rem 0 0;
+  padding: 5rem;
 
   h1,
   h2 {

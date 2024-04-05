@@ -16,33 +16,33 @@ export const ParticipantAreaData = () => {
       <h1>{t.myData}</h1>
       <div>
         <div>
-          <p>{t.nameSurname}</p>
+          <p>01/ {t.nameSurname}</p>
+          {/* <p>Januszator Kowalewuszewuski</p> */}
           {userData && (
             <p>
               {userData.name} {userData.surname}
             </p>
           )}
-          <p>/01</p>
         </div>
         <div>
-          <p>{t.emailAddress}</p>
+          <p>02/ {t.emailAddress}</p>
+          {/* <p>januszator.kowalewuszewski@</p> */}
           {userData && <p>{userData.email}</p>}
-          <p>/02</p>
         </div>
-        {participantUserData && participantUserData.length > 0 && (
-          <div>
-            <p>{t.phoneNumber}</p>
+        <div>
+          <p>03/ {t.phoneNumber}</p>
+          {/* <p>+48 873 328 283</p> */}
+          {participantUserData && participantUserData.length > 0 && (
             <p>{participantUserData[0].phone}</p>
-            <p>/03</p>
-          </div>
-        )}
-        {participantUserData && participantUserData.length > 0 && (
-          <div>
-            <p>{t.phoneNumber}</p>
+          )}
+        </div>
+        <div>
+          <p>04/ {t.tShirt}</p>
+          {/* <p>XL</p> */}
+          {participantUserData && participantUserData.length > 0 && (
             <p>{participantUserData[0].shirt}</p>
-            <p>/04</p>
-          </div>
-        )}
+          )}
+        </div>
         <Link to="/new-password">edit password</Link>
       </div>
     </StyledData>

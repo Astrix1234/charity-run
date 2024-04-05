@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledParticipant = styled.div`
-  background: url('/charity-run/public/images/cut-background.png') no-repeat;
+  background: url('../images/cut-background.png') no-repeat;
   background-size: 100% 15%;
 
   .container {
@@ -9,21 +9,25 @@ export const StyledParticipant = styled.div`
     padding-inline: 80px;
     margin-inline: auto;
 
-    #myData,
-    #prepare {
+    #heading {
+      padding-top: 80px;
+    }
+
+    #participantMain,
+    #my-data,
+    #run-info,
+    #before-run {
       padding-top: 150px;
     }
 
-    #participantMain {
-      padding-top: 50px;
-    }
-
-    a {
+    a,
+    .map {
       transition: color 400ms;
     }
 
-    a:hover {
-      color: orange;
+    a:hover,
+    .map:hover {
+      color: var(--orange);
     }
   }
 `;

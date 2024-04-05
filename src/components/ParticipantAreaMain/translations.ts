@@ -1,9 +1,11 @@
 const translations = {
   PL: {
-    addPhoto: 'Dodaj swoje zdjęcie',
+    addPhoto: 'Edytuj swoje zdjęcie',
+    alt: 'Zdjęcie profile',
   },
   EN: {
-    addPhoto: 'Add your photo',
+    addPhoto: 'Edit your photo',
+    alt: 'Profile photo',
   },
 };
 

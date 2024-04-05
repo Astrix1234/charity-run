@@ -2,16 +2,11 @@ import styled from 'styled-components';
 
 export const StyledData = styled.div`
   padding-right: 2rem;
-  border-right: 2px solid black;
-
-  div div {
-    display: flex;
-    gap: 1rem;
-    justify-content: right;
-  }
+  overflow-wrap: break-word;
 
   p:nth-child(2n + 1) {
     color: black;
+    padding-bottom: 1rem;
   }
 
   p:nth-child(2n) {
