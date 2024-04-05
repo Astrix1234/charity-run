@@ -1,0 +1,45 @@
+.sponsorship {
+    font-family: 'Poppins';
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 32px;
+    text-align: justify;
+    padding-bottom: 80px;
+
+    .title {
+        color: #2E2530;
+        font-size: 39px;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-top: 32px;
+        text-align: justify;
+    }
+
+    .content {
+        color: #2E2530;
+        font-size: 24px;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-top: 32px;
+        text-align: justify;
+
+        .boldText {            
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .normalText {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+        }
+
+        p {
+            margin: 0;
+            margin-top: 32px;
+            text-align: justify;
+        }
+    }
+}
