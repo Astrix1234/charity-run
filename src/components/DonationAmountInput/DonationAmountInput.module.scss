@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .label {
   display: flex;
   width: 161px;
@@ -9,6 +11,13 @@
   border: 3px solid var(--orange);
   background: var(--light);
   transition: all 0.3s ease-in-out;
+
+  @include mobile-screen {
+    padding: 7.2px 14.4px;
+    border-radius: 10.8px;
+    border: 1.35px solid var(--orange);
+    gap: 4px;
+  }
 }
 .active {
   background-color: var(--orange);
@@ -50,6 +59,11 @@
     -webkit-appearance: none;
     margin: 0;
   }
+
+  @media only screen and (max-width: 1440px) {
+    font-size: 14.4px;
+    height: 24px;
+  }
 }
 
 .text {
@@ -57,4 +71,8 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
+
+  @media only screen and (max-width: 1440px) {
+    font-size: 14.4px;
+  }
 }

@@ -1,7 +1,14 @@
+@import '../../stylesheets/mixins.scss';
+
 .button {
   position: relative;
   width: 276px;
   height: 65px;
+
+  @include mobile-screen {
+    width: 230px;
+    height: 54px;
+  }
 
   &__button {
     width: 100%;
@@ -14,7 +21,6 @@
     border-radius: 24px;
     background-color: var(--orange);
     background: linear-gradient(180deg, #fd7616 11.28%, #f28505 100%);
-
     color: var(--light);
     font-size: 24px;
     font-weight: 600;
@@ -30,6 +36,24 @@
       background: linear-gradient(180deg, #ff9c27 11.28%, #f28505 100%);
       border: 2px dashed var(--dark);
     }
+
+    @include mobile-screen {
+      gap: 19.92px;
+      border-radius: 20px;
+      font-size: 16px;
+
+      &:hover,
+      &:focus {
+        transform: translate(5.5px, -7px);
+        box-shadow: -2.5px 4px 0px 0px var(--dark);
+        border-width: 1.4px;
+      }
+
+      & svg {
+        width: 33.2px;
+        height: 37.35px;
+      }
+    }
   }
 
   &__dashedBorder {
@@ -43,6 +67,13 @@
     left: 5.5px;
     z-index: 100;
     pointer-events: none;
+
+    @include mobile-screen {
+      width: 229.832px;
+      height: 54px;
+      border-radius: 24px;
+      border-width: 1.4px;
+    }
   }
 
   &__disabled {

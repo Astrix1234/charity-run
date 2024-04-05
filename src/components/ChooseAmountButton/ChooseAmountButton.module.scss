@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .btn {
   display: flex;
   width: 161px;
@@ -20,6 +22,15 @@
     background-color: var(--orange);
     color: var(--light);
     outline: none;
+  }
+
+  @include mobile-screen {
+    font-size: 16px;
+    padding: 6.2px 12.4px;
+    border-radius: 10.8px;
+    border: 1.35px solid var(--orange);
+    font-size: 14.4px;
+    width: 68px;
   }
 }
 
