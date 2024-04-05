@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledParticipant = styled.div`
-  background: url('../images/cut-background.png') no-repeat;
+  background: url('images/cut-background.png') no-repeat;
   background-size: 100% 15%;
 
   .container {
