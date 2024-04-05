@@ -8,7 +8,7 @@ import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { apiUrl } from '../../Zustand/api';
-g;
+
 export const ParticipantAreaMain = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
