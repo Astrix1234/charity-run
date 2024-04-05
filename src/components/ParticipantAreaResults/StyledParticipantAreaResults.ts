@@ -5,6 +5,13 @@ export const StyledResults = styled.div`
   text-align: right;
   padding-left: 2rem;
 
+  @media screen and (max-width: 1310px) {
+    border-top: 2px solid black;
+    border-left: 0;
+    padding-top: 4rem;
+    text-align: center;
+  }
+
   h2,
   h3 {
     font-weight: 500;
