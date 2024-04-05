@@ -15,6 +15,7 @@ export const ParticipantAreaMain = () => {
 
   const { setIsLoading } = useIsLoadingStore();
   const { setUserData, userData } = useUserDataStore();
+  const { setUserData, userData } = useUserDataStore();
 
   const handleAvatarChange = async (
     event: React.ChangeEvent<HTMLInputElement>
