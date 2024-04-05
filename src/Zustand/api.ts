@@ -38,7 +38,7 @@ interface AxiosError extends Error {
   };
 }
 
-const apiUrl = 'http://localhost:3000/api/';
+export const apiUrl = 'http://localhost:3000/api/';
 
 axios.defaults.withCredentials = true;
 

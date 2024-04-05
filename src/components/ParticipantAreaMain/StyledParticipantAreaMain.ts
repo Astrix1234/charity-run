@@ -21,15 +21,29 @@ export const StyledMain = styled.div`
   }
 
   .photo {
-    display: grid;
-    place-content: center;
-    text-align: right;
-    gap: 1rem;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 3rem;
+    // display: grid;
+    // place-content: center;
+    // text-align: right;
+    // gap: 1rem;
   }
 
-  .addPhoto {
-    display: flex;
-    justify-content: right;
-    align-items: center;
+  .imgContainer {
+    width: 100%;
+    height: 100%;
   }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .addPhoto {
+  //   display: flex;
+  //   justify-content: right;
+  //   align-items: center;
+  // }
 `;
