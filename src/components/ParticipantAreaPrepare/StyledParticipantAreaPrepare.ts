@@ -28,8 +28,19 @@ export const StyledPrepare = styled.div`
     padding-bottom: 1rem;
   }
 
-  a {
+  a,
+  .map {
     text-decoration-line: underline;
+  }
+
+  .map {
+    max-width: 100%;
+    cursor: pointer;
+  }
+
+  .modal {
+    width: 100vw;
+    min-height: 100%;
   }
 
   .foots {

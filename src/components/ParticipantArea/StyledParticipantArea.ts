@@ -19,11 +19,13 @@ export const StyledParticipant = styled.div`
       padding-top: 150px;
     }
 
-    a {
+    a,
+    .map {
       transition: color 400ms;
     }
 
-    a:hover {
+    a:hover,
+    .map:hover {
       color: orange;
     }
   }
