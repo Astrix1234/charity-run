@@ -4,25 +4,34 @@
   background-size: 100% 100%;
   background-position: left;
   padding-top: 80px;
+  overflow: hidden;
 
   &__container {
-    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 80px;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+    gap: 20px;
   }
 
   &__box {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 24px;
 
     &__qr {
       gap: 12px;
@@ -40,6 +49,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
 
   &__title {
@@ -49,7 +59,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
-    /* 36px */
+    text-align: center;
   }
 
   &__text {
@@ -86,11 +96,12 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    justify-content: center;
 
     &__link {
       color: var(--dark);
       font-family: Inter;
-      font-size: 20px;
+      font-size: var(--smallFontSize);
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -104,15 +115,60 @@
 
   &__socials {
     display: flex;
-    gap: 40px;
+    gap: 35px;
     align-items: center;
+    justify-content: center;
   }
 
   &__support {
-    margin-top: 140px;
+    margin-top: 70px;
     margin-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact {
+    &__container {
+      padding: 0 80px;
+      align-items: normal;
+    }
+
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 80px;
+    }
+
+    &__box {
+      gap: 48px;
+    }
+
+    &__address {
+      align-items: normal;
+    }
+
+    &__email {
+      justify-content: normal;
+
+      &__link {
+        font-size: var(--mediumFontSize);
+      }
+    }
+
+    &__socials {
+      gap: 40px;
+      justify-content: normal;
+    }
+
+    &__support {
+      margin-top: 140px;
+      margin-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

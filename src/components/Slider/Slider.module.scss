@@ -13,7 +13,7 @@
     content: '';
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 100px;
     height: 100%;
     z-index: 2;
   }
@@ -55,5 +55,15 @@
 .slider__reverse {
   .slider__wrapper {
     animation-direction: reverse;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .slider,
+  .slider__reverse {
+    &:after,
+    &:before {
+      width: 250px;
+    }
   }
 }

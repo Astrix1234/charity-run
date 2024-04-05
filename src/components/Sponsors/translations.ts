@@ -1,11 +1,11 @@
 const translations = {
   PL: {
     sponsorsTitle: 'Sponsorzy & Partnerzy',
-    seeSponsors: 'Zobacz więcej',
+    seeSponsors: 'zobacz więcej',
   },
   EN: {
     sponsorsTitle: 'Sponsors & Partners',
-    seeSponsors: 'See more',
+    seeSponsors: 'see more',
   },
 };
 
