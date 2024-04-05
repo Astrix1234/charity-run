@@ -26,7 +26,7 @@ export const StyledParticipant = styled.div`
 
     a:hover,
     .map:hover {
-      color: orange;
+      color: var(--orange);
     }
   }
 `;
