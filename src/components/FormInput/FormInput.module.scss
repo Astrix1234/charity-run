@@ -6,11 +6,11 @@
   position: relative;
   width: 100%;
   max-width: 552px;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 500;
 
   input {
-    font-size: var(--mediumFontSize);
+    font-size: 16px;
     border: 1px solid var(--marine);
     border-radius: 10px;
     background-color: var(--light);
@@ -30,11 +30,10 @@
     }
   }
 
-  @include mobile-screen {
-    font-size: 14px;
-
+  @include desktop-screen {
+    font-size: 24px;
     & input {
-      font-size: 16px;
+      font-size: var(--mediumFontSize);
     }
   }
 }
@@ -48,13 +47,13 @@
 .formikMessage {
   position: absolute;
   right: 0;
-  top: 80px;
+  top: 70px;
   color: red;
-  font-size: 14px;
+  font-size: 12px;
 
-  @include mobile-screen {
-    font-size: 12px;
-    top: 70px;
+  @include desktop-screen {
+    font-size: 14px;
+    top: 80px;
   }
 }
 

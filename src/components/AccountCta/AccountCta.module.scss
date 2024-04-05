@@ -1,10 +1,10 @@
 @import '../../stylesheets/mixins.scss';
 
 .row {
-  font-size: 18px;
+  font-size: 14px;
 
-  @include mobile-screen {
-    font-size: 14px;
+  @include desktop-screen {
+    font-size: 18px;
   }
 }
 

@@ -3,20 +3,20 @@
 .label {
   display: flex;
   width: 161px;
-  padding: 16px 32px;
+  padding: 7.2px 14.4px;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  border-radius: 24px;
-  border: 3px solid var(--orange);
+  gap: 4px;
+  border-radius: 10.8px;
+  border: 1.35px solid var(--orange);
   background: var(--light);
   transition: all 0.3s ease-in-out;
 
-  @include mobile-screen {
-    padding: 7.2px 14.4px;
-    border-radius: 10.8px;
-    border: 1.35px solid var(--orange);
-    gap: 4px;
+  @include desktop-screen {
+    padding: 16px 32px;
+    border-radius: 24px;
+    border: 3px solid var(--orange);
+    gap: 10px;
   }
 }
 .active {
@@ -36,12 +36,13 @@
 
 .input {
   width: 100%;
-  height: 32px;
+
   border: none;
   background: transparent;
   border-bottom: 1px solid var(--marine);
   color: var(--marine);
-  font-size: 24px;
+  font-size: 14.4px;
+  height: 24px;
   font-weight: 700;
   line-height: 0;
 
@@ -60,19 +61,19 @@
     margin: 0;
   }
 
-  @media only screen and (max-width: 1440px) {
-    font-size: 14.4px;
-    height: 24px;
+  @include desktop-screen {
+    font-size: 24px;
+    height: 32px;
   }
 }
 
 .text {
   color: var(--marine);
-  font-size: 24px;
+  font-size: 14.4px;
   font-weight: 700;
   line-height: 1.5;
 
-  @media only screen and (max-width: 1440px) {
-    font-size: 14.4px;
+  @include desktop-screen {
+    font-size: 24px;
   }
 }

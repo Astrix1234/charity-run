@@ -31,12 +31,12 @@
 }
 
 .heading {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 150%;
   align-self: flex-start;
   font-weight: 400;
 
-  @include mobile-screen {
-    font-size: 16px;
+  @include desktop-screen {
+    font-size: 24px;
   }
 }

@@ -2,16 +2,16 @@
 
 .btn {
   display: flex;
-  width: 161px;
-  padding: 16px 32px;
+  width: 72px;
+  padding: 6.2px 12.4px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 24px;
-  border: 3px solid var(--orange);
+  border-radius: 10.8px;
+  border: 1.35px solid var(--orange);
   background-color: var(--light);
   color: var(--TEAL, #1ca2a7);
-  font-size: 24px;
+  font-size: 14.4px;
   font-weight: 700;
   line-height: 1.5;
   cursor: pointer;
@@ -24,13 +24,12 @@
     outline: none;
   }
 
-  @include mobile-screen {
-    font-size: 16px;
-    padding: 6.2px 12.4px;
-    border-radius: 10.8px;
-    border: 1.35px solid var(--orange);
-    font-size: 14.4px;
-    width: 68px;
+  @include desktop-screen {
+    font-size: 24px;
+    padding: 16px 32px;
+    border-radius: 24px;
+    border: 3px solid var(--orange);
+    width: 161px;
   }
 }
 
