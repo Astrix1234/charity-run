@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    seeGallery: 'Zobacz więcej',
+    seeGallery: 'zobacz całą galerię',
   },
   EN: {
-    seeGallery: 'See more',
+    seeGallery: 'see full gallery',
   },
 };
 
