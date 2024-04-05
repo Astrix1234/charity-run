@@ -13,7 +13,8 @@ export const ParticipantArea = () => {
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
         <div id="run-info">
-          <Timetable />
+          {/* <Timetable /> */}
+          <img src="../images/timetable.png" />
         </div>
         <ParticipantAreaPrepare />
       </div>
