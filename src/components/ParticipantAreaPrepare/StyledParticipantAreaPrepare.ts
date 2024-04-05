@@ -12,6 +12,8 @@ export const StyledPrepare = styled.div`
 
   h1,
   p {
+    position: relative;
+    z-index: 1;
     font-weight: 600;
     padding-left: 3rem;
     padding-right: 2rem;

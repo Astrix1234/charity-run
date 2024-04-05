@@ -4,13 +4,14 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import ItemSquare from '../ItemSquare/ItemSquare';
 import { IconFoot } from '../../Icons/TimetableIcons/IconFoot/IconFoot';
+import { ParticipantAreaItemSquare } from '../ParticipantAreaItemSquare/ParticipantAreaItemSquare';
 
 export const ParticipantAreaPrepare = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
     <StyledPrepare as="section" id="before-run">
-      <ItemSquare pos={1}>
+      <ParticipantAreaItemSquare pos={1}>
         <>
           <h1>{t.train}</h1>
           <p>{t.trainLinks}</p>
@@ -21,8 +22,8 @@ export const ParticipantAreaPrepare = () => {
             <Link to="#">{t.trainStart}</Link>
           </p>
         </>
-      </ItemSquare>
-      <ItemSquare pos={2}>
+      </ParticipantAreaItemSquare>
+      <ParticipantAreaItemSquare pos={2}>
         <>
           <h1>{t.diet}</h1>
           <p>{t.dietLinks}</p>
@@ -33,8 +34,8 @@ export const ParticipantAreaPrepare = () => {
             <Link to="#">{t.dietRunner}</Link>
           </p>
         </>
-      </ItemSquare>
-      <ItemSquare pos={3}>
+      </ParticipantAreaItemSquare>
+      <ParticipantAreaItemSquare pos={3}>
         <>
           <h1>{t.hydration}</h1>
           <p>
@@ -42,15 +43,15 @@ export const ParticipantAreaPrepare = () => {
           </p>
           <p>{t.hydrationAdvice}</p>
         </>
-      </ItemSquare>
-      <ItemSquare pos={4}>
+      </ParticipantAreaItemSquare>
+      <ParticipantAreaItemSquare pos={4}>
         <>
           <h1>{t.run}</h1>
           <p>
             <Link to="#">{t.runRoute}</Link>
           </p>
         </>
-      </ItemSquare>
+      </ParticipantAreaItemSquare>
       <div className="foots foot0">
         <IconFoot />
       </div>
