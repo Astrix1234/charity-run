@@ -1,38 +1,61 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 160px 0 0 0;
+  gap: 20px;
+  padding: 80px 0 0 0;
 
   &__box {
-    width: 480px;
+    width: 131px;
   }
 
   &__img {
-    width: 480px;
-    height: 407px;
+    width: 131px;
+    height: 111px;
   }
 
   &__link {
     display: flex;
     justify-content: flex-end;
-    padding-right: 80px;
+    padding-right: 20px;
   }
 
   &__placeholder {
-    right: 0;
-    bottom: 0;
+    font-family: Poppins;
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: var(--orange);
     font-weight: 700;
-    font-size: var(--mediumFontSize);
+    font-size: var(--smallFontSize);
     transition: all 0.3s ease-in-out;
 
     &:hover,
     &:focus {
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gallery {
+    gap: 16px;
+    padding: 160px 0 0 0;
+
+    &__box {
+      width: 480px;
+    }
+
+    &__img {
+      width: 480px;
+      height: 407px;
+    }
+
+    &__link {
+      padding-right: 80px;
+    }
+
+    &__placeholder {
+      font-size: var(--mediumFontSize);
     }
   }
 }
