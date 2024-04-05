@@ -1,6 +1,9 @@
+@import '../../stylesheets/mixins.scss';
+
 .section {
   padding: 80px 0 260px;
   position: relative;
+  overflow-x: clip;
 
   & > svg {
     position: absolute;
@@ -12,6 +15,25 @@
   & > svg:last-child {
     top: 45%;
     left: 0;
+  }
+  @include mobile-screen {
+    padding: 54px 0 80px;
+
+    & > svg {
+      position: absolute;
+      top: 38%;
+      right: -20%;
+      z-index: -1;
+      width: 262.574px;
+      height: 377.769px;
+    }
+
+    & > svg:last-child {
+      width: 263.504px;
+      height: 335.985px;
+      top: 45%;
+      left: -20%;
+    }
   }
 }
 
@@ -27,10 +49,23 @@
   background-position: left top;
   transform: rotate(75deg);
   z-index: -2;
+
+  @include mobile-screen {
+    width: 1057.508px;
+    height: 1023.114px;
+    top: -60px;
+    right: -700px;
+    transform: rotate(85deg);
+  }
 }
 
 .container {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
+
+  @include mobile-screen {
+    padding: 0px 20px;
+    max-width: 460px;
+  }
 }

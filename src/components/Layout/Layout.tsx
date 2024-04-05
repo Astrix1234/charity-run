@@ -6,11 +6,11 @@ import { Footer } from '../Footer/Footer';
 export const Layout = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,5 +1,8 @@
+@import '../../stylesheets/mixins.scss';
+
 .container {
-  width: 968px;
+  max-width: 968px;
+  width: 100%;
   padding: 24px;
   height: 605px;
   border-radius: 32px;
@@ -7,27 +10,46 @@
   background: rgba(250, 253, 253, 0.2);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
+  text-align: center;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 40px;
+
+  @include mobile-screen {
+    max-width: 360px;
+    height: auto;
+    margin-bottom: 48px;
+  }
 }
 
 .heading {
   font-size: 39px;
   font-weight: 500;
+
+  @include mobile-screen {
+    font-size: 24px;
+  }
 }
 
 .join {
   font-size: 24px;
   font-weight: 600;
+
+  @include mobile-screen {
+    font-size: 16px;
+  }
 }
 
 .choose {
   font-size: 21px;
   font-weight: 400;
+
+  @include mobile-screen {
+    font-size: 16px;
+  }
 }
 
 .row {
@@ -37,4 +59,18 @@
   gap: 12px;
   max-width: 768px;
   width: 100%;
+
+  @include mobile-screen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: max-content;
+    row-gap: 14px;
+
+    & label {
+      grid-column: 1/-1;
+      justify-self: center;
+      max-width: 96px;
+    }
+  }
 }
