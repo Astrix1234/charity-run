@@ -7,13 +7,14 @@ import { userAvatar } from '../../Zustand/api';
 import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
+import { apiUrl } from '../../Zustand/api';
 
 export const ParticipantAreaMain = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
   const { setIsLoading } = useIsLoadingStore();
-  const { setUserData } = useUserDataStore();
+  const { setUserData, userData } = useUserDataStore();
 
   const handleAvatarChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -42,7 +43,7 @@ export const ParticipantAreaMain = () => {
     <StyledMain as="section" id="participantMain">
       <div className="photo">
         <div className="imgContainer">
-          <img className="image" src="../images/running_man.png" alt="Avatar" />
+          <img className="image" src="../images/running_man.png" alt={t.alt} />
         </div>
         <div className="addPhoto">
           <IconPencil />
