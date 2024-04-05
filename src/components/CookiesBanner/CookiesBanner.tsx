@@ -15,6 +15,7 @@ const CookieBanner = () => {
       onAccept={() => setShowConsent(false)}
       onDecline={() => setShowConsent(false)}
       overlay
+      expires={30}
       style={{
         backgroundColor: '#1ca2a7',
         fontSize: '13px',
