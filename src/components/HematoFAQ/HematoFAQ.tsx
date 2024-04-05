@@ -24,7 +24,7 @@ const HematoFAQ: React.FC = () => {
         <div>
           <h1 className={scss.faq__title}>
             FAQ
-            <div>
+            <div className={scss.faq__bloodCell}>
               <IconBloodCell />
             </div>
           </h1>
