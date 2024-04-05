@@ -18,6 +18,7 @@ const CookieBanner = () => {
       style={{
         backgroundColor: '#1ca2a7',
         fontSize: '13px',
+        opacity: '0.9',
       }}
       buttonStyle={{
         backgroundColor: 'hsl(25, 98%, 54%)',
