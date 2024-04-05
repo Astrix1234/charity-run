@@ -1,7 +1,14 @@
+@import '../../stylesheets/mixins.scss';
+
 .button {
   position: relative;
-  width: 276px;
-  height: 65px;
+  width: 230px;
+  height: 54px;
+
+  @include desktop-screen {
+    width: 276px;
+    height: 65px;
+  }
 
   &__button {
     width: 100%;
@@ -9,14 +16,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 19.92px;
     border: none;
-    border-radius: 24px;
+    border-radius: 20px;
     background-color: var(--orange);
     background: linear-gradient(180deg, #fd7616 11.28%, #f28505 100%);
-
     color: var(--light);
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
@@ -26,23 +32,47 @@
     &:focus {
       background-color: var(--orange);
       transform: translate(5.5px, -7px);
-      box-shadow: -5.5px 7px 0px 0px var(--dark);
+      box-shadow: -2.5px 4px 0px 0px var(--dark);
       background: linear-gradient(180deg, #ff9c27 11.28%, #f28505 100%);
-      border: 2px dashed var(--dark);
+      border: 1.4px dashed var(--dark);
+    }
+
+    @include desktop-screen {
+      gap: 24px;
+      border-radius: 24px;
+      font-size: 24px;
+
+      &:hover,
+      &:focus {
+        box-shadow: -5.5px 7px 0px 0px var(--dark);
+        border: 2px dashed var(--dark);
+      }
+
+      & svg {
+        width: 33.2px;
+        height: 37.35px;
+      }
     }
   }
 
   &__dashedBorder {
     position: absolute;
-    width: 100%;
-    max-width: 276px;
-    height: 64.8px;
-    border: 2px dashed var(--dark);
+    width: 229.832px;
+
+    height: 54px;
+    border: 1.4px dashed var(--dark);
     border-radius: 24px;
     top: -7px;
     left: 5.5px;
     z-index: 100;
     pointer-events: none;
+
+    @include desktop-screen {
+      width: 100%;
+      max-width: 276px;
+      height: 64.8px;
+      border: 2px dashed var(--dark);
+    }
   }
 
   &__disabled {
