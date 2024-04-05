@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { StyledPrepare } from './StyledParticipantAreaPrepare';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
-import ItemSquare from '../ItemSquare/ItemSquare';
 import { IconFoot } from '../../Icons/TimetableIcons/IconFoot/IconFoot';
 import { ParticipantAreaItemSquare } from '../ParticipantAreaItemSquare/ParticipantAreaItemSquare';
 
