@@ -1,5 +1,4 @@
 import { StyledMain } from './StyledParticipantAreaMain';
-
 // import { Link } from 'react-router-dom';
 // import { useLanguageStore } from '../../Zustand/useLanguageStore';
 // import translations from './translations';
@@ -10,14 +9,14 @@ import { userAvatar } from '../../Zustand/api';
 import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
-// import { apiUrl } from '../../Zustand/api';
+import { apiUrl } from '../../Zustand/api';
 
 export const ParticipantAreaMain = () => {
   // const { language } = useLanguageStore();
   // const t = translations[language];
 
   const { setIsLoading } = useIsLoadingStore();
-  const { setUserData } = useUserDataStore();
+  const { setUserData, userData } = useUserDataStore();
 
   const handleAvatarChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -46,7 +45,15 @@ export const ParticipantAreaMain = () => {
     <StyledMain as="section" id="participantMain">
       <div className="photo">
         <div className="imgContainer">
-          <img className="img" src="images/gallery/slider1.webp" alt="Avatar" />
+          <img
+            className="img"
+            src={
+              userData?.avatarURL
+                ? `${apiUrl}users/avatar/${userData.avatarURL}`
+                : 'images/gallery/slider1.webp'
+            }
+            alt="Avatar"
+          />
         </div>
         <input type="file" onChange={handleAvatarChange} />
         {/* <RunnerMan />
