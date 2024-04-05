@@ -1,5 +1,11 @@
+@import '../../stylesheets/mixins.scss';
+
 .row {
   font-size: 18px;
+
+  @include mobile-screen {
+    font-size: 14px;
+  }
 }
 
 .text {

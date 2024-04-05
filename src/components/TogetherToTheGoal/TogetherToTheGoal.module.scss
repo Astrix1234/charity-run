@@ -1,16 +1,32 @@
+@import '../../stylesheets/mixins.scss';
+
 .togetherToTheGoal {
   &__together {
     font-size: 28px;
     font-weight: 500;
+
+    @include mobile-screen {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
   }
 
   &__title {
     font-size: 90px;
     font-weight: 800;
     color: var(--orange);
+
+    @include mobile-screen {
+      font-size: 40px;
+      margin-bottom: 6px;
+    }
   }
 
   &__foundation {
     font-size: 21px;
+
+    @include mobile-screen {
+      font-size: 16px;
+    }
   }
 }

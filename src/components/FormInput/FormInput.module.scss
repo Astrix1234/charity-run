@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .label {
   display: flex;
   flex-direction: column;
@@ -27,6 +29,14 @@
       border: 1px solid blue;
     }
   }
+
+  @include mobile-screen {
+    font-size: 14px;
+
+    & input {
+      font-size: 16px;
+    }
+  }
 }
 
 .error {
@@ -41,6 +51,11 @@
   top: 80px;
   color: red;
   font-size: 14px;
+
+  @include mobile-screen {
+    font-size: 12px;
+    top: 70px;
+  }
 }
 
 .box {
