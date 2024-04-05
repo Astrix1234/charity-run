@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 136px;
 }
@@ -12,4 +13,5 @@
   line-height: 1.5;
   color: var(--marine);
   margin-bottom: 18px;
+  text-align: justify;
 }

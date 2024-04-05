@@ -4,7 +4,11 @@ import scss from './IconLinkedIn.module.scss';
 export const IconLinkedIn = () => {
   return (
     <>
-      <Link className={scss.link} to="" target="_blank">
+      <Link
+        className={scss.link}
+        to="https://www.linkedin.com/company/fundacja-na-rzecz-pomocy-chorym-na-bia%C5%82aczki/"
+        target="_blank"
+      >
         <svg
           width="31"
           height="30"
