@@ -8,7 +8,8 @@ export const StyledMain = styled.div`
   gap: 4rem;
   position: relative;
 
-  & > * {
+  & > *,
+  .image {
     min-width: 510px;
     max-width: 50%;
   }
@@ -21,13 +22,11 @@ export const StyledMain = styled.div`
   }
 
   .photo {
-    width: 400px;
-    height: 400px;
     margin-bottom: 3rem;
-    // display: grid;
-    // place-content: center;
-    // text-align: right;
-    // gap: 1rem;
+    display: grid;
+    place-content: center;
+    text-align: right;
+    gap: 1rem;
   }
 
   .imgContainer {
@@ -35,15 +34,28 @@ export const StyledMain = styled.div`
     height: 100%;
   }
 
-  .img {
+  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  // .addPhoto {
-  //   display: flex;
-  //   justify-content: right;
-  //   align-items: center;
-  // }
+  .addPhoto {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+
+  label {
+    transition: color 400ms;
+  }
+
+  label:hover {
+    cursor: pointer;
+    color: var(--orange);
+  }
 `;

@@ -1,20 +1,16 @@
 import { StyledMain } from './StyledParticipantAreaMain';
-
-// import { Link } from 'react-router-dom';
-// import { useLanguageStore } from '../../Zustand/useLanguageStore';
-// import translations from './translations';
-// import RunnerMan from '../../Icons/RunnerMan/RunnerMan';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from './translations';
 import { ParticipantAreaNavigation } from '../ParticipantAreaNavigation/ParticipantAreaNavigation';
-// import { IconPencil } from '../../Icons/IconPencil/IconPlus';
+import { IconPencil } from '../../Icons/IconPencil/IconPlus';
 import { userAvatar } from '../../Zustand/api';
 import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
-// import { apiUrl } from '../../Zustand/api';
 
 export const ParticipantAreaMain = () => {
-  // const { language } = useLanguageStore();
-  // const t = translations[language];
+  const { language } = useLanguageStore();
+  const t = translations[language];
 
   const { setIsLoading } = useIsLoadingStore();
   const { setUserData } = useUserDataStore();
@@ -46,16 +42,16 @@ export const ParticipantAreaMain = () => {
     <StyledMain as="section" id="participantMain">
       <div className="photo">
         <div className="imgContainer">
-          <img className="img" src="images/gallery/slider1.webp" alt="Avatar" />
+          <img className="image" src="../images/running_man.png" alt="Avatar" />
         </div>
-        <input type="file" onChange={handleAvatarChange} />
-        {/* <RunnerMan />
-        <p className="addPhoto">
+        <div className="addPhoto">
           <IconPencil />
-          <Link to="#">{t.addPhoto}</Link>
-        </p> */}
+          <div className="upload">
+            <label htmlFor="file-upload">{t.addPhoto}</label>
+            <input id="file-upload" type="file" onChange={handleAvatarChange} />
+          </div>
+        </div>
       </div>
-
       <ParticipantAreaNavigation />
     </StyledMain>
   );
