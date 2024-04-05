@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledProfile = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+
+  & > * {
+    min-width: 50%;
+  }
 
   h1 {
     font-size: 3.125rem;
