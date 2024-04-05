@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledData = styled.div`
   padding-right: 2rem;
+  overflow-wrap: break-word;
 
   p:nth-child(2n + 1) {
     color: black;
