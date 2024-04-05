@@ -12,7 +12,7 @@ export const ParticipantArea = () => {
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
         <div id="run-info">
-          <img src="../images/timetable.png" />
+          <img src="images/timetable.png" />
         </div>
         <ParticipantAreaPrepare />
       </div>
