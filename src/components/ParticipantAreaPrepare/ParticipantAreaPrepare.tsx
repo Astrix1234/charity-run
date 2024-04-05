@@ -21,12 +21,20 @@ export const ParticipantAreaPrepare = () => {
           <h1>{t.train}</h1>
           <p>{t.trainLinks}</p>
           <p>
-            <Link to="https://bieganie.pl/plany-treningowe/">
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="https://bieganie.pl/plany-treningowe/"
+            >
               {t.trainPlans}
             </Link>
           </p>
           <p>
-            <Link to="https://www.bing.com/videos/riverview/relatedvideo?q=trening+przed+biegiem&mid=A4EB706D1C9A1824C597A4EB706D1C9A1824C597&FORM=VIRE">
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="https://www.bing.com/videos/riverview/relatedvideo?q=trening+przed+biegiem&mid=A4EB706D1C9A1824C597A4EB706D1C9A1824C597&FORM=VIRE"
+            >
               {t.trainStart}
             </Link>
           </p>
@@ -37,12 +45,20 @@ export const ParticipantAreaPrepare = () => {
           <h1>{t.diet}</h1>
           <p>{t.dietLinks}</p>
           <p>
-            <Link to="https://dietetycy.org.pl/co-jesc-przed-biegiem/">
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="https://dietetycy.org.pl/co-jesc-przed-biegiem/"
+            >
               {t.dietEat}
             </Link>
           </p>
           <p>
-            <Link to="https://dietetykanienazarty.pl/b/dieta-biegacza-co-zjesc-przed-biegiem">
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="https://dietetykanienazarty.pl/b/dieta-biegacza-co-zjesc-przed-biegiem"
+            >
               {t.dietRunner}
             </Link>
           </p>
@@ -52,7 +68,11 @@ export const ParticipantAreaPrepare = () => {
         <>
           <h1>{t.hydration}</h1>
           <p>
-            <Link to="https://world.nessi-sport.com/bieganie-a-nawodnienie-picie-przed-w-trakcie-i-po-treningu">
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="https://world.nessi-sport.com/bieganie-a-nawodnienie-picie-przed-w-trakcie-i-po-treningu"
+            >
               {t.hydrationRun}
             </Link>
           </p>
