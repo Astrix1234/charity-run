@@ -8,7 +8,7 @@ import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { apiUrl } from '../../Zustand/api';
-
+g;
 export const ParticipantAreaMain = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
@@ -43,7 +43,15 @@ export const ParticipantAreaMain = () => {
     <StyledMain as="section" id="participantMain">
       <div className="photo">
         <div className="imgContainer">
-          <img className="image" src="../images/running_man.png" alt={t.alt} />
+          <img
+            className="image"
+            src={
+              userData?.avatarURL
+                ? `${apiUrl}users/avatar/${userData.avatarURL}`
+                : '../images/running_man.png'
+            }
+            alt={t.alt}
+          />
         </div>
         <div className="addPhoto">
           <IconPencil />
