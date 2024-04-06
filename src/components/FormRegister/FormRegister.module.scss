@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .formRegister {
   &__container {
     max-width: 1280px;
@@ -11,7 +13,11 @@
   &__windows {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    @include desktop-screen {
+      justify-content: space-between;
+    }
   }
 
   &__form {
@@ -34,8 +40,12 @@
   }
 
   &__sectionTitle {
-    font-size: 24px;
     font-weight: 400;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
   }
 
   &__iconCheckPassword {
@@ -58,13 +68,21 @@
 
   &__instructionsTitle {
     margin-bottom: 24px;
-    font-size: 24px;
+    font-size: 16px;
     color: var(--orange);
     font-weight: 600;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
   }
 
   &__instructionsText {
-    font-size: 21px;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
   }
 
   &__instructionsTextHighlighted {
@@ -72,5 +90,3 @@
     color: var(--orange);
   }
 }
-
-
