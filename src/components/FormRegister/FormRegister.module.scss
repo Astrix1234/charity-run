@@ -86,7 +86,11 @@
   }
 
   &__instructionsTextHighlighted {
-    font-size: 21px;
     color: var(--orange);
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
   }
 }
