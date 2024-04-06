@@ -1,35 +1,55 @@
-.whyIsItWorth {
-  padding: 0 0 80px 0;
+@import '../../stylesheets/mixins.scss';
 
+.whyIsItWorth {
   &__IconBg {
+    display: none;
+
+    @include desktop-screen {
+      display: block;
+      position: absolute;
+      top: 337px;
+    }
+  }
+
+  &__IconBgMobile {
+    display: block;
     position: absolute;
-    top: 337px;
+    top: 180px;
+
+    @include desktop-screen {
+      display: none;
+    }
   }
 
   &__container {
     position: relative;
     max-width: 1440px;
-    height: 1435px;
+    height: 856px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url('/images/run.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      padding: 80px;
-      width: calc(100% - 160px);
-      height: calc(100% - 160px);
+    @include desktop-screen {
+      height: 1435px;
+      padding: 0 80px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('/images/run.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 80px;
+        width: calc(100% - 160px);
+        height: calc(100% - 160px);
+      }
     }
   }
 
@@ -42,21 +62,45 @@
 
   &__title {
     text-align: center;
-    width: 471px;
-    font-size: 67px;
+    width: 302px;
+    font-size: 40px;
     font-weight: 400;
     font-family: 'DM Serif Display', serif;
+
+    @include desktop-screen {
+      font-size: 67px;
+      width: 471px;
+    }
   }
 
   &__iconBlood {
     position: absolute;
     bottom: -5px;
-    right: -35px;
+    right: -5px;
+
+    & > svg {
+      width: 32px;
+      height: 45px;
+    }
+
+    @include desktop-screen {
+      bottom: -5px;
+      right: -35px;
+
+      & > svg {
+        width: 59px;
+        height: 83px;
+      }
+    }
   }
 
   &__list {
     position: relative;
-    width: 1022px;
+    width: 350px;
+
+    @include desktop-screen {
+      width: 1022px;
+    }
   }
 
   &__item {
@@ -64,47 +108,107 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 
-    >p {
-      line-height: 1.5;
-      text-align: center;
-      font-size: var(--mediumFontSize);
+    @include desktop-screen {
+      gap: 16px;
     }
 
     &-fundraising {
-      width: 441px;
-      top: 80px;
+      width: 152px;
+      top: 49px;
       left: 0;
+
+      @include desktop-screen {
+        width: 441px;
+        top: 80px;
+        left: 0;
+      }
     }
 
     &-awareness {
-      width: 438px;
-      top: 302px;
+      width: 150px;
+      top: 130px;
       right: 0;
+
+      @include desktop-screen {
+        width: 438px;
+        top: 302px;
+        right: 0;
+      }
     }
 
     &-opportunity {
-      width: 398px;
-      top: 465px;
+      width: 129px;
+      top: 265px;
       left: 0;
+
+      @include desktop-screen {
+        width: 398px;
+        top: 465px;
+        left: 0;
+      }
     }
 
     &-joy {
-      width: 415px;
-      top: 680px;
+      width: 138px;
+      top: 375px;
       right: 0;
+
+      @include desktop-screen {
+        width: 415px;
+        top: 680px;
+        right: 0;
+      }
     }
 
     &-family {
-      width: 455px;
-      top: 881px;
+      width: 159px;
+      top: 475px;
       left: 0;
+
+      @include desktop-screen {
+        width: 455px;
+        top: 881px;
+        left: 0;
+      }
+    }
+  }
+
+  &__itemText {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 12px;
+
+    @include desktop-screen {
+      font-size: var(--mediumFontSize);
+    }
+  }
+
+  &__itemOdd {
+    flex-direction: column-reverse;
+  }
+
+  &__itemEven {
+    flex-direction: column;
+  }
+
+  &__itemNumber > svg {
+    width: 73px;
+    height: 73px;
+
+    @include desktop-screen {
+      width: 124px;
+      height: 124px;
     }
   }
 
   &__button {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+
+    @include desktop-screen {
+      bottom: 0;
+    }
   }
 }

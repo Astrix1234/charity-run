@@ -24,36 +24,50 @@ export const Statements = ({
 
   return (
     <div className={scss.regulations}>
-      <p className={scss.regulations__sectionTitle}>{t.statement}</p>
-      <h3 className={scss.regulations__regulationsTitle}>
-        <span className={consentClass} onClick={handleIconClick}>
-          <IconStatementSquare />
-          {consent && (
-            <span className={scss.regulations__iconAgree}>
-              <IconAgree />
+      <div className={scss.regulations__content}>
+        <p className={scss.regulations__sectionTitle}>{t.statement}</p>
+        <h3 className={scss.regulations__regulationsTitle}>
+          <span className={consentClass} onClick={handleIconClick}>
+            <IconStatementSquare />
+            {consent && (
+              <span className={scss.regulations__iconAgree}>
+                <IconAgree />
+              </span>
+            )}
+          </span>
+          {t.statementTitle}
+        </h3>
+        <p>{t.statementIDo}</p>
+        <ol className={scss.regulations__statementList}>
+          {' '}
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem1part1}
+            <span onClick={openModal} className={scss.regulations__highlights}>
+              {t.span1}
             </span>
-          )}
-        </span>
-        {t.statementTitle}
-      </h3>
-      <p>{t.statementIDo}</p>
-      <ol className={scss.regulations__statementList}>
-        {' '}
-        <li className={scss.regulations__statementItem}>
-          {t.statementItem1part1}
-          <span onClick={openModal} className={scss.regulations__highlights}>
-            {t.span1}
-          </span>
-          {t.statementItem1part2}
-          <span onClick={openModal} className={scss.regulations__highlights}>
-            {t.span2}
-          </span>
-          {t.statementItem1part3}
-        </li>
-        <li className={scss.regulations__statementItem}>{t.statementItem2}</li>
-        <li className={scss.regulations__statementItem}>{t.statementItem3}</li>
-        <li className={scss.regulations__statementItem}>{t.statementItem4}</li>
-      </ol>
+            {t.statementItem1part2}
+            <span onClick={openModal} className={scss.regulations__highlights}>
+              {t.span2}
+            </span>
+            {t.statementItem1part3}
+          </li>
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem2}
+          </li>
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem3}
+          </li>
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem4}
+          </li>
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem5}
+          </li>
+          <li className={scss.regulations__statementItem}>
+            {t.statementItem6}
+          </li>
+        </ol>
+      </div>
     </div>
   );
 };
