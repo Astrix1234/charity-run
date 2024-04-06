@@ -1,8 +1,11 @@
 .link {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-    }
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
 }

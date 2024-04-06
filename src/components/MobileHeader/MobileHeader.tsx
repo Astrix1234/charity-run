@@ -10,9 +10,9 @@ function MobileHeader() {
       <button
         onClick={() => setIsNavOpen(prev => !prev)}
         aria-label="Toggle Mobile Navigation"
-        className={scss.btn}
+        className={`${scss.btn} ${isNavOpen ? scss.btn__active : ''}`}
       >
-        <HamburgerMenu />
+        <span />
       </button>
       <MobileNavigation open={isNavOpen} />
     </header>
