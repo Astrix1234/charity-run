@@ -1,0 +1,59 @@
+@keyframes open {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(90);
+  }
+}
+
+@keyframes flowContainer {
+  0% {
+    transform: translate(-80%, -50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.background {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(#fafdfd, 0.85);
+  transition: all 0.4s ease-in-out;
+  z-index: 450;
+  border-radius: 1300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(90);
+  animation: open 0.6s;
+}
+
+.container {
+  z-index: 550;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: flowContainer 0.3s;
+
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  max-width: 320px;
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
