@@ -1,28 +1,18 @@
-@import '../../stylesheets/mixins.scss';
-
 .regulations {
   padding-top: 124px;
+  background: #ffffff4d;
+  border: 1px solid var(--marine);
+  border-radius: 32px;
   display: flex;
   flex-direction: column;
-  padding: 11px;
-  padding-right: 0;
+  padding: 24px;
+  padding-right: 10px;
   width: 100%;
   max-width: 597px;
   line-height: 1.5;
   position: relative;
-
-  @include desktop-screen {
-    height: 780px;
-  }
-
-  @include desktop-screen {
-    border-radius: 32px;
-    border: 1px solid var(--marine);
-    background: #ffffff4d;
-    box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
-    padding: 24px;
-    padding-right: 10px;
-  }
+  height: 780px;
+  box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
 
   &__content {
     display: flex;
@@ -35,21 +25,12 @@
   }
 
   &__sectionTitle {
-    font-size: 16px;
-
-    @include desktop-screen {
-      font-size: 24px;
-    }
+    font-size: 24px;
   }
 
   &__regulationsTitle {
     margin-top: 24px;
     position: relative;
-    font-size: 16px;
-
-    @include desktop-screen {
-      font-size: 24px;
-    }
   }
 
   &__consent {
@@ -83,17 +64,10 @@
     padding: 0 24px;
     list-style: decimal;
     list-style-type: lower-roman;
-    text-align: justify;
   }
 
   &__statementItem {
     list-style: decimal;
-
-    font-size: 9.6px;
-
-    @include desktop-screen {
-      font-size: 16px;
-    }
   }
 
   &__highlights {

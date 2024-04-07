@@ -14,7 +14,6 @@ import AccountCta from '../AccountCta/AccountCta';
 import { Statements } from '../Statements/Statements';
 import FormInput from '../FormInput/FormInput';
 import TogglePasswordVisibilityButton from '../TogglePasswordVisibilityButton/TogglePasswordVisibilityButton';
-import { useMediaQuery } from '@react-hook/media-query';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
@@ -29,8 +28,6 @@ export const FormRegister = () => {
   const [consent, setConsent] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-
-  const isWideScreen = useMediaQuery('(min-width: 1360px)');
 
   useEffect(() => {
     const handleKeyDown = (event: WindowEventMap['keydown']) => {
@@ -215,13 +212,6 @@ export const FormRegister = () => {
               />
             </>
           </FormInput>
-          {!isWideScreen && (
-            <Statements
-              consent={consent}
-              handleIconClick={handleIconClick}
-              openModal={openModal}
-            />
-          )}
           <Button
             type="submit"
             content={t.button}
@@ -230,14 +220,11 @@ export const FormRegister = () => {
 
           <AccountCta type="login" />
         </form>
-
-        {isWideScreen && (
-          <Statements
-            consent={consent}
-            handleIconClick={handleIconClick}
-            openModal={openModal}
-          />
-        )}
+        <Statements
+          consent={consent}
+          handleIconClick={handleIconClick}
+          openModal={openModal}
+        />
       </div>
 
       <div className={scss.formRegister__instructions}>
