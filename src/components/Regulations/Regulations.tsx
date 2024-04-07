@@ -4,6 +4,7 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { IconAgree } from '../../Icons/IconAgree/IconAgree';
 import { IconCloseModal } from '../../Icons/IconCloseModal/IconCloseModal';
+import { TogetherToTheGoal } from '../TogetherToTheGoal/TogetherToTheGoal';
 
 interface RegulationsProps {
   onClose: () => void;
@@ -15,6 +16,9 @@ export const Regulations: React.FC<RegulationsProps> = ({ onClose }) => {
 
   return (
     <section className={scss.regulations}>
+      <div className={scss.regulations__containerTitles}>
+        <TogetherToTheGoal />
+      </div>
       <div className={scss.regulations__container}>
         <div className={scss.regulations__modal}>
           <div className={scss.regulations__modalCloseIcon}>
