@@ -62,9 +62,7 @@ export const SelectInput: React.FC<SelectInputProps> = ({
       <select
         id={id}
         name={name}
-        className={`${scss.SelectInput__input} ${
-          formik.touched[name] && formik.errors[name] ? scss.error : ''
-        }`}
+        className={scss.SelectInput__input}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values[name]}
@@ -75,11 +73,6 @@ export const SelectInput: React.FC<SelectInputProps> = ({
           </option>
         ))}
       </select>
-      {formik.touched[name] && formik.errors[name] && (
-        <div className={scss.SelectInput__errorMsg}>
-          {String(formik.errors[name])}
-        </div>
-      )}
     </label>
   );
 };
