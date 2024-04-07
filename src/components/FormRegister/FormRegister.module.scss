@@ -60,10 +60,13 @@
   }
 
   &__instructions {
-    width: 776px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @include desktop-screen {
+      width: 776px;
+    }
   }
 
   &__instructionsTitle {

@@ -38,14 +38,13 @@
   }
 
   &__info {
-    text-align: justify;
-
     @include desktop-screen {
       padding: 22px 32px;
     }
   }
 
   &__text {
+    text-align: justify;
     font-size: 12px;
     line-height: 1.5;
 
