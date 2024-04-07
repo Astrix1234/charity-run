@@ -64,10 +64,12 @@
     padding: 0 24px;
     list-style: decimal;
     list-style-type: lower-roman;
+
   }
 
   &__statementItem {
     list-style: decimal;
+    text-align: justify;
   }
 
   &__highlights {
