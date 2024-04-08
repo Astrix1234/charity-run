@@ -1,4 +1,14 @@
-@keyframes open {
+@keyframes openLarge {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(130);
+  }
+}
+
+@keyframes openSmall {
   0% {
     transform: translate(-50%, -50%) scale(1);
   }
@@ -34,8 +44,13 @@
   border-radius: 1300px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(80);
-  animation: open 0.7s;
+  transform: translate(-50%, -50%) scale(90);
+  animation: openSmall 0.7s;
+
+  @media only screen and (min-width: 600px) {
+    transform: translate(-50%, -50%) scale(130);
+    animation: openLarge 0.7s;
+  }
 }
 
 .container {

@@ -52,13 +52,13 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
         heading={t.hematoRun}
         handleClose={handleClose}
         links={[
-          { name: t.aboutRun, dest: '/charity-run' },
-          { name: t.gallery, dest: '/charity-run#gallery' },
-          { name: t.timeTable, dest: '/charity-run#timetable' },
-          { name: t.attractions, dest: '/charity-run#attractions' },
-          { name: t.ambassadors, dest: '/charity-run/our-ambassadors' },
-          { name: t.partners, dest: '/charity-run#sponsors' },
-          { name: t.faq, dest: '/charity-run#faq' },
+          { name: t.aboutRun, dest: '/' },
+          { name: t.gallery, dest: '/#gallery' },
+          { name: t.timeTable, dest: '/#timetable' },
+          { name: t.attractions, dest: '/#attractions' },
+          { name: t.ambassadors, dest: '/our-ambassadors' },
+          { name: t.partners, dest: '/#sponsors' },
+          { name: t.faq, dest: '/#faq' },
           {
             name: t.aboutFoundation,
             dest: 'https://fundacja.hematologiczna.org/',

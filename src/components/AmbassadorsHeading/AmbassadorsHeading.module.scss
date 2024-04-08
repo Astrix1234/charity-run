@@ -1,11 +1,17 @@
+@import '../../stylesheets/mixins.scss';
+
 .header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 64px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
+  padding: 80px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+
+  @include desktop-screen {
+    padding: 64px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
+  }
 }
 
 .heading {
