@@ -23,9 +23,11 @@ export const HematoRunMainTitle = () => {
       <div className={scss.hematoTitles__container}>
         <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
         <div className={scss.hematoTitles__titleContainer}>
-          <h1 className={scss.hematoTitles__title}>HEMAT</h1>
-          <div>
-            <IconBloodCell />
+          <div className={scss.hematoTitles__titleBegin}>
+            <h1 className={scss.hematoTitles__title}>HEMAT</h1>
+            <div>
+              <IconBloodCell />
+            </div>
           </div>
           <HematoSliderTitle />
         </div>
@@ -35,7 +37,9 @@ export const HematoRunMainTitle = () => {
         <p className={scss.hematoTitles__date}>26.05.2024 ŁÓDŹ</p>
         <div className={scss.hematoTitles__kmContainer}>
           <p className={scss.hematoTitles__km}>5 KM | 1 KM</p>
-          <IconRoad />
+          <div className={scss.hematoTitles__iconRoad}>
+            <IconRoad />
+          </div>
         </div>
         <Button onClick={handleClick} content={t.joinUs} />
 
