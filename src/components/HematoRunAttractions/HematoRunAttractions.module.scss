@@ -1,76 +1,66 @@
+@import '../../stylesheets/mixins.scss';
+
 .attractions {
   position: relative;
-  padding-top: 140px;
+  padding-top: 80px;
+
+  @include desktop-screen {
+    padding-top: 140px;
+  }
 
   &__container {
-    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 20px;
+
+    @include desktop-screen {
+      padding: 0 80px;
+      max-width: 1440px;
+    }
   }
 
   &__containerItems {
     display: flex;
     flex-wrap: wrap;
-    gap: 29px;
+    gap: 8px;
     justify-content: center;
+
+    @include desktop-screen {
+      gap: 29px;
+    }
   }
 
   &__title {
-    padding-bottom: 140px;
+    padding-bottom: 26px;
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+
+    @include desktop-screen {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__iconBloodCell svg {
+    width: 28px;
+    height: 38px;
+
+    @include desktop-screen {
+      width: 58px;
+      height: 82px;
+    }
   }
 
   &__backgroundIcon {
-    position: absolute;
-    top: 270px;
-    right: 0;
-  }
-}
+    display: none;
 
-.attraction {
-  &__block {
-    width: 452px;
-    height: 452px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 32px;
-    background-color: #ceeaeb;
-    padding: 40px;
-  }
-
-  &__image {
-    width: 329px;
-    height: 329px;
-    border-radius: 50%;
-    position: absolute;
-    top: 104px;
-    left: 62px;
-    order: 2;
-  }
-
-  &__idImage {
-    position: absolute;
-    top: 39px;
-    left: 39px;
-  }
-
-  &__name {
-    color: var #2e2530;
-    font-family: Poppins;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    position: absolute;
-    left: 197px;
-    top: 38px;
-    text-align: left;
+    @include desktop-screen {
+      position: absolute;
+      top: 270px;
+      right: 0;
+      display: flex;
+    }
   }
 }
 
@@ -78,8 +68,13 @@
   color: #2e2530;
   text-align: center;
   font-family: 'DM Serif Display';
-  font-size: 67px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 40px;
+  width: 224px;
+  height: 109px;
+
+  @include desktop-screen {
+    font-size: 67px;
+    width: 748px;
+    height: 87px;
+  }
 }

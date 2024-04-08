@@ -1,5 +1,11 @@
+@import '../../stylesheets/mixins.scss';
+
 .faq {
-  padding: 140px 0 132px 0;
+  padding: 40px 0 36px 0;
+
+  @include desktop-screen {
+    padding: 140px 0 132px 0;
+  }
 
   &__container {
     display: inline-flex;
@@ -7,23 +13,41 @@
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 40px;
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 36px;
+
+    @include desktop-screen {
+      padding: 0 80px;
+      gap: 64px;
+    }
   }
 
   &__title {
-    width: 249px;
+    width: 112px;
     color: #17181a;
     text-align: center;
     font-family: 'DM Serif Display';
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    gap: 10px;
+    font-size: 40px;
+    gap: 5px;
     display: flex;
+
+    @include desktop-screen {
+      width: 249px;
+      font-size: 64px;
+      gap: 10px;
+    }
+  }
+
+  &__bloodCell svg {
+    width: 25.907px;
+    height: 36.627px;
+
+    @include desktop-screen {
+      width: 58px;
+      height: 82px;
+    }
   }
 
   &__listContainer {

@@ -201,14 +201,14 @@ export const RegisterForRun = () => {
                       />
                       {genderMap[gender]}
                     </label>
-                  ))}{' '}
+                  ))}
                 </div>
                 <div className={scss.buttonContainer}>
                   <p>{t.statementPayment}</p>
                   <Button
                     type="submit"
                     content={t.button}
-                    disabled={!formik.isValid || !formik.dirty || !consent}
+                    disabled={!formik.isValid || !consent}
                   />
                 </div>
               </form>

@@ -38,7 +38,7 @@ const Attractions: React.FC = () => {
       <div className={scss.attractions__container}>
         <div className={scss.attractions__title}>
           <h1 className={scss.attractions__header}>{t.attractionsTitle}</h1>
-          <div>
+          <div className={scss.attractions__iconBloodCell}>
             <IconBloodCell />
           </div>
         </div>

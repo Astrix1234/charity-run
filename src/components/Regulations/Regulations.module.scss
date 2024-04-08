@@ -1,14 +1,28 @@
 .regulations {
   padding: 40px 0;
+  width: 100%;
+  padding-top: 63px;
+  background-image: url('/images/background.png');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  &__containerTitles {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    margin-bottom: 46px;
+  }
 
   &__container {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
   }
 
   &__modal {
+    margin: 0 auto;
     padding: 64px 69px;
     width: 1248px;
     height: 1074px;
@@ -37,6 +51,7 @@
   &__text {
     font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
   }
 
   &__modalCloseIcon {
