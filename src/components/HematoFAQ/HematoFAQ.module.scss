@@ -2,6 +2,8 @@
 
 .faq {
   padding: 40px 0 36px 0;
+  padding-left: 10%;
+  padding-right: 10%;
 
   @include desktop-screen {
     padding: 140px 0 132px 0;
@@ -12,7 +14,7 @@
     height: 100%;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 40px;
     justify-content: center;
     align-items: center;

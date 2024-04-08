@@ -9,11 +9,13 @@
   font-family: 'DM Serif Display';
   border-radius: 50%;
   background-color: var(--orange);
-  width: 76px;
-  font-size: 52px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
 
   @include desktop-screen {
     width: 124px;
+    height: 124px;
     font-size: 86px;
   }
 }
