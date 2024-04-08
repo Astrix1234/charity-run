@@ -1,3 +1,7 @@
+@import '../../stylesheets/mixins.scss';
+
+
+
 .hematoTitles {
     background-image: url('/images/background.png');
     background-size: 200% 200%;
@@ -7,109 +11,193 @@
 
     &__container {
         position: relative;
-        max-width: 1440px;
+        max-width: 350px;
         width: 100%;
         margin: 0 auto;
-        padding: 0 80px;
+        padding: 0 20px;
+        overflow: hidden;
+
+        @include desktop-screen {
+            max-width: 1440px;
+            padding: 0 80px;
+        }
     }
 
     &__giveOthers {
-        font-size: var(--largeFontSize);
         font-weight: 500;
-        line-height: 46px;
+
+
+
+        @include desktop-screen {
+            font-size: var(--largeFontSize);
+            line-height: 46px;
+            margin-bottom: 20px;
+        }
     }
 
     &__titleContainer {
         display: flex;
         align-items: center;
-        height: 135px;
+        flex-direction: column;
+
+        @include desktop-screen {
+            flex-direction: row;
+        }
+    }
+
+    &__titleBegin {
+        display: flex;
+        align-items: center;
     }
 
     &__title {
-        font-size: 90px;
+        font-size: 70px;
         font-weight: 800;
         color: var(--orange);
+
+        @include desktop-screen {
+            font-size: 90px;
+        }
     }
 
     &__foundation {
-        font-size: 21px;
+        font-size: 12px;
+        margin-top: 15px;
+
+        @include desktop-screen {
+            font-size: 21px;
+            margin-top: 0;
+        }
     }
 
     &__date {
-        font-size: 50px;
+        font-size: 20px;
         font-weight: 500;
-        line-height: 75px;
+        line-height: 30px;
         color: var(--orange);
-        margin-top: 8px;
+        margin-top: 15px;
+
+        @include desktop-screen {
+            font-size: 50px;
+            margin-top: 8px;
+            line-height: 75px;
+        }
     }
 
     &__kmContainer {
         display: flex;
         align-items: center;
-        margin-bottom: 39px;
+        margin-bottom: 19px;
+    }
+
+    @include desktop-screen {
         gap: 10px;
+        margin-bottom: 39px;
     }
 
     &__km {
-        font-size: var(--largeFontSize);
+        font-size: 20px;
         font-weight: 500;
-        line-height: 75px;
+        line-height: 20px;
         color: var(--marine);
+
+        @include desktop-screen {
+            font-size: var(--largeFontSize);
+            line-height: 75px;
+        }
+    }
+
+    &__iconRoad {
+        scale: 0.4;
+
+        @include desktop-screen {
+            scale: 1;
+        }
     }
 
     &__logInContainer {
         display: flex;
         gap: 8px;
         align-items: center;
-        margin: 16px 0 157px 0;
-        font-size: var(--mediumFontSize);
+        margin: 10px 0 275px 0;
+        font-size: 12px;
         line-height: 29px;
+
+        @include desktop-screen {
+            margin: 16px 0 157px 0;
+            font-size: var(--mediumFontSize);
+        }
     }
 
     &__logIn {
         color: #1C5CA7;
         font-weight: 700;
         transition: all 0.3s ease-in-out;
+        font-size: 16px;
 
         &:hover,
         &:focus {
             text-decoration: underline;
         }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+        }
     }
 
     &__illustrationContainer {
         position: absolute;
-        right: 80px;
+        right: 20px;
         transform: translateY(-100%);
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        pointer-events: none;
+
+        @include desktop-screen {
+            right: 80px;
+        }
     }
 
     &__illustration {
-        width: 612px;
-        height: 415px;
+        width: 375px;
+        height: 254px;
         background-image: url('/images/illustration.png');
         background-size: cover;
+        transform: translateX(55%);
+
+        @include desktop-screen {
+            width: 612px;
+            height: 415px;
+            transform: translateX(0);
+        }
     }
 
     &__runWithUs {
-        font-size: var(--largeFontSize);
         font-weight: 500;
         color: var(--orange);
-        line-height: 59px;
+        line-height: 30px;
+
+        @include desktop-screen {
+            font-size: var(--largeFontSize);
+            line-height: 59px;
+        }
     }
 
     &__findOutMore {
         color: var(--orange);
         font-weight: 700;
-        font-size: var(--mediumFontSize);
+
         line-height: 24px;
         transition: all 0.3s ease-in-out;
 
         &:hover,
         &:focus {
             text-decoration: underline;
+        }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
         }
     }
 }

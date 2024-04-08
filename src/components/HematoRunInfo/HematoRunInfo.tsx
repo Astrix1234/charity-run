@@ -2,11 +2,14 @@ import scss from './HematoRunInfo.module.scss';
 import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { useMediaQuery } from 'react-responsive';
 
 export const HematoRunInfo = () => {
   const [rolledUp, setRolledUp] = useState(true);
   const { language } = useLanguageStore();
   const t = translations[language];
+
+  const isDesktop = useMediaQuery({ minWidth: 1360 });
 
   const handleClick = () => {
     setRolledUp(!rolledUp);
@@ -59,7 +62,7 @@ export const HematoRunInfo = () => {
             </button>
           )}
         </div>
-        <div className={scss.runInfo__runningHelp}></div>
+        {isDesktop && <div className={scss.runInfo__runningHelp}></div>}
       </div>
     </section>
   );
