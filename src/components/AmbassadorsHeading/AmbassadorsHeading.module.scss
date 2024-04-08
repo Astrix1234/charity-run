@@ -4,13 +4,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 80px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
+  padding: 80px 24px 0px;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 
   @include desktop-screen {
-    padding: 64px clamp(24px, 4vw, 80px) clamp(0px, 4vw, 40px);
+    padding: 64px 80px 40px;
   }
 }
 
@@ -20,23 +20,36 @@
   align-items: center;
   text-align: center;
   color: var(--dark);
-  gap: clamp(6px, 0.5vw, 24px);
+  gap: 6px;
+
+  @include desktop-screen {
+    gap: 24px;
+  }
 
   &__sub {
     font-size: 50px;
     font-weight: 500;
-    font-size: clamp(16px, 5vw, 50px);
+    font-size: 16px;
+    @include desktop-screen {
+      font-size: 50px;
+    }
   }
 
   &__main {
     font-size: 90px;
     font-weight: 800;
-    font-size: clamp(36px, 9vw, 90px);
+    font-size: 36px;
+    @include desktop-screen {
+      font-size: 90px;
+    }
   }
 }
 
 .line {
   svg {
-    width: clamp(240px, 60vw, 800px);
+    width: 240px;
+    @include desktop-screen {
+      width: 800px;
+    }
   }
 }
