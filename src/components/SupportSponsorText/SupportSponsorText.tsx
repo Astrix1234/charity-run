@@ -18,7 +18,7 @@ function SupportSponsor(){
             </div>
             <br/>
 
-            <div className={scss.subtitle}>{t.whySponsor}</div>
+            <div className={scss.title}>{t.whySponsor}</div>
             <br/>
 
             <div className={scss.content}>

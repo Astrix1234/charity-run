@@ -6,14 +6,6 @@ import SupportVolunteersList from '../SupportVolunteersList/SupportVolunteersLis
 import SupportVolunteersText from '../SupportVolunteersText/SupportVolunteersText';
 import scss from './SupportVolunteers.module.scss';
 
-const tasks = [
-    { name: { eng: "Registration support", PL: "Obsługa rejestracji uczestników" }, description: "Pomóż nam w przyjmowaniu zgłoszeń uczestników, wydawaniu numerów startowych i udzielaniu informacji." },
-    { name: { eng: "Checkpoint assistance", PL: "Obsługa punktów kontrolnych na trasie" }, description: "Zapewnij bezpieczeństwo uczestnikom, stając na posterunkach kontrolnych i udzielając wsparcia w razie potrzeby." },
-    { name: { eng: "Gathering point and accompanying events support", PL: "Obsługa punktu zbiórki i wydarzeń towarzyszących" }, description: "Pomóż nam w organizacji punktu zbiórki, stoisk gastronomicznych, atrakcji dla dzieci i innych wydarzeń towarzyszących." },
-    { name: { eng: "Promotion and marketing", PL: "Promocja i marketing" }, description: "Pomóż nam w promocji wydarzenia poprzez udział w działaniach marketingowych, dzielenie się informacjami w mediach społecznościowych." }
-];
-
-
 function SupportVolunteers() {
     return (
         <section className={scss.section}>
@@ -21,7 +13,7 @@ function SupportVolunteers() {
                 <div className={scss.heading}>
                 <SupportHeading
                 headingText={{
-                    pl: 'Wesprzyj Fundację i zostań wolontariuszem',
+                    pl: 'Wesprzyj Fundację \n i zostań wolontariuszem',
                     eng: 'Support the foundation and become a volunteer',
                 }}
                 /></div>
@@ -38,7 +30,7 @@ function SupportVolunteers() {
                     pl: 'W jakich obszarach możesz pomóc?',
                     eng: 'In what areas can you help?',
                 }}/>
-            <SupportVolunteersList list={tasks} />
+            <SupportVolunteersList />
             <SupportVolunteersHeading subText={{
                     pl: 'Kto może zostać wolontariuszem?',
                     eng: 'Who can become a volunteer?'
