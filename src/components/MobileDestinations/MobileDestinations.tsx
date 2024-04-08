@@ -8,15 +8,40 @@ import MobileNavLinkCol from '../MobileNavLinkCol/MobileNavLinkCol';
 import scss from './MobileDestinations.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { logout } from '../../Zustand/api';
+import { useNavigate } from 'react-router-dom';
 
 type MobileDestinationsProps = {
   handleClose: () => void;
 };
 
 function MobileDestinations({ handleClose }: MobileDestinationsProps) {
+  const { isLogin, setIsLogin } = useIsLoginStore();
   const { language } = useLanguageStore();
   const t = translations[language];
   const [openCol, setOpenCol] = useState<number | null>(null);
+  const { setIsLoading } = useIsLoadingStore();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    const logoutUser = async () => {
+      try {
+        setIsLoading(true);
+        await logout();
+        setIsLogin(false);
+        navigate('/');
+      } catch (error) {
+        console.error('Error logging out:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    setIsLogin(false);
+    logoutUser();
+  };
+
   return (
     <div className={scss.container}>
       <MobileNavLinkCol
@@ -49,10 +74,22 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
         heading={t.participantArea}
         handleClose={handleClose}
         links={[
-          { name: t.myProfile, dest: '/participant-area' },
-          { name: t.runInfo, dest: '/participant-area#run-info' },
-          { name: t.beforeRun, dest: '/participant-area#before-run' },
-          { name: t.logIn, dest: '/login' },
+          { name: t.myProfile, dest: '/participant-area', disabled: !isLogin },
+          {
+            name: t.runInfo,
+            dest: '/participant-area#run-info',
+            disabled: !isLogin,
+          },
+          {
+            name: t.beforeRun,
+            dest: '/participant-area#before-run',
+            disabled: !isLogin,
+          },
+          {
+            name: isLogin ? t.logOut : t.logIn,
+            dest: isLogin ? '' : '/login',
+            handleClick: handleLogout,
+          },
         ]}
       />
       <MobileNavLinkCol

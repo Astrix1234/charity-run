@@ -9,7 +9,13 @@ type MobileNavLinkColProps = {
   isOpen: boolean;
   closeCol: () => void;
   openCol: () => void;
-  links: { name: string; dest: string; newPage?: boolean }[];
+  links: {
+    name: string;
+    dest: string;
+    newPage?: boolean;
+    disabled?: boolean;
+    handleClick?: () => void;
+  }[];
   handleClose: () => void;
 };
 
@@ -44,18 +50,31 @@ function MobileNavLinkCol({
       </button>
       <div className={`${scss.box} ${isOpen ? scss.box__open : ''}`}>
         <div className={scss.col}>
-          {links.map((link, i) => (
-            <Link
-              onClick={handleClose}
-              className={scss.item}
-              key={i}
-              to={link.dest}
-              target={link.newPage ? '_blank' : '_self'}
-            >
-              <div className={scss.item__line} />
-              <span className={scss.item__text}>{link.name}</span>
-            </Link>
-          ))}
+          {links.map((link, i) =>
+            !link.dest ? (
+              <button type="button" onClick={link.handleClick} key={i}>
+                <span className={scss.item__line} />
+                <span className={scss.item__text}>{link.name}</span>
+              </button>
+            ) : link.disabled ? (
+              <p className={`${scss.item} ${scss.item__disabled}`} key={i}>
+                {' '}
+                <span className={scss.item__line} />
+                <span className={scss.item__text}>{link.name}</span>
+              </p>
+            ) : (
+              <Link
+                onClick={handleClose}
+                className={`${scss.item} ${scss.item__enabled}`}
+                key={i}
+                to={link.dest}
+                target={link.newPage ? '_blank' : '_self'}
+              >
+                <span className={scss.item__line} />
+                <span className={scss.item__text}>{link.name}</span>
+              </Link>
+            )
+          )}
         </div>
       </div>
     </div>
