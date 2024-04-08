@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import HamburgerMenu from '../../Icons/HamburgerMenu/HamburgerMenu';
 import scss from './MobileHeader.module.scss';
 import MobileNavigation from '../MobileNavigation/MobileNavigation';
 
