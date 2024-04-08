@@ -1,27 +1,44 @@
+@import '../../stylesheets/mixins.scss';
+
 .container {
-  margin-bottom: 420px;
-  margin-bottom: clamp(240px, 40vw, 420px);
+  margin-bottom: 240px;
+
+  @include desktop-screen {
+    margin-bottom: 420px;
+  }
 }
 
 .heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
+
+  @include desktop-screen {
+    margin-bottom: 48px;
+  }
 
   &__sub {
     margin-bottom: 16px;
     font-size: 28px;
-    font-size: clamp(14px, 3vw, 28px);
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 500;
     max-width: 56vw;
+
+    @include desktop-screen {
+      font-size: 28px;
+    }
   }
 
   &__main {
-    font-size: clamp(32px, 9vw, 90px);
+    font-size: 32px;
     font-weight: 800;
     color: var(--orange);
     text-transform: uppercase;
+
+    @include desktop-screen {
+      font-size: 90px;
+    }
   }
 }

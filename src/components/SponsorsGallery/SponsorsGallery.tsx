@@ -26,11 +26,11 @@ function SponsorsGallery() {
       <div className={scss.lists}>
         <SponsorsList
           list={sponsorsList}
-          heading={language === 'PL' ? 'sponsorzy' : 'sponsors'}
+          heading={language === 'PL' ? 'Sponsorzy' : 'Sponsors'}
         />
         <SponsorsList
           list={partnersList}
-          heading={language === 'PL' ? 'partnerzy' : 'partners'}
+          heading={language === 'PL' ? 'Partnerzy' : 'Partners'}
         />
       </div>
       <BecomeSponsorButton />

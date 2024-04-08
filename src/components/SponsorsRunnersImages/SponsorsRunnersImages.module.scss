@@ -1,89 +1,27 @@
+@import '../../stylesheets/mixins.scss';
+
 .man {
   position: absolute;
-  right: 88px;
-  top: 170px;
-  transition: all 0.3s;
+  right: -220px;
+  top: 60px;
+  transform: scale(0.4);
 
-  @media only screen and (max-width: 1240px) {
-    transform: scale(0.9);
-    right: 0px;
-    top: 230px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    transform: scale(0.7);
-    right: -30px;
+  @include desktop-screen {
+    right: 88px;
     top: 170px;
-  }
-
-  @media only screen and (max-width: 820px) {
-    transform: scale(0.5);
-    top: 120px;
-  }
-
-  @media only screen and (max-width: 680px) {
-    transform: scale(0.4);
-    right: -80px;
-    top: 110px;
-  }
-
-  @media only screen and (max-width: 520px) {
-    right: -200px;
-    top: 110px;
-  }
-
-  @media only screen and (max-width: 380px) {
-    transform: scale(0.35);
-    right: -220px;
-    top: 110px;
-  }
-  @media only screen and (max-width: 300px) {
-    top: 140px;
+    transform: scale(1);
   }
 }
 
 .woman {
   position: absolute;
-  right: 504px;
-  top: 295px;
-  transition: all 0.3s;
+  transform: scale(0.4);
+  right: -14px;
+  top: 145px;
 
-  @media only screen and (max-width: 1240px) {
-    transform: scale(0.9);
-    right: 364px;
-    top: 355px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    transform: scale(0.7);
-    right: 264px;
+  @include desktop-screen {
+    right: 504px;
     top: 295px;
-  }
-
-  @media only screen and (max-width: 820px) {
-    transform: scale(0.5);
-    right: 204px;
-    top: 255px;
-  }
-
-  @media only screen and (max-width: 680px) {
-    transform: scale(0.4);
-    right: 124px;
-    top: 185px;
-  }
-
-  @media only screen and (max-width: 520px) {
-    right: 24px;
-    top: 185px;
-  }
-
-  @media only screen and (max-width: 380px) {
-    transform: scale(0.35);
-    right: -24px;
-    top: 185px;
-  }
-
-  @media only screen and (max-width: 300px) {
-    top: 215px;
+    transform: scale(1);
   }
 }

@@ -1,11 +1,19 @@
+@import '../../stylesheets/mixins.scss';
+
 .number {
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--light);
-  font-size: 86px;
   font-family: 'DM Serif Display';
   border-radius: 50%;
   background-color: var(--orange);
+  width: 76px;
+  font-size: 52px;
+
+  @include desktop-screen {
+    width: 124px;
+    font-size: 86px;
+  }
 }

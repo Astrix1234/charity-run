@@ -7,15 +7,8 @@ type NumberCircleProps = {
   color?: string;
 };
 
-function NumberCircle({
-  number = 0,
-  sizePx = 124,
-  fontSizePx = 86,
-  color = '',
-}: NumberCircleProps) {
+function NumberCircle({ number = 0, color = '' }: NumberCircleProps) {
   const numberStyle = {
-    width: `clamp(72px, 22vw, ${sizePx}px)`,
-    fontSize: `clamp(48px, 14vw, ${fontSizePx}px)`,
     backgroundColor: `${color}`,
   };
 

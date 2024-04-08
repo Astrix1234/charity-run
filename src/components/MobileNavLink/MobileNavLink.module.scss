@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  padding: 0 10px;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    color: var(--marine);
+  }
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+  }
+}

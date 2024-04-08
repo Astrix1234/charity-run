@@ -32,7 +32,7 @@ export default function HomePage() {
       <HematoRunMainTitle />
       <HematoRunInfo />
       <GalleryCarousel />
-      <Timetable />
+      {/* <Timetable /> */}
       <HematoRunRoute />
       <HematoRunWhyIsItWorth />
       <Attractions />

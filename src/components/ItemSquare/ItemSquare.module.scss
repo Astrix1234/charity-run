@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .container {
   position: relative;
   display: flex;
@@ -6,13 +8,16 @@
   justify-content: center;
   border-radius: 29px;
   background-color: var(--beige);
-  padding: clamp(20px, 10vw, 36px) clamp(28px, 10vw, 60px)
-    clamp(8px, 10vw, 20px);
+  padding: 20px 28px 8px;
   aspect-ratio: 1/1;
   z-index: -2;
   height: 100%;
   width: 100%;
   max-width: 474px;
+
+  @include desktop-screen {
+    padding: 36px 60px 20px;
+  }
 
   &__beige {
     background-color: var(--beige);
@@ -40,17 +45,25 @@
     justify-content: start;
     padding-left: 35%;
     width: 100%;
-    min-height: clamp(12px, 1vw, 73px);
+    min-height: 12px;
+
+    @include desktop-screen {
+      min-height: 73px;
+    }
   }
 }
 
 .heading {
-  font-size: clamp(12px, 3.5vw, 21px);
+  font-size: 12px;
   font-weight: 700;
   color: var(--black);
   margin-bottom: 14px;
   line-height: 1.4;
   white-space: pre-line;
+
+  @include desktop-screen {
+    font-size: 21px;
+  }
 }
 
 .pos {
@@ -65,10 +78,14 @@
 
 .image {
   width: 100%;
-  max-width: 330px;
+  max-width: 260px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
+
+  @include desktop-screen {
+    max-width: 330px;
+  }
 
   img {
     width: 100%;
@@ -82,7 +99,12 @@
   top: 0;
   right: 0;
   z-index: -1;
-  width: clamp(168px, 20vw, 256px);
+  width: 168px;
+
+  @include desktop-screen {
+    width: 256px;
+  }
+
   & svg {
     width: 100%;
     height: 100%;

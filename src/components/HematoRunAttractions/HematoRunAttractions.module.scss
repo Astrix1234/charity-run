@@ -24,9 +24,12 @@
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
+    max-width: 380px;
+    margin: 0 auto;
 
     @include desktop-screen {
       gap: 29px;
+      max-width: none;
     }
   }
 

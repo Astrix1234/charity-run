@@ -1,11 +1,18 @@
+@import '../../stylesheets/mixins.scss';
+
 .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 28px;
-  padding: clamp(32px, 4vw, 64px) clamp(32px, 10vw, 80px)
-    clamp(40px, 4vw, 140px);
+  padding: 32px 32px 40px;
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  max-width: 420px;
+
+  @include desktop-screen {
+    padding: 64px 80px 40px;
+    max-width: 1140px;
+  }
 }

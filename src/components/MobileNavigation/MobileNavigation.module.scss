@@ -1,0 +1,93 @@
+@keyframes openLarge {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(130);
+  }
+}
+
+@keyframes openSmall {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(90);
+  }
+}
+
+@keyframes flowContainer {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.background {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-image: radial-gradient(
+    circle,
+    rgba(206, 234, 235, 0.9) 0%,
+    rgba(250, 253, 253, 0.9) 50%
+  );
+
+  transition: all 0.4s ease-in-out;
+  z-index: 450;
+  border-radius: 1300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(90);
+  animation: openSmall 0.7s;
+
+  @media only screen and (min-width: 600px) {
+    transform: translate(-50%, -50%) scale(130);
+    animation: openLarge 0.7s;
+  }
+}
+
+.container {
+  z-index: 550;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  padding-top: 16vh;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  & > div:last-child {
+    margin-top: auto;
+  }
+}
+
+.col {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  animation: flowContainer 0.3s;
+  & > a:first-child {
+    display: block;
+    margin-bottom: 64px;
+    animation: fadeTop 0.5s;
+  }
+
+  & > div:nth-child(3) {
+    margin-bottom: 32px;
+  }
+}

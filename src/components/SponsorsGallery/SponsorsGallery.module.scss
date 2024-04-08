@@ -1,23 +1,34 @@
+@import '../../stylesheets/mixins.scss';
+
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(24px, 8vw, 64px) clamp(24px, 4vw, 80px)
-    clamp(120px, 16vw, 180px);
-  max-width: 1440px;
+  padding: 24px 24px 120px;
+  max-width: 560px;
   margin: 0 auto;
+
+  @include desktop-screen {
+    padding: 64px 80px 180px;
+    max-width: 1440px;
+  }
 }
 
 .heading {
   text-align: center;
-  font-size: clamp(32px, 9vw, 67px);
+  font-size: 32px;
   font-family: 'DM Serif Display';
   margin: 14px;
   font-weight: 400;
   letter-spacing: 0.2px;
   margin-bottom: 80px;
-  margin-bottom: clamp(16px, 6vw, 80px);
+  margin-bottom: 16px;
   line-height: 1.3;
+
+  @include desktop-screen {
+    font-size: 67px;
+    margin-bottom: 80px;
+  }
 }
 
 .lists {
@@ -25,5 +36,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 6vw, 42px);
+  gap: 24px;
+
+  @include desktop-screen {
+    gap: 42px;
+  }
 }

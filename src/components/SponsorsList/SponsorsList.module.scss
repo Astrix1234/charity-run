@@ -1,17 +1,27 @@
+@import '../../stylesheets/mixins.scss';
+
 .container {
   width: 100%;
 }
 
 .heading {
   font-size: 28px;
-  font-size: clamp(12px, 4vw, 28px);
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: clamp(16px, 3vw, 28px);
+  margin-bottom: 16px;
+
+  @include desktop-screen {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
 }
 
 .list {
   display: flex;
   align-items: center;
-  gap: 45px;
-  gap: clamp(10px, 3vw, 45px);
+  gap: 10px;
+
+  @include desktop-screen {
+    gap: 45px;
+  }
 }
