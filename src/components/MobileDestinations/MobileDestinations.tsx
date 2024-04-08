@@ -57,7 +57,7 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
           { name: t.timeTable, dest: '/#timetable' },
           { name: t.attractions, dest: '/#attractions' },
           { name: t.ambassadors, dest: '/our-ambassadors' },
-          { name: t.partners, dest: '/#sponsors' },
+          { name: t.partners, dest: '/#our-sponsors' },
           { name: t.faq, dest: '/#faq' },
           {
             name: t.aboutFoundation,

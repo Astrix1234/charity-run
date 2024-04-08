@@ -19,7 +19,7 @@ function MobileNavigation({ open, handleClose }: MobileNavigationProps) {
       />
       <div className={scss.container}>
         <div className={scss.col}>
-          <FoundationLogo />
+          <FoundationLogo additonalActions={handleClose} />
           <MobileDestinations handleClose={handleClose} />
           <SignUpButton additionalAction={handleClose} />
           <MobileLanguageSwitcher />

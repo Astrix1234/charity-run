@@ -1,12 +1,19 @@
+@import '../../stylesheets/mixins.scss';
+
 .runInfo {
     padding: 140px 0 0 0;
 
     &__container {
         position: relative;
-        max-width: 1440px;
+        max-width: 350px;
         width: 100%;
         margin: 0 auto;
-        padding: 0 80px;
+        padding: 0 20px;
+
+        @include desktop-screen {
+            max-width: 1440px;
+            padding: 0 80px;
+        }
     }
 
     &__titleContainer {
@@ -14,39 +21,60 @@
     }
 
     &__comment {
-        font-size: var(--mediumFontSize);
         font-weight: 500;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+            margin-bottom: 16px;
+        }
     }
 
     &__title {
         font-family: "DM Serif Display";
-        font-size: 64px;
-        margin-bottom: 53px;
+        font-size: 40px;
+        margin-bottom: 63px;
+
+        @include desktop-screen {
+            font-size: 64px;
+            margin-bottom: 53px;
+        }
     }
 
     &__underlines {
-        width: 382px;
-        height: 17px;
+        width: 231px;
+        height: 18px;
         background-image: url('/images/underlines.png');
-        background-size: cover;
+        background-size: 100% 100%;
         position: absolute;
-        top: 115px
+        top: 75px;
+
+        @include desktop-screen {
+            width: 382px;
+            height: 17px;
+            background-size: cover;
+            top: 115px;
+        }
+
     }
 
     &__text {
         position: relative;
         width: 100%;
         max-width: 923px;
-        font-size: var(--mediumFontSize);
+        font-size: 12px;
         text-align: justify;
         line-height: 1.5;
         height: 485px;
         overflow: hidden;
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+        }
     }
 
     &__developed {
-        height: 1105px;
+        height: auto;
     }
 
     &__paragraph {
@@ -62,12 +90,15 @@
         cursor: pointer;
         color: gray;
         font-weight: 700;
-        font-size: var(--mediumFontSize);
         transition: all 0.3s ease-in-out;
 
         &:hover,
         &:focus {
             text-decoration: underline;
+        }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
         }
     }
 

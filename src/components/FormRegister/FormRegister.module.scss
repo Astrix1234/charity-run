@@ -50,7 +50,8 @@
   }
 
   &__instructions {
-    width: 776px;
+    width: 100%;
+    max-width: 776px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -72,5 +73,3 @@
     color: var(--orange);
   }
 }
-
-
