@@ -6,11 +6,17 @@ type MobileNavLinkProps = {
   dest: string;
   heading: string;
   Icon: ReactNode;
+  handleClose: () => void;
 };
 
-function MobileNavLink({ dest, heading, Icon }: MobileNavLinkProps) {
+function MobileNavLink({
+  dest,
+  heading,
+  Icon,
+  handleClose,
+}: MobileNavLinkProps) {
   return (
-    <Link className={scss.link} to={dest}>
+    <Link onClick={handleClose} className={scss.link} to={dest}>
       {Icon}
       <span>{heading}</span>
     </Link>

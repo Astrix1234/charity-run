@@ -7,9 +7,9 @@ function ChevronLeft() {
       className="w-5 h-5"
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );

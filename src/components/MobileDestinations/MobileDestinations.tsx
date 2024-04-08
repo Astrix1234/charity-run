@@ -9,7 +9,11 @@ import scss from './MobileDestinations.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 
-function MobileDestinations() {
+type MobileDestinationsProps = {
+  handleClose: () => void;
+};
+
+function MobileDestinations({ handleClose }: MobileDestinationsProps) {
   const { language } = useLanguageStore();
   const t = translations[language];
   const [openCol, setOpenCol] = useState<number | null>(null);
@@ -21,15 +25,20 @@ function MobileDestinations() {
         closeCol={() => setOpenCol(null)}
         openCol={() => setOpenCol(0)}
         heading={t.hematoRun}
+        handleClose={handleClose}
         links={[
-          { name: t.aboutRun, dest: '/' },
-          { name: t.gallery, dest: '/' },
-          { name: t.timeTable, dest: '/' },
-          { name: t.attractions, dest: '/' },
-          { name: t.ambassadors, dest: '/' },
-          { name: t.partners, dest: '/' },
-          { name: t.faq, dest: '/' },
-          { name: t.aboutFoundation, dest: '/' },
+          { name: t.aboutRun, dest: '/charity-run' },
+          { name: t.gallery, dest: '/charity-run#gallery' },
+          { name: t.timeTable, dest: '/charity-run#timetable' },
+          { name: t.attractions, dest: '/charity-run#attractions' },
+          { name: t.ambassadors, dest: '/charity-run/our-ambassadors' },
+          { name: t.partners, dest: '/charity-run#sponsors' },
+          { name: t.faq, dest: '/charity-run#faq' },
+          {
+            name: t.aboutFoundation,
+            dest: 'https://fundacja.hematologiczna.org/',
+            newPage: true,
+          },
         ]}
       />
       <MobileNavLinkCol
@@ -38,11 +47,12 @@ function MobileDestinations() {
         closeCol={() => setOpenCol(null)}
         openCol={() => setOpenCol(1)}
         heading={t.participantArea}
+        handleClose={handleClose}
         links={[
-          { name: t.myProfile, dest: '/' },
-          { name: t.runInfo, dest: '/' },
-          { name: t.beforeRun, dest: '/' },
-          { name: t.logIn, dest: '/' },
+          { name: t.myProfile, dest: '/participant-area' },
+          { name: t.runInfo, dest: '/participant-area#run-info' },
+          { name: t.beforeRun, dest: '/participant-area#before-run' },
+          { name: t.logIn, dest: '/login' },
         ]}
       />
       <MobileNavLinkCol
@@ -51,13 +61,19 @@ function MobileDestinations() {
         closeCol={() => setOpenCol(null)}
         openCol={() => setOpenCol(2)}
         heading={t.support}
+        handleClose={handleClose}
         links={[
-          { name: t.becomeSponsor, dest: '/' },
-          { name: t.makeDonation, dest: '/' },
-          { name: t.volunteerArea, dest: '/' },
+          { name: t.becomeSponsor, dest: '/support-sponsors' },
+          { name: t.makeDonation, dest: '/support-donation' },
+          { name: t.volunteerArea, dest: '/support-volunteers' },
         ]}
       />
-      <MobileNavLink heading={t.contact} Icon={<IconPhone />} dest="/contact" />
+      <MobileNavLink
+        handleClose={handleClose}
+        heading={t.contact}
+        Icon={<IconPhone />}
+        dest="/contact"
+      />
     </div>
   );
 }

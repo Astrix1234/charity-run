@@ -7,9 +7,10 @@ import MobileDestinations from '../MobileDestinations/MobileDestinations';
 
 type MobileNavigationProps = {
   open: boolean;
+  handleClose: () => void;
 };
 
-function MobileNavigation({ open }: MobileNavigationProps) {
+function MobileNavigation({ open, handleClose }: MobileNavigationProps) {
   if (!open) return null;
   return (
     <>
@@ -19,8 +20,8 @@ function MobileNavigation({ open }: MobileNavigationProps) {
       <div className={scss.container}>
         <div className={scss.col}>
           <FoundationLogo />
-          <MobileDestinations />
-          <SignUpButton />
+          <MobileDestinations handleClose={handleClose} />
+          <SignUpButton additionalAction={handleClose} />
           <MobileLanguageSwitcher />
         </div>
         <MobileSocialsRow />

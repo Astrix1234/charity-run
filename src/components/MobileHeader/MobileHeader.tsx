@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import scss from './MobileHeader.module.scss';
 import MobileNavigation from '../MobileNavigation/MobileNavigation';
 
 function MobileHeader() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  function handleClose() {
+    setIsNavOpen(false);
+  }
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isNavOpen]);
+
   return (
     <header className={scss.header}>
       <button
@@ -13,7 +25,7 @@ function MobileHeader() {
       >
         <span />
       </button>
-      <MobileNavigation open={isNavOpen} />
+      <MobileNavigation handleClose={handleClose} open={isNavOpen} />
     </header>
   );
 }

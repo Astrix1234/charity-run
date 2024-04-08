@@ -9,7 +9,8 @@ type MobileNavLinkColProps = {
   isOpen: boolean;
   closeCol: () => void;
   openCol: () => void;
-  links: { name: string; dest: string }[];
+  links: { name: string; dest: string; newPage?: boolean }[];
+  handleClose: () => void;
 };
 
 function MobileNavLinkCol({
@@ -19,6 +20,7 @@ function MobileNavLinkCol({
   closeCol,
   openCol,
   links,
+  handleClose,
 }: MobileNavLinkColProps) {
   function toggleOpen() {
     if (isOpen) {
@@ -43,7 +45,13 @@ function MobileNavLinkCol({
       <div className={`${scss.box} ${isOpen ? scss.box__open : ''}`}>
         <div className={scss.col}>
           {links.map((link, i) => (
-            <Link className={scss.item} key={i} to={link.dest}>
+            <Link
+              onClick={handleClose}
+              className={scss.item}
+              key={i}
+              to={link.dest}
+              target={link.newPage ? '_blank' : '_self'}
+            >
               <div className={scss.item__line} />
               <span className={scss.item__text}>{link.name}</span>
             </Link>

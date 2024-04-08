@@ -4,7 +4,11 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Button } from '../Button/Button';
 
-function SignUpButton() {
+type SignUpButtonProps = {
+  additionalAction?: () => void;
+};
+
+function SignUpButton({ additionalAction }: SignUpButtonProps) {
   const { language } = useLanguageStore();
   const { isLogin } = useIsLoginStore();
   const t = translations[language];
@@ -12,6 +16,7 @@ function SignUpButton() {
 
   const handleClick = () => {
     isLogin ? navigate('/run-registration') : navigate('/login');
+    additionalAction?.();
   };
   return <Button onClick={handleClick} content={t.signUp} />;
 }

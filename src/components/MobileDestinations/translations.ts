@@ -1,6 +1,6 @@
 const translations = {
   PL: {
-    hematoRun: 'HematoBieg',
+    hematoRun: 'Hematobieg',
     participantAreaTitle: 'Strefa uczestnika',
     supportTitle: 'Wesprzyj',
     aboutRun: 'Informacje o biegu',
