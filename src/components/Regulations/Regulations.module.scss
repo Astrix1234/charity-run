@@ -1,31 +1,41 @@
+@import '../../stylesheets/mixins.scss';
+
 .regulations {
-  padding: 40px 0;
+  padding: 16px 0;
   width: 100%;
-  padding-top: 63px;
-  background-image: url('/images/background.png');
-  background-size: 200% 200%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
+
+  @include desktop-screen {
+    padding: 40px 0;
+  }
 
   &__containerTitles {
-    max-width: 1440px;
+    max-width: 390px;
     width: 100%;
     margin: 0 auto;
     padding: 0 80px;
     margin-bottom: 46px;
+
+    @include desktop-screen {
+      max-width: 1440px;
+    }
   }
 
   &__container {
-    max-width: 1440px;
+    max-width: 390px;
     width: 100%;
     margin: 0 auto;
+
+    @include desktop-screen {
+      max-width: 1440px;
+    }
   }
 
   &__modal {
+    padding-top: 60px;
+    padding-bottom: 20px;
     margin: 0 auto;
-    padding: 64px 69px;
-    width: 1248px;
-    height: 1074px;
+    width: 100%;
+    max-width: 390px;
     border: 1px solid #b7fcff;
     border-radius: 32px;
     box-shadow: 0px 4px 7px 0px #a4a4a4a6;
@@ -33,19 +43,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 72px;
+    gap: 32px;
     position: relative;
     background: #ffffff4d;
+
+    @include desktop-screen {
+      max-width: 1248px;
+      height: 1074px;
+      padding: 64px 69px;
+      gap: 72px;
+    }
   }
 
   &__title {
     font-size: 24px;
     line-height: 1.5;
     font-weight: 500;
+    margin-bottom: 20px;
+
+    @include desktop-screen {
+      margin-bottom: 0;
+    }
   }
 
   &__info {
-    padding: 22px 32px;
+    padding: 10px 32px;
+
+    @include desktop-screen {
+      padding: 22px 32px;
+    }
   }
 
   &__text {
@@ -57,8 +83,7 @@
   &__modalCloseIcon {
     position: absolute;
     top: 22px;
-    right: 32px;
-
+    right: 22px;
     cursor: pointer;
   }
 }
