@@ -37,7 +37,7 @@ export const Statements = ({
           </span>
           {t.statementTitle}
         </h3>
-        <p>{t.statementIDo}</p>
+        <p className={scss.regulations__iDo}>{t.statementIDo}</p>
         <ol className={scss.regulations__statementList}>
           <li className={scss.regulations__statementItem}>
             {t.statementItem1part1}

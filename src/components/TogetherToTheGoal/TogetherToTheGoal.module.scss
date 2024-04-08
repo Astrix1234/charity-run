@@ -1,6 +1,14 @@
 @import '../../stylesheets/mixins.scss';
 
 .togetherToTheGoal {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+
+  @include desktop-screen {
+    max-width: 1280px;
+  }
+
   &__together {
     font-weight: 500;
     margin-bottom: 6px;

@@ -23,7 +23,7 @@
 
   &__container {
     position: relative;
-    max-width: 1440px;
+    max-width: 390px;
     height: 856px;
     width: 100%;
     margin: 0 auto;
@@ -33,6 +33,7 @@
     align-items: center;
 
     @include desktop-screen {
+      max-width: 1440px;
       height: 1435px;
       padding: 0 80px;
 
