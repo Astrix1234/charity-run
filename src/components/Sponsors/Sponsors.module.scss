@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .sponsors {
   display: flex;
   flex-direction: column;
@@ -93,7 +95,7 @@
   height: 100px;
 }
 
-@media screen and (min-width: 1440px) {
+@include desktop-screen {
   .sponsors {
     padding-top: 80px;
     padding-bottom: 80px;
