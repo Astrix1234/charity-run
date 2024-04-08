@@ -1,13 +1,24 @@
+@import '../../stylesheets/mixins.scss';
+
+
+
+
+
 .timetable {
   padding: 150px 0 0 0;
   height: 2780px;
 
   &__container {
     position: relative;
-    max-width: 1440px;
+    max-width: 390px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 20px;
+
+    @include desktop-screen {
+      max-width: 1440px;
+      padding: 0 80px;
+    }
   }
 
   &__titleContainer {
