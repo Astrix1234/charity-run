@@ -1,10 +1,22 @@
 .header {
   position: fixed;
-  top: 18px;
-  right: 18px;
-  width: 38px;
-  height: 38px;
+  width: 100%;
   z-index: 1600;
+}
+
+.container {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+}
+
+.box {
+  position: relative;
 }
 
 .btn {
@@ -19,7 +31,7 @@
   padding: 6px;
   border-radius: 50%;
   box-shadow: 0px 8px 24px 0px rgba(51, 51, 51, 0.3);
-  z-index: 800;
+  z-index: 1800;
   display: flex;
   align-items: center;
   justify-content: center;

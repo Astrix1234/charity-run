@@ -15,16 +15,17 @@
     padding: 0 20px;
     overflow: hidden;
     &__container {
-        position: relative;
-        max-width: 390px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
-        overflow: hidden;
+      position: relative;
+      max-width: 390px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      overflow: hidden;
 
-    @include desktop-screen {
-      max-width: 1440px;
-      padding: 0 80px;
+      @include desktop-screen {
+        max-width: 1440px;
+        padding: 0 80px;
+      }
     }
   }
 
@@ -43,19 +44,19 @@
     align-items: center;
     flex-direction: column;
     &__titleContainer {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
 
+      @include desktop-screen {
+        flex-direction: row;
+      }
+    }
     @include desktop-screen {
       flex-direction: row;
+      align-items: center;
     }
   }
-        @include desktop-screen {
-            flex-direction: row;
-            align-items: center;
-        }
-    }
 
   &__titleBegin {
     display: flex;
@@ -67,12 +68,13 @@
     font-weight: 800;
     color: var(--orange);
     &__title {
-        font-size: 75px;
-        font-weight: 800;
-        color: var(--orange);
+      font-size: 75px;
+      font-weight: 800;
+      color: var(--orange);
 
-    @include desktop-screen {
-      font-size: 90px;
+      @include desktop-screen {
+        font-size: 90px;
+      }
     }
   }
 
@@ -170,17 +172,18 @@
     align-items: flex-end;
     pointer-events: none;
     &__illustrationContainer {
-        position: absolute;
-        right: 20px;
-        transform: translateY(-100%);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        pointer-events: none;
-        z-index: -1;
+      position: absolute;
+      right: 20px;
+      transform: translateY(-100%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      pointer-events: none;
+      z-index: -1;
 
-    @include desktop-screen {
-      right: 80px;
+      @include desktop-screen {
+        right: 80px;
+      }
     }
   }
 
@@ -191,16 +194,17 @@
     background-size: cover;
     transform: translateX(55%);
     &__illustration {
-        width: 375px;
-        height: 254px;
-        background-image: url('/images/illustration.png');
-        background-size: cover;
-        transform: translateX(50%);
+      width: 375px;
+      height: 254px;
+      background-image: url('/images/illustration.png');
+      background-size: cover;
+      transform: translateX(50%);
 
-    @include desktop-screen {
-      width: 612px;
-      height: 415px;
-      transform: translateX(0);
+      @include desktop-screen {
+        width: 612px;
+        height: 415px;
+        transform: translateX(0);
+      }
     }
   }
 

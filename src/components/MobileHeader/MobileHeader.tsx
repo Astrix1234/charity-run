@@ -18,14 +18,18 @@ function MobileHeader() {
 
   return (
     <header className={scss.header}>
-      <button
-        onClick={() => setIsNavOpen(prev => !prev)}
-        aria-label="Toggle Mobile Navigation"
-        className={`${scss.btn} ${isNavOpen ? scss.btn__active : ''}`}
-      >
-        <span />
-      </button>
-      <MobileNavigation handleClose={handleClose} open={isNavOpen} />
+      <div className={scss.container}>
+        <div className={scss.box}>
+          <button
+            onClick={() => setIsNavOpen(prev => !prev)}
+            aria-label="Toggle Mobile Navigation"
+            className={`${scss.btn} ${isNavOpen ? scss.btn__active : ''}`}
+          >
+            <span />
+          </button>
+          <MobileNavigation handleClose={handleClose} open={isNavOpen} />
+        </div>
+      </div>
     </header>
   );
 }
