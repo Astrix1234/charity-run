@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include desktop-screen {
+    margin-top: -20px;
+  }
 }
 
 .heading {
@@ -15,6 +19,10 @@
   background-position: bottom left;
   background-size: 200% 200%;
   width: 100%;
+
+  @include desktop-screen {
+    padding-top: 20px;
+  }
 }
 
 .arrow {
