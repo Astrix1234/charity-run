@@ -7,18 +7,27 @@
   max-width: 420px;
   width: 100%;
   align-items: start;
-  margin-bottom: 62px;
+  margin-bottom: 48px;
+
+  @include desktop-screen {
+    margin-bottom: 62px;
+  }
 
   & > input {
-    font-size: 16px;
     border: 2px solid var(--marine);
     border-radius: 10px;
     background-color: var(--light);
     outline: none;
     width: 100%;
-    height: 40px;
+    font-size: 14px;
+    height: 36px;
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
+
+    @include desktop-screen {
+      font-size: 16px;
+      height: 40px;
+    }
   }
 
   &__error {
@@ -29,9 +38,14 @@
 }
 
 .text {
-  font-size: 18px;
-  margin-bottom: 6px;
-  padding-left: 4px;
+  font-size: 16px;
+  margin-bottom: 16px;
+
+  @include desktop-screen {
+    font-size: 18px;
+    margin-bottom: 6px;
+    padding-left: 4px;
+  }
 }
 
 .message {
@@ -40,4 +54,8 @@
   color: red;
   font-size: 14px;
   bottom: -20px;
+
+  @include desktop-screen {
+    font-size: 12px;
+  }
 }
