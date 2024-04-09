@@ -26,5 +26,6 @@ export const StyledFollow = styled.div`
     row-gap: 1.8em;
     position: relative;
     left: 20%;
+    justify-items: center;
   }
 `;
