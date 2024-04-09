@@ -1,5 +1,6 @@
 const translations = {
   PL: {
+    support: 'Wesprzyj',
     faqItems: [
       {
         question: 'Czy jest możliwość zapisania się na bieg na miejscu?',
@@ -51,6 +52,7 @@ const translations = {
     ],
   },
   EN: {
+    support: 'Support',
     faqItems: [
       {
         question: 'Is it possible to sign up for the race on-site?',
@@ -101,7 +103,6 @@ const translations = {
         answer: 'There will be a possibility to park on nearby streets.',
       },
     ],
-    support: 'Support',
   },
 };
 
