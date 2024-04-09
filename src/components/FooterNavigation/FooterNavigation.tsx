@@ -17,9 +17,6 @@ export const FooterNavigation = () => {
       <li>
         <Link to="#">{t.privacyPolicy}</Link>
       </li>
-      <li>
-        <Link to="#">{t.reserved}</Link>
-      </li>
     </StyledNavigation>
   );
 };

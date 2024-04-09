@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StyledNavigation = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 4em;
+  gap: 14em;
   font-size: 1.25em;
 `;
