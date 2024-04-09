@@ -6,10 +6,13 @@ import { FooterNavigation } from '../FooterNavigation/FooterNavigation';
 export const Footer = () => {
   return (
     <StyledFooter as="footer">
-      <div className="container">
-        <FoundationLogotype />
-        <FooterInformationSection />
-        <FooterNavigation />
+      <div className="background-top"></div>
+      <div className="background-bottom">
+        <div className="container">
+          <FoundationLogotype />
+          <FooterInformationSection />
+          <FooterNavigation />
+        </div>
       </div>
     </StyledFooter>
   );
