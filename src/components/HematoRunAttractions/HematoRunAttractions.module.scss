@@ -2,7 +2,7 @@
 
 .attractions {
   position: relative;
-  padding-top: 80px;
+  padding-top: 60px;
 
   @include desktop-screen {
     padding-top: 140px;
@@ -82,7 +82,7 @@
   }
 }
 
-.attractions__containerItems > li {
+.attractions__containerItems>li {
   flex: 1 0 48%;
   max-width: 48%;
 
