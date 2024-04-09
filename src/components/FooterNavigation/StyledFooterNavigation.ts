@@ -5,6 +5,7 @@ export const StyledNavigation = styled.div`
   display: grid;
   justify-items: center;
   gap: 1em;
+  text-align: center;
   ul {
     display: flex;
     justify-content: center;
