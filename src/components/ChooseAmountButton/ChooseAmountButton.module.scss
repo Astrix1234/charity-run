@@ -1,6 +1,6 @@
 @import '../../stylesheets/mixins.scss';
 
-.btn {
+.label {
   display: flex;
   width: 72px;
   padding: 6.2px 12.4px;
@@ -31,10 +31,14 @@
     border: 3px solid var(--orange);
     width: 161px;
   }
-}
 
-.active {
-  background-color: var(--orange);
-  color: var(--light);
-  transform: translateY(-6px);
+  & > input {
+    display: none;
+  }
+
+  &__active {
+    background-color: var(--orange);
+    color: var(--light);
+    transform: translateY(-6px);
+  }
 }
