@@ -19,7 +19,7 @@ export const StyledFooter = styled.footer`
     max-width: 1440px;
     display: grid;
     gap: 3rem;
-    padding: 15em 80px 2em 80px;
+    padding: 1em 80px 2em 80px;
   }
 
   @media screen and (max-width: 600px) {
