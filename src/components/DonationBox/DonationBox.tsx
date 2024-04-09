@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import ChooseAmountButton from '../ChooseAmountButton/ChooseAmountButton';
 import scss from './DonationBox.module.scss';
 import translations from './translations';
 import SupportButton from '../SupportButton/SupportButton';
 import DonationAmountInput from '../DonationAmountInput/DonationAmountInput';
+import { validationSchema } from './validationSchema';
+import { useFormik } from 'formik';
+import DonationEmail from '../DonationEmail/DonationEmail';
 
 function DonationBox() {
   const { language } = useLanguageStore();
@@ -12,32 +14,85 @@ function DonationBox() {
 
   const amounts = [25, 50, 100];
 
-  const [currentAmount, setCurrentAmount] = useState<number>(0);
+  const formik = useFormik({
+    initialValues: { amount: 0, email: '' },
+    validationSchema: validationSchema,
+    onSubmit: values => {
+      console.log(values);
+      formik.resetForm();
+    },
+  });
+
+  const supportButtonDisabled = Boolean(
+    formik.errors.amount || formik.errors.email || !formik.values.amount
+  );
 
   return (
     <div className={scss.container}>
       <h4 className={scss.heading}>{t.support}</h4>
       <p className={scss.join}>{t.join}</p>
       <p className={scss.choose}>{t.choose}</p>
-      <div className={scss.row}>
-        {amounts.map((item, i) => (
-          <ChooseAmountButton
-            key={i}
-            handleClick={() => setCurrentAmount(item)}
-            amount={item}
-            currentAmount={currentAmount}
+      <form onSubmit={formik.handleSubmit} className={scss.form}>
+        <div className={scss.row}>
+          {amounts.map((item, i) => (
+            <ChooseAmountButton
+              id={`amount-box-${i}`}
+              amount={item}
+              value={formik.values.amount}
+              key={i}
+            >
+              <input
+                type="radio"
+                id={`amount-box-${i}`}
+                value={item}
+                name="amount-box"
+                onChange={() => formik.setFieldValue('amount', item)}
+                checked={formik.values.amount === item}
+                onBlur={formik.handleBlur}
+              />
+            </ChooseAmountButton>
+          ))}
+          <DonationAmountInput
+            isActive={
+              !amounts.includes(formik.values.amount) && !formik.errors.amount
+            }
+            value={formik.values.amount}
+            error={{
+              condition: Boolean(formik.touched.amount && formik.errors.amount),
+              message: String(formik.errors.amount),
+            }}
+          >
+            <>
+              <input
+                id="amount"
+                name="amount"
+                type="number"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.amount}
+              />
+            </>
+          </DonationAmountInput>
+        </div>
+        <DonationEmail
+          id="email"
+          label={t.email}
+          error={{
+            condition: Boolean(formik.touched.email && formik.errors.email),
+            message: String(formik.errors.email),
+          }}
+        >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
           />
-        ))}
-        <DonationAmountInput
-          isActive={!amounts.includes(currentAmount)}
-          value={currentAmount}
-          handleChange={e => setCurrentAmount(e)}
-        />
-      </div>
-      <SupportButton
-        disabled={!currentAmount || currentAmount < 0}
-        handleClick={() => console.log(currentAmount)}
-      />
+        </DonationEmail>
+        <SupportButton disabled={supportButtonDisabled} type="submit" />
+      </form>
     </div>
   );
 }
