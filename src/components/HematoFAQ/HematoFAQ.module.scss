@@ -1,12 +1,11 @@
 @import '../../stylesheets/mixins.scss';
 
 .faq {
-  padding: 40px 0 36px 0;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 40px 20px 36px 20px;
+  width: 100%;
 
   @include desktop-screen {
-    padding: 140px 0 132px 0;
+    padding: 140px 80px 132px 80px;
   }
 
   &__container {
@@ -21,7 +20,6 @@
     gap: 36px;
 
     @include desktop-screen {
-      padding: 0 80px;
       gap: 64px;
     }
   }

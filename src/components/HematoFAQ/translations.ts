@@ -9,7 +9,7 @@ const translations = {
       {
         question: 'Czy będą udogodnienia dla osób niepełnosprawnych?',
         answer:
-          'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+          'Osoby niepełnosprawne będą mogły liczyć na pełne wsparcie organizatorów.',
       },
       {
         question:
@@ -61,7 +61,7 @@ const translations = {
       {
         question: 'Are there facilities for people with disabilities?',
         answer:
-          'Lorem ipsum dolor sit amet, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+          'Disabled persons will be able to count on full support from the organizers.',
       },
       {
         question:
