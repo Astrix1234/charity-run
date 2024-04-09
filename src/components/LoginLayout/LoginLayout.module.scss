@@ -9,8 +9,9 @@
   background-position: left bottom 140px;
 
   @include desktop-screen {
-    padding: 48px 0 240px;
+    padding: 68px 0 240px;
     background-position: left bottom 100px;
+    margin-top: -20px;
   }
 }
 
