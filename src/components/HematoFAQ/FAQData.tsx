@@ -2,54 +2,51 @@ import { FAQItem } from '../FAQItem/FAQItem';
 
 const faqData: FAQItem[] = [
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
+    question: 'Czy jest możliwość zapisania się na bieg na miejscu?',
+    answer: 'Tak, będzie taka możliwość w biurze zawodów.',
+  },
+  {
+    question: 'Czy będą udogodnienia dla osób niepełnosprawnych?',
     answer:
       'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question:
+      'Czy istnieje opłata rejestracyjna, i jeśli tak, jakie są jej kwoty?',
+    answer: 'Tak, jest opłata - dla dorosłego 30 zł, a dla dziecka 20 zł.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question: 'Jak mogę się zarejestrować do udziału w Hematobiegu?',
+    answer: 'Na stronie www.hematobieg.org lub podczas wydarzenia.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question: 'Czy można zabrać ze sobą psa na bieg?',
+    answer: 'Tak, można. Pies musi być na smyczy.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
+    question: 'Czy jest możliwość wsparcia Hematobiegu?',
     answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+      'Tak, można zostać partnerem, darczyńcą, wolontariuszem lub ambasadorem.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question: 'Czy będą dostępne szatnie dla uczestników?',
+    answer: 'Tak, będą dostępne szatnie oraz toalety.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
+    question:
+      'Czy podczas Hematobiegu będą dostępne punkty z napojami i przekąskami dla uczestników?',
     answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+      'Tak, będzie strefa gastronomiczna. Uczestnicy dostaną wodę w pakiecie startowym.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question:
+      'Czy istnieje możliwość zakupienia koszulki lub innych gadżetów związanych z Hematobiegiem?',
+    answer: 'Tak, na miejscu będzie punkt sprzedaży.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet lorem, consectetur adip?',
-    answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+    question:
+      'Czy na Hematobiegu będą dostępne miejsca parkingowe dla uczestników?',
+    answer: 'Będzie możliwość zaparkowania przy pobliskich ulicach.',
   },
 ];
 

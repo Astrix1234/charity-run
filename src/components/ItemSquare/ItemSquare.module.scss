@@ -70,6 +70,12 @@
   position: absolute;
   top: 8%;
   left: 8%;
+  width: 40px;
+  height: 40px;
+  @include desktop-screen {
+    width: 124.788px;
+    height: 124.788px;
+  }
 }
 
 .content {
