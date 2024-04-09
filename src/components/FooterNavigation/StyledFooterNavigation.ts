@@ -9,7 +9,8 @@ export const StyledNavigation = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12em;
+    column-gap: 12em;
+    row-gap: 1em;
     margin-bottom: 2em;
   }
 `;
