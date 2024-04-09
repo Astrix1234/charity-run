@@ -1,25 +1,29 @@
+import { ReactNode } from 'react';
 import scss from './ChooseAmountButton.module.scss';
 
 type ChooseAmountButtonProps = {
   amount: number;
-  currentAmount: number;
-  handleClick: () => void;
+  value: number;
+  children: ReactNode;
+  id: string;
 };
 
 function ChooseAmountButton({
   amount,
-  currentAmount,
-  handleClick,
+  value,
+  children,
+  id,
 }: ChooseAmountButtonProps) {
-  const isActive = amount === currentAmount;
+  const isActive = amount === value;
 
   return (
-    <button
-      onClick={handleClick}
-      className={`${scss.btn} ${isActive ? scss.active : ''}`}
+    <label
+      className={`${scss.label} ${isActive ? scss.label__active : ''}`}
+      htmlFor={id}
     >
-      {amount} zł
-    </button>
+      {children}
+      <span>{amount} zł</span>
+    </label>
   );
 }
 

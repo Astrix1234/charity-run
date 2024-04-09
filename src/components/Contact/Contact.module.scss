@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .contact {
   background-image: url('/images/cut-background.png');
   background-repeat: no-repeat;
@@ -94,7 +96,6 @@
 
   &__email {
     display: flex;
-    gap: 16px;
     align-items: center;
     justify-content: center;
 
@@ -129,7 +130,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@include desktop-screen {
   .contact {
     &__container {
       padding: 0 80px;
@@ -151,6 +152,7 @@
     }
 
     &__email {
+      gap: 16px;
       justify-content: normal;
 
       &__link {

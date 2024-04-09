@@ -1,0 +1,61 @@
+@import '../../stylesheets/mixins.scss';
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  width: 100%;
+  align-items: start;
+  margin-bottom: 48px;
+
+  @include desktop-screen {
+    margin-bottom: 62px;
+  }
+
+  & > input {
+    border: 2px solid var(--marine);
+    border-radius: 10px;
+    background-color: var(--light);
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    height: 36px;
+    padding-left: 15px;
+    transition: border 0.3s ease-in-out;
+
+    @include desktop-screen {
+      font-size: 16px;
+      height: 40px;
+    }
+  }
+
+  &__error {
+    & > input {
+      border: 2px solid red;
+    }
+  }
+}
+
+.text {
+  font-size: 16px;
+  margin-bottom: 16px;
+
+  @include desktop-screen {
+    font-size: 18px;
+    margin-bottom: 6px;
+    padding-left: 4px;
+  }
+}
+
+.message {
+  position: absolute;
+  right: 6px;
+  color: red;
+  font-size: 14px;
+  bottom: -20px;
+
+  @include desktop-screen {
+    font-size: 12px;
+  }
+}

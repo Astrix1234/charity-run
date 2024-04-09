@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .support {
   &__wrapper {
     display: flex;
@@ -12,8 +14,8 @@
   &__arrow {
     position: absolute;
     transform: rotate(297deg) scaleX(-1);
-    left: -60px;
-    bottom: 50px;
+    left: -40px;
+    bottom: 25px;
 
     & > svg {
       stroke: var(--orange);
@@ -22,7 +24,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@include desktop-screen {
   .support {
     &__wrapper {
       max-width: 100%;
