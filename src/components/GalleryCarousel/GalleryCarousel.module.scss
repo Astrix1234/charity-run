@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -36,7 +38,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@include desktop-screen {
   .gallery {
     gap: 16px;
     padding: 160px 0 0 0;
