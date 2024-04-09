@@ -1,7 +1,11 @@
 @import '../../stylesheets/mixins.scss';
 
 .runInfo {
-    padding: 140px 0 0 0;
+    padding: 60px 0 0 0;
+
+    @include desktop-screen {
+        padding: 140px 0 0 0;
+    }
 
     &__container {
         position: relative;
