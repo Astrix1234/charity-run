@@ -24,6 +24,7 @@
     width: 100%;
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     gap: 140px;
@@ -32,7 +33,13 @@
   &__windows {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 60px;
+  }
+
+  @include desktop-screen {
+    padding-bottom: 120px;
   }
 
   &__sectionTitle {
@@ -111,6 +118,46 @@
     margin-top: 8px;
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
+  }
+
+  &__instructions {
+    width: 100%;
+    max-width: 776px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 16px;
+  }
+
+  &__instructionsTitle {
+    margin-bottom: 12px;
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__instructionsText {
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
+  }
+
+  &__instructionsTextHighlighted {
+    color: var(--orange);
+
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
   }
 }
 

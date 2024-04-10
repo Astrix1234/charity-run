@@ -56,9 +56,6 @@
   flex-direction: column;
   align-items: start;
   gap: 12px;
-  & > a:last-child {
-    margin-bottom: 12px;
-  }
 }
 
 .item {
@@ -67,9 +64,17 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
 
   & > span {
     transition: all 0.2s;
+  }
+
+  &:last-child {
+    margin-bottom: 12px;
   }
 
   &__enabled {

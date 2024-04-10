@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
-import { IpsumLogo } from '../../Icons/SponsorsIcons/IpsumLogo';
-import { LogoIpsum } from '../../Icons/SponsorsIcons/LogoIpsum';
 import { Wave } from '../../Icons/WaveBackground/Wave';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import Slider from '../Slider/Slider';
 import scss from './Sponsors.module.scss';
 import translations from './translations';
+import { KopernikLogo } from '../../Icons/SponsorsIcons/KopernikLogo';
 
 const Sponsors = () => {
   const { language } = useLanguageStore();
@@ -14,17 +13,11 @@ const Sponsors = () => {
 
   const sponsorsList = [
     <div className={scss.sponsors__logo}>
-      <IpsumLogo />
+      <KopernikLogo />
     </div>,
-    <div className={scss.sponsors__logo}>
-      <LogoIpsum />
-    </div>,
-    <div className={scss.sponsors__logo}>
-      <IpsumLogo />
-    </div>,
-    <div className={scss.sponsors__logo}>
-      <LogoIpsum />
-    </div>,
+    // <div className={scss.sponsors__logo}>
+    //   <KopernikLogo />
+    // </div>,
   ];
 
   return (
