@@ -68,10 +68,11 @@
 }
 
 .attractions__header {
-  color: #2e2530;
+  color: var(--dark);
   text-align: center;
-  font-family: 'DM Serif Display';
+  font-family: 'DM Serif Display', serif;
   font-size: 40px;
+  font-weight: 400;
   width: 224px;
   height: 109px;
 
@@ -82,12 +83,7 @@
   }
 }
 
-.attractions__containerItems>li {
+.attractions__containerItems > li {
   flex: 1 0 48%;
   max-width: 48%;
-
-  @include desktop-screen {
-    // flex: 1 0 calc(25% - 29px);
-    // max-width: calc(25% - 29px);
-  }
 }

@@ -217,6 +217,33 @@ export const RegisterForRun = () => {
                 handleIconClick={handleIconClick}
                 openModal={openModal}
               />
+              <div className={scss.registration__instructions}>
+                <h4 className={scss.registration__instructionsTitle}>
+                  {t.instructionsTitle}
+                </h4>
+                <p className={scss.registration__instructionsText}>
+                  {t.instructionsCost}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  <span
+                    className={scss.registration__instructionsTextHighlighted}
+                  >
+                    {t.cost1}
+                  </span>
+                  {t.costAdult}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  <span
+                    className={scss.registration__instructionsTextHighlighted}
+                  >
+                    {t.cost2}
+                  </span>
+                  {t.costChild}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  {t.costGeneral}
+                </p>
+              </div>
             </div>
           </div>
         </div>
