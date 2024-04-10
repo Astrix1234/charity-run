@@ -1,9 +1,15 @@
+@import '../../stylesheets/mixins.scss';
+
 .section {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 10px;
+  padding-bottom: 100px;
   width: 100%;
-  margin-bottom: 140px;
+  @include desktop-screen {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 140px;
+  }
 }
 
 .background {
@@ -21,14 +27,22 @@
 .header {
   top: 150px;
   display: flex;
-  max-width: 1440px;
+  max-width: 390px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 20px;
+  @include desktop-screen {
+    padding: 0 80px;
+    max-width: 1440px;
+  }
   &__text {
-    font-size: 39px;
+    font-size: 16px;
     font-weight: 500;
-    margin-right: 20px;
+    @include desktop-screen {
+      font-size: 39px;
+      font-weight: 400;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -37,12 +51,18 @@
   cursor: pointer;
   &__container {
     margin: auto;
-    padding-bottom: 40px;
-    max-width: 566px;
+    max-width: 240px;
+    @include desktop-screen {
+      max-width: 566px;
+      padding-bottom: 40px;
+    }
   }
   &:hover {
-    transform: scale(1.8);
+    transform: scale(1.4);
     transition: transform 1s;
+    @include desktop-screen {
+      transform: scale(1.8);
+    }
   }
   &:not(:hover) {
     transform: scale(1);
