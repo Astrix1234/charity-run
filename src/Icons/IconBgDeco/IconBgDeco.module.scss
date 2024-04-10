@@ -1,0 +1,8 @@
+@import '../../stylesheets/mixins.scss';
+
+.icon {
+  display: none;
+  @include desktop-screen {
+    display: block;
+  }
+}
