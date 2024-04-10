@@ -58,8 +58,11 @@
     }
   }
   &:hover {
-    transform: scale(1.8);
+    transform: scale(1.4);
     transition: transform 1s;
+    @include desktop-screen {
+      transform: scale(1.8);
+    }
   }
   &:not(:hover) {
     transform: scale(1);
