@@ -29,7 +29,7 @@
 
     @include desktop-screen {
       gap: 29px;
-      max-width: none;
+      max-width: 1080px;
     }
   }
 
@@ -82,7 +82,7 @@
   }
 }
 
-.attractions__containerItems>li {
+.attractions__containerItems > li {
   flex: 1 0 48%;
   max-width: 48%;
 
