@@ -7,10 +7,13 @@ import DonationAmountInput from '../DonationAmountInput/DonationAmountInput';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import DonationEmail from '../DonationEmail/DonationEmail';
+import { registerForDonation } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 function DonationBox() {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { setIsLoading } = useIsLoadingStore();
 
   const amounts = [25, 50, 100];
 
@@ -18,7 +21,25 @@ function DonationBox() {
     initialValues: { amount: 0, email: '' },
     validationSchema: validationSchema,
     onSubmit: values => {
-      console.log(values);
+      const { amount, email } = values;
+      const amountInCents = amount * 100;
+      const givDonation = async () => {
+        try {
+          setIsLoading(true);
+          const response = await registerForDonation(amountInCents, email);
+          if (response.status === 201 && response.data) {
+            window.open(response.data);
+            console.log('Donation successful!');
+          } else {
+            console.error('Unexpected response status:', response.status);
+          }
+        } catch (error: unknown) {
+          console.error('Error:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      givDonation();
       formik.resetForm();
     },
   });

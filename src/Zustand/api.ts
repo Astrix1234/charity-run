@@ -141,3 +141,16 @@ export const resetPassword = async (email: string) => {
     throw error;
   }
 };
+
+export const registerForDonation = async (amount: number, email: string) => {
+  try {
+    const response = await axios.post(`${apiUrl}/payment/donation`, {
+      amount,
+      email,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error with user participation:', error);
+    throw error;
+  }
+};
