@@ -13,8 +13,6 @@ const translations = {
     statementPayment:
       'Klikając „Zapisz się na bieg”, wyrażasz zgodę na przekierowanie do systemu płatności Przelewy24.',
     button: 'Zapisz się na bieg',
-    instructionsTitle:
-      'Po zarejestrowaniu się i utworzeniu konta na stronie, otrzymasz możliwość ZAPISU NA BIEG. ',
     instructionsCost: 'Koszt zapisu na bieg wynosi:',
     cost1: '30 zł',
     costAdult: ' za osobę dorosłą.',
@@ -44,8 +42,6 @@ const translations = {
     statementPayment:
       'By clicking "Sign up for the run", you consent to being redirected to the Przelewy24 payment system.',
     button: 'Sign up for run',
-    instructionsTitle:
-      'After registering and creating an account on the website, you will receive the opportunity to SIGN UP FOR A RUN.',
     instructionsCost: 'The cost of signing up for the run is:',
     cost1: '30 PLN',
     costAdult: ' per adult participant.',

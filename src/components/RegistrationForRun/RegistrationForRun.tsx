@@ -218,9 +218,6 @@ export const RegisterForRun = () => {
                 openModal={openModal}
               />
               <div className={scss.registration__instructions}>
-                <h4 className={scss.registration__instructionsTitle}>
-                  {t.instructionsTitle}
-                </h4>
                 <p className={scss.registration__instructionsText}>
                   {t.instructionsCost}
                 </p>

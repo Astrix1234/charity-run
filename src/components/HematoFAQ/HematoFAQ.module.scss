@@ -1,32 +1,30 @@
 @import '../../stylesheets/mixins.scss';
 
 .faq {
-  padding: 40px 20px 36px 20px;
-  width: 100%;
+  padding: 40px 0 36px 0;
 
   @include desktop-screen {
-    padding: 140px 80px 132px 80px;
+    padding: 140px 0 132px 0;
   }
 
   &__container {
+    padding: 0 20px;
     display: inline-flex;
     height: 100%;
     flex-direction: column;
     width: 100%;
     margin: 0;
-    padding: 0 40px;
     justify-content: center;
     align-items: center;
     gap: 36px;
 
     @include desktop-screen {
       gap: 64px;
+      padding: 0 80px;
     }
   }
 
   &__title {
-    width: 112px;
-    color: #17181a;
     text-align: center;
     font-family: 'DM Serif Display';
     font-size: 40px;
@@ -34,7 +32,6 @@
     display: flex;
 
     @include desktop-screen {
-      width: 249px;
       font-size: 64px;
       gap: 10px;
     }

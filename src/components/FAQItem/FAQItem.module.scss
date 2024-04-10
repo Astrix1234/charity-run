@@ -3,14 +3,13 @@
 .faq {
   &__item {
     width: 100%;
-    min-width: 136.984px;
     height: 100%;
     display: block;
-    padding: 15.522px;
+    padding: 15px;
     margin-bottom: 16px;
     align-items: center;
     flex-wrap: wrap;
-    border-radius: 6.209px;
+    border-radius: 6px;
     background: var(--beige);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -21,8 +20,7 @@
     }
 
     @include desktop-screen {
-      width: 900px;
-      min-width: 353px;
+      max-width: 900px;
       padding: 40px;
       border-radius: 16px;
     }
