@@ -33,10 +33,11 @@
   }
   &__text {
     font-size: 16px;
-    font-weight: 400;
-    margin-right: 20px;
+    font-weight: 500;
     @include desktop-screen {
       font-size: 39px;
+      font-weight: 400;
+      margin-right: 20px;
     }
   }
 }
@@ -46,8 +47,11 @@
   cursor: pointer;
   &__container {
     margin: auto;
-    padding-bottom: 40px;
-    max-width: 566px;
+    max-width: 240px;
+    @include desktop-screen {
+      max-width: 566px;
+      padding-bottom: 40px;
+    }
   }
   &:hover {
     transform: scale(1.8);
