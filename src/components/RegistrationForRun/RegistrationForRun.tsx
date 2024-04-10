@@ -75,10 +75,16 @@ export const RegisterForRun = () => {
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
       const registerUserOnRun = async () => {
+        const amount = values.shirtGender === 'Dziecięca' ? 2000 : 3000;
         try {
           setIsLoading(true);
-          await userParticipation(values);
-          console.log('User registered for the run!');
+          const response = await userParticipation(amount, values);
+          if (response.status === 201 && response.data) {
+            window.open(response.data);
+            console.log('Registration successful!');
+          } else {
+            console.error('Unexpected response status:', response.status);
+          }
         } catch (error: unknown) {
           console.error(error);
         } finally {
