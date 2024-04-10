@@ -14,7 +14,7 @@ type MobileNavLinkColProps = {
     dest: string;
     newPage?: boolean;
     disabled?: boolean;
-    handleClick?: () => void;
+    handleClick?: (e: React.MouseEvent) => void;
   }[];
   handleClose: () => void;
 };
@@ -52,7 +52,12 @@ function MobileNavLinkCol({
         <div className={scss.col}>
           {links.map((link, i) =>
             !link.dest ? (
-              <button type="button" onClick={link.handleClick} key={i}>
+              <button
+                className={`${scss.item} ${scss.item__enabled}`}
+                type="button"
+                onClick={link.handleClick}
+                key={i}
+              >
                 <span className={scss.item__line} />
                 <span className={scss.item__text}>{link.name}</span>
               </button>
