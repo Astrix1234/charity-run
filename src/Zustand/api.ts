@@ -99,12 +99,12 @@ export const updateUserDetails = async (userDetails: UserUpdateData) => {
 
 export const userParticipation = async (
   amount: number,
-  userData: raceParticipantUserData
+  participantData: raceParticipantUserData
 ) => {
   try {
     const response = await axios.post(`${apiUrl}/payment/participate`, {
       amount,
-      userData,
+      participant: participantData, 
     });
     return response.data;
   } catch (error) {
