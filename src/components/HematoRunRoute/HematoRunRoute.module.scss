@@ -23,10 +23,14 @@
 .header {
   top: 150px;
   display: flex;
-  max-width: 1440px;
+  max-width: 390px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 20px;
+  @include desktop-screen {
+    padding: 0 80px;
+    max-width: 1440px;
+  }
   &__text {
     font-size: 16px;
     font-weight: 400;
