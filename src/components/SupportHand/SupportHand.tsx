@@ -4,17 +4,16 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { ButtonOrange } from '../ButtonOrange/ButtonOrange';
 import scss from './SupportHand.module.scss';
 import translations from './translations';
+import { useNavigate } from 'react-router-dom';
 
 const SupportHand = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    window.open(
-      'https://fundacja.hematologiczna.org/darowizna.html',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    navigate('/support-donation');
   };
 
   return (
