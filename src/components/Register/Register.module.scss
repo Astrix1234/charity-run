@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: left bottom;
 
+  @include desktop-screen {
+    padding-top: 83px;
+    margin-top: -20px;
+  }
+
   &__container {
     position: relative;
     max-width: 1440px;

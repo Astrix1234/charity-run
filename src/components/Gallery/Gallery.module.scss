@@ -1,10 +1,18 @@
+@import '../../stylesheets/mixins.scss';
+
 .background {
   background-image: url('/images/cut-background.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: left;
   padding: 80px 0;
+
+  @include desktop-screen {
+    margin-top: -20px;
+  }
 }
+
+
 
 .container {
   max-width: 1440px;
