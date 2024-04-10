@@ -97,9 +97,15 @@ export const updateUserDetails = async (userDetails: UserUpdateData) => {
   }
 };
 
-export const userParticipation = async (userData: raceParticipantUserData) => {
+export const userParticipation = async (
+  amount: number,
+  userData: raceParticipantUserData
+) => {
   try {
-    const response = await axios.post(`${apiUrl}/users/participate`, userData);
+    const response = await axios.post(`${apiUrl}/payment/participate`, {
+      amount,
+      userData,
+    });
     return response.data;
   } catch (error) {
     console.error('Error with user participation:', error);
