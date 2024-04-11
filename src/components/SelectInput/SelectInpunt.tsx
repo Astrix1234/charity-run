@@ -33,11 +33,7 @@ const shirts = {
 
   Dziecięca: [
     { value: '104', label: '104' },
-    { value: '110', label: '110' },
     { value: '116', label: '116' },
-    { value: '122', label: '122' },
-    { value: '134', label: '134' },
-    { value: '140', label: '140' },
   ],
 };
 

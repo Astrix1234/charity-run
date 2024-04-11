@@ -4,11 +4,12 @@
   width: 100%;
   padding-top: 63px;
   background-image: url('/images/background.png');
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   background-repeat: no-repeat;
   background-position: left bottom;
 
   @include desktop-screen {
+    background-size: 200% 200%;
     padding-top: 83px;
     margin-top: -20px;
   }
@@ -17,7 +18,12 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 20px;
+
+    @include desktop-screen {
+      padding: 0 80px;
+      max-width: 1440px;
+    }
   }
 
   &__container {
@@ -47,8 +53,12 @@
     flex-direction: column;
     justify-content: center;
     align-self: stretch;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
   }
 
   &__form {
@@ -78,6 +88,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    width: 100%;
   }
 
   &__radioList {
@@ -96,8 +107,12 @@
     position: relative;
     width: 100%;
     max-width: 552px;
-    font-size: 24px;
     font-weight: 500;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
 
     &:hover .registration__input,
     &:focus .registration__input {
@@ -106,7 +121,7 @@
   }
 
   &__input {
-    font-size: var(--mediumFontSize);
+    font-size: 16px;
     border: 1px solid var(--marine);
     border-radius: 10px;
     background-color: var(--light);
@@ -117,6 +132,10 @@
     margin-top: 8px;
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
   }
 
   &__instructions {
@@ -127,23 +146,23 @@
     flex-wrap: wrap;
     position: relative;
     gap: 16px;
+    padding-top: 30px;
   }
 
   &__instructionsText {
     font-size: 16px;
 
     @include desktop-screen {
-      font-size: 21px;
+      font-size: 24px;
     }
   }
 
   &__instructionsTextHighlighted {
     color: var(--orange);
-
     font-size: 16px;
 
     @include desktop-screen {
-      font-size: 21px;
+      font-size: 24px;
     }
   }
 }
@@ -153,7 +172,7 @@
   right: 0;
   top: 85px;
   color: red;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -173,4 +192,8 @@ input[type='radio'] {
   padding-top: 10px;
   font-size: 16px;
   gap: 24px;
+
+  @include desktop-screen {
+    font-size: 24px;
+  }
 }
