@@ -27,6 +27,10 @@
 }
 
 .heading {
-  max-width: 413px;
-  margin-bottom: 32px;
+  font-size: 16px;
+  @include desktop-screen {
+    font-size: 24px;
+    max-width: 413px;
+    margin-bottom: 32px;
+  }
 }
