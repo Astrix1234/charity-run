@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="background-top"></div>
       <div className="background-bottom">
         <div className="container">
-          <FoundationLogotype />
+          <img src="images/foundation-logotype.png" alt="Foundation Logotype" />
           <FooterInformationSection />
           <FooterNavigation />
         </div>
