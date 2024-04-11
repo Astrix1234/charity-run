@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .supportVolunteersList {
   margin-inline: auto;
   display: flex;
@@ -5,33 +7,53 @@
   flex-wrap: wrap;
   gap: 2rem;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+    @include desktop-screen {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
 
   .item h1 {
-    position: absolute; /* Nagłówek ma być absolutnie pozycjonowany */
     top: 65px; /* Na górze kontenera */
     left: 200px; /* Po prawej stronie kontenera */
     font-family: Poppins;
     font-size: 21px;
     font-weight: 700;
     line-height: 31.5px;
-    text-align: left;
-    padding-right: 25px;
-    margin: 0; /* Resetujemy margines, aby nagłówek był dokładnie na górze i na prawo */
+    text-align: center;
+    margin: 0 auto; /* Resetujemy margines, aby nagłówek był dokładnie na górze i na prawo */
+
+    @include desktop-screen {
+      position: absolute; /* Nagłówek ma być absolutnie pozycjonowany */
+      top: 65px; 
+      left: 200px;
+      font-size: 21px;
+      text-align: left;
+      padding-right: 25px;
+      margin: 0;
+    }
   }
   
   .item p {
-    position: absolute; /* Tekst ma być absolutnie pozycjonowany */
     top: 200px; /* Na dole kontenera */
     left: 0; /* Po lewej stronie kontenera */
     font-family: Poppins;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 31.5px;
     text-align: left;
-    padding-left: 80px;
-    padding-right: 80px; /* Dodajemy odstępy z lewej strony */
+    padding-top: 20px;
     margin: 0; /* Resetujemy margines, aby tekst był dokładnie na dole i na lewo */
+
+    @include desktop-screen {
+      position: absolute; /* Tekst ma być absolutnie pozycjonowany */
+      text-align: left;
+      font-size: 21px;
+      padding-left: 80px;
+      padding-right: 80px; /* Dodajemy odstępy z lewej strony */
+      text-align: left;
+    }
   }
 }
