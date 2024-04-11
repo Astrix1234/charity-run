@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
     height: 128.5px;
     background: url('images/footer-background-top.png') no-repeat bottom;
     background-size: contain;
-    background-size: 100% 100%;
+    background-size: 100% min(100%, calc(100vw / 7));
   }
 
   .background-bottom {
