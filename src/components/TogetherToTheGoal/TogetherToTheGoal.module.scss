@@ -2,7 +2,7 @@
 
 .togetherToTheGoal {
   width: 100%;
-  max-width: 390px;
+  max-width: 350px;
   margin: 0 auto;
 
   @include desktop-screen {
@@ -34,9 +34,11 @@
 
   &__foundation {
     font-size: 16px;
+    max-width: 290px;
 
     @include desktop-screen {
       font-size: 21px;
+      max-width: 574px;
     }
   }
 }

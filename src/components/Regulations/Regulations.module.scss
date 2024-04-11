@@ -83,7 +83,11 @@
   &__modalCloseIcon {
     position: absolute;
     top: 22px;
-    right: 22px;
+    left: 20px;
     cursor: pointer;
+
+    @include desktop-screen {
+      left: 95%;
+    }
   }
 }

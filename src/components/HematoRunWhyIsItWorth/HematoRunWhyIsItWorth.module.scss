@@ -14,6 +14,7 @@
   &__IconBgMobile {
     display: block;
     position: absolute;
+
     top: 180px;
 
     @include desktop-screen {
@@ -117,8 +118,8 @@
 
     &-fundraising {
       width: 152px;
-      top: 49px;
-      left: 0;
+      top: 45px;
+      left: 10px;
 
       @include desktop-screen {
         width: 441px;
@@ -129,8 +130,8 @@
 
     &-awareness {
       width: 150px;
-      top: 130px;
-      right: 0;
+      top: 120px;
+      right: 10px;
 
       @include desktop-screen {
         width: 438px;
@@ -141,8 +142,8 @@
 
     &-opportunity {
       width: 129px;
-      top: 265px;
-      left: 0;
+      top: 250px;
+      left: 10px;
 
       @include desktop-screen {
         width: 398px;
@@ -153,8 +154,8 @@
 
     &-joy {
       width: 138px;
-      top: 375px;
-      right: 0;
+      top: 355px;
+      right: 10px;
 
       @include desktop-screen {
         width: 415px;
@@ -165,8 +166,8 @@
 
     &-family {
       width: 159px;
-      top: 475px;
-      left: 0;
+      top: 455px;
+      left: 10px;
 
       @include desktop-screen {
         width: 455px;
