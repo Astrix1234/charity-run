@@ -7,6 +7,7 @@ const translations = {
     footnote: 'Dopisek: "Darowizna na cele statutowe"',
     krs: 'KRS: 0000069531',
     nip: 'NIP: 729-23-25-734',
+    donation: 'Darowizna online',
   },
   EN: {
     support: 'Support',
@@ -16,6 +17,7 @@ const translations = {
     footnote: 'Footnote: "Donation for statutory purposes"',
     krs: 'KRS: 0000069531',
     nip: 'NIP: 729-23-25-734',
+    donation: 'Online donation',
   },
 };
 
