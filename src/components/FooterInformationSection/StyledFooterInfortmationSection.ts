@@ -4,7 +4,7 @@ export const StyledSection = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3.5rem;
   margin-bottom: 1.35rem;
 
   h3 {

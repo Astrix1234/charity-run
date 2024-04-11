@@ -22,7 +22,7 @@ export const StyledFooter = styled.footer`
     padding: 1em 80px 2em 80px;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1359px) {
     background-size: 100% 100%;
     .container {
       padding-inline: 20px;
