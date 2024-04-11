@@ -9,7 +9,12 @@
   background-position: left bottom;
 
   @include desktop-screen {
+
     background-size: 200% 200%;
+
+    padding-top: 83px;
+    margin-top: -20px;
+
   }
 
   &__container {

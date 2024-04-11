@@ -8,7 +8,7 @@ const faqData: FAQItem[] = [
   {
     question: 'Czy będą udogodnienia dla osób niepełnosprawnych?',
     answer:
-      'Lorem ipsum dolor sit amet lorem, consectet tempor adip eum non mag et eum erat vol accusam et eum erat vol accusam et eum erat vol accusam et.',
+      'Osoby niepełnosprawne będą mogły liczyć na pełne wsparcie organizatorów.',
   },
   {
     question:

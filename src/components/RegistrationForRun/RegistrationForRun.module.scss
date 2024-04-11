@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .registration {
   width: 100%;
   padding-top: 63px;
@@ -5,6 +7,11 @@
   background-size: 200% 200%;
   background-repeat: no-repeat;
   background-position: left bottom;
+
+  @include desktop-screen {
+    padding-top: 83px;
+    margin-top: -20px;
+  }
 
   &__containerMain {
     max-width: 1440px;
@@ -17,6 +24,7 @@
     width: 100%;
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     gap: 140px;
@@ -25,7 +33,12 @@
   &__windows {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @include desktop-screen {
+    padding-bottom: 120px;
   }
 
   &__sectionTitle {
@@ -52,7 +65,7 @@
     width: 100%;
     max-width: 600px;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
-    margin-bottom: 143px;
+    margin-bottom: 60px;
     height: 780px;
   }
 
@@ -104,6 +117,34 @@
     margin-top: 8px;
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
+  }
+
+  &__instructions {
+    width: 100%;
+    max-width: 776px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 16px;
+  }
+
+  &__instructionsText {
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
+  }
+
+  &__instructionsTextHighlighted {
+    color: var(--orange);
+
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
   }
 }
 

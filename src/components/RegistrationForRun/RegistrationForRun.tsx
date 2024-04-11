@@ -75,10 +75,16 @@ export const RegisterForRun = () => {
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
       const registerUserOnRun = async () => {
+        const amount = values.shirtGender === 'Dziecięca' ? 2000 : 3000;
         try {
           setIsLoading(true);
-          await userParticipation(values);
-          console.log('User registered for the run!');
+          const response = await userParticipation(amount, values);
+          if (response.status === 201 && response.data) {
+            window.open(response.data);
+            console.log('Registration successful!');
+          } else {
+            console.error('Unexpected response status:', response.status);
+          }
         } catch (error: unknown) {
           console.error(error);
         } finally {
@@ -217,6 +223,30 @@ export const RegisterForRun = () => {
                 handleIconClick={handleIconClick}
                 openModal={openModal}
               />
+              <div className={scss.registration__instructions}>
+                <p className={scss.registration__instructionsText}>
+                  {t.instructionsCost}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  <span
+                    className={scss.registration__instructionsTextHighlighted}
+                  >
+                    {t.cost1}
+                  </span>
+                  {t.costAdult}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  <span
+                    className={scss.registration__instructionsTextHighlighted}
+                  >
+                    {t.cost2}
+                  </span>
+                  {t.costChild}
+                </p>
+                <p className={scss.registration__instructionsText}>
+                  {t.costGeneral}
+                </p>
+              </div>
             </div>
           </div>
         </div>

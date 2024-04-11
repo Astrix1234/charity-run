@@ -5,17 +5,16 @@ import translations from './translations';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
 import { ButtonOrange } from '../ButtonOrange/ButtonOrange';
 import { IconHandHeart } from '../../Icons/IconHandHeart/IconHandHeart';
+import { useNavigate } from 'react-router-dom';
 
 const HematoFAQ: React.FC = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    window.open(
-      'https://fundacja.hematologiczna.org/darowizna.html',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    navigate('/support-donation');
   };
 
   return (
