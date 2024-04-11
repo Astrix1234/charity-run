@@ -1,10 +1,8 @@
 @import '../../stylesheets/mixins.scss';
 
 .icon {
-  position: relative;
-  width: 55px;
-  stroke: #1ca2a7;
+  display: none;
   @include desktop-screen {
-    width: 150px;
+    display: block;
   }
 }

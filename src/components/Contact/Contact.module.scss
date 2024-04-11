@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
 
-    & > div:first-child {
+    &>div:first-child {
       display: flex;
       flex-direction: column;
     }
@@ -132,9 +132,13 @@
 
 @include desktop-screen {
   .contact {
+    margin-top: -20px;
+
+
     &__container {
       padding: 0 80px;
       align-items: normal;
+      padding-top: 20px;
     }
 
     &__wrapper {

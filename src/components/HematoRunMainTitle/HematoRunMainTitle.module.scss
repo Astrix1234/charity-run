@@ -7,6 +7,11 @@
   background-position: right bottom;
   padding-top: 63px;
 
+  @include desktop-screen {
+    margin-top: -20px;
+    padding-top: 83px;
+  }
+
   &__container {
     position: relative;
     max-width: 390px;
