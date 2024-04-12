@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledMain = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
   position: relative;
@@ -14,7 +13,7 @@ export const StyledMain = styled.div`
     max-width: 50%;
   }
 
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1349px) {
     & > * {
       min-width: 80%;
       text-align: center;
