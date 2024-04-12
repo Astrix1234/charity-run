@@ -38,7 +38,7 @@ interface AxiosError extends Error {
   };
 }
 
-export const apiUrl = 'http://localhost:3000/api/';
+export const apiUrl = 'https://charyty-run-backend.azurewebsites.net/api';
 
 axios.defaults.withCredentials = true;
 
@@ -104,7 +104,7 @@ export const userParticipation = async (
   try {
     const response = await axios.post(`${apiUrl}/payment/participate`, {
       amount,
-      participant: participantData, 
+      participant: participantData,
     });
     return response.data;
   } catch (error) {
