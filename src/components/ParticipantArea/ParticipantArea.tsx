@@ -3,6 +3,7 @@ import { ParticipantAreaHeading } from '../ParticipantAreaHeading/ParticipantAre
 import { ParticipantAreaMain } from '../ParticipantAreaMain/ParticipantAreaMain';
 import { ParticipantAreaProfile } from '../ParticipantAreaProfile/ParticipantAreaProfile';
 import { ParticipantAreaPrepare } from '../ParticipantAreaPrepare/ParticipantAreaPrepare';
+import { Timetable } from '../Timetable/Timetable';
 
 export const ParticipantArea = () => {
   return (
@@ -11,9 +12,7 @@ export const ParticipantArea = () => {
         <ParticipantAreaHeading />
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
-        <div id="run-info">
-          <img src="images/timetable.png" />
-        </div>
+        <Timetable />
         <ParticipantAreaPrepare />
       </div>
     </StyledParticipant>
