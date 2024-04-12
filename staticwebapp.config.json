@@ -1,0 +1,11 @@
+{
+  "navigationFallback": {
+    "rewrite": "/charity-run/index.html"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/charity-run/index.html",
+      "statusCode": 200
+    }
+  }
+}
