@@ -2,12 +2,18 @@ import { StyledNavigation } from './StyledParticipantAreaNavigation';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
 
-export const ParticipantAreaNavigation = () => {
+type NavigationProps = {
+  children?: ReactNode;
+};
+
+export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
     <StyledNavigation>
+      {children}
       <h1>{t.myProfile}</h1>
       <h2>{t.navigation}</h2>
       <p>
