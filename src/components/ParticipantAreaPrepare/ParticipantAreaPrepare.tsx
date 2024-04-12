@@ -95,7 +95,7 @@ export const ParticipantAreaPrepare = () => {
           >
             <img
               className="modal"
-              src="/charity-run/images/hematoRunRoute.webp"
+              src="images/hematoRunRoute.webp"
               about="run route full size"
             />
           </Modal>
