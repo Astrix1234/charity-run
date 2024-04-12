@@ -9,7 +9,7 @@ export const ParticipantArea = () => {
   return (
     <StyledParticipant>
       <div className="container">
-        <ParticipantAreaHeading />
+        {/* <ParticipantAreaHeading /> */}
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
         <Timetable />

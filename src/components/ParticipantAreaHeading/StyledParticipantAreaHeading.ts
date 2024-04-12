@@ -16,4 +16,8 @@ export const StyledHeading = styled.div`
     font-weight: 400;
     padding-bottom: 0;
   }
+
+  svg {
+    width: 100%;
+  }
 `;

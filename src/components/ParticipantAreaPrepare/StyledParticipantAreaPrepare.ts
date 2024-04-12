@@ -43,6 +43,12 @@ export const StyledPrepare = styled.div`
     min-height: 100%;
   }
 
+  @media screen and (max-width: 1359px) {
+    .foots {
+      display: none;
+    }
+  }
+
   .foots {
     position: absolute;
     z-index: -4;

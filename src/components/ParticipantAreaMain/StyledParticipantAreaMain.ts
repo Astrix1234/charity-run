@@ -7,54 +7,37 @@ export const StyledMain = styled.div`
   gap: 4rem;
   position: relative;
 
-  & > *,
-  .image {
+  & > * {
     min-width: 510px;
     max-width: 50%;
   }
 
   @media screen and (max-width: 1349px) {
-    & > * {
-      min-width: 80%;
-      text-align: center;
+    .navigation {
+      min-width: calc(100vw - 40px);
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      white-space: nowrap;
+    }
+
+    .image {
+      min-width: 80px;
+      max-width: 400px;
     }
   }
 
-  .photo {
-    margin-bottom: 3rem;
-    display: grid;
-    place-content: center;
-    text-align: right;
-    gap: 1rem;
-  }
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
 
-  .imgContainer {
-    width: 100%;
-    height: 100%;
-  }
+    h2 {
+      font-size: 1rem;
+    }
 
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .addPhoto {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-
-  input[type='file'] {
-    display: none;
-  }
-
-  label {
-    transition: color 400ms;
-  }
-
-  label:hover {
-    cursor: pointer;
-    color: var(--orange);
+    p {
+      font-size: 0.75rem;
+    }
   }
 `;

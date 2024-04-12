@@ -7,7 +7,7 @@ export const StyledNavigation = styled.div`
   text-align: right;
   position: relative;
   right: 0px;
-  padding: 5rem;
+  padding: 2rem;
 
   h1,
   h2 {
