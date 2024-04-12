@@ -1,7 +1,10 @@
 {
   "navigationFallback": {
     "rewrite": "/charity-run/index.html",
-    "exclude": ["/charity-run/assets/*"]
+    "exclude": [
+      "/charity-run/assets/*",
+      "!/charity-run/assets/index-DtHtMXPn.js"
+    ]
   },
   "responseOverrides": {
     "404": {
