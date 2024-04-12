@@ -1,11 +1,11 @@
 {
   "navigationFallback": {
-    "rewrite": "/dist/charity-run/index.html",
-    "exclude": ["/dist/charity-run/assets/*"]
+    "rewrite": "/charity-run/index.html",
+    "exclude": ["/charity-run/assets/*"]
   },
   "responseOverrides": {
     "404": {
-      "rewrite": "/dist/charity-run/index.html",
+      "rewrite": "/charity-run/index.html",
       "statusCode": 200
     }
   }
