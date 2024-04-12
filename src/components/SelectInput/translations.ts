@@ -45,11 +45,7 @@ const translations: Translations = {
       'rozmiar L': 'rozmiar L',
       'rozmiar XL': 'rozmiar XL',
       '104': '104',
-      '110': '110',
       '116': '116',
-      '122': '122',
-      '134': '134',
-      '140': '140',
     },
   },
   EN: {
@@ -74,11 +70,7 @@ const translations: Translations = {
       'rozmiar L': 'size L',
       'rozmiar XL': 'size XL',
       '104': '104',
-      '110': '110',
       '116': '116',
-      '122': '122',
-      '134': '134',
-      '140': '140',
     },
   },
 };
