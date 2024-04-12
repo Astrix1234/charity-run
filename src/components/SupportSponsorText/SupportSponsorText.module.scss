@@ -1,71 +1,104 @@
-.sponsorship {
-    font-family: 'Poppins';
-    max-width: 1440px;
-    margin: 0 auto;
-    margin-top: 32px;
-    text-align: justify;
-    padding: 0 80px 117px;
+    @import '../../stylesheets/mixins.scss';
 
-    .title {
-        color: #2E2530;
-        font-size: 39px;
-        font-weight: 500;
-        word-wrap: break-word;
+    .sponsorship {
+        font-family: 'Poppins';
+        max-width: 1440px;
+        margin: 0 auto;
         margin-top: 32px;
         text-align: justify;
-        line-height: 58,5px;
-    }
+        padding: 0 20px 80px; // zmiana paddingu dla urządzeń mobilnych
 
-    .subtitle {
-        color: #2E2530;
-        font-size: 24px;
-        font-weight: 700;
-        word-wrap: break-word;
-        margin-top: 32px;
-        text-align: justify;
-    }
+            @include desktop-screen {
+                padding: 0 80px 117px; // oryginalny padding dla ekranów desktopowych
+            }
 
-    .content {
-        color: #2E2530;
-        font-size: 21px;
-        font-weight: 400;
-        word-wrap: break-word;
-        margin-top: 32px;
-        text-align: justify;
+        .title {
+            color: var(--dark);
+            font-size: 30px;
+            font-weight: 500;
+            word-wrap: break-word;
+            margin-top: 20px;
+            text-align: start;
+            line-height: 36px;
 
-        p {
-            margin: 0;
-            margin-top: 32px;
+            @include desktop-screen {
+                font-size: 39px;
+                margin-top: 32px;
+                line-height: 58.5px;
+                text-align: justify;
+            }
+        }
+
+        .subtitle {
+            color: var(--dark);
+            font-size: 20px;
+            font-weight: 700;
+            word-wrap: break-word;
+            margin-top: 20px;
             text-align: justify;
+
+            @include desktop-screen {
+                font-size: 24px;
+                margin-top: 32px;
+            }
+        }
+
+        .content {
+            color: var(--dark);
+            font-size: 18px;
+            font-weight: 400;
+            word-wrap: break-word;
+            margin-top: 20px;
+            text-align: justify;
+
+            p {
+                margin: 0;
+                margin-top: 32px;
+                text-align: justify;
+            }
+
+            @include desktop-screen {
+                font-size: 21px;
+                margin-top: 32px;
+            }
+        }
+
+        .benefits span {
+            display: inline-block;
+            margin-right: 15px;
+            text-align: justify;
+
+            @include desktop-screen {
+                margin-right: 25px;
+            }
+        }
+
+        .contactEmail {
+            margin-top: 20px;
+            margin-bottom: 32px;
+
+            @include desktop-screen {
+                margin-top: auto;
+            }
+
+        }
+        .contactLink {
+            color: var(--orange);
+            font-size: 18px;
+            font-weight: 600;
+            word-wrap: break-word;
+
+            @include desktop-screen {
+                font-size: 24px;
+            }
+        }
+
+        .contactEmail {
+            margin-top: 50px;
+            
+            :hover,
+            :focus {
+                text-decoration: underline;
+            }
         }
     }
-
-    .benefits span {
-        display: inline-block;
-        margin-right: 25px;
-        text-align: justify;
-    }
-
-    .contactEmail {
-        margin-top: auto;
-        margin-bottom: 32px;
-
-    }
-    .contactLink {
-        color: #FD7616;
-        font-size: 24px;
-        font-weight: 600;
-        word-wrap: break-word;
-
-        
-    }
-
-    .contactEmail {
-        margin-top: 50px;
-        
-        :hover,
-        :focus {
-            text-decoration: underline;
-        }
-    }
-}
