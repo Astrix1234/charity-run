@@ -9,10 +9,27 @@ export const StyledParticipant = styled.div`
     padding-inline: 80px;
     margin-inline: auto;
   }
+  #run-info {
+    display: flex;
+    justify-content: center;
+  }
+  #timetable {
+    min-width: 1440px;
+  }
 
   @media screen and (max-width: 1359px) {
     .container {
       padding-inline: 20px;
+      #participantMain,
+      #my-data,
+      #run-info,
+      #before-run {
+        padding-top: 50px;
+      }
+
+      #timetable {
+        min-width: 390px;
+      }
     }
   }
 
