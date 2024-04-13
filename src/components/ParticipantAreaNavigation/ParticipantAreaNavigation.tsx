@@ -1,8 +1,11 @@
 import { StyledNavigation } from './StyledParticipantAreaNavigation';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import { logout } from '../../Zustand/api';
+import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
 type NavigationProps = {
   children?: ReactNode;
@@ -11,6 +14,28 @@ type NavigationProps = {
 export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
   const { language } = useLanguageStore();
   const t = translations[language];
+  const { setIsLogin } = useIsLoginStore();
+  const { setIsLoading } = useIsLoadingStore();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    event.preventDefault();
+    const logoutUser = async () => {
+      try {
+        setIsLoading(true);
+        await logout();
+        setIsLogin(false);
+        navigate('/');
+      } catch (error) {
+        console.error('Error logging out:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    setIsLogin(false);
+    logoutUser();
+  };
+
   return (
     <StyledNavigation className="navigation">
       {children}
@@ -30,7 +55,9 @@ export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
           <Link to="/participant-area/#before-run">{t.getReady} /04</Link>
         </p>
         <p>
-          <Link to="#">{t.logout} /05</Link>
+          <a href="#" onClick={handleLogout}>
+            {t.logout} /05
+          </a>
         </p>
       </div>
     </StyledNavigation>
