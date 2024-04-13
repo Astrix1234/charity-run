@@ -159,7 +159,7 @@ export const getUserParticipation = async () => {
     );
     return response.data;
   } catch (error) {
-    console.error('Error getting current user:', error);
+    console.error('Error getting participant:', error);
     throw error;
   }
 };
