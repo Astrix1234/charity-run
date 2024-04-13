@@ -40,7 +40,33 @@ interface AxiosError extends Error {
 
 export const apiUrl = 'https://charyty-run-backend.azurewebsites.net/api';
 
-axios.defaults.withCredentials = true;
+const setAuthHeader = (token: string) => {
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+};
+
+const clearAuthHeader = () => {
+  axios.defaults.headers.common.Authorization = '';
+};
+
+const token = localStorage.getItem('token');
+if (token) {
+  setAuthHeader(token);
+}
+
+const getToken = () => {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    throw new Error('No token found in localStorage');
+  }
+  return token;
+};
+
+const getConfig = () => {
+  const token = getToken();
+  return {
+    headers: { Authorization: `Bearer ${token}` },
+  };
+};
 
 export const register = async (userData: UserData) => {
   try {
@@ -60,6 +86,8 @@ export const login = async (email: string, password: string) => {
       email,
       password,
     });
+    localStorage.setItem('token', response.data.token);
+    setAuthHeader(response.data.token);
     return response.data;
   } catch (error) {
     console.error('Error logging in:', error);
@@ -69,7 +97,9 @@ export const login = async (email: string, password: string) => {
 
 export const logout = async () => {
   try {
-    const response = await axios.get(`${apiUrl}/users/logout`);
+    const response = await axios.get(`${apiUrl}/users/logout`, getConfig());
+    localStorage.removeItem('token');
+    clearAuthHeader();
     return response.data;
   } catch (error) {
     console.error('Error logging out:', error);
@@ -79,7 +109,7 @@ export const logout = async () => {
 
 export const getCurrentUser = async () => {
   try {
-    const response = await axios.get(`${apiUrl}/users/current`);
+    const response = await axios.get(`${apiUrl}/users/current`, getConfig());
     return response.data;
   } catch (error) {
     console.error('Error getting current user:', error);
@@ -89,7 +119,11 @@ export const getCurrentUser = async () => {
 
 export const updateUserDetails = async (userDetails: UserUpdateData) => {
   try {
-    const response = await axios.patch(`${apiUrl}/users/`, userDetails);
+    const response = await axios.patch(
+      `${apiUrl}/users/`,
+      userDetails,
+      getConfig()
+    );
     return response.data;
   } catch (error) {
     console.error('Error updating user details:', error);
@@ -102,10 +136,14 @@ export const userParticipation = async (
   participantData: raceParticipantUserData
 ) => {
   try {
-    const response = await axios.post(`${apiUrl}/payment/participate`, {
-      amount,
-      participant: participantData,
-    });
+    const response = await axios.post(
+      `${apiUrl}/payment/participate`,
+      {
+        amount,
+        participant: participantData,
+      },
+      getConfig()
+    );
     return response.data;
   } catch (error) {
     console.error('Error with user participation:', error);
@@ -115,7 +153,10 @@ export const userParticipation = async (
 
 export const getUserParticipation = async () => {
   try {
-    const response = await axios.get(`${apiUrl}/users/participant`);
+    const response = await axios.get(
+      `${apiUrl}/users/participant`,
+      getConfig()
+    );
     return response.data;
   } catch (error) {
     console.error('Error getting current user:', error);
@@ -128,7 +169,11 @@ export const userAvatar = async (avatar: File) => {
   formData.append('avatar', avatar);
 
   try {
-    const response = await axios.patch(`${apiUrl}/users/avatars`, formData);
+    const response = await axios.patch(
+      `${apiUrl}/users/avatars`,
+      formData,
+      getConfig()
+    );
     return response.data;
   } catch (error) {
     console.error('Error updating user avatar:', error);

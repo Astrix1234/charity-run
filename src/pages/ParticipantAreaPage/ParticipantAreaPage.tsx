@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
@@ -12,11 +12,12 @@ import { getUserParticipation } from '../../Zustand/api';
 export default function ParticipantAreaPage() {
   const { hash } = useLocation();
   const { setIsLoading } = useIsLoadingStore();
-  const { setIsLogin } = useIsLoginStore();
+  const { isLogin } = useIsLoginStore();
   const { setUserData, userData } = useUserDataStore();
   const { setParticipantUserData } = useParticipantUserDataStore();
   const [hasFetchedParticipantData, setHasFetchedParticipantData] =
     useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (hash) {
@@ -29,17 +30,22 @@ export default function ParticipantAreaPage() {
   }, [hash]);
 
   useEffect(() => {
+    if (!isLogin) {
+      navigate('/login');
+    }
+  }, [isLogin, navigate]);
+
+  useEffect(() => {
     const fetchUserData = async () => {
       try {
         setIsLoading(true);
         const response = await getCurrentUser();
         console.log('Response:', response);
         if (response) {
-          setIsLogin(true);
           setUserData(response);
         }
       } catch (error) {
-        console.error('Error checking login:', error);
+        console.error('Error fetching user:', error);
       } finally {
         setIsLoading(false);
       }
@@ -55,7 +61,6 @@ export default function ParticipantAreaPage() {
         setIsLoading(true);
         const response = await getUserParticipation();
         console.log('Response:', response);
-        console.log('ok');
         if (response) {
           setParticipantUserData(response);
           setHasFetchedParticipantData(true);

@@ -8,10 +8,6 @@ import { useIsLoadingStore } from './Zustand/useIsLoadingStore';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useIsLoginStore } from './Zustand/useIsLoginStore';
-import { getCurrentUser } from './Zustand/api';
-import { useUserDataStore } from './Zustand/useUserDataStore';
-import CookiesBanner from './components/CookiesBanner/CookiesBanner.tsx';
-import { useCookieConsentStore } from './Zustand/useCookieConsentStore.ts';
 
 import RestorePasswordPage from './pages/RestorePasswordPage/RestorePasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage/NewPasswordPage';
@@ -49,10 +45,8 @@ function App() {
     language: state.language,
     setLanguage: state.setLanguage,
   }));
-  const { isLoading, setIsLoading } = useIsLoadingStore();
+  const { isLoading } = useIsLoadingStore();
   const { setIsLogin } = useIsLoginStore();
-  const { setUserData } = useUserDataStore();
-  const { showConsent } = useCookieConsentStore();
 
   const location = useLocation();
 
@@ -84,29 +78,13 @@ function App() {
   }, [location.hash]);
 
   useEffect(() => {
-    const checkLogin = async () => {
-      try {
-        setIsLoading(true);
-        const response = await getCurrentUser();
-        console.log('Response:', response);
-        if (response) {
-          setIsLogin(true);
-          setUserData(response);
-        }
-      } catch (error) {
-        console.error('Error checking login:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    checkLogin();
+    const token = localStorage.getItem('token');
+    setIsLogin(!!token);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      {showConsent && <CookiesBanner />}
       {isLoading && <Loader />}
       <ToastContainer
         position="top-right"
