@@ -20,11 +20,7 @@ export const FooterSupport = () => {
       </div>
       <p className="nip">{t.nip}</p>
       <p>
-        <Link
-          className="gala"
-          to="https://fundacja.hematologiczna.org/darowizna.html"
-          target="_blanc"
-        >
+        <Link className="donation" to="/support-donation/">
           {t.donation}
         </Link>
       </p>
