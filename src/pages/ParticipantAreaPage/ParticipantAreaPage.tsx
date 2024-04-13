@@ -44,7 +44,7 @@ export default function ParticipantAreaPage() {
           setUserData(response);
         }
       } catch (error) {
-        console.error('Error fetching user:');
+        console.error('Error fetching user');
       } finally {
         setIsLoading(false);
       }
@@ -65,7 +65,7 @@ export default function ParticipantAreaPage() {
             setHasFetchedParticipantData(true);
           }
         } catch (error) {
-          console.error('Error checking participation:');
+          console.error('Error checking participation');
         } finally {
           setIsLoading(false);
         }
