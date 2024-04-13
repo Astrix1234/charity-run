@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
@@ -35,48 +35,49 @@ export default function ParticipantAreaPage() {
     }
   }, [isLogin, navigate]);
 
-  useEffect(() => {
+  const fetchUserData = useCallback(async () => {
     if (isLogin) {
-      const fetchUserData = async () => {
-        try {
-          setIsLoading(true);
-          const response = await getCurrentUser();
-          if (response) {
-            setUserData(response);
-          }
-        } catch (error) {
-          console.error('Error fetching user:', error);
-        } finally {
-          setIsLoading(false);
+      try {
+        setIsLoading(true);
+        const response = await getCurrentUser();
+        if (response) {
+          setUserData(response);
+          setHasFetchedParticipantData(false);
         }
-      };
-
-      fetchUserData();
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      } finally {
+        setIsLoading(false);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLogin]);
 
-  useEffect(() => {
+  const fetchUserParticipation = useCallback(async () => {
     if (isLogin && userData && !hasFetchedParticipantData) {
-      const fetchUserParticipation = async () => {
-        try {
-          setIsLoading(true);
-          const response = await getUserParticipation();
-          if (response) {
-            setParticipantUserData(response);
-            setHasFetchedParticipantData(true);
-          }
-        } catch (error) {
-          console.error('Error checking participation:', error);
-        } finally {
-          setIsLoading(false);
+      try {
+        setIsLoading(true);
+        const response = await getUserParticipation();
+        if (response) {
+          setParticipantUserData(response);
+          setHasFetchedParticipantData(true);
         }
-      };
-
-      fetchUserParticipation();
+      } catch (error) {
+        console.error('Error checking participation:', error);
+      } finally {
+        setIsLoading(false);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLogin, userData]);
+  }, [isLogin, userData, hasFetchedParticipantData]);
+
+  useEffect(() => {
+    fetchUserData();
+  }, [fetchUserData]);
+
+  useEffect(() => {
+    fetchUserParticipation();
+  }, [fetchUserParticipation]);
 
   return (
     <div>
