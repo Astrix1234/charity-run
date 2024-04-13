@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledPhoto = styled.div`
-  .photo {
-    /* margin-bottom: 5rem;
-    display: grid;
-    place-content: center;
-    text-align: right;
-    gap: 2rem; */
-  }
-
   .imgContainer {
     width: 100%;
   }
@@ -31,6 +23,7 @@ export const StyledPhoto = styled.div`
 
   label {
     transition: color 400ms;
+    font-size: min(3.5vw, 1rem);
   }
 
   label:hover {

@@ -1,7 +1,7 @@
 const translations = {
   PL: {
-    myProfile: '/Mój profil',
-    navigation: '/nawigacja',
+    myProfile: 'Mój profil',
+    navigation: 'nawigacja',
     myData: 'Moje dane',
     myResult: 'Moje wyniki',
     timetable: 'Rozkład jazdy',

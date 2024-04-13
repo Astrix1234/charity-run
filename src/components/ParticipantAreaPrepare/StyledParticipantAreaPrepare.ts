@@ -18,14 +18,15 @@ export const StyledPrepare = styled.div`
     padding-left: 3rem;
     padding-right: 2rem;
   }
+
   h1 {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
+    font-size: min(7vw, 2.5rem);
+    padding-bottom: min(1rem, 2vw);
   }
 
   p {
     font-size: 1.25rem;
-    padding-bottom: 1rem;
+    padding-bottom: min(1rem, 2vw);
   }
 
   a,

@@ -9,10 +9,12 @@ export const ParticipantArea = () => {
   return (
     <StyledParticipant>
       <div className="container">
-        {/* <ParticipantAreaHeading /> */}
+        <ParticipantAreaHeading />
         <ParticipantAreaMain />
         <ParticipantAreaProfile />
-        <Timetable />
+        <div id="run-info">
+          <Timetable />
+        </div>
         <ParticipantAreaPrepare />
       </div>
     </StyledParticipant>

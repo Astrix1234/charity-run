@@ -17,27 +17,28 @@ export const StyledMain = styled.div`
       min-width: calc(100vw - 40px);
       display: flex;
       justify-content: space-between;
-      gap: 2rem;
+      gap: min(2rem, 5vw);
       white-space: nowrap;
     }
 
     .image {
-      min-width: 80px;
+      min-width: 50px;
       max-width: 400px;
     }
   }
 
-  @media screen and (max-width: 600px) {
-    h1 {
-      font-size: 1.5rem;
+  @media screen and (max-width: 800px) {
+    .navigation {
+      min-width: calc(100vw - 40px);
+      display: flex;
+      justify-content: space-between;
+      gap: min(2rem, 5vw);
+      white-space: nowrap;
     }
 
-    h2 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 0.75rem;
+    .image {
+      width: min(40vw, 400px);
+      padding-bottom: 1rem;
     }
   }
 `;

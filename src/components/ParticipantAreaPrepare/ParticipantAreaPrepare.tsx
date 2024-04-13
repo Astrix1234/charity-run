@@ -18,7 +18,7 @@ export const ParticipantAreaPrepare = () => {
     <StyledPrepare as="section" id="before-run">
       <ParticipantAreaItemSquare pos={1}>
         <>
-          <h1>{t.train}</h1>
+          <h1>/ {t.train}</h1>
           <p>{t.trainLinks}</p>
           <p>
             <Link
@@ -42,7 +42,7 @@ export const ParticipantAreaPrepare = () => {
       </ParticipantAreaItemSquare>
       <ParticipantAreaItemSquare pos={2}>
         <>
-          <h1>{t.diet}</h1>
+          <h1>/ {t.diet}</h1>
           <p>{t.dietLinks}</p>
           <p>
             <Link
@@ -66,7 +66,7 @@ export const ParticipantAreaPrepare = () => {
       </ParticipantAreaItemSquare>
       <ParticipantAreaItemSquare pos={3}>
         <>
-          <h1>{t.hydration}</h1>
+          <h1>/ {t.hydration}</h1>
           <p>
             <Link
               target="_blank"
@@ -81,7 +81,7 @@ export const ParticipantAreaPrepare = () => {
       </ParticipantAreaItemSquare>
       <ParticipantAreaItemSquare pos={4}>
         <>
-          <h1>{t.run}</h1>
+          <h1>/ {t.run}</h1>
           <p className="map" onClick={onOpenModal}>
             {t.runRoute}
           </p>

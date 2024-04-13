@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
-export const StyledHeading = styled.div`
+export const StyledHeading = styled.section`
   display: grid;
   justify-items: center;
   gap: 2rem;
+  width: 100%;
 
   h1 {
     text-align: center;
-    font-size: 5.625rem;
+    font-size: min(5.625rem, 13.2vw);
     font-weight: 800;
   }
 
   h2 {
-    font-size: 4.1875rem;
+    font-size: min(5.625rem, 10.2vw);
     font-weight: 400;
     padding-bottom: 0;
+    white-space: nowrap;
   }
 
   svg {

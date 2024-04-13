@@ -1,17 +1,17 @@
 const translations = {
   PL: {
-    train: '/Weź udział w treningu',
+    train: 'Weź udział w treningu',
     trainLinks: 'Przydatne linki:',
     trainPlans: 'Plany treningowe',
     trainStart: 'Trening przed startem',
-    diet: '/Zadbaj o zdrową dietę',
+    diet: 'Zadbaj o zdrową dietę',
     dietLinks: 'Przydatne linki:',
     dietEat: 'Co zjeść przed biegiem',
     dietRunner: 'Dieta biegacza',
-    hydration: '/Pamiętaj o nawodnieniu',
+    hydration: 'Pamiętaj o nawodnieniu',
     hydrationRun: 'Bieganie a nawodnienie',
     hydrationAdvice: 'Nie zapomnij zabrać ze sobą na bieg butelki wody :)',
-    run: '/Zapoznaj się z trasą biegu',
+    run: 'Zapoznaj się z trasą biegu',
     runRoute: 'Kliknij tutaj i sprawdź trasę',
   },
   EN: {

@@ -5,15 +5,12 @@ export const StyledItem = styled.div`
   border-radius: 1.8rem;
   background-color: var(--beige);
   padding: 3% 5%;
-  aspect-ratio: 1/1;
-  height: 100%;
-  width: 100%;
-  max-width: 474px;
-  min-width: 380px;
+  width: min(30rem, 90vw);
+  height: min(30rem, 90vw);
   background-color: var(--beige);
 
   .circle {
-    padding-bottom: 7%;
+    padding-bottom: min(3vw, 7%);
   }
   .dots {
     position: absolute;
