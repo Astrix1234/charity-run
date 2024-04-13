@@ -21,10 +21,16 @@ export const StyledParticipant = styled.div`
     .container {
       padding-inline: 20px;
       #participantMain,
-      #my-data,
-      #run-info,
+      #my-data {
+        padding-top: 45px;
+      }
+
       #before-run {
-        padding-top: 50px;
+        padding-top: 65px;
+      }
+
+      #run-info {
+        padding-top: 0;
       }
 
       #timetable {
