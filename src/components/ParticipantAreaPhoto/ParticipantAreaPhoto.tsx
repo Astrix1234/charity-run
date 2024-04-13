@@ -6,7 +6,6 @@ import { userAvatar } from '../../Zustand/api';
 import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
-import { apiUrl } from '../../Zustand/api';
 
 export const ParticipantAreaPhoto = () => {
   const { language } = useLanguageStore();
@@ -44,9 +43,7 @@ export const ParticipantAreaPhoto = () => {
         <img
           className="image"
           src={
-            userData?.avatarURL
-              ? `${apiUrl}users/avatar/${userData.avatarURL}`
-              : 'images/running_man.png'
+            userData?.avatarURL ? userData.avatarURL : 'images/running_man.png'
           }
           alt={t.alt}
         />
