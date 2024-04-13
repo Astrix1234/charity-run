@@ -1,0 +1,515 @@
+[33mcommit 08b6517516fc1c926511c165c83a231d3f9279ef[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfooter[m[33m, [m[1;31morigin/footer[m[33m)[m
+Merge: 3645198 1797b1f
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 10:23:42 2024 +0200
+
+    Merge branch 'main' of github.com:Astrix1234/charity-run into footer
+
+[33mcommit 364519820ba78c5b74db85860f2b4b3530806b42[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:53:45 2024 +0200
+
+    Adjust the connection between top&bott background
+
+[33mcommit ebe828c40a833c7636b66a37c7af010c5ce8239b[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:48:54 2024 +0200
+
+    Make the footer background wave full responsive
+
+[33mcommit 447bf054bb1bb3213cdce1389208e7e42de9f9fb[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:43:36 2024 +0200
+
+    Add donation link in the footer
+
+[33mcommit a4b490acc476156613161b49d552cd8fc60975bc[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:35:46 2024 +0200
+
+    Adjust styling in footer
+
+[33mcommit ffb7c9807e96f6aa597a3ebd82f5a1680220b217[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:24:46 2024 +0200
+
+    Remove foundation logotype component
+
+[33mcommit 5452ae6b889a209c1fe41af9a81ec2067cf92fa1[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:23:36 2024 +0200
+
+    Replace the foundation logotype with image png
+
+[33mcommit 8469fa162b2ae42c8400f3a8444da48e78f05294[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 09:08:39 2024 +0200
+
+    Add foundation logotype png image with opacity
+
+[33mcommit 1797b1fb923d00cbeb560b9d60b15a9bcbd60ca2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 22448bf 0242b8b
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Thu Apr 11 09:02:35 2024 +0200
+
+    Merge pull request #163 from Astrix1234/regulations-mobile
+    
+    adjusted mobile view
+
+[33mcommit 0242b8bde29c63ae72b94e9e8c0773303038f716[m
+Merge: 73c2874 22448bf
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Thu Apr 11 09:02:28 2024 +0200
+
+    Merge branch 'main' into regulations-mobile
+
+[33mcommit 654e645e0cc37dd86a8b82c21a5e0a024d07aad8[m
+Merge: 9f95ca5 22448bf
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Thu Apr 11 08:38:19 2024 +0200
+
+    Merge branch 'main' of github.com:Astrix1234/charity-run into footer
+
+[33mcommit 73c2874fff2e77d249141ce347b45bfed3cd7a99[m
+Author: Aleksandra Zabłocka <aleksandra-zablocka@o2.pl>
+Date:   Wed Apr 10 19:34:12 2024 +0200
+
+    adjusted mobile view
+
+[33mcommit 22448bfd15a241a83d6e5e8e4aff13d2874a36c7[m
+Merge: e7cafd9 e11d9f9
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 19:08:31 2024 +0200
+
+    Merge pull request #162 from Astrix1234/states
+    
+    api correction
+
+[33mcommit e11d9f959e8c567c051ca914aec60c6021543b91[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 19:07:28 2024 +0200
+
+    api correction
+
+[33mcommit e7cafd9d00535c1add2227ea9429e98baefc17da[m
+Merge: fd3aed0 6c762c6
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 18:24:41 2024 +0200
+
+    Merge pull request #161 from Astrix1234/states
+    
+    registration for run logic with payment
+
+[33mcommit 6c762c66c1b11676ed553ef1da454960386fd6e9[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 18:24:11 2024 +0200
+
+    registration for run logic with payment
+
+[33mcommit fd3aed046e7a2beb489cfda3505f9c1987e9c2ad[m
+Merge: f46c183 7aae70a
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 14:54:27 2024 +0200
+
+    Merge pull request #160 from Astrix1234/states
+    
+    donatin logic
+
+[33mcommit 7aae70a0756a87e9799db5e7aebd45f95d0790b5[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 14:53:53 2024 +0200
+
+    donatin logic
+
+[33mcommit f46c1835aaa4f16e1ef3a4f8b6816f56cc9029c7[m
+Merge: 62e27b7 2f3fa10
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 14:43:34 2024 +0200
+
+    Merge pull request #159 from Astrix1234/fix/landingpage/hematoRunMap/mobile
+    
+    add focus
+
+[33mcommit 2f3fa1088a1c2218a8b3e76aabdc5bf5a769e7bd[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 14:33:10 2024 +0200
+
+    add focus
+    
+    add focus feature on styles
+
+[33mcommit 62e27b7b382ab299e4888be4e9b03bc44678da9c[m
+Merge: 4dc2c64 1284f2a
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 14:01:38 2024 +0200
+
+    Merge pull request #158 from Astrix1234/fix/landingpage/hematoRunMap/mobile
+    
+    Fix/landingpage/hemato run map/mobile
+
+[33mcommit 1284f2a6c6b03b738a2af6fac4d7325359db4b20[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 13:43:58 2024 +0200
+
+    icon zoom scale
+
+[33mcommit 64505c31c34f6182865342d5d8c0f4b4a6035728[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 13:40:58 2024 +0200
+
+    bg decoration icon
+
+[33mcommit 93566bc6be696b334f33fe314eaa14c945da039f[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 13:35:41 2024 +0200
+
+    section paddings
+
+[33mcommit 36ce75047c652bffd30d7b5b5c539ca707073edb[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 13:29:28 2024 +0200
+
+    map container
+
+[33mcommit 5625d23a177d185d21ba051579896a95973919ec[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 12:31:29 2024 +0200
+
+    container
+
+[33mcommit d4185541575b046871f181451f3a67f5effdeadb[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 12:21:30 2024 +0200
+
+    icon
+
+[33mcommit 89ce40abfaca5f8498e7b54fee7e11159417dc94[m
+Author: PiotrDrechsler <pdrech@gmail.com>
+Date:   Wed Apr 10 12:16:40 2024 +0200
+
+    header
+
+[33mcommit 4dc2c6499bb7cc4d54e39ddaab1b9b6befd76dbf[m
+Merge: 7daefa2 513a070
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 11:25:08 2024 +0200
+
+    Merge pull request #157 from Astrix1234/states
+    
+    States
+
+[33mcommit 513a0704689c638ae10d2d3971dbeb5e6d339209[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 11:24:30 2024 +0200
+
+    FAQ corrections
+
+[33mcommit c8f278267a89de701c4813b97461d185945288c2[m
+Merge: 908d15f 947a00b
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 11:02:26 2024 +0200
+
+    Merge branch 'main' into states
+    k
+
+[33mcommit 7daefa266c1506737e475506427efb6c8b12096d[m
+Merge: 947a00b 908d15f
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 10:58:42 2024 +0200
+
+    Merge pull request #156 from Astrix1234/states
+    
+    support button
+
+[33mcommit 908d15fc89626be1a8389e26cfa99a2db0dd1f45[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Wed Apr 10 10:51:19 2024 +0200
+
+    support button
+
+[33mcommit 947a00ba309d3908650936cd23d9fe509ae5f0ba[m
+Merge: 63d78b8 099f36d
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 10:49:15 2024 +0200
+
+    Merge pull request #155 from Astrix1234/mobile-oliwier
+    
+    Added smooth animations to mobile nav && fixed smaller bugs
+
+[33mcommit 099f36dc364da4039c97224e580f57d5257f323e[m
+Merge: bf93b2d 63d78b8
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 10:48:51 2024 +0200
+
+    Merge branch 'main' into mobile-oliwier
+
+[33mcommit 63d78b839500a66853326363213f8cfd32c55a66[m
+Merge: 93c53b2 3cb6eaf
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 10:44:12 2024 +0200
+
+    Merge pull request #154 from Astrix1234/feature-contact
+    
+    feat/add sponsor logo to carousel
+
+[33mcommit 93c53b25cf92df238410b78e2f59f9cf1bcbc6e6[m
+Merge: 5796939 c14e4b6
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Wed Apr 10 10:42:59 2024 +0200
+
+    Merge pull request #153 from Astrix1234/FAQ
+    
+    update: FAQ, attarctions, run registration
+
+[33mcommit bf93b2d8fd5a8471efe9d7a0eed1464f94030aa1[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Wed Apr 10 07:43:11 2024 +0200
+
+    removed unnoticed console.log
+
+[33mcommit 103250cf5620e38ca0c0c9f07d3f85434e88de42[m
+Merge: e02c81e 5796939
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Wed Apr 10 07:41:09 2024 +0200
+
+    Merge branch 'main' into mobile-oliwier
+
+[33mcommit e02c81ea7fa883c3b42f63258e9eb4895189f6ea[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Wed Apr 10 07:40:50 2024 +0200
+
+    fixed smaller bugs for navigation, donations and attractions
+
+[33mcommit 553ee351c7bd48e191cdc7b32c43f9f6a2af3397[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Wed Apr 10 07:24:40 2024 +0200
+
+    fixed the smooth mobile navigation problem
+
+[33mcommit 3cb6eaf270aa8c20fc4de7568147c6ac9c3b95d7[m
+Author: Okazaki92 <vincentslominski@gmail.com>
+Date:   Wed Apr 10 01:08:36 2024 +0200
+
+    feat/add sponsor logo to carousel
+
+[33mcommit c14e4b66fd2e96c63303b610d928bf0d74aaf4ca[m
+Author: Agnieszka Iwan <agnieszka.iwan2@gmail.com>
+Date:   Tue Apr 9 23:30:17 2024 +0200
+
+    update: FAQ, attarctions, run registration
+
+[33mcommit 9f95ca5142082eb8e1c227f6ffe92d7403fb9d64[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 19:47:32 2024 +0200
+
+    Adjust padding top on footer
+
+[33mcommit 38f27d7c70710e291fffed4a50b2db75c619fe67[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 19:44:43 2024 +0200
+
+    Remove unused footer background
+
+[33mcommit 30eaaacf22cab3e3176b9ab81e10356f033f9e60[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 19:43:55 2024 +0200
+
+    Add new background for footer: top and bottom
+
+[33mcommit 5796939c81d770eb3dea5ad9bfe505dafde65c48[m
+Merge: 7505eff 6779863
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 18:42:36 2024 +0200
+
+    Merge pull request #152 from Astrix1234/states
+    
+    margin abd padding corrections in sections
+
+[33mcommit 677986330df0fa67e2db45068e23d7aac0eb8b2b[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Tue Apr 9 18:42:07 2024 +0200
+
+    margin abd padding corrections in sections
+
+[33mcommit 0ba1417c31419e36b2d5149cad1695d89a33ed92[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 18:20:55 2024 +0200
+
+    Add text align center to footer's nav links
+
+[33mcommit 1fb4f77b35e516fd17474de3f71ec6006b5a5863[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 18:06:49 2024 +0200
+
+    Adjust styling to footer's nav links
+
+[33mcommit 431592d7cc2de5899223474b2f361d1f13fbca50[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 18:01:22 2024 +0200
+
+    Position social media icons at the same row
+
+[33mcommit 3010b756a804e8bcde15f1589df77fae6052c7f0[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 17:58:11 2024 +0200
+
+    Add all rights reserved at the bottom of footer
+
+[33mcommit e91663b8e579c1260339336317af8fd0db5fe593[m
+Author: wojtekbrejnak <150580013+wojtekbrejnak@users.noreply.github.com>
+Date:   Tue Apr 9 17:53:02 2024 +0200
+
+    Remove all rights reserved from links
+
+[33mcommit 7505eff637ac7b1ab250f0abb74e166364923814[m[33m ([m[1;31morigin/participant[m[33m, [m[1;32mparticipant[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 138d7cd ee4cc1f
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 16:08:24 2024 +0200
+
+    Merge pull request #151 from Astrix1234/states
+    
+    timetable for mobile
+
+[33mcommit ee4cc1f0d3f272976bc88db879a64e3ce28273af[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Tue Apr 9 16:07:22 2024 +0200
+
+    timetable for mobile
+
+[33mcommit 138d7cd59970ba834136d87fe2b5894c5c745cc7[m
+Merge: ad93f0c 346748a
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 10:45:58 2024 +0200
+
+    Merge pull request #150 from Astrix1234/states
+    
+    States
+
+[33mcommit 346748ac2a85fc994e2d7262d99552488500b010[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Tue Apr 9 10:45:24 2024 +0200
+
+    corriection in FAQ
+
+[33mcommit 847c973a56535ecb7130b4b6c2e754ed73ec619c[m
+Merge: 4619da5 ad93f0c
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Tue Apr 9 10:35:07 2024 +0200
+
+    Merge branch 'main' into states
+    k
+
+[33mcommit 4619da5b6e9bee777388c455ba12977cd2bd00e1[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Tue Apr 9 10:34:22 2024 +0200
+
+    correction in FormRegister
+
+[33mcommit ad93f0cab2c0efa601850b8a33ef00d06fe082c3[m
+Merge: 6084a95 0014f8f
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 10:32:00 2024 +0200
+
+    Merge pull request #149 from Astrix1234/mobile-oliwier
+    
+    Created Email Input && migrated amount from state to formik value (Support Donation Page)
+
+[33mcommit 6084a9556b2905dd6cc4941b5258f0507b3b14bf[m
+Merge: 4398a65 01efc7f
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 10:27:16 2024 +0200
+
+    Merge pull request #148 from Astrix1234/SupportSponsorAndVolunteers
+    
+    Corrections
+
+[33mcommit 4398a651fe37cefd0d1b65864c1486985a770866[m
+Merge: 660a46d 317fda8
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 10:25:06 2024 +0200
+
+    Merge pull request #147 from Astrix1234/FAQupdate+mobiles
+    
+    FAQ+attractions-mobile
+
+[33mcommit 660a46d10845cba1365a1faeff21e6fae915b2d1[m
+Merge: f7177b3 9435d3b
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Tue Apr 9 10:23:25 2024 +0200
+
+    Merge pull request #146 from Astrix1234/feature-contact
+    
+    feat/ change desktop resolutions
+
+[33mcommit 0014f8fb1652cc277791976f4776194c2e5ce99c[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Tue Apr 9 09:05:05 2024 +0200
+
+    created mobile view for updated Support Donation page
+
+[33mcommit 71ed87db9b5884607527e6c858d61281ea96be6f[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Tue Apr 9 08:49:27 2024 +0200
+
+    added e-mail input to support donation && transofrmed amount state into formik value
+
+[33mcommit c0c37c69015cdf8535006fd3f96aa9f18bba2581[m
+Merge: f7177b3 4b5d987
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Tue Apr 9 07:09:17 2024 +0200
+
+    Merge branch 'mobile-oliwier'
+
+[33mcommit 4b5d987136e7e947ca1e6858a44938fe432e74ca[m
+Author: OliwierSellig <oliwierandrzej.sellig@gmail.com>
+Date:   Tue Apr 9 07:09:00 2024 +0200
+
+    resued timetable
+
+[33mcommit 01efc7fc3a0fbcadad6a3ca895a49e7138b875a7[m
+Author: kglanos <k.glanowski@wp.pl>
+Date:   Mon Apr 8 23:52:59 2024 +0200
+
+    Corrections
+
+[33mcommit 317fda8054f4f4e895e7736a422b11e62e32dadf[m
+Author: Agnieszka Iwan <agnieszka.iwan2@gmail.com>
+Date:   Mon Apr 8 23:10:50 2024 +0200
+
+    FAQ+attractions-mobile
+
+[33mcommit 9435d3b6f3ddf2e310c5d0ac3feff73d40b30e14[m
+Author: Okazaki92 <vincentslominski@gmail.com>
+Date:   Mon Apr 8 21:15:44 2024 +0200
+
+    feat/ change desktop resolutions
+
+[33mcommit f7177b3dfbcdfef1e3166f239009931573ecdf44[m
+Merge: ab8d51a 012fa81
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Mon Apr 8 18:55:42 2024 +0200
+
+    Merge pull request #145 from Astrix1234/regulations-mobile
+    
+    added mobile version for register page
+
+[33mcommit 012fa81cc56f81c30d3f2683724ccc9ce7999be2[m
+Author: Aleksandra Zabłocka <aleksandra-zablocka@o2.pl>
+Date:   Mon Apr 8 18:48:05 2024 +0200
+
+    added mobile version for register page
+
+[33mcommit ab8d51a5dca84ab0f2051ad1827e72c2edc2089b[m
+Merge: 81d66c4 8ff8718
+Author: Astrix1234 <130665627+Astrix1234@users.noreply.github.com>
+Date:   Mon Apr 8 17:31:10 2024 +0200
+
+    Merge pull request #144 from Astrix1234/states
+    
+    uncommented in HomePage
+
+[33mcommit 8ff871896d1a4bf72eb1b6799da28182abd5d0c3[m
+Author: Asia <dobrowolska.krakow@gmail.com>
+Date:   Mon Apr 8 17:30:13 2024 +0200
+
+    uncommented in HomePage

@@ -1,6 +1,6 @@
 import { StyledItem } from './StyledParticipantAreaItemSquare';
 import DotsSquare from '../../Icons/DotsSquare/DotsSquare';
-import NumberCircle from '../NumberCircle/NumberCircle';
+import { ParticipantAreaNumberCircle } from '../ParticipantAreaNumberCircle/ParticipantAreaNumberCircle';
 import { ReactNode } from 'react';
 
 type ItemSquareProps = {
@@ -15,7 +15,7 @@ export const ParticipantAreaItemSquare = ({
   return (
     <StyledItem>
       <div className="circle">
-        <NumberCircle number={pos} />
+        <ParticipantAreaNumberCircle number={pos} />
       </div>
       <div className="dots">
         <DotsSquare />

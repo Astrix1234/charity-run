@@ -15,17 +15,18 @@ export const StyledPrepare = styled.div`
     position: relative;
     z-index: 1;
     font-weight: 600;
-    padding-left: 3rem;
-    padding-right: 2rem;
+    padding-left: min(6vw, 3rem);
+    padding-right: min(3vw, 2rem);
   }
+
   h1 {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
+    font-size: min(7vw, 2.5rem);
+    padding-bottom: min(1rem, 2vw);
   }
 
   p {
     font-size: 1.25rem;
-    padding-bottom: 1rem;
+    padding-bottom: min(1rem, 2vw);
   }
 
   a,
@@ -41,6 +42,12 @@ export const StyledPrepare = styled.div`
   .modal {
     width: 100vw;
     min-height: 100%;
+  }
+
+  @media screen and (max-width: 1359px) {
+    .foots {
+      display: none;
+    }
   }
 
   .foots {

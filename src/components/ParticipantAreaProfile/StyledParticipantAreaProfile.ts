@@ -7,14 +7,14 @@ export const StyledProfile = styled.div`
     min-width: 50%;
   }
 
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1349px) {
     flex-wrap: wrap;
     gap: 4rem;
     text-align: center;
     justify-content: center;
 
     & > * {
-      max-width: 80%;
+      max-width: 90%;
     }
   }
 

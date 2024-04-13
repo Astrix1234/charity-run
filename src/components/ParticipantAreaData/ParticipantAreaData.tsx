@@ -17,7 +17,6 @@ export const ParticipantAreaData = () => {
       <div>
         <div>
           <p>01/ {t.nameSurname}</p>
-          {/* <p>Januszator Kowalewuszewuski</p> */}
           {userData && (
             <p>
               {userData.name} {userData.surname}
@@ -26,19 +25,16 @@ export const ParticipantAreaData = () => {
         </div>
         <div>
           <p>02/ {t.emailAddress}</p>
-          {/* <p>januszator.kowalewuszewski@</p> */}
           {userData && <p>{userData.email}</p>}
         </div>
         <div>
           <p>03/ {t.phoneNumber}</p>
-          {/* <p>+48 873 328 283</p> */}
           {participantUserData && participantUserData.length > 0 && (
             <p>{participantUserData[0].phone}</p>
           )}
         </div>
         <div>
           <p>04/ {t.tShirt}</p>
-          {/* <p>XL</p> */}
           {participantUserData && participantUserData.length > 0 && (
             <p>{participantUserData[0].shirt}</p>
           )}

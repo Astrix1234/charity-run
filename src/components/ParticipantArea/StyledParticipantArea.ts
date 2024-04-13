@@ -8,26 +8,32 @@ export const StyledParticipant = styled.div`
     max-width: 1440px;
     padding-inline: 80px;
     margin-inline: auto;
+  }
 
-    #heading {
-      padding-top: 80px;
+  @media screen and (max-width: 1359px) {
+    .container {
+      padding-inline: 20px;
     }
+  }
 
-    #participantMain,
-    #my-data,
-    #run-info,
-    #before-run {
-      padding-top: 150px;
-    }
+  #heading {
+    padding-top: 80px;
+  }
 
-    a,
-    .map {
-      transition: color 400ms;
-    }
+  #participantMain,
+  #my-data,
+  #run-info,
+  #before-run {
+    padding-top: 150px;
+  }
 
-    a:hover,
-    .map:hover {
-      color: var(--orange);
-    }
+  a,
+  .map {
+    transition: color 400ms;
+  }
+
+  a:hover,
+  .map:hover {
+    color: var(--orange);
   }
 `;

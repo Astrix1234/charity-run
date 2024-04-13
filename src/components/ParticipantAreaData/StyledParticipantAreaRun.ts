@@ -12,4 +12,8 @@ export const StyledData = styled.div`
   p:nth-child(2n) {
     font-weight: 800;
   }
+
+  @media screen and (max-width: 1349px) {
+    padding-right: 0;
+  }
 `;
