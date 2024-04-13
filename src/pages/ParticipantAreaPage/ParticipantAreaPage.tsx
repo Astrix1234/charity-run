@@ -35,49 +35,46 @@ export default function ParticipantAreaPage() {
     }
   }, [isLogin, navigate]);
 
-  const fetchUserData = useCallback(async () => {
-    if (isLogin) {
+  useEffect(() => {
+    const fetchUserData = async () => {
       try {
         setIsLoading(true);
         const response = await getCurrentUser();
         if (response) {
           setUserData(response);
-          setHasFetchedParticipantData(false);
         }
       } catch (error) {
         console.error('Error fetching user:', error);
       } finally {
         setIsLoading(false);
       }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLogin]);
+    };
 
-  const fetchUserParticipation = useCallback(async () => {
-    if (isLogin && userData && !hasFetchedParticipantData) {
-      try {
-        setIsLoading(true);
-        const response = await getUserParticipation();
-        if (response) {
-          setParticipantUserData(response);
-          setHasFetchedParticipantData(true);
-        }
-      } catch (error) {
-        console.error('Error checking participation:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLogin, userData, hasFetchedParticipantData]);
-
-  useEffect(() => {
     fetchUserData();
-  }, [fetchUserData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
-    fetchUserParticipation();
-  }, [fetchUserParticipation]);
+    if (userData && !hasFetchedParticipantData) {
+      const fetchUserParticipation = async () => {
+        try {
+          setIsLoading(true);
+          const response = await getUserParticipation();
+          if (response) {
+            setParticipantUserData(response);
+            setHasFetchedParticipantData(true);
+          }
+        } catch (error) {
+          console.error('Error checking participation:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+
+      fetchUserParticipation();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userData]);
 
   return (
     <div>
