@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
