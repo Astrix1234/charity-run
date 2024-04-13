@@ -18,7 +18,7 @@ export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
   const { setIsLoading } = useIsLoadingStore();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
+  const handleLogout = async (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const logoutUser = async () => {
       try {
