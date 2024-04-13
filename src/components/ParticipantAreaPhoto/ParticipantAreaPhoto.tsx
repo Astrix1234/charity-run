@@ -3,6 +3,7 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { IconPencil } from '../../Icons/IconPencil/IconPlus';
 import { userAvatar } from '../../Zustand/api';
+import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { apiUrl } from '../../Zustand/api';
@@ -12,7 +13,7 @@ export const ParticipantAreaPhoto = () => {
   const t = translations[language];
 
   const { setIsLoading } = useIsLoadingStore();
-  const { userData } = useUserDataStore();
+  const { setUserData, userData } = useUserDataStore();
 
   const handleAvatarChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -23,6 +24,11 @@ export const ParticipantAreaPhoto = () => {
         const uploadAvatar = await userAvatar(event.target.files[0]);
         if (uploadAvatar) {
           console.log('Avatar uploaded:', uploadAvatar);
+          const response = await getCurrentUser();
+          console.log('Response:', response);
+          if (response) {
+            setUserData(response);
+          }
         }
       } catch (error) {
         console.error('Error updating user avatar:', error);
