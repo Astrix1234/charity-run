@@ -8,6 +8,7 @@ export interface UserData {
   language: string;
   raceParticipants?: [];
   avatarURL?: string;
+  userId?: string;
 }
 
 export interface raceParticipantUserData {
