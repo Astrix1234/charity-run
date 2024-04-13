@@ -3,7 +3,6 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { IconPencil } from '../../Icons/IconPencil/IconPlus';
 import { userAvatar } from '../../Zustand/api';
-import { getCurrentUser } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { apiUrl } from '../../Zustand/api';
