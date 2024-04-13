@@ -14,7 +14,7 @@ export const FooterFollow = () => {
     <StyledFollow>
       <h3>{t.follow}</h3>
       <p className="globe-website">
-        <img className="globe" src="/charity-run/images/globe.png"></img>
+        <img className="globe" src="images/globe.png"></img>
         <Link to="https://fundacja.hematologiczna.org/" target="_blanc">
           {t.foundation}
         </Link>
