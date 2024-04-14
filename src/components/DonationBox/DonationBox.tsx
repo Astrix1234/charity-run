@@ -30,7 +30,7 @@ function DonationBox() {
           if (response.status === 201 && response.data) {
             console.log('Donation successful!', response.data.data);
             console.log('data', response);
-            window.open(response.data.data);
+            window.location.href = response.data.data;
             console.log('Donation successful!');
           } else {
             console.error('Unexpected response status:', response.status);
