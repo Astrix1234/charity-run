@@ -9,6 +9,7 @@ export interface UserData {
   raceParticipants?: [];
   avatarURL?: string;
   userId?: string;
+  raceID?: string;
 }
 
 export interface raceParticipantUserData {

@@ -94,6 +94,7 @@ export const RegisterForRun = () => {
       };
       registerUserOnRun();
       formik.resetForm();
+      setConsent(false);
     },
   });
 
@@ -110,7 +111,7 @@ export const RegisterForRun = () => {
   }, [userData?.email]);
 
   useEffect(() => {
-    console.log(userData);
+    console.log('userData:', userData);
   });
 
   if (isModalOpen) {
