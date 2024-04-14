@@ -34,7 +34,6 @@ function LoginContainer() {
         try {
           setIsLoading(true);
           await login(email, password);
-          console.log('Login successful!');
           toast.info('Login successful!');
           setIsLogin(true);
           navigate('/');

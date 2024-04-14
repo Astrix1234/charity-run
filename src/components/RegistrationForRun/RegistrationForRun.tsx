@@ -83,7 +83,7 @@ export const RegisterForRun = () => {
           setIsLoading(true);
           const response = await userParticipation(amount, values);
           if (response.status === 201 && response.data) {
-            window.open(response.data.data);
+            window.location.href = response.data.data;
             console.log('Registration successful!');
           } else {
             console.error('Unexpected response status:', response.status);

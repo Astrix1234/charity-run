@@ -150,7 +150,7 @@ export const userParticipation = async (
     );
     return response;
   } catch (error) {
-    console.error('Error with user participation:', error);
+    console.error('Error with user participation');
     throw error;
   }
 };
