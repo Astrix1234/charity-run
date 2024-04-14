@@ -8,8 +8,7 @@ export interface UserData {
   language: string;
   raceParticipants?: [];
   avatarURL?: string;
-  userId?: string;
-  raceID?: string;
+  id?: string;
 }
 
 export interface raceParticipantUserData {
@@ -22,6 +21,8 @@ export interface raceParticipantUserData {
   km: string;
   shirtGender: ShirtGender;
   agreementStatements: boolean;
+  raceID?: string;
+  userId?: string;
 }
 
 export type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';

@@ -72,6 +72,8 @@ export const RegisterForRun = () => {
       shirt: 'rozmiar 36 (S)',
       shirtGender: 'Damska',
       agreementStatements: consent,
+      raceID: '2024|Łódź',
+      userId: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
@@ -111,8 +113,11 @@ export const RegisterForRun = () => {
   }, [userData?.email]);
 
   useEffect(() => {
-    console.log('userData:', userData);
-  });
+    if (userData?.id) {
+      formik.setFieldValue('userId', userData.id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userData?.id]);
 
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
