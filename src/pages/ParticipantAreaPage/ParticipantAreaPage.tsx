@@ -60,9 +60,15 @@ export default function ParticipantAreaPage() {
         try {
           setIsLoading(true);
           const response = await getUserParticipation();
-          if (response) {
+          if (response.status === 200) {
             setParticipantUserData(response);
             setHasFetchedParticipantData(true);
+          } else if (response.status === 404) {
+            console.log('No participation found for the user');
+            setParticipantUserData(null);
+            setHasFetchedParticipantData(true);
+          } else {
+            console.log(`Unhandled status: ${response.status}`);
           }
         } catch (error) {
           console.error('Error checking participation:', error);
