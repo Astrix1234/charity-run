@@ -66,7 +66,7 @@ export const RegisterForRun = () => {
       name: '',
       surname: '',
       phone: '',
-      email: userData ? userData.email : '',
+      email: '',
       language: language,
       km: '0',
       shirt: 'rozmiar 36 (S)',
@@ -92,6 +92,7 @@ export const RegisterForRun = () => {
           setIsLoading(false);
         }
       };
+      console.log('Form submitted:', values);
       registerUserOnRun();
       formik.resetForm();
     },
@@ -102,9 +103,12 @@ export const RegisterForRun = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [consent]);
 
-  console.log(formik.values);
-  console.log('Errors', formik.errors);
-  console.log('Valid', formik.isValid, formik.dirty);
+  useEffect(() => {
+    if (userData?.email) {
+      formik.setFieldValue('email', userData.email);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userData?.email]);
 
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;

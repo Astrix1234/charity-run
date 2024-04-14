@@ -71,8 +71,14 @@ export const FormRegister = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values: FormValues) => {
-      const { passwordConfirm, ...userData } = values;
-      console.log(passwordConfirm);
+      const userData = {
+        name: values.name,
+        surname: values.surname,
+        email: values.email,
+        password: values.password,
+        language: values.language,
+        agreementStatements: values.agreementStatements,
+      };
       const registerUser = async () => {
         try {
           setIsLoading(true);
