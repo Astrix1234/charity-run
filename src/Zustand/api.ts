@@ -203,7 +203,7 @@ export const registerForDonation = async (amount: number, email: string) => {
       amount,
       email,
     });
-    return response.data;
+    return response;
   } catch (error) {
     console.error('Error with user participation:', error);
     throw error;
