@@ -20,6 +20,7 @@ export interface raceParticipantUserData {
   shirt: string;
   km: string;
   shirtGender: ShirtGender;
+  agreementStatements: boolean;
 }
 
 export type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';

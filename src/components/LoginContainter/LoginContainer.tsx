@@ -114,7 +114,11 @@ function LoginContainer() {
           </>
         </FormInput>
         <ForgotPassword />
-        <Button type="submit" content={t.button} onClick={() => {}} />
+        <Button
+          type="submit"
+          content={t.button}
+          disabled={!formik.isValid || !formik.dirty}
+        />
       </form>
       <AccountCta type="register" />
     </InputColContainer>

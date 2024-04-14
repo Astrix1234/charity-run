@@ -45,7 +45,7 @@ export const ParticipantAreaPhoto = () => {
           className="image"
           src={
             userData?.avatarURL
-              ? `${apiUrl}/users/avatar/${userData.userId}`
+              ? `${apiUrl}/users/avatar/${userData.avatarURL}`
               : 'images/running_man.png'
           }
           alt={t.alt}

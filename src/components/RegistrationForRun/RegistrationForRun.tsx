@@ -1,4 +1,4 @@
-import { SelectInput } from '../SelectInput/SelectInpunt';
+import SelectInput from '../SelectInput/SelectInput';
 import { FormikProps, FormikValues } from 'formik';
 import scss from './RegistrationForRun.module.scss';
 import { TogetherToTheGoal } from '../TogetherToTheGoal/TogetherToTheGoal';
@@ -71,6 +71,7 @@ export const RegisterForRun = () => {
       km: '0',
       shirt: 'rozmiar 36 (S)',
       shirtGender: 'Damska',
+      agreementStatements: consent,
     },
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
@@ -95,6 +96,15 @@ export const RegisterForRun = () => {
       formik.resetForm();
     },
   });
+
+  useEffect(() => {
+    formik.setFieldValue('agreementStatements', consent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [consent]);
+
+  console.log(formik.values);
+  console.log('Errors', formik.errors);
+  console.log('Valid', formik.isValid, formik.dirty);
 
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
@@ -214,8 +224,14 @@ export const RegisterForRun = () => {
                   <Button
                     type="submit"
                     content={t.button}
-                    disabled={!formik.isValid || !consent}
+                    disabled={!formik.isValid || !formik.dirty || !consent}
                   />
+                  {formik.touched.agreementStatements &&
+                  formik.errors.agreementStatements ? (
+                    <div className={scss.formikMessageStatement}>
+                      {formik.errors.agreementStatements}
+                    </div>
+                  ) : null}
                 </div>
               </form>
               <Statements

@@ -18,6 +18,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 
 interface FormValues extends UserData {
   passwordConfirm: string;
+  agreementStatements: boolean;
 }
 
 export const FormRegister = () => {
@@ -66,6 +67,7 @@ export const FormRegister = () => {
       password: '',
       passwordConfirm: '',
       language: language,
+      agreementStatements: consent,
     },
     validationSchema: validationSchema,
     onSubmit: (values: FormValues) => {
@@ -87,8 +89,14 @@ export const FormRegister = () => {
       };
       registerUser();
       formik.resetForm();
+      setConsent(false);
     },
   });
+
+  useEffect(() => {
+    formik.setFieldValue('agreementStatements', consent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [consent]);
 
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
@@ -223,14 +231,21 @@ export const FormRegister = () => {
               openModal={openModal}
             />
           )}
+          <div className={scss.formRegister__buttonContainer}>
+            <Button
+              type="submit"
+              content={t.button}
+              disabled={!formik.isValid || !formik.dirty || !consent}
+            />
 
-          <Button
-            type="submit"
-            content={t.button}
-            disabled={!formik.isValid || !formik.dirty || !consent}
-          />
-
-          <AccountCta type="login" />
+            <AccountCta type="login" />
+            {formik.touched.agreementStatements &&
+            formik.errors.agreementStatements ? (
+              <div className={scss.formikMessageStatement}>
+                {formik.errors.agreementStatements}
+              </div>
+            ) : null}
+          </div>
         </form>
 
         {isWideScreen && (

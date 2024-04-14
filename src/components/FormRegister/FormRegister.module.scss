@@ -28,14 +28,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 24px;
+    justify-content: flex-start;
+    padding: 24px 24px 0 24px;
     gap: 24px;
     width: 100%;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
+    height: 1033px;
 
     @include desktop-screen {
       max-width: 600px;
+      height: auto;
     }
   }
 
@@ -60,6 +62,19 @@
     &:hover,
     &:focus {
       cursor: pointer;
+    }
+  }
+
+  &__buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+
+    @include desktop-screen {
+      gap: 30px;
+      margin-top: 20px;
     }
   }
 
@@ -101,5 +116,16 @@
     @include desktop-screen {
       font-size: 21px;
     }
+  }
+}
+
+.formikMessageStatement {
+  top: 85px;
+  color: red;
+  font-size: 12px;
+  font-weight: 400;
+
+  @include desktop-screen {
+    font-size: 14px;
   }
 }
