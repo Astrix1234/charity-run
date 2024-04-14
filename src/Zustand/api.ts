@@ -148,7 +148,7 @@ export const userParticipation = async (
       },
       getConfig()
     );
-    return response.data;
+    return response;
   } catch (error) {
     console.error('Error with user participation:', error);
     throw error;
