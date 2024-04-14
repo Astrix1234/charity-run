@@ -92,7 +92,6 @@ export const RegisterForRun = () => {
           setIsLoading(false);
         }
       };
-      console.log('Form submitted:', values);
       registerUserOnRun();
       formik.resetForm();
     },
