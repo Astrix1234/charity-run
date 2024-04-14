@@ -109,6 +109,10 @@ export const RegisterForRun = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData?.email]);
 
+  useEffect(() => {
+    console.log(userData);
+  });
+
   if (isModalOpen) {
     return <Regulations onClose={closeModal} />;
   }
