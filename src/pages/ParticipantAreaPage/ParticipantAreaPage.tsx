@@ -71,7 +71,7 @@ export default function ParticipantAreaPage() {
             console.log(`Unhandled status: ${response.status}`);
           }
         } catch (error) {
-          console.error('Error checking participation');
+          console.error('Error checking participation:', error);
         } finally {
           setIsLoading(false);
         }
