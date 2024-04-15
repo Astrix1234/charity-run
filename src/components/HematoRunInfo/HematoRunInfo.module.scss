@@ -13,6 +13,8 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
+        display: flex;
+        flex-direction: column;
 
         @include desktop-screen {
             max-width: 1440px;
@@ -87,15 +89,13 @@
     }
 
     &__button {
-        position: absolute;
-        right: 0;
-        bottom: 0;
         background-color: transparent;
         border: none;
         cursor: pointer;
         color: gray;
         font-weight: 700;
         transition: all 0.3s ease-in-out;
+        margin-left: auto;
 
         &:hover,
         &:focus {
@@ -104,6 +104,7 @@
 
         @include desktop-screen {
             font-size: var(--mediumFontSize);
+            margin-right: 360px;
         }
     }
 

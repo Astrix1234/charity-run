@@ -44,24 +44,24 @@ export const HematoRunInfo = () => {
           </p>
           <p className={scss.runInfo__paragraph}>{t.runInfo13}</p>
           <p className={scss.runInfo__paragraph}>{t.runInfo14}</p>
-          {rolledUp ? (
-            <button
-              className={scss.runInfo__button}
-              type="button"
-              onClick={handleClick}
-            >
-              {t.moreAbout}
-            </button>
-          ) : (
-            <button
-              className={scss.runInfo__button}
-              type="button"
-              onClick={handleClick}
-            >
-              {t.scrollDown}
-            </button>
-          )}
         </div>
+        {rolledUp ? (
+          <button
+            className={scss.runInfo__button}
+            type="button"
+            onClick={handleClick}
+          >
+            {t.moreAbout}
+          </button>
+        ) : (
+          <button
+            className={scss.runInfo__button}
+            type="button"
+            onClick={handleClick}
+          >
+            {t.scrollDown}
+          </button>
+        )}
         {isDesktop && <div className={scss.runInfo__runningHelp}></div>}
       </div>
     </section>
