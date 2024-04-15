@@ -9,13 +9,14 @@
   padding-bottom: 40px;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &__background {
     position: absolute;
     width: 170%;
-    top: 8%;
-    height: 90%;
+    top: 3%;
+    height: 95%;
+    overflow: visible;
   }
 
   &__container {
