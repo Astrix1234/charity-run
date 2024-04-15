@@ -5,134 +5,123 @@
     max-width: 1440px;
     margin: 0 auto;
     margin-top: 32px;
-    text-align: justify;
-    
 
-        @include desktop-screen {
-            padding-top: 80px;
+    @include desktop-screen {
+        padding-top: 80px;
+        text-align: justify;
     }
 
-    .title {
+    & .title {
         color: var(--dark);
         font-size: 30px;
         font-weight: 500;
         word-wrap: break-word;
         margin-top: 20px;
-        text-align: justify;
 
         @include desktop-screen {
             font-size: 39px;
             margin-top: 32px;
+            text-align: justify;
         }
     }
 
-    .vector {
+    & .vector {
         padding: 42px 0 32px 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         @include desktop-screen {
             padding: 62px 0 52px 0;
         }
     }
 
-    .heading {
-    font-family: DM Serif Display;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 43.87px;
-    text-align: center;
-    color: var(--marine);
-    text-align: center;
+    & .heading {
+        font-family: DM Serif Display;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 43.87px;
+        text-align: center;
+        color: var(--marine);
+        text-align: center;
 
-    @include desktop-screen {
-        font-size: 67px;
-        line-height: 91.86px;
-        text-align: left; 
+        @include desktop-screen {
+            font-size: 67px;
+            line-height: 91.86px;
+            text-align: left;
         }
     }
 
-    .content {
+    & .content {
         color: var(--dark);
         font-size: 18px;
         font-weight: 400;
         word-wrap: break-word;
         margin-top: 40px;
-        text-align: justify;
 
         @include desktop-screen {
             font-size: 21px;
             margin-top: 32px;
+            text-align: justify;
         }
 
-        :first-child {
+        &:first-child {
             color: var(--orange);
             font-size: 18px;
             font-weight: 700;
             line-height: 31.5px;
-            text-align: left;
+            text-align: center;
 
             @include desktop-screen {
-                font-size: 21px; 
+                font-size: 21px;
+                text-align: left;
             }
         }
 
-        p {
-            margin: 0;
-            margin-top: 20px;
-            text-align: justify;
-
-            @include desktop-screen {
-                margin-top: 32px;
-            }
-        }
     }
 
-    .contentThanks {
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-    color: var(--orange);
-    padding-top: 52px;
-
-    @include desktop-screen {
-        font-size: 32px; 
-        line-height: 48px;
-        padding-top: 104px;
-        }
-    }
-    
-    .contactEmail {
-        margin-bottom: 20px;
+    & .contentThanks {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        color: var(--orange);
+        padding-top: 52px;
 
         @include desktop-screen {
-            margin-bottom: 32px;
-        }
+            font-size: 32px;
+            line-height: 48px;
+            padding-top: 104px;
 
+        }
     }
-    .contactLink {
+
+    & .contactEmail {
+        margin-bottom: 20px;
+    }
+
+    & .contactLink {
         color: var(--orange);
-        font-size: 18px;
         font-weight: 600;
         word-wrap: break-word;
+        font-size: 16px;
 
         @include desktop-screen {
             font-size: 24px;
         }
     }
 
-    .contactEmail {
+    & .contactEmail {
         margin-top: 40px;
+        color: var(--orange);
 
         @include desktop-screen {
             margin-top: 50px;
         }
-        
-        :hover,
-        :focus {
+
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }

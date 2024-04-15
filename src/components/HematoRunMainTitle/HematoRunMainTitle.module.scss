@@ -166,7 +166,7 @@
     height: 254px;
     background-image: url('/images/illustration.png');
     background-size: cover;
-    transform: translateX(50%);
+    transform: translateX(35%);
 
     @include desktop-screen {
       width: 612px;
