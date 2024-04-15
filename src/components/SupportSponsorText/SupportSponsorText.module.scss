@@ -5,7 +5,7 @@
         max-width: 1440px;
         margin: 0 auto;
         margin-top: 32px;
-        padding: 0 20px 80px;
+        padding: 0 20px;
 
         @include desktop-screen {
             padding: 0 80px 117px;
@@ -34,7 +34,6 @@
             font-size: 20px;
             font-weight: 700;
             word-wrap: break-word;
-            margin-top: 20px;
 
 
             @include desktop-screen {
@@ -46,15 +45,16 @@
 
         & .content {
             color: var(--dark);
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             word-wrap: break-word;
-            margin-top: 20px;
 
             & p {
                 margin: 0;
-                margin-top: 32px;
 
+                @include desktop-screen {
+                    margin-top: 32px;
+                }
             }
 
             @include desktop-screen {
@@ -76,12 +76,11 @@
         }
 
         & .contactEmail {
-            margin-top: 20px;
-            margin-bottom: 32px;
-
 
             @include desktop-screen {
                 margin-top: auto;
+                margin-top: 20px;
+                margin-bottom: 32px;
             }
 
         }
@@ -96,12 +95,16 @@
             }
         }
 
-        .contactEmail {
-            margin-top: 50px;
+        & .contactEmail {
+            margin-top: 10px;
 
             &:hover,
             &:focus {
                 text-decoration: underline;
+            }
+
+            @include desktop-screen {
+                margin-top: 50px;
             }
         }
     }

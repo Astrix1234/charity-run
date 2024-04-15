@@ -44,20 +44,22 @@
         text-align: center;
         color: var(--marine);
         text-align: center;
+        margin-bottom: 30px;
 
         @include desktop-screen {
             font-size: 67px;
             line-height: 91.86px;
             text-align: left;
+            margin-bottom: 0;
         }
     }
 
     & .content {
         color: var(--dark);
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         word-wrap: break-word;
-        margin-top: 40px;
+        margin-top: 10px;
 
         @include desktop-screen {
             font-size: 21px;
@@ -113,7 +115,7 @@
     }
 
     & .contactEmail {
-        margin-top: 40px;
+        margin-top: 10px;
         color: var(--orange);
 
         @include desktop-screen {

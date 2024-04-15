@@ -5,36 +5,41 @@
     max-width: 1440px;
     margin: 0 auto;
     margin-top: 32px;
-    text-align: justify;
     padding-bottom: 40px;
+
 
     @include desktop-screen {
         padding-bottom: 80px;
+        text-align: justify;
     }
 
-    .title {
+    & .title {
         color: var(--dark);
         font-size: 30px;
         font-weight: 500;
         word-wrap: break-word;
         margin-top: 20px;
-        text-align: justify;
+
 
         @include desktop-screen {
             font-size: 39px;
             margin-top: 32px;
+            text-align: justify;
         }
     }
 
-    .content {
+    & .content {
         color: var(--dark);
         font-size: 24px;
         font-weight: 600;
         word-wrap: break-word;
         margin-top: 32px;
-        text-align: justify;
 
-        .boldText {            
+        @include desktop-screen {
+            text-align: justify;
+        }
+
+        & .boldText {
             font-size: 18px;
             font-weight: 700;
             line-height: 24px;
@@ -44,8 +49,8 @@
             }
         }
 
-        .normalText {
-            font-size: 18px;
+        & .normalText {
+            font-size: 16px;
             font-weight: 400;
             line-height: 24px;
 
@@ -54,13 +59,14 @@
             }
         }
 
-        p {
+        & p {
             margin: 0;
             margin-top: 20px;
-            text-align: justify;
+
 
             @include desktop-screen {
                 margin-top: 32px;
+                text-align: justify;
             }
         }
     }
