@@ -17,4 +17,9 @@ export const StyledSection = styled.div`
   p {
     padding-bottom: 0.33rem;
   }
+
+  @media screen and (max-width: 720px) {
+    justify-content: left;
+    flex-flow: column wrap;
+  }
 `;

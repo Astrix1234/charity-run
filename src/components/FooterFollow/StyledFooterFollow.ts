@@ -22,4 +22,9 @@ export const StyledFollow = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 720px) {
+    justify-content: flex-start;
+    max-width: 210px;
+  }
 `;
