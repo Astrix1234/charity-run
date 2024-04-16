@@ -19,7 +19,14 @@ export const StyledSection = styled.div`
   }
 
   @media screen and (max-width: 720px) {
+    gap: 2rem;
     justify-content: left;
     flex-flow: column wrap;
+    h3 {
+      margin-bottom: 1.4rem;
+    }
+    p {
+      padding-bottom: 0.2rem;
+    }
   }
 `;

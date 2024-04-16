@@ -11,4 +11,13 @@ export const StyledSupport = styled.div`
   a {
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 720px) {
+    .bank,
+    .account,
+    .footnote,
+    .nip {
+      padding-bottom: 0.5em;
+    }
+  }
 `;

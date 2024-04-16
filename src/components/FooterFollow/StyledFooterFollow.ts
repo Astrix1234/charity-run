@@ -26,5 +26,8 @@ export const StyledFollow = styled.div`
   @media screen and (max-width: 720px) {
     justify-content: flex-start;
     max-width: 210px;
+    .globe-website {
+      padding-bottom: 1em;
+    }
   }
 `;
