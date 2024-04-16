@@ -19,13 +19,15 @@ export const StyledFollow = styled.div`
   }
 
   .social-media {
-    display: grid;
-    width: 75%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 1.8em;
-    position: relative;
-    left: 20%;
-    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 720px) {
+    justify-content: flex-start;
+    max-width: 210px;
+    .globe-website {
+      padding-bottom: 1em;
+    }
   }
 `;
