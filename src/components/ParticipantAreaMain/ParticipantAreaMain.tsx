@@ -1,7 +1,7 @@
 import { StyledMain } from './StyledParticipantAreaMain';
 import { ParticipantAreaNavigation } from '../ParticipantAreaNavigation/ParticipantAreaNavigation';
 import { ParticipantAreaPhoto } from '../ParticipantAreaPhoto/ParticipantAreaPhoto';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export const ParticipantAreaMain = () => {
   {
