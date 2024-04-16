@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
 
   .background-bottom {
     margin-top: -1.5px;
-    background: url('images/footer-background-bottom.png') no-repeat top;
+    background: url('../images/footer-background-bottom.png') no-repeat top;
     background-size: contain;
     background-size: 100% 100%;
   }
