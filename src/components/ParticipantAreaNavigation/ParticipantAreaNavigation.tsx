@@ -2,7 +2,6 @@ import { StyledNavigation } from './StyledParticipantAreaNavigation';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Link, useNavigate } from 'react-router-dom';
-import { ReactNode } from 'react';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { logout } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
