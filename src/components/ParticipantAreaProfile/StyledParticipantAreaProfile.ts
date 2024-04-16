@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import {
+  h1Size,
+  h2Size,
+  pSize,
+} from '../ParticipantArea/StyledParticipantArea';
 
 export const StyledProfile = styled.div`
   display: flex;
+  text-align: center;
 
   & > * {
     min-width: 50%;
@@ -9,8 +15,7 @@ export const StyledProfile = styled.div`
 
   @media screen and (max-width: 1349px) {
     flex-wrap: wrap;
-    gap: 4rem;
-    text-align: center;
+    gap: 2rem;
     justify-content: center;
 
     & > * {
@@ -19,14 +24,20 @@ export const StyledProfile = styled.div`
   }
 
   h1 {
-    font-size: 3.125rem;
+    font-size: ${h1Size};
     font-weight: 500;
-    margin-bottom: 5rem;
+    margin-bottom: ${h1Size};
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: ${pSize};
     font-weight: 600;
-    padding-bottom: 2.5rem;
+    padding-bottom: ${h2Size};
+  }
+
+  @media screen and (max-width: 800px) {
+    text-align: left;
+    justify-content: left;
+    padding-left: ${h2Size};
   }
 `;

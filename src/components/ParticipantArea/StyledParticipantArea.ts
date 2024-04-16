@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const h1Size = 'min(3rem, max(1.5rem,6vw))';
+export const h2Size = 'min(2.5rem, max(1.25rem, 5vw))';
+export const h3Size = 'min(1.5rem, max(1.15rem, 4.5vw))';
+export const pSize = 'min(1.25rem, max(1rem, 4vw))';
+
 export const StyledParticipant = styled.div`
   background: url('images/cut-background.png') no-repeat;
   background-size: 100% 15%;

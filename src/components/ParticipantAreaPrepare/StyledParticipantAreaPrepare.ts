@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import {
+  h1Size,
+  h2Size,
+  pSize,
+} from '../ParticipantArea/StyledParticipantArea';
 
 export const StyledPrepare = styled.div`
   margin-inline: auto;
