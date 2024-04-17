@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { pSize } from '../ParticipantArea/StyledParticipantArea';
 
 export const StyledData = styled.div`
   padding-right: 2rem;
