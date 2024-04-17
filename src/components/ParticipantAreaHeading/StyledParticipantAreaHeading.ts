@@ -14,13 +14,18 @@ export const StyledHeading = styled.section`
   }
 
   h2 {
-    font-size: min(5.625rem, 10.2vw);
+    font-size: min(4.5rem, 10.6vw);
     font-weight: 400;
     white-space: nowrap;
+    padding-bottom: min(0.75rem, max(0.6rem, 4vw));
   }
 
   svg {
     width: 100%;
+  }
+
+  .arrows svg {
+    height: min(145px, 25vw);
   }
 
   @media screen and (max-width: 800px) {
