@@ -15,7 +15,7 @@ export const ParticipantAreaResults = () => {
           {t.hematorun} <br />
           {t.city}
           <br />
-          10.05.2024
+          26.05.2024
         </p>
         <h3>/ {t.result}</h3>
         <MiniTripleOrangeWave />
