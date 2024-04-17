@@ -49,9 +49,7 @@
 
     @include desktop-screen {
       max-width: 1248px;
-      height: 1074px;
       padding: 64px 69px;
-      gap: 72px;
     }
   }
 
@@ -89,5 +87,11 @@
     @include desktop-screen {
       left: 95%;
     }
+  }
+
+  &__list > li:before {
+    content: '\2022';
+    font-size: 8px;
+    margin-right: 35px;
   }
 }
