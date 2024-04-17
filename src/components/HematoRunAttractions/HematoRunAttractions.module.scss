@@ -86,12 +86,4 @@
 .attractions__containerItems > li {
   flex: 1 0 48%;
   max-width: 48%;
-
-
-  @include desktop-screen {
-    // flex: 1 0 calc(25% - 29px);
-    // max-width: calc(25% - 29px);
-  }
-
-
 }
