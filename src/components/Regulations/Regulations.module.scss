@@ -89,9 +89,13 @@
     }
   }
 
-  &__list > li:before {
-    content: '\2022';
-    font-size: 8px;
-    margin-right: 35px;
+  &__list > li {
+    line-height: 1.5;
+
+    &:before {
+      content: '\2022';
+      font-size: 8px;
+      margin-right: 35px;
+    }
   }
 }
