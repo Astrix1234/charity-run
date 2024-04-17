@@ -22,7 +22,7 @@ const textContent = {
         email: "kontakt@fundacja.hematologiczna.org",
         thanks: "Dziękujemy za Wasze zaangażowanie i wsparcie naszej misji walki z nowotworami krwi!",
         regards: "Z wyrazami szacunku,",
-        team: "Zespół Fundacji Pomocy na Rzecz Chorych na Białaczkę"
+        team: "Zespół Fundacji Pomocy na Rzecz Chorych na Białaczki"
     },
     EN: {
         title: "Join Our Team - Become a Sponsor!",
