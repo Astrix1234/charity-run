@@ -36,6 +36,7 @@ export const StyledParticipant = styled.div`
 
       #run-info {
         padding-top: 0;
+        margin-bottom: -100px;
       }
 
       #timetable {
