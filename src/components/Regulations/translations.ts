@@ -16,7 +16,7 @@ const translations = {
       'Administratorem danych osobowych jest Fundacja Na Rzecz Pomocy Chorym Na Białaczki',
     foundationInformationClauseTitle3: 'INSPEKTOR OCHRONY DANYCH',
     foundationInformationClauseDetails3:
-      'W sprawach związanych z przetwarzaniem danych osobowych można kontaktować się z Inspektorem Ochrony Danych pod adresem e-mail: E-mail: kontakt@fundacja.hematologiczna.org',
+      'W sprawach związanych z przetwarzaniem danych osobowych można kontaktować się z Inspektorem Ochrony Danych pod adresem e-mail: E-mail: kontakt@fundacja. hematologiczna.org',
     foundationInformationClauseTitle4: 'CEL I PODSTAWY PRAWNE',
     foundationInformationClauseDetails4:
       'Pani/Pana dane będą przetwarzane w celach:',
@@ -51,7 +51,7 @@ const translations = {
       'The controller of personal data is the Foundation for Assistance to Leukemia Patients.',
     foundationInformationClauseTitle3: 'DATA PROTECTION OFFICER',
     foundationInformationClauseDetails3:
-      'For matters related to the processing of personal data, you can contact the Data Protection Officer at the following email address: Email: contact@foundation.hematological.org',
+      'For matters related to the processing of personal data, you can contact the Data Protection Officer at the following email address: Email: kontakt@fundacja. hematologiczna.org',
     foundationInformationClauseTitle4: 'PURPOSE AND LEGAL BASIS',
     foundationInformationClauseDetails4:
       'Your data will be processed for the following purposes:',
