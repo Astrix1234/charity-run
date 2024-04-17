@@ -6,14 +6,13 @@ export const StyledNavigation = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
+    justify-content: center;
   }
 
   @media screen and (max-width: 720px) {
     font-size: 1rem;
     ul {
-      text-align: left;
       row-gap: 0.7rem;
-      justify-content: left;
       flex-flow: column wrap;
     }
 
