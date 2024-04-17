@@ -10,13 +10,7 @@ export const FooterNavigation = () => {
     <StyledNavigation>
       <ul>
         <li>
-          <Link to="#">{t.statute}</Link>
-        </li>
-        <li>
-          <Link to="#">{t.rodo}</Link>
-        </li>
-        <li>
-          <Link to="#">{t.privacyPolicy}</Link>
+          <Link to="#">{t.clause}</Link>
         </li>
       </ul>
       <p>

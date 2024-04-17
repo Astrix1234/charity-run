@@ -1,14 +1,10 @@
 const translations = {
   PL: {
-    statute: 'Regulamin',
-    rodo: 'Rodo',
-    privacyPolicy: 'Polityka prywatności',
+    clause: 'Klauzula informacyjna',
     reserved: 'Wszelkie prawa zastrzeżone',
   },
   EN: {
-    statute: 'Statute',
-    rodo: 'Rodo',
-    privacyPolicy: 'Privacy policy',
+    clause: 'Information clause',
     reserved: 'All rights reserved',
   },
 };

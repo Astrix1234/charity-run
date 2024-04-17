@@ -4,41 +4,37 @@ export const StyledMain = styled.div`
   display: flex;
   justify-content: space-between;
   justify-content: center;
+  align-items: center;
   gap: 4rem;
   position: relative;
 
   & > * {
-    min-width: 510px;
-    max-width: 50%;
+    width: 50%;
   }
 
   @media screen and (max-width: 1349px) {
-    .navigation {
-      min-width: calc(100vw - 40px);
-      display: flex;
-      justify-content: space-between;
-      gap: min(2rem, 5vw);
-      white-space: nowrap;
+    flex-flow: column wrap;
+    gap: 1rem;
+
+    .photo {
+      width: min(500px, 90vw);
+      margin-bottom: 1rem;
     }
 
-    .image {
-      min-width: 50px;
-      max-width: 400px;
+    .addPhoto {
+      justify-content: left;
+    }
+
+    .navigation {
+      width: min(606px, 90vw);
+      text-align: center;
     }
   }
 
   @media screen and (max-width: 800px) {
     .navigation {
-      min-width: calc(100vw - 40px);
-      display: flex;
-      justify-content: space-between;
-      gap: min(2rem, 5vw);
-      white-space: nowrap;
-    }
-
-    .image {
-      width: min(40vw, 400px);
-      padding-bottom: 1rem;
+      text-align: left;
+      width: 100%;
     }
   }
 `;

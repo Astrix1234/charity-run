@@ -2,16 +2,11 @@ import { StyledNavigation } from './StyledParticipantAreaNavigation';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Link, useNavigate } from 'react-router-dom';
-import { ReactNode } from 'react';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { logout } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 
-type NavigationProps = {
-  children?: ReactNode;
-};
-
-export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
+export const ParticipantAreaNavigation = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   const { setIsLogin } = useIsLoginStore();
@@ -38,28 +33,25 @@ export const ParticipantAreaNavigation = ({ children }: NavigationProps) => {
 
   return (
     <StyledNavigation className="navigation">
-      {children}
-      <div className="navigation-links">
-        <h1>{t.myProfile}</h1>
-        <h2>{t.navigation}</h2>
-        <p>
-          <Link to="/participant-area/#my-data">{t.myData} /01</Link>
-        </p>
-        <p>
-          <Link to="/participant-area/#my-data">{t.myResult} /02</Link>
-        </p>
-        <p>
-          <Link to="/participant-area/#run-info">{t.timetable} /03</Link>
-        </p>
-        <p>
-          <Link to="/participant-area/#before-run">{t.getReady} /04</Link>
-        </p>
-        <p>
-          <a href="#" onClick={handleLogout}>
-            {t.logout} /05
-          </a>
-        </p>
-      </div>
+      <h1>{t.myProfile}</h1>
+      <h2>{t.navigation}</h2>
+      <p>
+        <Link to="/participant-area/#my-data">{t.myData} /01</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#my-data">{t.myResult} /02</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#run-info">{t.timetable} /03</Link>
+      </p>
+      <p>
+        <Link to="/participant-area/#before-run">{t.getReady} /04</Link>
+      </p>
+      <p>
+        <a href="#" onClick={handleLogout}>
+          {t.logout} /05
+        </a>
+      </p>
     </StyledNavigation>
   );
 };
