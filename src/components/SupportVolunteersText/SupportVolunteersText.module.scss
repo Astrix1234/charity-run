@@ -67,9 +67,9 @@
             text-align: justify;
         }
 
-        &:first-child {
+        & .welcome {
             color: var(--orange);
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             line-height: 31.5px;
             text-align: center;
