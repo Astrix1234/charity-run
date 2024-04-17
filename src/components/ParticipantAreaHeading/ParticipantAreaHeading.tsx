@@ -14,8 +14,9 @@ export const ParticipantAreaHeading = () => {
         <h2>{t.participantArea}</h2>
         <HandwrittenLine />
       </div>
-
-      <TrippleArrowDown />
+      <div className="arrows">
+        <TrippleArrowDown />
+      </div>
     </StyledHeading>
   );
 };

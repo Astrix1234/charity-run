@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const StyledMain = styled.div`
   display: flex;
-  justify-content: space-between;
-  justify-content: center;
   align-items: center;
   gap: 4rem;
   position: relative;
 
-  & > * {
+  .navigation,
+  .photo {
     width: 50%;
   }
 
@@ -22,7 +21,7 @@ export const StyledMain = styled.div`
     }
 
     .addPhoto {
-      justify-content: left;
+      justify-content: flex-start;
     }
 
     .navigation {
