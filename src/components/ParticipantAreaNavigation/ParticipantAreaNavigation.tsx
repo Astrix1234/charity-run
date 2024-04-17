@@ -39,7 +39,7 @@ export const ParticipantAreaNavigation = () => {
         <Link to="/participant-area/#my-data">{t.myData} /01</Link>
       </p>
       <p>
-        <Link to="/participant-area/#my-data">{t.myResult} /02</Link>
+        <Link to="/participant-area/#my-results">{t.myResult} /02</Link>
       </p>
       <p>
         <Link to="/participant-area/#run-info">{t.timetable} /03</Link>

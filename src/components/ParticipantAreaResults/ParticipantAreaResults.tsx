@@ -7,7 +7,7 @@ export const ParticipantAreaResults = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   return (
-    <StyledResults>
+    <StyledResults id="my-results">
       <h1>{t.myResults}</h1>
       <div>
         <h2>/ {t.edition}</h2>

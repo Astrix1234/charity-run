@@ -30,8 +30,8 @@ export const StyledParticipant = styled.div`
         padding-top: 45px;
       }
 
-      #before-run {
-        padding-top: 65px;
+      #my-results {
+        padding-top: 35px;
       }
 
       #run-info {
