@@ -59,11 +59,8 @@ export const FooterNavigation = () => {
         </li>
       </ul>
 
-      <p>
-        Wszelkie prawa zastrzeżone © Fundacja Na Rzecz Pomocy Chorym Na
-        Białaczki 2024
-      </p>
-      <p>Utworzone przez wolontariuszy</p>
+      <p>{t.reserved}</p>
+      <p>{t.volunteers}</p>
     </StyledNavigation>
   );
 };
