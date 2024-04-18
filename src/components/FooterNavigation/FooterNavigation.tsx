@@ -41,7 +41,7 @@ export const FooterNavigation = () => {
         </li>
         <li>
           <p className="regulamin" onClick={onOpenSecondModal}>
-            Regulamin
+            {t.statute}
           </p>
           <Modal
             open={openSecond}
