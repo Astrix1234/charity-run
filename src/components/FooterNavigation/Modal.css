@@ -1,0 +1,11 @@
+.customModal {
+  border-radius: 1.4rem;
+}
+
+.clause,
+.statute {
+  padding: 1rem;
+  padding-top: 3rem;
+  color: gray;
+  background-color: white;
+}
