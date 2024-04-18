@@ -2,6 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 1600;
+  pointer-events: none;
 }
 
 .container {
@@ -20,6 +21,7 @@
 }
 
 .btn {
+  pointer-events: auto;
   position: relative;
   border: none;
   background-color: var(--light);
