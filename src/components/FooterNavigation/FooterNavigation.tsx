@@ -5,8 +5,8 @@ import translations from './translations';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { useState } from 'react';
-import { Clause } from './Clause';
-import { Statute } from './Statute';
+import { Clause } from '../Clause/Clause';
+import { Statute } from '../Statute/Statute';
 
 export const FooterNavigation = () => {
   const { language } = useLanguageStore();
@@ -22,19 +22,22 @@ export const FooterNavigation = () => {
       <ul>
         <li>
           <p onClick={onOpenFirstModal}>{t.clause}</p>
-          <Modal
-            open={openFirst}
-            onClose={onCloseFirstModal}
-            classNames={{
-              modal: 'customModal',
-              overlay: 'customOverlay',
-            }}
-            center
-          >
-            <div className="clause">
-              <Clause />
-            </div>
-          </Modal>
+          <div className="modal">
+            <Modal
+              open={openFirst}
+              onClose={onCloseFirstModal}
+              classNames={{
+                modal: 'customModal',
+                overlay: 'customOverlay',
+              }}
+              center
+              showCloseIcon={true}
+            >
+              <div className="clause">
+                <Clause />
+              </div>
+            </Modal>
+          </div>
         </li>
         <li>
           <p className="regulamin" onClick={onOpenSecondModal}>

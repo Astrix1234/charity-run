@@ -1,5 +1,6 @@
 .customModal {
   border-radius: 1.4rem;
+  width: min(1440px, 90vw);
 }
 
 .clause,
