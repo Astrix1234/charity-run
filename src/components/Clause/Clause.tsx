@@ -20,7 +20,8 @@ export const Clause = () => {
       <h2>INSPEKTOR OCHRONY DANYCH</h2>
       <p>
         W sprawach związanych z przetwarzaniem danych osobowych można
-        kontaktować się z Inspektorem Ochrony Danych pod adresem e-mail: E-mail:
+        kontaktować się z Inspektorem Ochrony Danych pod adresem e-mail:
+        <br />
         kontakt@fundacja.hematologiczna.org
       </p>
       <h2>CEL I PODSTAWY PRAWNE</h2> Pani/Pana dane będą przetwarzane w celach:
