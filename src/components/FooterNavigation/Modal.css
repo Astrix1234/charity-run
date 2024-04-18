@@ -1,11 +1,12 @@
 .customModal {
   border-radius: 1.4rem;
   width: min(1440px, 90vw);
+  overflow-x: hidden;
 }
 
 .clause,
 .statute {
-  padding: 1rem;
+  padding: min(1rem, 0.3vw);
   padding-top: 3rem;
   color: gray;
   background-color: white;

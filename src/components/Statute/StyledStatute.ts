@@ -12,18 +12,20 @@ export const StyledStatute = styled.div`
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-bottom: min(0.6rem, 1.5vw);
   }
 
-  p {
+  p,
+  li {
     font-size: 0.9rem;
+    padding-bottom: 0.3rem;
   }
 
   .important {
     font-size: 0.9rem;
-    font-weight: 700;
-    padding-top: 0.5rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
   }
   .end {
     padding-bottom: min(2rem, 4vw);
