@@ -43,12 +43,14 @@ export const HematoRunMainTitle = () => {
         </div>
         <Button onClick={handleClick} content={t.joinUs} />
 
-        <div className={scss.hematoTitles__logInContainer}>
-          <p>{t.alreadyHaveAccount}</p>
-          <Link className={scss.hematoTitles__logIn} to="/login">
-            {t.logIn}
-          </Link>
-        </div>
+        {!isLogin && (
+          <div className={scss.hematoTitles__logInContainer}>
+            <p>{t.alreadyHaveAccount}</p>
+            <Link className={scss.hematoTitles__logIn} to="/login">
+              {t.logIn}
+            </Link>
+          </div>
+        )}
         <div className={scss.hematoTitles__illustrationContainer}>
           <div className={scss.hematoTitles__illustration}></div>
           <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
