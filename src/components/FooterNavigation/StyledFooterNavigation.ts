@@ -4,9 +4,14 @@ export const StyledNavigation = styled.div`
   text-align: center;
   ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
     margin-bottom: 2em;
     justify-content: center;
+  }
+
+  li:hover {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 720px) {

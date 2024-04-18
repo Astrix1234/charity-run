@@ -31,12 +31,14 @@ export const StyledFooter = styled.footer`
   }
 
   a,
-  Link {
+  Link,
+  li {
     transition: text-shadow 400ms;
   }
 
   a:hover,
-  Link:hover {
+  Link:hover,
+  li:hover {
     text-shadow: 1px 0;
   }
 `;
