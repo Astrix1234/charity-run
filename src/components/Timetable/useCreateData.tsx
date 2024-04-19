@@ -16,8 +16,16 @@ export const useCreateData = () => {
       comment: t.registry,
       place: t.office,
       address: t.slowackiego,
-      time: t.inHours,
-      hours: '09:00 - 12:00',
+      time: t.startHour,
+      hours: '09:00',
+    },
+    {
+      icon: <IconMumChildren />,
+      comment: t.mumChildren,
+      place: t.hospital,
+      address: 'Pabianicka 62',
+      time: t.startHour,
+      hours: '10:45',
     },
     {
       icon: <IconStart />,
@@ -27,21 +35,14 @@ export const useCreateData = () => {
       time: t.startHour,
       hours: '11:00',
     },
-    {
-      icon: <IconMumChildren />,
-      comment: t.mumChildren,
-      place: t.hospital,
-      address: 'Pabianicka 62',
-      time: t.startHour,
-      hours: '12:00',
-    },
+
     {
       icon: <IconWalk />,
       comment: t.walk,
       place: t.hospital,
       address: 'Pabianicka 62',
       time: t.startHour,
-      hours: '13:00',
+      hours: '11:30',
     },
     {
       icon: <IconAwards />,
@@ -49,7 +50,7 @@ export const useCreateData = () => {
       place: t.hospital,
       address: 'Pabianicka 62',
       time: t.startHour,
-      hours: '14:00',
+      hours: '12:00',
     },
   ];
   return data;
