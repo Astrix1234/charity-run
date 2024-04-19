@@ -19,10 +19,12 @@
     margin: 0 auto;
     padding: 0 20px;
     overflow: hidden;
+    height: 658px;
 
     @include desktop-screen {
       max-width: 1440px;
       padding: 0 80px;
+      height: 638px;
     }
   }
 
@@ -121,12 +123,12 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    margin: 10px 0 300px 0;
+    margin: 10px 0 0 0;
     font-size: 12px;
     line-height: 29px;
 
     @include desktop-screen {
-      margin: 16px 0 157px 0;
+      margin: 16px 0 0 0;
       font-size: var(--mediumFontSize);
     }
   }
@@ -150,7 +152,7 @@
   &__illustrationContainer {
     position: absolute;
     right: 20px;
-    transform: translateY(-100%);
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
