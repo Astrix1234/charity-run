@@ -200,7 +200,7 @@ const translations = {
     h2_3__h3_3__p3: 'The Run routes run through areas with a uniform surface.',
     h2_3__h3_3__p4:
       'Participants line up at the start in the place designated by the Organizer with assigned starting numbers and measurement orders received at the Competition Office.',
-    h2_4: 'IV. APPLICATIONS/REGISTRATIONS',
+    h2_4: 'IV. APPLICATIONS/ REGISTRATIONS',
     h2_4__p1:
       "Participants register via the application form available on the Foundation's website:",
     h2_4__p1_strong: 'fundacja.hematologiczna.org',
