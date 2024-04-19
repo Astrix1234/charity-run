@@ -11,3 +11,15 @@
   color: gray;
   background-color: white;
 }
+
+@media screen and (max-width: 580px) {
+  .react-responsive-modal-closeButton {
+    right: 2.5rem !important;
+  }
+}
+
+@media screen and (min-width: 580.1px) and (max-width: 680px) {
+  .react-responsive-modal-closeButton {
+    right: 15% !important;
+  }
+}
