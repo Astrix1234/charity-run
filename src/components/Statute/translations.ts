@@ -4,7 +4,7 @@ const translations = {
     h1_br: '26 maja 2024 r.',
     h2_1: 'I. ORGANIZATOR',
     h2_1__p:
-      'Organizatorem Biegu Charytatywnego, w ramach którego organizowane sątrzy biegi: „Hematobieg”, „Bieg Mam z Dziećmi”, „Bieg w Kapciach” oraz spacer „Hematospacer” zwane dalej “Biegiem”, jest Fundacja Na Rzecz Pomocy Chorym Na Białaczki z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93-513 Łódź, wpisana do rejestru stowarzyszeń, innych organizacji społecznych i zawodowych, fundacji oraz samodzielnych publicznych zakładów opieki zdrowotnej prowadzonego przez Sąd Rejonowy dla Łodzi-Śródmieścia w Łodzi pod nr KRS: 0000069531.',
+      'Organizatorem Biegu Charytatywnego, w ramach którego organizowane są trzy biegi: „Hematobieg”, „Bieg Mam z Dziećmi”, „Bieg w Kapciach” oraz spacer „Hematospacer” zwane dalej “Biegiem”, jest Fundacja Na Rzecz Pomocy Chorym Na Białaczki z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93-513 Łódź, wpisana do rejestru stowarzyszeń, innych organizacji społecznych i zawodowych, fundacji oraz samodzielnych publicznych zakładów opieki zdrowotnej prowadzonego przez Sąd Rejonowy dla Łodzi-Śródmieścia w Łodzi pod nr KRS: 0000069531.',
     h2_2: 'II. CELE',
     h2_2__h3_1: 'Celem Biegu jest:',
     h2_2__h3_1__important1: 'Pozyskanie środków:',
@@ -42,9 +42,9 @@ const translations = {
       'Przed rozpoczęciem Biegu, każdy Uczestnik podlega weryfikacji przez właściwe Biuro Zawodów. W tym celu obowiązany jest posiadać ze sobą dowód osobisty lub inny dokument ze zdjęciem potwierdzający tożsamość (w przypadku uczestników niepełnoletnich dopuszczalna jest także legitymacja szkolna ze zdjęciem).',
     h2_4__p3: 'Organizator ustala limit uczestników Biegu na 450 osób.',
     h2_4__p4:
-      'Warunkiem przyjęcia zgłoszenia jest prawidłowe wypełnienie formularza zgłoszeniowego oraz uiszczenie opłaty startowej w formie darowizny.Całkowity dochód z opłat startowych zostanie przekazany na cele statutowe fundacji.',
+      'Warunkiem przyjęcia zgłoszenia jest prawidłowe wypełnienie formularza zgłoszeniowego oraz uiszczenie opłaty startowej w formie darowizny. Całkowity dochód z opłat startowych zostanie przekazany na cele statutowe fundacji.',
     h2_4__p5:
-      'W przypadku zgłoszenia uczestnictwa za pośrednictwem formularza na stronie internetowej, uczestnik zostanie przekierowany do SerwisuPrzelewy24 (https://www.przelewy24.pl/), celem dokonania wpłaty (darowizny na cele statutowe).',
+      'W przypadku zgłoszenia uczestnictwa za pośrednictwem formularza na stronie internetowej, uczestnik zostanie przekierowany do Serwisu Przelewy24 (https://www.przelewy24.pl/), celem dokonania wpłaty (darowizny na cele statutowe).',
     h2_4__p6:
       'W dniu Biegu opłaty startowe będą zbierane przez Biuro Zawodów. W miarę możliwości Organizator zapewni także możliwość wnoszenia opłaty startowej za pomocą terminala płatniczego lub BLIK.',
     h2_4__p7:
@@ -200,7 +200,7 @@ const translations = {
     h2_3__h3_3__p3: 'The Run routes run through areas with a uniform surface.',
     h2_3__h3_3__p4:
       'Participants line up at the start in the place designated by the Organizer with assigned starting numbers and measurement orders received at the Competition Office.',
-    h2_4: 'IV. APPLICATIONS/REGISTRATIONS',
+    h2_4: 'IV. APPLICATIONS/ REGISTRATIONS',
     h2_4__p1:
       "Participants register via the application form available on the Foundation's website:",
     h2_4__p1_strong: 'fundacja.hematologiczna.org',
