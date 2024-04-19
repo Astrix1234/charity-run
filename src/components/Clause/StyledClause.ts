@@ -18,6 +18,7 @@ export const StyledClause = styled.div`
 
   li {
     padding-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
 
   ul {
