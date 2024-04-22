@@ -92,11 +92,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 19px;
-  }
 
-  @include desktop-screen {
-    gap: 10px;
-    margin-bottom: 39px;
+
+    @include desktop-screen {
+      gap: 10px;
+      margin-bottom: 39px;
+    }
   }
 
   &__km {
