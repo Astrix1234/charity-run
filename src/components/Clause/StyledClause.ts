@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledClause = styled.div`
+  padding-inline: 1.5rem;
+  padding-bottom: 1rem;
   h1 {
     font-size: 1.5rem;
     padding-bottom: min(1.5rem, 3vw);
@@ -18,6 +20,7 @@ export const StyledClause = styled.div`
 
   li {
     padding-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
 
   ul {
