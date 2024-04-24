@@ -79,8 +79,7 @@ export const register = async (userData: UserData) => {
   } catch (error) {
     const err = error as AxiosError;
     console.error('Error registering user:', err);
-    console.error('Error response:', err.response);
-    throw err;
+    return err.response;
   }
 };
 
