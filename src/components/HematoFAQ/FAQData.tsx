@@ -13,11 +13,12 @@ const faqData: FAQItem[] = [
   {
     question:
       'Czy istnieje opłata rejestracyjna, i jeśli tak, jakie są jej kwoty?',
-    answer: 'Tak, jest opłata - dla dorosłego 30 zł, a dla dziecka 20 zł.',
+    answer: 'Tak, jest opłata - dla dorosłego 30 PLN, a dla dziecka 20 PLN.',
   },
   {
     question: 'Jak mogę się zarejestrować do udziału w Hematobiegu?',
-    answer: 'Na stronie www.hematobieg.org lub podczas wydarzenia.',
+    answer:
+      'Na stronie https://www.hematobieg.fundacja.hematologiczna.org/ lub podczas wydarzenia.',
   },
   {
     question: 'Czy można zabrać ze sobą psa na bieg?',

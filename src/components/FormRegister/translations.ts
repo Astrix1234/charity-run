@@ -14,7 +14,7 @@ const translations = {
     account: 'Masz już konto? ',
     login: 'Zaloguj się',
     instructionsTitle:
-      'Po zarejestrowaniu się i utworzeniu konta na stronie, otrzymasz możliwość ZAPISU NA BIEG. ',
+      'Po zarejestrowaniu się i utworzeniu konta na stronie, otrzymasz możliwość ZAPISU NA BIEG poprzez kliknięcie Zapisz się w nagłówku strony.',
     instructionsCost: 'Koszt zapisu na bieg wynosi:',
     cost1: '30 zł',
     costAdult: ' za osobę dorosłą.',
@@ -40,7 +40,7 @@ const translations = {
     account: 'Already registered? ',
     login: 'Log in',
     instructionsTitle:
-      'After registering and creating an account on the website, you will receive the opportunity to SIGN UP FOR A RUN.',
+      'Once you have registered and created an account on the website, you will be given the opportunity to SAVE FOR THE RUN by clicking Sign up in the header of the page.',
     instructionsCost: 'The cost of signing up for the run is:',
     cost1: '30 PLN',
     costAdult: ' per adult participant.',

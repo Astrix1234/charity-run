@@ -4,7 +4,7 @@ const translations = {
     site: 'Strona Fundacji',
   },
   EN: {
-    title: 'The Foundation For Leukemia Patients',
+    title: 'The Foundation For Help People With Leukemia',
     site: 'Foundation Site',
   },
 };
