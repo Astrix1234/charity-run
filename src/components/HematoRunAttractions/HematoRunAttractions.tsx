@@ -46,7 +46,7 @@ const Attractions: React.FC = () => {
           {attractions.map((attraction, index) => (
             <ItemSquare
               pos={attraction.id}
-              heading={attraction.name}
+              heading={t.attractionNames[index]}
               contentType={{ type: 'image', src: attraction.url, alt: '' }}
               backgroundColor="grey"
               key={index}
