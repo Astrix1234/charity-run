@@ -83,6 +83,7 @@ export const FormRegister = () => {
         try {
           setIsLoading(true);
           const response = await register(userData);
+          console.log('response status', response.status);
           if (response.status === 409) {
             toast.info('Email already in use. Please use a different email.');
           } else {
