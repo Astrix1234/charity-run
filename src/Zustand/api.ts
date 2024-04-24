@@ -75,7 +75,7 @@ const getConfig = () => {
 export const register = async (userData: UserData) => {
   try {
     const response = await axios.post(`${apiUrl}/users/signup`, userData);
-    return response.data;
+    return response;
   } catch (error) {
     const err = error as AxiosError;
     console.error('Error registering user:', err);
