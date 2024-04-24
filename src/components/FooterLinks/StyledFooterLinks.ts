@@ -8,4 +8,10 @@ export const StyledLinks = styled.div`
   .gala {
     text-decoration-line: underline;
   }
+
+  @media screen and (max-width: 720px) {
+    p {
+      padding-bottom: 0.5em;
+    }
+  }
 `;

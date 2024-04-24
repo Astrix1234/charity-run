@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledPhoto = styled.div`
   .imgContainer {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   .image {

@@ -63,7 +63,7 @@ export const Timetable = () => {
             <IconEnd />
           </div>
           <p className={scss.timetable__comment}>{t.end}</p>
-          <p className={scss.timetable__hours}>19.00</p>
+          <p className={scss.timetable__hours}>18.00</p>
         </div>
         {isDesktop &&
           array.map((item, index) => (

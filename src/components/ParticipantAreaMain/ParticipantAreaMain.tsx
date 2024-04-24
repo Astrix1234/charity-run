@@ -1,9 +1,11 @@
 import { StyledMain } from './StyledParticipantAreaMain';
 import { ParticipantAreaNavigation } from '../ParticipantAreaNavigation/ParticipantAreaNavigation';
 import { ParticipantAreaPhoto } from '../ParticipantAreaPhoto/ParticipantAreaPhoto';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export const ParticipantAreaMain = () => {
+  {
+    /*  possibility to put photo inside box
   const useScreenSize = () => {
     const [screenSize, setScreenSize] = useState(window.innerWidth);
 
@@ -22,9 +24,12 @@ export const ParticipantAreaMain = () => {
 
   const screenSize = useScreenSize();
   const isMobile = screenSize < 1350;
+*/
+  }
 
   return (
     <StyledMain as="section" id="participantMain">
+      {/* mobile and normal view
       {isMobile ? (
         <ParticipantAreaNavigation>
           <ParticipantAreaPhoto />
@@ -35,6 +40,9 @@ export const ParticipantAreaMain = () => {
           <ParticipantAreaNavigation />
         </>
       )}
+    */}
+      <ParticipantAreaPhoto />
+      <ParticipantAreaNavigation />
     </StyledMain>
   );
 };

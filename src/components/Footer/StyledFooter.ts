@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
 
   .background-bottom {
     margin-top: -1.5px;
-    background: url('images/footer-background-bottom.png') no-repeat top;
+    background: url('../images/footer-background-bottom.png') no-repeat top;
     background-size: contain;
     background-size: 100% 100%;
   }
@@ -31,12 +31,14 @@ export const StyledFooter = styled.footer`
   }
 
   a,
-  Link {
+  Link,
+  li {
     transition: text-shadow 400ms;
   }
 
   a:hover,
-  Link:hover {
+  Link:hover,
+  li:hover {
     text-shadow: 1px 0;
   }
 `;

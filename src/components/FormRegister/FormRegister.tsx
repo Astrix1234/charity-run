@@ -82,10 +82,16 @@ export const FormRegister = () => {
       const registerUser = async () => {
         try {
           setIsLoading(true);
-          await register(userData);
-          toast.info(
-            'Registration successful! Please check your email to verify your account.'
-          );
+          const response = await register(userData);
+          if (response && response.status === 409) {
+            toast.error('Email already in use. Please use a different email.');
+          } else if (response && response.status === 201) {
+            toast.info(
+              'Registration successful! Please check your email to verify your account.'
+            );
+          } else {
+            toast.error('An error occurred. Please try again.');
+          }
         } catch (error) {
           console.error(error);
           toast.error('An error occurred. Please try again.');

@@ -13,6 +13,18 @@ export const StyledData = styled.div`
     font-weight: 800;
   }
 
+  .password {
+    color: var(--orange);
+    font-size: min(1rem, max(0.9rem, 3.5vw));
+    font-weight: 700;
+    transition: all 400ms;
+  }
+
+  .password:hover {
+    text-decoration-line: underline;
+    color: red;
+  }
+
   @media screen and (max-width: 1349px) {
     padding-right: 0;
   }

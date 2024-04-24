@@ -5,6 +5,7 @@ const translations = {
     phoneNumber: 'Numer telefonu:',
     emailAddress: 'Adres e-mail:',
     tShirt: 'Rozmiar koszulki:',
+    password: 'Zmień hasło',
   },
   EN: {
     myData: 'My data:',
@@ -12,6 +13,7 @@ const translations = {
     phoneNumber: 'Phone number:',
     emailAddress: 'E-mail address:',
     tShirt: 'T-shirt size:',
+    password: 'Change password',
   },
 };
 

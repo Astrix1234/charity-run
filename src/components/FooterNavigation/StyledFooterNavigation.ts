@@ -1,17 +1,28 @@
 import styled from 'styled-components';
 
 export const StyledNavigation = styled.div`
-  font-size: 1.25em;
-  display: grid;
-  justify-items: center;
-  gap: 1em;
   text-align: center;
   ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 12em;
-    row-gap: 1em;
+    flex-direction: column;
+    gap: 1rem;
     margin-bottom: 2em;
+    justify-content: center;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 1rem;
+    ul {
+      row-gap: 0.7rem;
+      flex-flow: column wrap;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
   }
 `;

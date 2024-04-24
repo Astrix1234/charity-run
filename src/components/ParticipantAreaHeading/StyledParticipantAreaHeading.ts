@@ -5,6 +5,7 @@ export const StyledHeading = styled.section`
   justify-items: center;
   gap: 2rem;
   width: 100%;
+  text-align: center;
 
   h1 {
     text-align: center;
@@ -13,13 +14,21 @@ export const StyledHeading = styled.section`
   }
 
   h2 {
-    font-size: min(5.625rem, 10.2vw);
+    font-size: min(4.5rem, 10.6vw);
     font-weight: 400;
-    padding-bottom: 0;
     white-space: nowrap;
+    padding-bottom: min(0.75rem, max(0.6rem, 4vw));
   }
 
   svg {
     width: 100%;
+  }
+
+  .arrows svg {
+    height: min(145px, 25vw);
+  }
+
+  @media screen and (max-width: 800px) {
+    gap: 0.5rem;
   }
 `;

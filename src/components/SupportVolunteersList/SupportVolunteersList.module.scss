@@ -10,24 +10,24 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
-    @include desktop-screen {
-      margin-top: 80px;
-      margin-bottom: 80px;
-    }
+  @include desktop-screen {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 
-  .item h1 {
-    top: 65px; /* Na górze kontenera */
-    left: 200px; /* Po prawej stronie kontenera */
+  & .item h1 {
+    top: 65px;
+    left: 200px;
     font-family: Poppins;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 31.5px;
+    line-height: 25px;
     text-align: center;
-    margin: 0 auto; /* Resetujemy margines, aby nagłówek był dokładnie na górze i na prawo */
+    margin: 0 auto;
 
     @include desktop-screen {
-      position: absolute; /* Nagłówek ma być absolutnie pozycjonowany */
-      top: 65px; 
+      position: absolute;
+      top: 65px;
       left: 200px;
       font-size: 21px;
       text-align: left;
@@ -35,24 +35,25 @@
       margin: 0;
     }
   }
-  
-  .item p {
-    top: 200px; /* Na dole kontenera */
-    left: 0; /* Po lewej stronie kontenera */
+
+  & .item p {
+    top: 200px;
+    left: 0;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 31.5px;
+    line-height: 25px;
     text-align: left;
-    padding-top: 20px;
-    margin: 0; /* Resetujemy margines, aby tekst był dokładnie na dole i na lewo */
+    padding-top: 5px;
+    margin: 0;
+
 
     @include desktop-screen {
-      position: absolute; /* Tekst ma być absolutnie pozycjonowany */
+      position: absolute;
       text-align: left;
       font-size: 21px;
       padding-left: 80px;
-      padding-right: 80px; /* Dodajemy odstępy z lewej strony */
+      padding-right: 80px;
       text-align: left;
     }
   }

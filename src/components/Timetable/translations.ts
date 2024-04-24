@@ -20,7 +20,7 @@ const translations = {
     slowackiego: 'Słowackiego Park',
     inHours: 'In hours',
     start: 'Running start',
-    hospital: 'Before the hospital',
+    hospital: 'Before hospital',
     startHour: 'Start time',
     walk: 'Start of walk',
     mumChildren: 'Slipper run and mothers<br /> with children run',

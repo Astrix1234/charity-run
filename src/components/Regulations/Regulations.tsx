@@ -34,8 +34,38 @@ export const Regulations: React.FC<RegulationsProps> = ({ onClose }) => {
               {t.foundationInformationClause}
             </h4>
             <p className={scss.regulations__text}>
-              {t.foundationInformationClauseDetails}
+              {t.foundationInformationClauseTitle1}
             </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseDetails1}
+            </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseTitle2}
+            </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseDetails2}
+            </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseTitle3}
+            </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseDetails3}
+            </p>
+            <br />
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseTitle4}
+            </p>
+            <p className={scss.regulations__text}>
+              {t.foundationInformationClauseDetails4}
+            </p>
+            <ol className={scss.regulations__list}>
+              <li>{t.foundationInformationClauseDetailsItem1}</li>
+              <li>{t.foundationInformationClauseDetailsItem2}</li>
+              <li>{t.foundationInformationClauseDetailsItem3}</li>
+              <li>{t.foundationInformationClauseDetailsItem4}</li>
+              <li>{t.foundationInformationClauseDetailsItem5}</li>
+              <li>{t.foundationInformationClauseDetailsItem6}</li>
+            </ol>
           </div>
           <div className={scss.regulations__button}>
             <Button onClick={onClose} content={t.button} icon={<IconAgree />} />

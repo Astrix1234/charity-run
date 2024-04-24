@@ -15,7 +15,7 @@ export const validationSchema = Yup.object({
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^da-zA-Z]).{8,}$/,
       'Min 8 chars, incl. uppercase, number & symbol'
     )
-    .required('Required!'),
+    .required('Required field'),
   passwordConfirm: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
     .required('Required field'),

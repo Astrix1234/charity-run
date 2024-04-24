@@ -33,7 +33,7 @@ const translations = {
     charityRun: 'Charity run',
     hematoRun: 'Hemato Run',
     runInfo1:
-      'People with big hearts are cordially invited to take part in the Hemat Run, an event organised by the Leukaemia Foundation.',
+      'People with big hearts are cordially invited to take part in the Hemato Run, an event organised by the Leukaemia Foundation.',
     runInfo2:
       'The run will take place on Sunday 26 May 2024. The route will lead around the Mikołaj Kopernik Regional Multispecialist Oncology and Traumatology Centre in Łódź.',
     runInfo3:
