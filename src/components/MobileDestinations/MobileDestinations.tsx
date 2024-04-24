@@ -25,21 +25,6 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
   const { setIsLoading } = useIsLoadingStore();
   const navigate = useNavigate();
 
-  const handleLinkClick = (
-    e: React.MouseEvent,
-    dest: 'participant' | 'main'
-  ) => {
-    e.preventDefault();
-    const url = dest === 'participant' ? '/participant-area' : '/';
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-    if (location.pathname !== url) {
-      navigate(url);
-    }
-  };
-
   const handleLogout = () => {
     const logoutUser = async () => {
       try {
@@ -98,12 +83,8 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
         links={[
           {
             name: t.myProfile,
-            dest: '',
+            dest: '/participant-area',
             disabled: !isLogin,
-            handleClick: (e: React.MouseEvent) => {
-              handleLinkClick(e, 'participant');
-              handleClose();
-            },
           },
           {
             name: t.runInfo,
