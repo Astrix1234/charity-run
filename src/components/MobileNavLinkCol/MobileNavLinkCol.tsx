@@ -53,9 +53,11 @@ function MobileNavLinkCol({
           {links.map((link, i) =>
             !link.dest ? (
               <button
-                className={`${scss.item} ${scss.item__enabled}`}
+                className={`${scss.item} ${
+                  link.disabled ? scss.item__disabled : scss.item__enabled
+                }`}
                 type="button"
-                onClick={link.handleClick}
+                onClick={!link.disabled ? link.handleClick : undefined}
                 key={i}
               >
                 <span className={scss.item__line} />

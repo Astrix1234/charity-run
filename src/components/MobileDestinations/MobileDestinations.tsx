@@ -98,8 +98,12 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
         links={[
           {
             name: t.myProfile,
-            dest: '/participant-area',
+            dest: '',
             disabled: !isLogin,
+            handleClick: (e: React.MouseEvent) => {
+              handleLinkClick(e, 'participant');
+              handleClose();
+            },
           },
           {
             name: t.runInfo,
