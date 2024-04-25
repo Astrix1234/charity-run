@@ -29,11 +29,11 @@ export default function ParticipantAreaPage() {
     }
   }, [hash]);
 
-  useEffect(() => {
-    if (!isLogin) {
-      navigate('/login');
-    }
-  }, [isLogin, navigate]);
+  // useEffect(() => {
+  //   if (!isLogin) {
+  //     navigate('/login');
+  //   }
+  // }, [isLogin, navigate]);
 
   useEffect(() => {
     const fetchUserData = async () => {
