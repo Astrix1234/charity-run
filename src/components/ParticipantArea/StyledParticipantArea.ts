@@ -6,6 +6,7 @@ export const h3Size = 'min(1.5rem, max(1.15rem, 4.5vw))';
 export const pSize = 'min(1.25rem, max(1rem, 4vw))';
 
 export const StyledParticipant = styled.div`
+  overflow-x: hidden;
   background: url('images/cut-background.png') no-repeat;
   background-size: 100% 15%;
 
