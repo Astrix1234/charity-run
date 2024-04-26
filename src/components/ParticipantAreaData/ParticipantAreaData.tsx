@@ -29,15 +29,11 @@ export const ParticipantAreaData = () => {
         </div>
         <div>
           <p>03/ {t.phoneNumber}</p>
-          {participantUserData && participantUserData.length > 0 && (
-            <p>{participantUserData[0].phone}</p>
-          )}
+          {participantUserData && <p>{participantUserData.phone}</p>}
         </div>
         <div>
           <p>04/ {t.tShirt}</p>
-          {participantUserData && participantUserData.length > 0 && (
-            <p>{participantUserData[0].shirt}</p>
-          )}
+          {participantUserData && <p>{participantUserData.shirt}</p>}
         </div>
         <Link className="password" to="/new-password">
           {t.password}
