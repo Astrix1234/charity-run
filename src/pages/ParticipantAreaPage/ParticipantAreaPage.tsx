@@ -61,7 +61,7 @@ export default function ParticipantAreaPage() {
           setIsLoading(true);
           const response = await getUserParticipation();
           if (response.status === 200) {
-            setParticipantUserData(response);
+            setParticipantUserData(response.data);
             setHasFetchedParticipantData(true);
           } else if (response.status === 404) {
             console.log('No participation found for the user');

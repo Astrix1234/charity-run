@@ -160,7 +160,7 @@ export const getUserParticipation = async () => {
       `${apiUrl}/users/participant`,
       getConfig()
     );
-    return response.data;
+    return response;
   } catch (error) {
     console.error('Error getting participant:', error);
     throw error;
