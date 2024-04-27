@@ -1,5 +1,6 @@
 import scss from './HematoRunMainTitle.module.scss';
 import { Button } from '../Button/Button';
+import { CountdownTimer } from '../../components/CountdownTimer/CountdownTimer';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Link } from 'react-router-dom';
@@ -21,6 +22,7 @@ export const HematoRunMainTitle = () => {
   return (
     <section id="home" className={scss.hematoTitles}>
       <div className={scss.hematoTitles__container}>
+        <CountdownTimer />
         <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
         <div className={scss.hematoTitles__titleContainer}>
           <div className={scss.hematoTitles__titleBegin}>

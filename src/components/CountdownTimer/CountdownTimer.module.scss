@@ -1,24 +1,8 @@
 @import '../../stylesheets/mixins.scss';
 
 .countdownTimer {
-  padding: 60px 0 0 0;
-
-  @include desktop-screen {
-    padding: 140px 0 0 0;
-  }
-
   &__container {
-    position: relative;
-    max-width: 390px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-
-    @include desktop-screen {
-      max-width: 1440px;
-      padding: 0 80px;
-    }
+    background-color: #ceeaeb;
+    height: 50px;
   }
 }

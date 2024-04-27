@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CountdownTimer } from '../../components/CountdownTimer/CountdownTimer';
 import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRunMainTitle';
 import { HematoRunRoute } from '../../components/HematoRunRoute/HematoRunRoute';
 import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
@@ -30,7 +29,6 @@ export default function HomePage() {
       <Helmet>
         <title>Hemato Run</title>
       </Helmet>
-      <CountdownTimer />
       <HematoRunMainTitle />
       <HematoRunInfo />
       <GalleryCarousel />
