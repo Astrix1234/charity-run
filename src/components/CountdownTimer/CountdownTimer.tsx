@@ -44,6 +44,7 @@ export const CountdownTimer: React.FC = () => {
 
     const updateRemainingTime = () => {
       setTimeRemaining(calculateTimeRemaining());
+    };
 
     // Call the function that updates the remaining time at the start to initiate the countdown
     updateRemainingTime();
