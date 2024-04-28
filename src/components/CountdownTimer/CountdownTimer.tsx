@@ -5,6 +5,9 @@ import {
   differenceInMinutes,
 } from 'date-fns';
 
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from './translations';
+
 import scss from './CountdownTimer.module.scss';
 
 interface TimeRemaining {
@@ -14,7 +17,11 @@ interface TimeRemaining {
 }
 
 const eventDate = new Date('May 26, 2024 09:00:00');
+
 export const CountdownTimer: React.FC = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+
   const formatTime = (time: number): string =>
     time < 0 ? `0${time}` : time.toString();
 
@@ -56,9 +63,9 @@ export const CountdownTimer: React.FC = () => {
   return (
     <div className={scss.countdownTimer}>
       <div className={scss.countdownTimer__container}>
-        <span className={scss.countdownTimer__text}>Dni</span>
-        <span className={scss.countdownTimer__text}>Godzin</span>
-        <span className={scss.countdownTimer__text}>Minut</span>
+        <span className={scss.countdownTimer__text}>{t.day}</span>
+        <span className={scss.countdownTimer__text}>{t.hour}</span>
+        <span className={scss.countdownTimer__text}>{t.minute}</span>
         <span className={scss.countdownTimer__number}>
           {timeRemaining.days}
         </span>
