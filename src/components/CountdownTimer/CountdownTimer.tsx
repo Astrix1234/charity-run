@@ -13,11 +13,10 @@ interface TimeRemaining {
   minutes: number;
 }
 
-const eventDate = new Date('May 25, 2024 09:00:00');
-
+const eventDate = new Date('May 26, 2024 09:00:00');
 export const CountdownTimer: React.FC = () => {
   const formatTime = (time: number): string =>
-    time < 10 ? `0${time}` : time.toString();
+    time < 0 ? `0${time}` : time.toString();
 
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
