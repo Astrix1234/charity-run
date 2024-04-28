@@ -19,12 +19,12 @@
     margin: 0 auto;
     padding: 0 20px;
     overflow: hidden;
-    height: 658px;
+    height: 748px;
 
     @include desktop-screen {
       max-width: 1440px;
       padding: 0 80px;
-      height: 638px;
+      height: 728px;
     }
   }
 
@@ -93,7 +93,6 @@
     align-items: center;
     margin-bottom: 19px;
 
-
     @include desktop-screen {
       gap: 10px;
       margin-bottom: 39px;
@@ -157,7 +156,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 
     @include desktop-screen {
       right: 80px;
