@@ -5,6 +5,7 @@ interface GalleryState {
   page: number;
   pageCount: number;
   displayedImages: Array<{ index: number; src: string; alt: string }>;
+  setPage: (page: number) => void;
 }
 
 export const useGalleryStore = create<GalleryState>(set => ({
