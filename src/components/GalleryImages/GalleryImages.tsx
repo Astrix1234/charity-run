@@ -1,5 +1,4 @@
 import { Pagination } from '@mui/material';
-import FsLightbox from 'fslightbox-react';
 
 import { useGalleryStore } from '../../Zustand/useGalleryStore';
 import scss from './GalleryImages.module.scss';
