@@ -4,7 +4,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
 import { useGalleryStore } from '../../Zustand/useGalleryStore';
-import { images } from '../components/Gallery/Images';
+import { images } from '../Gallery/Images';
 import scss from './GalleryImages.module.scss';
 
 function GalleryImages() {
@@ -18,8 +18,8 @@ function GalleryImages() {
     setPage(page);
   };
 
-  const handleImageClick = (clickedIndex: number) => {
-    setLightboxOpen(clickedIndex);
+  const handleImageClick = (index: number) => {
+    setLightboxOpen(index);
   };
 
   const handleLightboxClose = () => {
@@ -32,13 +32,13 @@ function GalleryImages() {
         <Pagination count={pageCount} onChange={handlePageChange} page={page} />
       </div>
       <ul className={scss.gallery__list}>
-        {displayedImages.map((image, imageIndex) => (
-          <li key={imageIndex}>
+        {displayedImages.map(image => (
+          <li key={image.index}>
             <img
               className={scss.gallery__img}
               src={image.src}
               alt={image.alt}
-              onClick={() => handleImageClick(imageIndex)}
+              onClick={() => handleImageClick(image.index)}
               loading="lazy"
             />
           </li>
@@ -48,7 +48,7 @@ function GalleryImages() {
         index={lightboxOpen}
         open={lightboxOpen >= 0}
         close={handleLightboxClose}
-        slides={displayedImages.map(image => ({
+        slides={images.map(image => ({
           src: image.src,
           caption: image.alt,
         }))}
