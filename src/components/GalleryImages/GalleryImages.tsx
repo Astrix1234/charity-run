@@ -4,6 +4,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
 import { useGalleryStore } from '../../Zustand/useGalleryStore';
+import { images } from '../components/Gallery/Images';
 import scss from './GalleryImages.module.scss';
 
 function GalleryImages() {
@@ -52,6 +53,9 @@ function GalleryImages() {
           caption: image.alt,
         }))}
       />
+      <div className={scss.gallery__pagination}>
+        <Pagination count={pageCount} onChange={handlePageChange} page={page} />
+      </div>
     </div>
   );
 }
