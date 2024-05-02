@@ -35,6 +35,7 @@
     "spinner": "^0.3.4",
     "styled-components": "^6.1.8",
     "swiper": "^11.0.7",
+    "yet-another-react-lightbox": "^3.17.5",
     "yup": "^1.4.0",
     "zustand": "^4.5.2"
   },
