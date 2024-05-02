@@ -4,7 +4,7 @@ import { images } from '../components/Gallery/Images';
 interface GalleryState {
   page: number;
   pageCount: number;
-  displayedImages: Array<{ src: string; alt: string }>;
+  displayedImages: Array<{ index: number; src: string; alt: string }>;
   setPage: (page: number) => void;
 }
 
