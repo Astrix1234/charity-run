@@ -7,12 +7,12 @@ export const IconMumChildren = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_953_2818)">
+      <g filter="url(#filter0_d_1525_16332)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M140.122 10.8592C166.427 16.4748 186.992 33.1489 205.462 52.642C223.204 71.3674 237.269 92.3382 241.41 117.76C246.48 148.878 254.738 187.523 230.79 208.12C206.989 228.591 171.47 202.501 140.122 204.876C103.103 207.68 65.528 243.36 34.5348 222.989C3.01122 202.27 6.7336 155.384 7.57883 117.76C8.39934 81.2359 10.664 40.1218 39.1592 17.1395C66.408 -4.83758 105.846 3.54182 140.122 10.8592Z"
-          fill="#1CA2A7"
+          fill="#FD7616"
         />
       </g>
       <path
@@ -21,7 +21,7 @@ export const IconMumChildren = () => {
       />
       <defs>
         <filter
-          id="filter0_d_953_2818"
+          id="filter0_d_1525_16332"
           x="0"
           y="0"
           width="254"
@@ -46,12 +46,12 @@ export const IconMumChildren = () => {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_953_2818"
+            result="effect1_dropShadow_1525_16332"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_953_2818"
+            in2="effect1_dropShadow_1525_16332"
             result="shape"
           />
         </filter>

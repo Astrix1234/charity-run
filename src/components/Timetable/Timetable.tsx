@@ -23,6 +23,17 @@ export const Timetable = () => {
 
   const isDesktop = useMediaQuery({ minWidth: 1360 });
 
+  const goToMap = () => {
+    const parkName = 'Park im. Juliusza Słowackiego, Łódź';
+    const zoomLevel = 18;
+
+    const url = `https://www.google.com/maps?q=${encodeURIComponent(
+      parkName
+    )}&z=${zoomLevel}`;
+
+    window.open(url, '_blank');
+  };
+
   return (
     <section id="timetable" className={scss.timetable}>
       <div className={scss.timetable__container}>
@@ -50,14 +61,16 @@ export const Timetable = () => {
               className={scss.timetable__comment}
               dangerouslySetInnerHTML={{ __html: item.comment }}
             ></div>
-            <p className={scss.timetable__place}>{item.place}</p>
-            <p className={scss.timetable__address}>{item.address}</p>
+            <div
+              className={scss.timetable__address}
+              dangerouslySetInnerHTML={{ __html: item.address }}
+            ></div>
             <p className={scss.timetable__times}>{item.time}</p>
             <p className={scss.timetable__hours}>{item.hours}</p>
           </div>
         ))}
         <div
-          className={`${scss.timetable__element} ${scss.timetable__element5}`}
+          className={`${scss.timetable__element} ${scss.timetable__element6}`}
         >
           <div className={scss.timetable__icon}>
             <IconEnd />
@@ -65,6 +78,7 @@ export const Timetable = () => {
           <p className={scss.timetable__comment}>{t.end}</p>
           <p className={scss.timetable__hours}>18.00</p>
         </div>
+        <div className={scss.timetable__goToMap} onClick={goToMap}></div>
         {isDesktop &&
           array.map((item, index) => (
             <div key={index} className={scss[`timetable__icon${index}`]}>

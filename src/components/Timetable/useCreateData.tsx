@@ -5,6 +5,7 @@ import { IconRegistration } from '../../Icons/TimetableIcons/IconRegistration/Ic
 import { IconWalk } from '../../Icons/TimetableIcons/IconWalk/IconWalk';
 import { IconMumChildren } from '../../Icons/TimetableIcons/IconMumChildren/IconMumChildren';
 import { IconAwards } from '../../Icons/TimetableIcons/IconAwards/IconAwards';
+import { IconPicnic } from '../../Icons/TimetableIcons/IconPicnic/IconPicnic';
 
 export const useCreateData = () => {
   const { language } = useLanguageStore();
@@ -14,7 +15,6 @@ export const useCreateData = () => {
     {
       icon: <IconRegistration />,
       comment: t.registry,
-      place: t.office,
       address: t.slowackiego,
       time: t.startHour,
       hours: '09:00',
@@ -22,16 +22,14 @@ export const useCreateData = () => {
     {
       icon: <IconMumChildren />,
       comment: t.mumChildren,
-      place: t.hospital,
-      address: 'Pabianicka 62',
+      address: t.street,
       time: t.startHour,
       hours: '10:45',
     },
     {
       icon: <IconStart />,
       comment: t.start,
-      place: t.hospital,
-      address: 'Pabianicka 62',
+      address: t.street,
       time: t.startHour,
       hours: '11:00',
     },
@@ -39,18 +37,23 @@ export const useCreateData = () => {
     {
       icon: <IconWalk />,
       comment: t.walk,
-      place: t.hospital,
-      address: 'Pabianicka 62',
+      address: t.street,
       time: t.startHour,
       hours: '11:30',
     },
     {
       icon: <IconAwards />,
       comment: t.awards,
-      place: t.hospital,
-      address: 'Pabianicka 62',
+      address: t.slowackiego,
       time: t.startHour,
       hours: '12:00',
+    },
+    {
+      icon: <IconPicnic />,
+      comment: t.walk,
+      address: t.slowackiego,
+      time: t.startHour,
+      hours: '12:00-18:00',
     },
   ];
   return data;
