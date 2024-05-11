@@ -23,7 +23,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
   return (
     <div className={scss.faq__item}>
       <div className={scss.faq__question}>
-        <span>{item.question}</span>
+        <span>{item.question} </span>
         <button
           className={scss.faq__icon}
           onClick={handleIconClick}

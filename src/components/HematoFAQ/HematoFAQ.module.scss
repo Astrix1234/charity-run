@@ -24,20 +24,24 @@
     }
   }
 
+  &__titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   &__title {
     text-align: center;
-    font-family: 'DM Serif Display';
     font-size: 40px;
-    gap: 5px;
+
     display: flex;
 
     @include desktop-screen {
-      font-size: 64px;
-      gap: 10px;
+      font-size: 54px;
     }
   }
 
-  &__bloodCell svg {
+  &__bloodCell {
     width: 25.907px;
     height: 36.627px;
 

@@ -20,13 +20,11 @@ const HematoFAQ: React.FC = () => {
   return (
     <section id="faq" className={scss.faq}>
       <div className={scss.faq__container}>
-        <div>
-          <h1 className={scss.faq__title}>
-            FAQ
-            <div className={scss.faq__bloodCell}>
-              <IconBloodCell />
-            </div>
-          </h1>
+        <div className={scss.faq__titleContainer}>
+          <h1 className={scss.faq__title}>FAQ</h1>
+          <div className={scss.faq__bloodCell}>
+            <IconBloodCell />
+          </div>
         </div>
         <div className={scss.faq__listContainer}>
           {t.faqItems.map((item, index) => (
