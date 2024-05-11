@@ -50,7 +50,7 @@ export const useCreateData = () => {
     },
     {
       icon: <IconPicnic />,
-      comment: t.walk,
+      comment: t.picnic,
       address: t.slowackiego,
       time: t.startHour,
       hours: '12:00-18:00',
