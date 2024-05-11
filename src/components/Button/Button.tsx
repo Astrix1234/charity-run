@@ -27,7 +27,6 @@ export const Button: React.FC<ButtonProps> = ({
         {icon && <span className={scss.button__icon}>{icon}</span>}
         {content}
       </button>
-      <div className={scss.button__dashedBorder}></div>
     </div>
   );
 };
