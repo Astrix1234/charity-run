@@ -1,11 +1,19 @@
 const translations = {
   PL: {
-    sponsorsTitle: 'Sponsorzy & Partnerzy',
+    sponsorsTitle: 'Darczyńcy & Partnerzy',
     seeSponsors: 'zobacz więcej',
+    donor: 'DARCZYŃCY',
+    partners: 'PARTNERZY',
+    becomeDonor: 'ZOSTAŃ DARCZYŃCĄ',
+    becomePartner: 'ZOSTAŃ PARTNEREM',
   },
   EN: {
-    sponsorsTitle: 'Sponsors & Partners',
+    sponsorsTitle: 'Donors & Partners',
     seeSponsors: 'see more',
+    donor: 'DONORS',
+    partners: 'PARTNERS',
+    becomeDonor: 'BECOME A DONOR',
+    becomePartner: 'BECOME A PARTNER',
   },
 };
 

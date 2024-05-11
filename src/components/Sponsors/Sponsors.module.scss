@@ -90,10 +90,26 @@
       text-decoration: underline;
     }
   }
+  &__subtitle {
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-left: 80px;
+    z-index: 1;
+  }
 }
 
 .padding {
   height: 100px;
+}
+
+.marqueeFiller {
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 58.5px;
+  color: var(--dark);
+  width: min-content;
 }
 
 @include desktop-screen {

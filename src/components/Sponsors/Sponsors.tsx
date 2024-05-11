@@ -5,19 +5,49 @@ import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import Slider from '../Slider/Slider';
 import scss from './Sponsors.module.scss';
 import translations from './translations';
-import { KopernikLogo } from '../../Icons/SponsorsIcons/KopernikLogo';
+
+const Donor = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+  return <h3 className={scss.marqueeFiller}>{t.becomeDonor}</h3>;
+};
+const Partner = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language];
+  return <h3 className={scss.marqueeFiller}>{t.becomePartner}</h3>;
+};
 
 const Sponsors = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
-  const sponsorsList = [
+  const donorsList = [
     <div className={scss.sponsors__logo}>
-      <KopernikLogo />
+      <Donor />
     </div>,
-    // <div className={scss.sponsors__logo}>
-    //   <KopernikLogo />
-    // </div>,
+    <div className={scss.sponsors__logo}>
+      <Donor />
+    </div>,
+    <div className={scss.sponsors__logo}>
+      <Donor />
+    </div>,
+    <div className={scss.sponsors__logo}>
+      <Donor />
+    </div>,
+  ];
+  const partnersList = [
+    <div className={scss.sponsors__logo}>
+      <Partner />
+    </div>,
+    <div className={scss.sponsors__logo}>
+      <Partner />
+    </div>,
+    <div className={scss.sponsors__logo}>
+      <Partner />
+    </div>,
+    <div className={scss.sponsors__logo}>
+      <Partner />
+    </div>,
   ];
 
   return (
@@ -34,11 +64,13 @@ const Sponsors = () => {
           </div>
         </div>
         <div className={scss.sponsors__wrapper}>
+          <h3 className={scss.sponsors__subtitle}>{t.donor}</h3>
           <div className={scss.sponsors__box}>
-            <Slider array={sponsorsList} reverse={false} />
+            <Slider array={donorsList} reverse={false} />
           </div>
+          <h3 className={scss.sponsors__subtitle}>{t.partners}</h3>
           <div className={scss.sponsors__box}>
-            <Slider array={sponsorsList} reverse={true} />
+            <Slider array={partnersList} reverse={true} />
           </div>
         </div>
         <div className={scss.sponsors__link__container}>
