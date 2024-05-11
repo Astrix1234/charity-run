@@ -37,7 +37,6 @@
     }
 
     &__title {
-        font-family: "DM Serif Display";
         font-size: 40px;
         margin-bottom: 63px;
 
@@ -92,7 +91,7 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        color: gray;
+        color: var(--orange);
         font-weight: 700;
         transition: all 0.3s ease-in-out;
         margin-left: auto;

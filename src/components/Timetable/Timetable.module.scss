@@ -2,10 +2,10 @@
 
 .timetable {
   padding: 60px 0 0 0;
-  height: 1250px;
+  height: 1350px;
 
   @include desktop-screen {
-    height: 2780px;
+    height: 3100px;
     padding: 150px 0 0 0;
   }
 
@@ -42,11 +42,10 @@
   }
 
   &__title {
-    font-family: 'DM Serif Display';
-    font-size: 38px;
+    font-size: 35px;
 
     @include desktop-screen {
-      font-size: 67px;
+      font-size: 54px;
     }
   }
 
@@ -98,7 +97,7 @@
 
   &__element0 {
     top: -20px;
-    left: -98px;
+    left: -65px;
 
     @include desktop-screen {
       top: 230px;
@@ -131,43 +130,80 @@
     right: -78px;
 
     @include desktop-screen {
-      top: 1450px;
+      top: 1400px;
       right: 160px;
     }
   }
 
   &__element4 {
     top: 600px;
-    left: -78px;
+    left: -65px;
 
     @include desktop-screen {
       top: 1625px;
-      left: 80px;
+      left: 200px;
     }
   }
 
   &__element5 {
-    top: 760px;
-    right: -60px;
+    top: 680px;
+    right: -30px;
 
     @include desktop-screen {
-      top: 2095px;
+      top: 2000px;
       right: 80px;
     }
   }
 
-  &__comment,
+  &__element6 {
+    top: 930px;
+    left: 100px;
+
+    @include desktop-screen {
+      top: 2450px;
+      left: 680px;
+    }
+  }
+
+  &__comment {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
   &__times {
     text-align: center;
-    font-size: var(--mediumFontSize);
+    font-size: 22px;
     font-weight: 400;
   }
 
-  &__place,
-  &__address,
-  &__hours {
-    font-size: var(--largeFontSize);
+  &__address {
+    text-align: center;
+    font-size: 24px;
     font-weight: 500;
+  }
+
+  &__hours {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  &__goToMap {
+    position: absolute;
+    width: 100px;
+    height: 95px;
+    top: 120px;
+    left: 28px;
+    cursor: pointer;
+
+
+    @include desktop-screen {
+      width: 240px;
+      height: 230px;
+      top: 230px;
+      left: 100px;
+      scale: 1;
+    }
   }
 
   &__icon0 {
