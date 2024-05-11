@@ -38,10 +38,11 @@ export const HematoRunMainTitle = () => {
         </p>
         <p className={scss.hematoTitles__date}>26.05.2024 ŁÓDŹ</p>
         <div className={scss.hematoTitles__kmContainer}>
-          <p className={scss.hematoTitles__km}>5 KM | 1 KM</p>
+          <p className={scss.hematoTitles__km}>5 KM</p>
           <div className={scss.hematoTitles__iconRoad}>
             <IconRoad />
           </div>
+          <p className={scss.hematoTitles__km}>1 KM</p>
         </div>
         <Button onClick={handleClick} content={t.joinUs} />
 

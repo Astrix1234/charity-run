@@ -24,17 +24,19 @@
     @include desktop-screen {
       max-width: 1440px;
       padding: 0 80px;
-      height: 728px;
     }
   }
 
   &__giveOthers {
-    font-weight: 500;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--light);
+    -webkit-text-stroke: 1.5px var(--dark);
+
 
     @include desktop-screen {
       font-size: var(--largeFontSize);
       line-height: 46px;
-      margin-bottom: 20px;
     }
   }
 
@@ -94,7 +96,7 @@
     margin-bottom: 19px;
 
     @include desktop-screen {
-      gap: 10px;
+      gap: 20px;
       margin-bottom: 39px;
     }
   }
@@ -106,7 +108,7 @@
     color: var(--marine);
 
     @include desktop-screen {
-      font-size: var(--largeFontSize);
+      font-size: 50px;
       line-height: 75px;
     }
   }
