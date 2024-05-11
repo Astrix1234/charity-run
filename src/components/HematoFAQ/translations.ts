@@ -15,7 +15,7 @@ const translations = {
         question:
           'Czy istnieje opłata rejestracyjna, i jeśli tak, jakie są jej kwoty?',
         answer:
-          'Tak, jest opłata - dla dorosłego 30 PLN, a dla dziecka 20 PLN.',
+          'Tak, jest opłata - dla dorosłego 30 PLN, a dla dziecka 20 PLN (dzieci do 12 r.ż. bezpłatnie).',
       },
       {
         question: 'Jak mogę się zarejestrować do udziału w Hematobiegu?',
@@ -69,7 +69,7 @@ const translations = {
         question:
           'Is there a registration fee, and if so, what are the amounts?',
         answer:
-          'Yes, there is a fee - 30 PLN for adults and 20 PLN for children.',
+          'Yes, there is a fee - 30 PLN for adults and 20 PLN for children (children up to 12 years of age free of charge).',
       },
       {
         question: 'How can I register to participate in the Hematobieg?',
