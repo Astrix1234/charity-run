@@ -11,7 +11,7 @@ function SponsorsHeading() {
   return (
     <div className={scss.container}>
       <h2 className={scss.heading}>
-        <span className={scss.heading__sub}>{t.sub}</span>
+        <span className={scss.text}>{t.heading}</span>
         <HematorunTitle secondTitle={{ pl: 'biegu!', eng: 'run!' }} />
       </h2>
       <BecomeSponsorButton />

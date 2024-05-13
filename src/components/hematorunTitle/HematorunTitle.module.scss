@@ -1,8 +1,35 @@
+@import '../../stylesheets/mixins.scss';
+
 .title {
-  font-size: 90px;
+  font-size: 36px;
   display: flex;
   align-items: center;
   font-weight: 800;
   color: var(--orange);
   text-transform: uppercase;
+
+  & > svg {
+    width: 26px;
+    height: auto;
+  }
+
+  @include desktop-screen {
+    font-size: 90px;
+
+    & > svg {
+      width: auto;
+    }
+  }
+}
+
+.blood {
+  & > svg {
+    width: 26px;
+    height: auto;
+
+    @include desktop-screen {
+      width: auto;
+      height: 100%;
+    }
+  }
 }

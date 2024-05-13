@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    sub: 'Dziękujemy wszystkim sponsorom i partnerom',
+    heading: 'Dziękujemy wszystkim sponsorom i partnerom',
   },
   EN: {
-    sub: 'Thank you to all sponsors and partners of',
+    heading: 'Thank you to all sponsors and partners of',
   },
 };
 

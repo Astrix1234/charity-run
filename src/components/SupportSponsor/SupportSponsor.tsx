@@ -17,11 +17,11 @@ function SupportSponsor() {
           />
         </div>
         <SupportSubHeading
-          subText={{
+          content={{
             pl: 'Pomóż nam w realizacji celów Fundacji oraz wesprzyj organizacje',
             eng: 'Help us achieve the goals of the Foundation and support the organization',
           }}
-          mainText={{ pl: 'Hematobiegu', eng: 'Hematorun' }}
+          titleSub={{ pl: 'biegu', eng: 'run' }}
         />
       </div>
       <SupportSponsorText />
