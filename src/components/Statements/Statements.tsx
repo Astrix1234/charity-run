@@ -7,14 +7,9 @@ import { IconStatementSquare } from '../../Icons/IconStatementSquare/IconStateme
 interface StatementsProps {
   consent: boolean;
   handleIconClick: () => void;
-  openModal: () => void;
 }
 
-export const Statements = ({
-  consent,
-  handleIconClick,
-  openModal,
-}: StatementsProps) => {
+export const Statements = ({ consent, handleIconClick }: StatementsProps) => {
   const { language } = useLanguageStore();
   const t = translations[language];
 
@@ -40,15 +35,7 @@ export const Statements = ({
         <p className={scss.regulations__iDo}>{t.statementIDo}</p>
         <ol className={scss.regulations__statementList}>
           <li className={scss.regulations__statementItem}>
-            {t.statementItem1part1}
-            <span onClick={openModal} className={scss.regulations__highlights}>
-              {t.span1}
-            </span>
-            {t.statementItem1part2}
-            <span onClick={openModal} className={scss.regulations__highlights}>
-              {t.span2}
-            </span>
-            {t.statementItem1part3}
+            {t.statementItem1}
           </li>
           <li className={scss.regulations__statementItem}>
             {t.statementItem2}
