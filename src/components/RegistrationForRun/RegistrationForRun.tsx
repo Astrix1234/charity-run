@@ -41,6 +41,8 @@ export const RegisterForRun = () => {
   const [isDiscountCodeValid, setIsDiscountCodeValid] = useState(false);
   const [discountMessage, setDiscountMessage] = useState('');
 
+  const MINIMUM_CHARGE_AMOUNT = 1;
+
   useEffect(() => {
     const handleKeyDown = (event: WindowEventMap['keydown']) => {
       if (event.key === 'Escape') {
@@ -95,7 +97,7 @@ export const RegisterForRun = () => {
     onSubmit: (values: raceParticipantUserData) => {
       const registerUserOnRun = async () => {
         const amount = isDiscountCodeValid
-          ? 0
+          ? MINIMUM_CHARGE_AMOUNT
           : values.shirtGender === 'Dziecięca'
           ? 2000
           : 3000;
@@ -103,7 +105,7 @@ export const RegisterForRun = () => {
           setIsLoading(true);
           const response = await userParticipation(amount, values);
           if (response.status === 201 && response.data) {
-            if (amount === 0) {
+            if (isDiscountCodeValid) {
               toast.info('Registration successful!');
               setTimeout(() => navigate('/'), 2500);
               return;
