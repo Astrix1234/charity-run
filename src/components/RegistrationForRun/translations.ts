@@ -10,6 +10,10 @@ const translations = {
     tshirtTypeFemale: 'Damska',
     tshirtTypeMale: 'Męska',
     tshirtTypeChild: 'Dziecięca',
+    discount: 'Kod rabatowy (opcjonalnie)',
+    payDiscount: 'Płacę z kodem rabatowym',
+    toPay: 'DO ZAPŁATY (w tym VAT):',
+    wrongCode: 'Błędny kod',
     statementPayment:
       'Klikając „Zapisz się na bieg”, wyrażasz zgodę na przekierowanie do systemu płatności Przelewy24.',
     button: 'Zapisz się na bieg',
@@ -39,6 +43,10 @@ const translations = {
     tshirtTypeFemale: 'Female',
     tshirtTypeMale: 'Male',
     tshirtTypeChild: 'Child',
+    discount: 'Discount code (optional)',
+    payDiscount: 'Pay with discount code',
+    toPay: 'FOR PAYMENT (including VAT):',
+    wrongCode: 'Wrong code',
     statementPayment:
       'By clicking "Sign up for the run", you consent to being redirected to the Przelewy24 payment system.',
     button: 'Sign up for run',
