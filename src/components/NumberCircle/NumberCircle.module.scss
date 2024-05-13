@@ -6,16 +6,16 @@
   align-items: center;
   justify-content: center;
   color: var(--light);
-  font-family: 'DM Serif Display';
   border-radius: 50%;
   background-color: var(--orange);
   width: 40px;
   height: 40px;
   font-size: 24px;
+  font-weight: 700;
 
   @include desktop-screen {
-    width: 124px;
-    height: 124px;
+    width: 138px;
+    height: 138px;
     font-size: 86px;
   }
 }

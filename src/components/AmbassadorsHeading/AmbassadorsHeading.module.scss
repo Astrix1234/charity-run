@@ -25,23 +25,14 @@
   @include desktop-screen {
     gap: 24px;
   }
+}
 
-  &__sub {
+.text {
+  font-size: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  @include desktop-screen {
     font-size: 50px;
-    font-weight: 500;
-    font-size: 16px;
-    @include desktop-screen {
-      font-size: 50px;
-    }
-  }
-
-  &__main {
-    font-size: 90px;
-    font-weight: 800;
-    font-size: 36px;
-    @include desktop-screen {
-      font-size: 90px;
-    }
   }
 }
 

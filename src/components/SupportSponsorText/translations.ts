@@ -1,63 +1,56 @@
 const textContent = {
   PL: {
-    title: 'Dołącz do Naszego Zespołu - Zostań Sponsorem!',
+    title: 'Dołącz do Naszego Zespołu - Zostań Darczyńcą!',
     greeting: 'Drodzy Przyjaciele!',
     projectDescription:
       'Jesteśmy niezwykle podekscytowani naszym nowym projektem – Bieg Charytatywny Fundacji Na Rzecz Pomocy Chorym Na Białaczki. Biegniemy, walczyć z nowotworami krwi, ale nasz wysiłek nie przyniesie efektów bez Waszego wsparcia!',
-    whySponsor: 'Dlaczego warto zostać sponsorem?',
+    whySponsor: 'Dlaczego warto zostać darczyńcą?',
     sponsorBenefits: {
       point1: '1.',
-      point1Title: 'Wspieracie walkę z nowotworami krwi:',
-      point1Description:
-        'Przekazywane przez Was fundusze pozwalają nam m. in. udoskonalać opiekę, którą szpitale otaczają swoich pacjentów oraz finansować badania nad leczeniem nowotworów krwi.',
+      point1Title: 'Wspieracie walkę z nowotworami krwi.',
       point2: '2.',
-      point2Title: 'Zdobywacie wizualne uznanie:',
-      point2Description:
-        'Wasze logo umieścimy na stronie naszej fundacji, w materiałach promocyjnych oraz pojawi się ono podczas wszelkich eventów.',
+      point2Title:
+        'Dołączacie do grupy aktywnie działającej na rzecz społeczeństwa.',
       point3: '3.',
-      point3Title: 'Dołączacie do społecznej odpowiedzialności biznesu:',
-      point3Description:
-        'Jako sponsorzy zostajecie częścią niezwykłej grupy firm aktywnie działających na rzecz społeczeństwa. Tym samym wpieracie nas w różnych przedsięwzięciach.',
+      point3Title:
+        'Informacje o darczyńcach umieszczamy na stronie fundacji oraz pojawią się podczas eventu.',
     },
     howToHelp: 'Jak możecie pomóc?',
     howToHelpDescription:
-      'Najlepszą formą pomocy jest zostanie sponsorem lub darczyńcą i wsparcie finansowe naszego biegu. Z tego powodu przygotowaliśmy różne pakiety sponsorskie dopasowane do każdego. Jeśli chcecie poznać szczegóły, to skontaktujcie się z nami, a pomożemy Wam wybrać opcję najlepiej odpowiadającą Waszym potrzebom.',
+      'Skontaktujcie się z nami a wybierzemy najlepszą opcję odpowiadającą waszym możliwościom.',
     contact: 'Kontakt:',
-    contactEmail:
-      'Jeżeli chcecie dowiedzieć się więcej na temat sponsoringu, skontaktujcie się z nami poprzez adres mailowy:',
-    email: 'kontakt@fundacja.hematologiczna.org',
+    contactEmail: 'Skontaktujcie się z nami przez adres mailowy:',
+    email: 'hematobieg@fundacja.hematologiczna.org',
+    phoneTo: '+48730118500',
+    phoneText: '+48 730 118 500',
     thanks:
       'Dziękujemy za Wasze zaangażowanie i wsparcie naszej misji walki z nowotworami krwi!',
     regards: 'Z wyrazami szacunku,',
     team: 'Zespół Fundacji Na Rzecz Pomocy Chorym na Białaczki',
   },
   EN: {
-    title: 'Join Our Team - Become a Sponsor!',
+    title: 'Join Our Team - Become a Donor!',
     greeting: 'Dear Friends!',
     projectDescription:
-      'We are incredibly excited about our new project - Charity Run of the Foundation for Helping Patients with Leukemia. We run to fight blood cancers, but our effort will not yield results without your support!',
-    whySponsor: 'Why become a sponsor?',
+      "We are extremely excited about our new project - the Leukemia Foundation's Charity Run. We are running to fight blood cancer, but our efforts will not bring results without your support!",
+    whySponsor: 'Why become a donor?',
     sponsorBenefits: {
       point1: '1.',
       point1Title: 'Support the fight against blood cancers:',
-      point1Description:
-        'Funds provided by you allow us, among other things, to improve the care provided by hospitals to their patients and to finance research into the treatment of blood cancers.',
       point2: '2.',
-      point2Title: 'Gain visual recognition:',
-      point2Description:
-        "Your logo will be placed on our foundation's website, in promotional materials, and will appear at all events.",
+      point2Title: 'Join a group actively working for society.',
       point3: '3.',
-      point3Title: 'Join corporate social responsibility:',
-      point3Description:
-        'As sponsors, you become part of an extraordinary group of companies actively working for the benefit of society. You thus support us in various initiatives.',
+      point3Title:
+        "Information about donors is posted on the foundation's website and will appear during the event.",
     },
     howToHelp: 'How can you help?',
     howToHelpDescription:
-      'The best way to help is to become a sponsor or donor and support our run financially. For this reason, we have prepared various sponsorship packages tailored to everyone. If you want to learn more, contact us and we will help you choose the option that best suits your needs.',
+      'Contact us and we will choose the best option that suits your possibilities!',
     contact: 'Contact:',
-    contactEmail:
-      'If you want to learn more about sponsoring, contact us via email:',
-    email: 'kontakt@fundacja.hematologiczna.org',
+    contactEmail: 'Contact us via e-mail address:',
+    email: 'hematobieg@fundacja.hematologiczna.org',
+    phoneTo: '+48730118500',
+    phoneText: '+48 730 118 500',
     thanks:
       'Thank you for your commitment and support in our mission to fight blood cancers!',
     regards: 'Best regards,',

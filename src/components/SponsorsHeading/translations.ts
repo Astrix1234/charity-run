@@ -1,11 +1,9 @@
 const translations = {
   PL: {
-    sub: 'Dziękujemy wszystkim sponsorom i partnerom',
-    main: 'Hematobiegu!',
+    heading: 'Dziękujemy wszystkim sponsorom i partnerom',
   },
   EN: {
-    sub: 'Thank you to all sponsors and partners of',
-    main: 'Hemmatorun!',
+    heading: 'Thank you to all sponsors and partners of',
   },
 };
 

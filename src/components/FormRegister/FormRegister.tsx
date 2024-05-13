@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import { Button } from '../Button/Button';
-import { Regulations } from '../Regulations/Regulations';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { UserData } from '../../Zustand/api';
@@ -26,34 +25,11 @@ export const FormRegister = () => {
   const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [consent, setConsent] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   const isWideScreen = useMediaQuery('(min-width: 1360px)');
-
-  useEffect(() => {
-    const handleKeyDown = (event: WindowEventMap['keydown']) => {
-      if (event.key === 'Escape') {
-        setIsModalOpen(false);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   const handleIconClick = () => {
     setConsent(!consent);
@@ -109,10 +85,6 @@ export const FormRegister = () => {
     formik.setFieldValue('agreementStatements', consent);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [consent]);
-
-  if (isModalOpen) {
-    return <Regulations onClose={closeModal} />;
-  }
 
   return (
     <div className={scss.formRegister__container}>
@@ -237,11 +209,7 @@ export const FormRegister = () => {
           </FormInput>
 
           {!isWideScreen && (
-            <Statements
-              consent={consent}
-              handleIconClick={handleIconClick}
-              openModal={openModal}
-            />
+            <Statements consent={consent} handleIconClick={handleIconClick} />
           )}
           <div className={scss.formRegister__buttonContainer}>
             <Button
@@ -261,11 +229,7 @@ export const FormRegister = () => {
         </form>
 
         {isWideScreen && (
-          <Statements
-            consent={consent}
-            handleIconClick={handleIconClick}
-            openModal={openModal}
-          />
+          <Statements consent={consent} handleIconClick={handleIconClick} />
         )}
       </div>
 

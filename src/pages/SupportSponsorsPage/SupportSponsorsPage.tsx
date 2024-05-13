@@ -4,7 +4,7 @@ export default function SupporSponsorstPage() {
   return (
     <div>
       <Helmet>
-        <title>Become a Sponsor</title>
+        <title>Become a Donor</title>
       </Helmet>
       <SupportSponsor />
     </div>

@@ -74,13 +74,12 @@
     gap: 24px;
     width: 100%;
     box-shadow: 0px 3px 8px 0px rgba(173, 171, 177, 0.6);
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 
 
     @include desktop-screen {
       max-width: 600px;
-      height: 780px;
-      padding: 24px 24px 0 24px;
+      margin-bottom: 60px;
     }
   }
 
@@ -136,6 +135,45 @@
     margin-top: 8px;
     padding-left: 15px;
     transition: border 0.3s ease-in-out;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
+  }
+
+  &__buttonDiscount {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--orange);
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    @include desktop-screen {
+      font-size: var(--mediumFontSize);
+      margin-top: 10px;
+    }
+  }
+
+  &__summery {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__summeryToPay {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 14px;
 
     @include desktop-screen {
       font-size: 24px;
@@ -209,7 +247,6 @@ input[type='radio'] {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 10px;
   gap: 24px;
   font-size: 12px;
   text-align: justify;

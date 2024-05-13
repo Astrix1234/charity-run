@@ -20,7 +20,7 @@ export const StyledHeading = styled.section`
     padding-bottom: min(0.75rem, max(0.6rem, 4vw));
   }
 
-  svg {
+  & > div:not(:first-child) > svg {
     width: 100%;
   }
 

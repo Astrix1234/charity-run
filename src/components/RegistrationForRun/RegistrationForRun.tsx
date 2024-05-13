@@ -6,7 +6,6 @@ import { Button } from '../Button/Button';
 import { useState, useEffect } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import { Regulations } from '../Regulations/Regulations';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { raceParticipantUserData } from '../../Zustand/api';
@@ -15,6 +14,8 @@ import { useUserDataStore } from '../../Zustand/useUserDataStore';
 import { Statements } from '../Statements/Statements';
 import { userParticipation } from '../../Zustand/api';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
@@ -24,6 +25,7 @@ const setShirtGenderValue = (value: string): ShirtGender | undefined => {
 };
 
 export const RegisterForRun = () => {
+  const navigate = useNavigate();
   const { language } = useLanguageStore();
   const { setIsLoading } = useIsLoadingStore();
   const t = translations[language];
@@ -31,34 +33,25 @@ export const RegisterForRun = () => {
 
   const genderMap = t.shirtGenderMap;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [consent, setConsent] = useState(false);
+  const [discountCode, setDiscountCode] = useState('');
+  const [isDiscountCodeValid, setIsDiscountCodeValid] = useState(false);
+  const [discountMessage, setDiscountMessage] = useState('');
 
-  useEffect(() => {
-    const handleKeyDown = (event: WindowEventMap['keydown']) => {
-      if (event.key === 'Escape') {
-        setIsModalOpen(false);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const MINIMUM_CHARGE_AMOUNT = 1;
 
   const handleIconClick = () => {
     setConsent(!consent);
+  };
+
+  const handleDiscountCode = () => {
+    if (discountCode === 'Podarujinnymmoc-hemtobieg') {
+      setIsDiscountCodeValid(true);
+      setDiscountMessage('');
+    } else {
+      setIsDiscountCodeValid(false);
+      setDiscountMessage(t.wrongCode);
+    }
   };
 
   const formik = useFormik({
@@ -78,13 +71,23 @@ export const RegisterForRun = () => {
     validationSchema: validationSchema,
     onSubmit: (values: raceParticipantUserData) => {
       const registerUserOnRun = async () => {
-        const amount = values.shirtGender === 'Dziecięca' ? 2000 : 3000;
+        const amount = isDiscountCodeValid
+          ? MINIMUM_CHARGE_AMOUNT
+          : values.shirtGender === 'Dziecięca'
+          ? 2000
+          : 3000;
         try {
           setIsLoading(true);
           const response = await userParticipation(amount, values);
           if (response.status === 201 && response.data) {
-            window.location.href = response.data.data;
-            console.log('Registration successful!');
+            if (isDiscountCodeValid) {
+              toast.info('Registration successful!');
+              navigate('/');
+              return;
+            } else {
+              window.location.href = response.data.data;
+              console.log('Registration successful!');
+            }
           } else {
             console.error('Unexpected response status:', response.status);
           }
@@ -97,6 +100,8 @@ export const RegisterForRun = () => {
       registerUserOnRun();
       formik.resetForm();
       setConsent(false);
+      setIsDiscountCodeValid(false);
+      setDiscountMessage('');
     },
   });
 
@@ -119,9 +124,14 @@ export const RegisterForRun = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData?.id]);
 
-  if (isModalOpen) {
-    return <Regulations onClose={closeModal} />;
-  }
+  const totalAmount = () => {
+    if (isDiscountCodeValid) {
+      return '0,00 PLN';
+    }
+    return formik.values.shirtGender === 'Dziecięca'
+      ? '20,00 PLN'
+      : '30,00 PLN';
+  };
 
   return (
     <section className={scss.registration}>
@@ -232,8 +242,46 @@ export const RegisterForRun = () => {
                     </label>
                   ))}
                 </div>
+                <div className={scss.registration__summery}>
+                  <label
+                    className={scss.registration__label}
+                    htmlFor="discount"
+                  >
+                    {t.discount}
+                    <input
+                      id="discount"
+                      className={scss.registration__input}
+                      type="text"
+                      name="discount"
+                      onChange={e => setDiscountCode(e.target.value)}
+                      onBlur={handleDiscountCode}
+                    />
+                    {discountMessage && (
+                      <div className={scss.formikMessage}>
+                        {discountMessage}
+                      </div>
+                    )}
+                  </label>
+
+                  <button
+                    className={scss.registration__buttonDiscount}
+                    type="button"
+                    onClick={handleDiscountCode}
+                  >
+                    {t.payDiscount}
+                  </button>
+
+                  <div className={scss.registration__summeryToPay}>
+                    <p className={scss.registration__summeryToPayText}>
+                      {t.toPay}
+                    </p>
+                    <p className={scss.registration__summeryToPayCount}>
+                      {totalAmount()}
+                    </p>
+                  </div>
+                </div>
                 <div className={scss.buttonContainer}>
-                  <p>{t.statementPayment}</p>
+                  {!isDiscountCodeValid && <p>{t.statementPayment}</p>}
                   <Button
                     type="submit"
                     content={t.button}
@@ -247,11 +295,7 @@ export const RegisterForRun = () => {
                   ) : null}
                 </div>
               </form>
-              <Statements
-                consent={consent}
-                handleIconClick={handleIconClick}
-                openModal={openModal}
-              />
+              <Statements consent={consent} handleIconClick={handleIconClick} />
               <div className={scss.registration__instructions}>
                 <p className={scss.registration__instructionsText}>
                   {t.instructionsCost}

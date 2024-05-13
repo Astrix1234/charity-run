@@ -1,6 +1,7 @@
 import scss from './TogetherToTheGoal.module.scss';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import HematorunTitle from '../hematorunTitle/HematorunTitle';
 
 export const TogetherToTheGoal = () => {
   const { language } = useLanguageStore();
@@ -11,7 +12,7 @@ export const TogetherToTheGoal = () => {
       <h3 className={scss.togetherToTheGoal__together}>
         {t.togetherToTheGoal}
       </h3>
-      <h1 className={scss.togetherToTheGoal__title}>{t.hematorun}</h1>
+      <HematorunTitle />
       <p className={scss.togetherToTheGoal__foundation}>
         {t.foundationForHelpingPeopleWithLeukemia}{' '}
       </p>{' '}

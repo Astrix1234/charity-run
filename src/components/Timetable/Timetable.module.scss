@@ -31,12 +31,11 @@
 
   &__titleIcon {
     display: flex;
-    gap: 0;
+    gap: 10px;
     align-items: center;
     height: 70px;
 
     @include desktop-screen {
-      gap: 12px;
       height: 92px;
     }
   }
@@ -51,6 +50,7 @@
 
   &__titleBlood {
     scale: 0.5;
+    transform-origin: left center;
 
     @include desktop-screen {
       scale: 1;
