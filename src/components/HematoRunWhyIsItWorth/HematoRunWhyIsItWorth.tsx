@@ -3,15 +3,11 @@ import { Button } from '../Button/Button';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { IconBloodCell } from '../../Icons/IconBloodCell/IconBloodCell';
-import { IconNumberOne } from '../../Icons/IconNumbers/IconNumberOne/IconNumberOne';
-import { IconNumberTwo } from '../../Icons/IconNumbers/IconNumberTwo/IconNumberTwo';
-import { IconNumberThree } from '../../Icons/IconNumbers/IconNumberThree/IconNumberThree';
-import { IconNumberFour } from '../../Icons/IconNumbers/IconNumberFour/IconNumberFour';
-import { IconNumberFive } from '../../Icons/IconNumbers/IconNumberFive/IconNumberFive';
 import { IconWavyArrowDown } from '../../Icons/IconWavyArrowDown/IconWavyArrowDown';
 import { useNavigate } from 'react-router';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { IconWavyArrowDownMobile } from '../../Icons/IconWavyArrowDownMobile/IconWavyArrowDownMobile';
+import NumberCircle from '../NumberCircle/NumberCircle';
 
 export const HematoRunWhyIsItWorth = () => {
   const { language } = useLanguageStore();
@@ -45,14 +41,14 @@ export const HematoRunWhyIsItWorth = () => {
             >
               <p className={scss.whyIsItWorth__itemText}>{t.fundraising}</p>
               <div className={scss.whyIsItWorth__itemNumber}>
-                <IconNumberOne />
+                <NumberCircle number={1} color="#FD7616" />
               </div>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-awareness']} ${scss['whyIsItWorth__itemEven']}`}
             >
               <div className={scss.whyIsItWorth__itemNumber}>
-                <IconNumberTwo />
+                <NumberCircle number={2} color="#FD7616" />
               </div>
               <p className={scss.whyIsItWorth__itemText}>{t.awareness}</p>
             </li>
@@ -61,14 +57,14 @@ export const HematoRunWhyIsItWorth = () => {
             >
               <p className={scss.whyIsItWorth__itemText}>{t.opportunity}</p>
               <div className={scss.whyIsItWorth__itemNumber}>
-                <IconNumberThree />
+                <NumberCircle number={3} color="#FD7616" />
               </div>
             </li>
             <li
               className={`${scss['whyIsItWorth__item']} ${scss['whyIsItWorth__item-joy']} ${scss['whyIsItWorth__itemEven']}`}
             >
               <div className={scss.whyIsItWorth__itemNumber}>
-                <IconNumberFour />
+                <NumberCircle number={4} color="#FD7616" />
               </div>
               <p className={scss.whyIsItWorth__itemText}>{t.joy}</p>
             </li>
@@ -77,7 +73,7 @@ export const HematoRunWhyIsItWorth = () => {
             >
               <p className={scss.whyIsItWorth__itemText}>{t.family}</p>
               <div className={scss.whyIsItWorth__itemNumber}>
-                <IconNumberFive />
+                <NumberCircle number={5} color="#FD7616" />
               </div>
             </li>
           </ul>

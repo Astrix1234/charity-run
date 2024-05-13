@@ -32,7 +32,7 @@
 
   &__title {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
 
     display: flex;
 
@@ -42,12 +42,11 @@
   }
 
   &__bloodCell {
-    width: 25.907px;
-    height: 36.627px;
+    scale: 0.5;
+    transform-origin: left center;
 
     @include desktop-screen {
-      width: 58px;
-      height: 82px;
+      scale: 1;
     }
   }
 
