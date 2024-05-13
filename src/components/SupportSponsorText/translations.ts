@@ -17,7 +17,7 @@ const textContent = {
     },
     howToHelp: 'Jak możecie pomóc?',
     howToHelpDescription:
-      'Skontaktujcie się z nami a wybierzemy najlepszą opcję odpowiadającą waszym możliwościom',
+      'Skontaktujcie się z nami a wybierzemy najlepszą opcję odpowiadającą waszym możliwościom.',
     contact: 'Kontakt:',
     contactEmail: 'Skontaktujcie się z nami przez adres mailowy:',
     email: 'hematobieg@fundacja.hematologiczna.org',
