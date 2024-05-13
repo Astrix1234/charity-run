@@ -13,5 +13,9 @@ export const StyledContact = styled.div`
     .address {
       padding-bottom: 0.5em;
     }
+    .mail {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
   }
 `;

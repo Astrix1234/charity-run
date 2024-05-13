@@ -19,6 +19,11 @@ export const FooterContact = () => {
           kontakt@fundacja.hematologiczna.org
         </a>
       </p>
+      <p className="mail">
+        <a href="mailto:hematobieg@fundacja.hematologiczna.org">
+          hematobieg@fundacja.hematologiczna.org
+        </a>
+      </p>
     </StyledContact>
   );
 };
