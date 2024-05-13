@@ -40,34 +40,26 @@
     padding-bottom: 26px;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
     max-width: 290px;
+    gap: 10px;
 
     @include desktop-screen {
       padding-bottom: 140px;
       max-width: 100%;
-      gap: 5px;
+      align-items: center;
     }
   }
 
   &__iconBloodCell {
-    margin-top: 35px;
+    scale: 0.5;
+    transform-origin: left center;
 
     @include desktop-screen {
-      margin-top: 0;
+      scale: 1;
     }
   }
 
 
-  &__iconBloodCell svg {
-    width: 28px;
-    height: 38px;
-
-    @include desktop-screen {
-      width: 58px;
-      height: 82px;
-    }
-  }
 
   &__backgroundIcon {
     display: none;
@@ -83,12 +75,11 @@
 
 .attractions__header {
   text-align: center;
-  font-family: 'DM Serif Display', serif;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 35px;
+  font-weight: 700;
 
   @include desktop-screen {
-    font-size: 67px;
+    font-size: 54px;
   }
 }
 
