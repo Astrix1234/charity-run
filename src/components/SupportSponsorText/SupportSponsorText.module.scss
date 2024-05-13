@@ -1,110 +1,128 @@
-    @import '../../stylesheets/mixins.scss';
+@import '../../stylesheets/mixins.scss';
 
-    .sponsorship {
-        font-family: 'Poppins';
-        max-width: 1440px;
-        margin: 0 auto;
-        margin-top: 32px;
-        padding: 0 20px;
+.sponsorship {
+  font-family: 'Poppins';
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 32px;
+  padding: 0 20px;
 
-        @include desktop-screen {
-            padding: 0 80px 117px;
-            text-align: justify;
-        }
+  @include desktop-screen {
+    padding: 0 80px 220px;
+    text-align: justify;
+  }
 
-        & .title {
-            color: var(--dark);
-            font-size: 30px;
-            font-weight: 500;
-            word-wrap: break-word;
-            margin-top: 20px;
-            text-align: start;
-            line-height: 36px;
+  & .title {
+    color: var(--dark);
+    font-size: 30px;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-top: 20px;
+    text-align: start;
+    line-height: 36px;
+    margin-bottom: 12px;
 
-            @include desktop-screen {
-                font-size: 39px;
-                margin-top: 32px;
-                line-height: 58.5px;
-                text-align: justify;
-            }
-        }
-
-        & .subtitle {
-            color: var(--dark);
-            font-size: 20px;
-            font-weight: 700;
-            word-wrap: break-word;
-
-
-            @include desktop-screen {
-                font-size: 24px;
-                margin-top: 32px;
-                text-align: justify;
-            }
-        }
-
-        & .content {
-            color: var(--dark);
-            font-size: 16px;
-            font-weight: 400;
-            word-wrap: break-word;
-
-            & p {
-                margin: 0;
-
-                @include desktop-screen {
-                    margin-top: 32px;
-                }
-            }
-
-            @include desktop-screen {
-                font-size: 21px;
-                margin-top: 32px;
-                text-align: justify;
-            }
-        }
-
-        & .benefits span {
-            display: inline-block;
-            margin-right: 15px;
-
-
-            @include desktop-screen {
-                margin-right: 25px;
-                text-align: justify;
-            }
-        }
-
-        & .contactEmail {
-
-            @include desktop-screen {
-                margin-top: auto;
-                margin-top: 20px;
-                margin-bottom: 32px;
-            }
-
-        }
-
-        & .contactLink {
-            color: var(--orange);
-            font-weight: 600;
-            word-wrap: break-word;
-
-            @include desktop-screen {
-                font-size: 24px;
-            }
-        }
-
-        & .contactEmail {
-            margin-top: 10px;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
-
-            @include desktop-screen {
-                margin-top: 50px;
-            }
-        }
+    @include desktop-screen {
+      font-size: 39px;
+      margin-top: 32px;
+      line-height: 58.5px;
+      text-align: justify;
     }
+  }
+
+  & .subtitle {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+
+    word-wrap: break-word;
+
+    @include desktop-screen {
+      font-size: 24px;
+      margin-top: 32px;
+      text-align: justify;
+    }
+  }
+
+  & .friends {
+    margin-bottom: 32px;
+  }
+
+  & .content {
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1.4;
+    word-wrap: break-word;
+
+    & p {
+      margin: 0;
+
+      @include desktop-screen {
+        margin-top: 16px;
+      }
+    }
+
+    @include desktop-screen {
+      font-size: 21px;
+      margin-top: 32px;
+      text-align: justify;
+    }
+  }
+
+  & .benefits span {
+    display: inline-block;
+    margin-right: 15px;
+
+    @include desktop-screen {
+      margin-right: 25px;
+      text-align: justify;
+    }
+  }
+
+  & .contactEmail {
+    @include desktop-screen {
+      margin-top: auto;
+      margin-top: 20px;
+      margin-bottom: 32px;
+    }
+  }
+
+  & .contactLink {
+    color: var(--orange);
+    font-weight: 600;
+    word-wrap: break-word;
+
+    @include desktop-screen {
+      font-size: 24px;
+    }
+  }
+
+  & .contactEmail {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include desktop-screen {
+      margin-top: 50px;
+    }
+
+    & > a {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .phoneLink {
+    font-weight: 600;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 21px;
+    }
+  }
+}
