@@ -1,5 +1,6 @@
 import HandwrittenLine from '../../Icons/HandwrittenLine/HandwrittenLine';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import HematorunTitle from '../hematorunTitle/HematorunTitle';
 import scss from './AmbassadorsHeading.module.scss';
 import translations from './translations';
 
@@ -10,8 +11,8 @@ function AmbassadorsHeading() {
   return (
     <div className={scss.header}>
       <h2 className={scss.heading}>
-        <span className={scss.heading__sub}>{t.sub}</span>
-        <span className={scss.heading__main}>{t.main}</span>
+        <span className={scss.text}>{t.heading}</span>
+        <HematorunTitle secondTitle={{ pl: 'biegu', eng: 'run' }} />
       </h2>
       <div className={scss.line}>
         <HandwrittenLine />
