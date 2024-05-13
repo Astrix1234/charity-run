@@ -11,8 +11,8 @@ function SupportSponsor() {
         <div className={scss.heading}>
           <SupportHeading
             headingText={{
-              pl: 'Wesprzyj Fundację \n i zostań Sponsorem',
-              eng: 'Support the Foundation and become a Sponsor',
+              pl: 'Wesprzyj Fundację \n i zostań Darczyńcą',
+              eng: 'Support the Foundation and become a Donor',
             }}
           />
         </div>
