@@ -13,11 +13,11 @@ export default function RegistrationForRunPage() {
   const { setIsLoading } = useIsLoadingStore();
   const { setUserData } = useUserDataStore();
 
-  useEffect(() => {
-    if (!isLogin) {
-      navigate('/login');
-    }
-  }, [isLogin, navigate]);
+  // useEffect(() => {
+  //   if (!isLogin) {
+  //     navigate('/login');
+  //   }
+  // }, [isLogin, navigate]);
 
   useEffect(() => {
     const fetchUserData = async () => {

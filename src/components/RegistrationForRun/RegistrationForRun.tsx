@@ -6,7 +6,6 @@ import { Button } from '../Button/Button';
 import { useState, useEffect } from 'react';
 import translations from './translations';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import { Regulations } from '../Regulations/Regulations';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
 import { raceParticipantUserData } from '../../Zustand/api';
@@ -34,36 +33,12 @@ export const RegisterForRun = () => {
 
   const genderMap = t.shirtGenderMap;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [consent, setConsent] = useState(false);
   const [discountCode, setDiscountCode] = useState('');
   const [isDiscountCodeValid, setIsDiscountCodeValid] = useState(false);
   const [discountMessage, setDiscountMessage] = useState('');
 
   const MINIMUM_CHARGE_AMOUNT = 1;
-
-  useEffect(() => {
-    const handleKeyDown = (event: WindowEventMap['keydown']) => {
-      if (event.key === 'Escape') {
-        setIsModalOpen(false);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   const handleIconClick = () => {
     setConsent(!consent);
@@ -107,7 +82,7 @@ export const RegisterForRun = () => {
           if (response.status === 201 && response.data) {
             if (isDiscountCodeValid) {
               toast.info('Registration successful!');
-              setTimeout(() => navigate('/'), 2500);
+              navigate('/');
               return;
             } else {
               window.location.href = response.data.data;
@@ -157,10 +132,6 @@ export const RegisterForRun = () => {
       ? '20,00 PLN'
       : '30,00 PLN';
   };
-
-  if (isModalOpen) {
-    return <Regulations onClose={closeModal} />;
-  }
 
   return (
     <section className={scss.registration}>
@@ -324,11 +295,7 @@ export const RegisterForRun = () => {
                   ) : null}
                 </div>
               </form>
-              <Statements
-                consent={consent}
-                handleIconClick={handleIconClick}
-                openModal={openModal}
-              />
+              <Statements consent={consent} handleIconClick={handleIconClick} />
               <div className={scss.registration__instructions}>
                 <p className={scss.registration__instructionsText}>
                   {t.instructionsCost}
