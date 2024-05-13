@@ -30,7 +30,7 @@ export default function ParticipantAreaPage() {
   }, [hash]);
 
   useEffect(() => {
-    if (isLogin) {
+    if (!isLogin) {
       navigate('/login');
     }
   }, [isLogin, navigate]);
