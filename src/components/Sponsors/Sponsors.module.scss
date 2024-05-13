@@ -106,8 +106,8 @@
 
 .marqueeFiller {
   font-weight: 700;
-  font-size: 39px;
-  line-height: 58.5px;
+  font-size: 20px;
+  line-height: 30px;
   color: var(--dark);
   width: min-content;
 }
@@ -166,5 +166,9 @@
 
   .padding {
     height: 100px;
+  }
+  .marqueeFiller {
+    font-size: 39px;
+    line-height: 58.5px;
   }
 }
