@@ -24,7 +24,7 @@
 
     @include desktop-screen {
       font-size: 39px;
-      margin-top: 32px;
+      margin-top: 62px;
       line-height: 58.5px;
       text-align: justify;
     }
@@ -60,13 +60,13 @@
       margin: 0;
 
       @include desktop-screen {
-        margin-top: 16px;
+        margin-top: 12px;
       }
     }
 
     @include desktop-screen {
       font-size: 21px;
-      margin-top: 32px;
+      margin-top: 16px;
       text-align: justify;
     }
   }
