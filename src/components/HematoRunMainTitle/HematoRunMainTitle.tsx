@@ -8,7 +8,7 @@ import { IconRoad } from '../../Icons/IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
 import { useNavigate } from 'react-router';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
-import HomePageTimer from '../HomePageTimer/HomePageTimer';
+import HomePageTimer from '../homePageTimer/HomePageTimer';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
