@@ -18,6 +18,8 @@ export const Statute = () => {
       <h3>{t.h2_2__h3_1}</h3>
       <div className="important">{t.h2_2__h3_1__important1}</div>
       <p>{t.h2_2__h3_1__p1}</p>
+      <p>{t.h2_2__h3_1__p2}</p>
+      <p>{t.h2_2__h3_1__p3}</p>
       <div className="important">{t.h2_2__h3_1_important2}</div>
       <div className="important">{t.h2_2__h3_1_important3}</div>
       <div className="important">{t.h2_2__h3_1_important4}</div>
@@ -82,11 +84,13 @@ export const Statute = () => {
       <p>{t.h2_6__p11}</p>
       <p>{t.h2_6__p12}</p>
       <p>{t.h2_6__p13}</p>
-      <p className="end">{t.h2_6__p14}</p>
+      <p>{t.h2_6__p14}</p>
+      <p className="end">{t.h2_6__p15}</p>
       <h2>{t.h2_7}</h2>
       <p>{t.h2_7__p1}</p>
       <p>{t.h2_7__p2}</p>
       <p>{t.h2_7__p3}</p>
+      <p>{t.h2_7__p4}</p>
       <ul>
         <li>{t.h2_7__ul1__li1}</li>
         <li>{t.h2_7__ul1__li2}</li>
@@ -94,35 +98,75 @@ export const Statute = () => {
         <li>{t.h2_7__ul1__li4}</li>
         <li>{t.h2_7__ul1__li5}</li>
       </ul>
-      <p>{t.h2_7__p4}</p>
       <p>{t.h2_7__p5}</p>
-      <p className="end">{t.h2_7__p6}</p>
+      <p>{t.h2_7__p6}</p>
+      <p className="end">{t.h2_7__p7}</p>
       <h2>{t.h2_8}</h2>
       <p>{t.h2_8__p1}</p>
       <p>{t.h2_8__p2}</p>
+      <ul>
+        <li>{t.h2_8__ul1__li1}</li>
+        <li>{t.h2_8__ul1__li2}</li>
+        <li>{t.h2_8__ul1__li3}</li>
+        <li>{t.h2_8__ul1__li4}</li>
+        <li>{t.h2_8__ul1__li5}</li>
+      </ul>
       <p>{t.h2_8__p3}</p>
+      <ul>
+        <li>{t.h2_8__ul2__li1}</li>
+        <li>{t.h2_8__ul2__li2}</li>
+        <li>{t.h2_8__ul2__li3}</li>
+        <li>{t.h2_8__ul2__li4}</li>
+        <li>{t.h2_8__ul2__li5}</li>
+        <ul>
+          <li>{t.h2_8__ul2__li5__br1}</li>
+          <li>{t.h2_8__ul2__li5__br2}</li>
+          <li>{t.h2_8__ul2__li5__br3}</li>
+          <li>{t.h2_8__ul2__li5__br4}</li>
+          <li>{t.h2_8__ul2__li5__br5}</li>
+          <li>{t.h2_8__ul2__li5__br6}</li>
+        </ul>
+      </ul>
       <p>{t.h2_8__p4}</p>
       <p>{t.h2_8__p5}</p>
+      <ul>
+        <li>{t.h2_8__ul3__li1}</li>
+        <li>{t.h2_8__ul3__li2}</li>
+        <li>{t.h2_8__ul3__li3}</li>
+        <li>{t.h2_8__ul3__li4}</li>
+        <li>{t.h2_8__ul3__li5}</li>
+      </ul>
+
       <p>{t.h2_8__p6}</p>
       <p>{t.h2_8__p7}</p>
       <p>{t.h2_8__p8}</p>
       <p className="end">{t.h2_8__p9}</p>
       <h2>{t.h2_9}</h2>
-      <p className="end">{t.h2_9__p1}</p>
+      <p>{t.h2_9__p1}</p>
+      <p>{t.h2_9__p2}</p>
+      <p>{t.h2_9__p3}</p>
+      <p>{t.h2_9__p4}</p>
+      <p>{t.h2_9__p5}</p>
+      <p>{t.h2_9__p6}</p>
+      <p>{t.h2_9__p7}</p>
+      <p>{t.h2_9__p8}</p>
+      <p className="end">{t.h2_9__p9}</p>
       <h2>{t.h2_10}</h2>
-      <p>{t.h2_10__p1}</p>
-      <p>{t.h2_10__p2}</p>
-      <p>{t.h2_10__p3}</p>
-      <p>{t.h2_10__p4}</p>
-      <p>{t.h2_10__p5}</p>
-      <p>{t.h2_10__p6}</p>
-      <p>{t.h2_10__p7}</p>
-      <p>{t.h2_10__p8}</p>
-      <p>{t.h2_10__p9}</p>
+      <p className="end">{t.h2_10__p1}</p>
+      <h2>{t.h2_11}</h2>
+      <p>{t.h2_11__p1}</p>
+      <p>{t.h2_11__p2}</p>
+      <p>{t.h2_11__p3}</p>
+      <p>{t.h2_11__p4}</p>
+      <p>{t.h2_11__p5}</p>
+      <p>{t.h2_11__p6}</p>
+      <p>{t.h2_11__p7}</p>
+      <p>{t.h2_11__p8}</p>
+      <p>{t.h2_11__p9}</p>
       <p>
-        {t.h2_10__p10}
+        {t.h2_11__p10}
         <br />
-        <strong>{t.h2_10__p10_strong}</strong>
+        <strong>{t.h2_11__p10_strong}</strong>
       </p>
     </StyledStatute>
   );
