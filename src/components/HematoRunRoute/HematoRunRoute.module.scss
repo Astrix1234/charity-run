@@ -5,6 +5,7 @@
   padding-top: 10px;
   padding-bottom: 100px;
   width: 100%;
+
   @include desktop-screen {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -31,17 +32,22 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+
   @include desktop-screen {
     padding: 0 80px;
     max-width: 1440px;
   }
+
   &__text {
     font-size: 16px;
     font-weight: 500;
+    margin-right: 5px;
+
     @include desktop-screen {
       font-size: 39px;
       font-weight: 400;
       margin-right: 20px;
+      margin-left: 200px;
     }
   }
 }
@@ -49,28 +55,35 @@
 .map {
   max-width: 100%;
   cursor: pointer;
+
   &__container {
     margin: auto;
     max-width: 240px;
+
     @include desktop-screen {
       max-width: 566px;
-      padding-bottom: 40px;
+      padding-bottom: 70px;
     }
   }
+
   &:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
     transition: transform 1s;
+
     @include desktop-screen {
-      transform: scale(1.8);
+      transform: scale(1.2);
     }
   }
+
   &:focus {
-    transform: scale(1.4);
+    transform: scale(1.2);
     transition: transform 1s;
+
     @include desktop-screen {
-      transform: scale(1.8);
+      transform: scale(1.2);
     }
   }
+
   &:not(:hover) {
     transform: scale(1);
     transition: transform 1s;

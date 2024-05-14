@@ -19,7 +19,7 @@ const translations = {
     runInfo10:
       'Jeśli chcesz pobiec razem z nami, wystarczy, że wypełnisz formularz znajdujący się na stronie internetowej lub zapiszesz się tuż przed startem.',
     runInfo11:
-      'Udział w biegu to koszt 30 PLN dla dorosłego i 20 PLN dla dziecka.',
+      'Udział w biegu to koszt 30 PLN dla dorosłego i 20 PLN dla dziecka (dzieci do 12 r.ż. bezpłatnie).',
     runInfo12:
       'Środki zebrane podczas Hematobiegu zostaną przekazane na rzecz podopiecznych Fundacji Na Rzecz Pomocy Chorym Na Białaczki. Na uczestników czekają nagrody, a tych, którzy pobiec nie mogą, zapraszamy na piknik, który odbędzie się w parku im. Juliusza Słowackiego, tuż obok szpitala. Gwarantujemy mnóstwo atrakcji dla całej rodziny, o których poinformujemy już niebawem.',
     runInfo13:
@@ -50,7 +50,7 @@ const translations = {
     runInfo10:
       'If you want to run with us, all you have to do is fill in the form on the website or sign up just before the start.',
     runInfo11:
-      'Participation in the run costs PLN 30 for an adult and PLN 20 for a child.',
+      'Participation in the run costs PLN 30 for an adult and PLN 20 for a child (children up to 12 years of age free of charge).',
     runInfo12:
       'Funds raised during the Haemat run will be donated to the Leukaemia Foundation. Prizes await the participants, and those who cannot run are invited to the picnic, which will take place in Juliusz Słowacki Park, right next to the hospital. Lots of attractions for the whole family are guaranteed, which will be announced soon.',
     runInfo13:

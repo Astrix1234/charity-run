@@ -9,7 +9,7 @@ const translations = {
     statementItem3:
       'Treść Klauzuli jest dla mnie zrozumiała i jasna, a wszelkie wątpliwości zostały mi wyjaśnione przez osobę upoważnioną przez Fundację w sposób wyczerpujący.',
     statementItem4:
-      'W sposób całkowicie dobrowolny, wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Hematobiegu dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przez Fundację.',
+      'W sposób całkowicie dobrowolny, wyrażam zgodę na przetwarzanie moich danych osobowych (w trybie art. 81 ust.1 ustawy o prawie autorskim i prawach pokrewnych) w zakresie mojego wizerunku utrwalonego podczas Hematobiegu dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych przez Fundację (zarówno obecnych jaki i przyszłych) oraz w zakresie danych kontaktowych w celu informowania o przyszłych wydarzeniach oraz działalności statutowej Fundacji.',
     statementItem5:
       'Zostałem/am poinformowany/a, że moje dane osobowe przetwarzane są na podstawie wyrażonej przeze mnie dobrowolnej zgody oraz, że przysługuje mi prawo do jej cofnięcia w każdym czasie, przy czym cofnięcie zgody wywołuje skutki prawne od momentu jego złożenia i będzie pozostawało bez wpływu na przetwarzanie moich danych osobowych dla celów.',
     statementItem6:
@@ -27,7 +27,7 @@ const translations = {
     statementItem3:
       'The content of the Clause is clear and understandable to me and any doubts have been explained to me in a comprehensive manner by a person authorised by the Foundation.',
     statementItem4:
-      'On a completely voluntary basis, I consent to the processing of my personal data with regard to my image captured during the Hemat Run for the purposes of internal and external communication and marketing activities carried out by the Foundation.',
+      'I voluntarily consent to the processing of my personal data (pursuant to Article 81 par. 1 of the Act on Copyright and Related Rights) in respect of my image recorded during the Haemat Run for the purposes of internal and external communication and marketing activities carried out by the Foundation (both present and future) and in respect of contact data for the purpose of informing me about future events and the statutory activities of the Foundation.',
     statementItem5:
       'I have been informed that my personal data is processed on the basis of my freely given consent and that I have the right to withdraw it at any time, whereby the withdrawal of consent has legal effect from the moment of its submission and will not affect the processing of my personal data for purposes.',
     statementItem6:
