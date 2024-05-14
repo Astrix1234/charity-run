@@ -3,6 +3,7 @@ import { FooterInformationSection } from '../FooterInformationSection/FooterInfo
 import { FooterNavigation } from '../FooterNavigation/FooterNavigation';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
+import { FooterTitleEnglish } from '../FooterTitleEnglish/FooterTitleEnglish';
 
 export const Footer = () => {
   const { language } = useLanguageStore();
@@ -12,7 +13,10 @@ export const Footer = () => {
       <div className="background-top"></div>
       <div className="background-bottom">
         <div className="container">
-          <img src={t.background} alt={t.alt} />
+          <div>
+            <img src={t.background} alt={t.alt} />
+            {language === 'PL' && <FooterTitleEnglish />}
+          </div>
           <FooterInformationSection />
           <FooterNavigation />
         </div>

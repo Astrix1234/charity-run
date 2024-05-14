@@ -130,7 +130,7 @@ function MobileDestinations({ handleClose }: MobileDestinationsProps) {
         heading={t.support}
         handleClose={handleClose}
         links={[
-          { name: t.becomeSponsor, dest: '/support-sponsors' },
+          { name: t.becomeSponsor, dest: '/support-donors' },
           { name: t.makeDonation, dest: '/support-donation' },
           { name: t.volunteerArea, dest: '/support-volunteers' },
         ]}

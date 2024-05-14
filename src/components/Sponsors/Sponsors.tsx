@@ -74,7 +74,7 @@ const Sponsors = () => {
           </div>
         </div>
         <div className={scss.sponsors__link__container}>
-          <Link className={scss.sponsors__link} to="/our-sponsors">
+          <Link className={scss.sponsors__link} to="/our-donors">
             {t.seeSponsors}
           </Link>
         </div>

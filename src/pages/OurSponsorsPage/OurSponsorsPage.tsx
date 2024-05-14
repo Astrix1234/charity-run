@@ -5,7 +5,7 @@ export default function OurSponsorsPage() {
   return (
     <>
       <Helmet>
-        <title>Our Sponsors</title>
+        <title>Our Donors</title>
       </Helmet>
       <OurSponsors />
     </>

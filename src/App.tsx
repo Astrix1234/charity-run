@@ -111,9 +111,9 @@ function App() {
               element={<RegistrationForRunPage />}
             />
             <Route path="our-ambassadors" element={<OurAmbassadorsPage />} />
-            <Route path="our-sponsors" element={<OurSponsorsPage />} />
+            <Route path="our-donors" element={<OurSponsorsPage />} />
             <Route path="participant-area" element={<ParticipantAreaPage />} />
-            <Route path="support-sponsors" element={<PleaseSupportPage />} />
+            <Route path="support-donors" element={<PleaseSupportPage />} />
             <Route path="support-donation" element={<SupportDonationPage />} />
             <Route
               path="support-volunteers"
