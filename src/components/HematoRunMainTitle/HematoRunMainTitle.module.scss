@@ -58,7 +58,6 @@
     color: var(--light);
     -webkit-text-stroke: 1.5px var(--dark);
 
-
     @include desktop-screen {
       font-size: var(--largeFontSize);
       line-height: 46px;
@@ -195,6 +194,7 @@
     background-image: url('/images/illustration.png');
     background-size: cover;
     transform: translateX(35%);
+    z-index: -1;
 
     @include desktop-screen {
       width: 612px;
