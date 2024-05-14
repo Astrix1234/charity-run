@@ -1,5 +1,6 @@
 const translations = {
   PL: {
+    patrons: 'Patroni:',
     logIn: 'Zaloguj się',
     giveOthersPower: 'Podaruj innym MOC!',
     foundationForHelpingPeopleWithLeukemia:
@@ -10,6 +11,7 @@ const translations = {
     findOutMore: 'Dowiedz się więcej',
   },
   EN: {
+    patrons: 'Patrons:',
     logIn: 'Log in',
     giveOthersPower: 'Give others POWER!',
     foundationForHelpingPeopleWithLeukemia:

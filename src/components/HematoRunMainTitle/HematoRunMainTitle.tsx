@@ -21,48 +21,53 @@ export const HematoRunMainTitle = () => {
   };
   return (
     <section id="home" className={scss.hematoTitles}>
-      <div className={scss.hematoTitles__container}>
-        <CountdownTimer />
-        <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
-        <div className={scss.hematoTitles__titleContainer}>
-          <div className={scss.hematoTitles__titleBegin}>
-            <h1 className={scss.hematoTitles__title}>HEMAT</h1>
-            <div>
-              <IconBloodCell />
+      <div className={scss.hematoTitles__patronsContainer}>
+        <p className={scss.hematoTitles__patronsTitle}>{t.patrons}</p>
+      </div>
+      <div className={scss.hematoTitles__containerMain}>
+        <div className={scss.hematoTitles__container}>
+          <CountdownTimer />
+          <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
+          <div className={scss.hematoTitles__titleContainer}>
+            <div className={scss.hematoTitles__titleBegin}>
+              <h1 className={scss.hematoTitles__title}>HEMAT</h1>
+              <div>
+                <IconBloodCell />
+              </div>
             </div>
+            <HematoSliderTitle />
           </div>
-          <HematoSliderTitle />
-        </div>
-        <p className={scss.hematoTitles__foundation}>
-          {t.foundationForHelpingPeopleWithLeukemia}
-        </p>
-        <p className={scss.hematoTitles__date}>26.05.2024 ŁÓDŹ</p>
-        <div className={scss.hematoTitles__kmContainer}>
-          <p className={scss.hematoTitles__km}>5 KM</p>
-          <div className={scss.hematoTitles__iconRoad}>
-            <IconRoad />
+          <p className={scss.hematoTitles__foundation}>
+            {t.foundationForHelpingPeopleWithLeukemia}
+          </p>
+          <p className={scss.hematoTitles__date}>26.05.2024 ŁÓDŹ</p>
+          <div className={scss.hematoTitles__kmContainer}>
+            <p className={scss.hematoTitles__km}>5 KM</p>
+            <div className={scss.hematoTitles__iconRoad}>
+              <IconRoad />
+            </div>
+            <p className={scss.hematoTitles__km}>1 KM</p>
           </div>
-          <p className={scss.hematoTitles__km}>1 KM</p>
-        </div>
-        <Button onClick={handleClick} content={t.joinUs} />
+          <Button onClick={handleClick} content={t.joinUs} />
 
-        {!isLogin && (
-          <div className={scss.hematoTitles__logInContainer}>
-            <p>{t.alreadyHaveAccount}</p>
-            <Link className={scss.hematoTitles__logIn} to="/login">
-              {t.logIn}
+          {!isLogin && (
+            <div className={scss.hematoTitles__logInContainer}>
+              <p>{t.alreadyHaveAccount}</p>
+              <Link className={scss.hematoTitles__logIn} to="/login">
+                {t.logIn}
+              </Link>
+            </div>
+          )}
+          <div className={scss.hematoTitles__illustrationContainer}>
+            <div className={scss.hematoTitles__illustration}></div>
+            <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
+            <Link
+              className={scss.hematoTitles__findOutMore}
+              to="/#run-description"
+            >
+              {t.findOutMore}
             </Link>
           </div>
-        )}
-        <div className={scss.hematoTitles__illustrationContainer}>
-          <div className={scss.hematoTitles__illustration}></div>
-          <p className={scss.hematoTitles__runWithUs}>{t.runWithAs}</p>
-          <Link
-            className={scss.hematoTitles__findOutMore}
-            to="/#run-description"
-          >
-            {t.findOutMore}
-          </Link>
         </div>
       </div>
     </section>
