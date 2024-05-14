@@ -1,3 +1,5 @@
+@import '../../stylesheets/mixins.scss';
+
 .container {
   display: flex;
   justify-content: flex-end;
@@ -15,7 +17,11 @@
   font-size: 26px;
   color: var(--orange);
   text-transform: uppercase;
-  align-self: flex-end;
+  align-self: flex-start;
+
+  @include desktop-screen {
+    align-self: flex-end;
+  }
 }
 
 .timer {
