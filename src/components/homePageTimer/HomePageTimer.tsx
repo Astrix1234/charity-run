@@ -1,35 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import scss from './HomePageTimer.module.scss';
+import translations from './translations';
 import {
   differenceInDays,
   differenceInHours,
   differenceInMinutes,
 } from 'date-fns';
 
-import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import translations from './translations';
+const eventDate = new Date('May 26, 2024 09:00:00');
 
-import scss from './CountdownTimer.module.scss';
-
-interface TimeRemaining {
+type TimeRemaining = {
   days: number;
   hours: number;
   minutes: number;
-}
+};
 
-const eventDate = new Date('May 26, 2024 09:00:00');
-
-export const CountdownTimer: React.FC = () => {
-  const { language } = useLanguageStore();
-  const t = translations[language];
-
-  const formatTime = (time: number): string =>
-    time < 0 ? `0${time}` : time.toString();
-
+function HomePageTimer() {
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
     hours: 0,
     minutes: 0,
   });
+
+  const formatTime = (time: number): string =>
+    time < 0 ? `0${time}` : time.toString();
 
   useEffect(() => {
     const calculateTimeRemaining = (): TimeRemaining => {
@@ -60,26 +55,17 @@ export const CountdownTimer: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const { language } = useLanguageStore();
+  const t = translations[language];
+  const countdownText = `${timeRemaining.days} ${t.day} ${timeRemaining.hours} ${t.hour} : ${timeRemaining.minutes} ${t.minute}`;
   return (
-    <div className={scss.countdownTimer}>
-      <div className={scss.countdownTimer__container}>
-        <span className={scss.countdownTimer__text}>{t.day}</span>
-        <span className={scss.countdownTimer__text}>{t.hour}</span>
-        <span className={scss.countdownTimer__text}>{t.minute}</span>
-        <span className={scss.countdownTimer__number}>
-          {timeRemaining.days}
-        </span>
-        <span
-          className={`${scss.countdownTimer__semi} ${scss.countdownTimer__number}`}
-        >
-          {formatTime(timeRemaining.hours)}
-        </span>
-        <span className={scss.countdownTimer__number}>
-          {formatTime(timeRemaining.minutes)}
-        </span>
+    <div className={scss.container}>
+      <div className={scss.col}>
+        <p className={scss.heading}>{t.until}</p>
+        <p className={scss.timer}>{countdownText}</p>
       </div>
     </div>
   );
-};
+}
 
-// Code Unused
+export default HomePageTimer;

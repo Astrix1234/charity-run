@@ -1,6 +1,5 @@
 import scss from './HematoRunMainTitle.module.scss';
 import { Button } from '../Button/Button';
-import { CountdownTimer } from '../../components/CountdownTimer/CountdownTimer';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import translations from './translations';
 import { Link } from 'react-router-dom';
@@ -9,6 +8,7 @@ import { IconRoad } from '../../Icons/IconRoad/IconRoad';
 import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
 import { useNavigate } from 'react-router';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
+import HomePageTimer from '../homePageTimer/HomePageTimer';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
@@ -26,7 +26,7 @@ export const HematoRunMainTitle = () => {
       </div>
       <div className={scss.hematoTitles__containerMain}>
         <div className={scss.hematoTitles__container}>
-          <CountdownTimer />
+          <HomePageTimer />
           <p className={scss.hematoTitles__giveOthers}>{t.giveOthersPower}</p>
           <div className={scss.hematoTitles__titleContainer}>
             <div className={scss.hematoTitles__titleBegin}>
