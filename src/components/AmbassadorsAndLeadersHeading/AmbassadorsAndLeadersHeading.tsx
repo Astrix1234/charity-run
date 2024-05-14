@@ -1,10 +1,10 @@
 import HandwrittenLine from '../../Icons/HandwrittenLine/HandwrittenLine';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import HematorunTitle from '../hematorunTitle/HematorunTitle';
-import scss from './AmbassadorsHeading.module.scss';
+import scss from './AmbassadorsAndLeadersHeading.module.scss';
 import translations from './translations';
 
-function AmbassadorsHeading() {
+function AmbassadorsAndLeadersHeading() {
   const { language } = useLanguageStore();
   const t = translations[language];
 
@@ -21,4 +21,4 @@ function AmbassadorsHeading() {
   );
 }
 
-export default AmbassadorsHeading;
+export default AmbassadorsAndLeadersHeading;

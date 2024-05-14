@@ -1,7 +1,7 @@
-import AmbassadorsHeading from '../AmbassadorsHeading/AmbassadorsHeading';
-import AmbassadorsList from '../AmbassadorsList/AmbassadorsList';
+import AmbassadorsAndLeadersHeading from '../AmbassadorsAndLeadersHeading/AmbassadorsAndLeadersHeading';
+import AmbassadorsList from '../AmbassadorsAndLeadersList/AmbassadorsAndLeadersList';
 import TrippleArrowDown from '../../Icons/TrippleArrowDown/TrippleArrowDown';
-import scss from './OurAmbassadors.module.scss';
+import scss from './OurAmbassadorsAndLeaders.module.scss';
 
 const ambassadorsList = [
   {
@@ -26,11 +26,11 @@ const ambassadorsList = [
   },
 ];
 
-function OurAmbassadors() {
+function OurAmbassadorsAndLeaders() {
   return (
     <section className={scss.container}>
       <div className={scss.heading}>
-        <AmbassadorsHeading />
+        <AmbassadorsAndLeadersHeading />
         <div className={scss.arrow}>
           <TrippleArrowDown />
         </div>
@@ -40,4 +40,4 @@ function OurAmbassadors() {
   );
 }
 
-export default OurAmbassadors;
+export default OurAmbassadorsAndLeaders;

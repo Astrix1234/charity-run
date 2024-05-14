@@ -29,9 +29,11 @@
   svg {
     width: 32px;
     height: 100%;
+    padding-bottom: 32px;
 
     @include desktop-screen {
       width: 80px;
+      padding-bottom: 140px;
     }
   }
 }
