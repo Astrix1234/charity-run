@@ -4,7 +4,10 @@
   position: relative;
   width: 55px;
   stroke: #1ca2a7;
+  transform: translateY(-10px);
+
   @include desktop-screen {
     width: 150px;
+    transform: translateY(-30px);
   }
 }

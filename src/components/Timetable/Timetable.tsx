@@ -24,12 +24,11 @@ export const Timetable = () => {
   const isDesktop = useMediaQuery({ minWidth: 1360 });
 
   const goToMap = () => {
-    const parkName = 'Park im. Juliusza Słowackiego, Łódź';
+    const latitude = 51.73311529011235;
+    const longitude = 19.454956207371968;
     const zoomLevel = 18;
 
-    const url = `https://www.google.com/maps?q=${encodeURIComponent(
-      parkName
-    )}&z=${zoomLevel}`;
+    const url = `https://www.google.com/maps?q=${latitude},${longitude}&z=${zoomLevel}`;
 
     window.open(url, '_blank');
   };

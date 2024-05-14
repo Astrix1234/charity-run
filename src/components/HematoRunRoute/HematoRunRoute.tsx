@@ -22,11 +22,7 @@ export const HematoRunRoute = () => {
         <IconArrow />
       </div>
       <div className={scss.map__container}>
-        <img
-          className={scss.map}
-          src="images/hematoRunRoute.webp"
-          about="run route"
-        />
+        <img className={scss.map} src="images/mapaRun.png" about="run route" />
       </div>
       <div className={scss.backgroundIcon}>
         <IconBgDeco />
