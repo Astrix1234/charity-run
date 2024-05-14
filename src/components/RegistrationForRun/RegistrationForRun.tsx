@@ -45,7 +45,7 @@ export const RegisterForRun = () => {
   };
 
   const handleDiscountCode = () => {
-    if (discountCode === 'Podarujinnymmoc-hemtobieg') {
+    if (discountCode === 'Podarujinnymmoc-Hematobieg') {
       setIsDiscountCodeValid(true);
       setDiscountMessage('');
     } else {
