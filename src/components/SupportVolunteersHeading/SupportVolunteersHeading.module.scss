@@ -1,9 +1,8 @@
 @import '../../stylesheets/mixins.scss';
 
 .heading {
-    font-family: DM Serif Display;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 43.87px;
     text-align: center;
     align-items: center;
@@ -12,11 +11,12 @@
     white-space: wrap;
 
     @include desktop-screen {
-        font-size: 67px; 
-        line-height: 91.86px; 
+        font-size: 60px;
+        line-height: 91.86px;
         padding: 0 300px;
     }
 }
+
 .line {
     display: flex;
     justify-content: center;

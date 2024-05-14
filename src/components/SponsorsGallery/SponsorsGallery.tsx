@@ -26,7 +26,7 @@ function SponsorsGallery() {
       <div className={scss.lists}>
         <SponsorsList
           list={sponsorsList}
-          heading={language === 'PL' ? 'Sponsorzy' : 'Sponsors'}
+          heading={language === 'PL' ? 'Darczyńcy' : 'Donors'}
         />
         <SponsorsList
           list={partnersList}
