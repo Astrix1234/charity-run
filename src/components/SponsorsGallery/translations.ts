@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    heading: 'Nasi sponsorzy i partnerzy',
+    heading: 'Nasi darczyńcy i partnerzy',
   },
   EN: {
-    heading: 'Our sponsors and partners',
+    heading: 'Our donors and partners',
   },
 };
 

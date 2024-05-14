@@ -37,9 +37,8 @@
     }
 
     & .heading {
-        font-family: DM Serif Display;
-        font-size: 48px;
-        font-weight: 400;
+        font-size: 32px;
+        font-weight: 600;
         line-height: 43.87px;
         text-align: center;
         color: var(--marine);
@@ -47,7 +46,7 @@
         margin-bottom: 30px;
 
         @include desktop-screen {
-            font-size: 67px;
+            font-size: 60px;
             line-height: 91.86px;
             text-align: left;
             margin-bottom: 0;
@@ -71,7 +70,6 @@
             color: var(--orange);
             font-size: 16px;
             font-weight: 700;
-            line-height: 31.5px;
             text-align: center;
 
             @include desktop-screen {
@@ -87,7 +85,7 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
-        text-align: center;
+        text-align: left;
         color: var(--orange);
         padding-top: 52px;
 

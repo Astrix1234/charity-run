@@ -2,7 +2,7 @@ const translations = {
   PL: {
     welcome: 'Wszyscy są mile widziani!',
     welcomeNext:
-      'Niezależnie od wieku, doświadczenia czy umiejętności, jeśli masz chęci i zaangażowanie, możesz dołączyć do naszego zespołu. Zarówno młodzież, studenci, profesjonaliści, jak i emeryci - każdy może znaleźć coś dla siebie w naszej społeczności wolontariuszy.',
+      'Zapraszamy wszystkie osoby pełnoletnie. Jeśli masz chęć i zaangażowanie, możesz dołączyć do naszego zespołu wolontariuszy. Każdy może znaleźć coś dla siebie w naszej społeczności.',
     joinTeam: 'Dołącz do naszego zespołu!',
     contactInfo:
       'Jeśli jesteś zainteresowany(a) zostaniem wolontariuszem i chciałbyś/chciałabyś dowiedzieć się więcej, skontaktuj się z nami pod adresem e-mail:',
@@ -15,7 +15,7 @@ const translations = {
   EN: {
     welcome: 'Everyone is welcome!',
     welcomeNext:
-      "Regardless of age, experience or skills, if you have the willingness and dedication, you can join our team. Whether you're a young person, a student, a professional, or a retiree - everyone can find something for themselves in our volunteer community.",
+      'All adults are welcome. If you have the desire and commitment, you can join our team of volunteers. There is something for everyone in our community.',
     joinTeam: 'Join our team!',
     contactInfo:
       "If you're interested in becoming a volunteer and would like to learn more, contact us at the following e-mail address:",
