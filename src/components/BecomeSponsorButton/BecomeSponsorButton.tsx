@@ -9,7 +9,7 @@ function BecomeSponsorButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/support-sponsors');
+    navigate('/support-donors');
   };
 
   return <Button content={t.text} onClick={handleClick} />;

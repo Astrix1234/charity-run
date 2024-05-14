@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    text: 'Zostań sponsorem',
+    text: 'Zostań darczyńcą',
   },
   EN: {
-    text: 'Become a sponsor',
+    text: 'Become a donor',
   },
 };
 
