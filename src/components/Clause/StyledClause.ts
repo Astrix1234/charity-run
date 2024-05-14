@@ -16,15 +16,20 @@ export const StyledClause = styled.div`
   p {
     padding-bottom: min(2rem, 4vw);
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   li {
     padding-bottom: 0.5rem;
     font-size: 0.9rem;
+    line-height: 1.5;
+    list-style-type: disc; 
+    margin-left: 1.5rem;
   }
 
   ul {
     padding-top: min(0.5rem, 1.5vw);
     padding-left: 0.5rem;
+    margin-bottom: 1rem;
   }
 `;
