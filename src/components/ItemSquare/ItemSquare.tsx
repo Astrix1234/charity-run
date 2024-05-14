@@ -6,7 +6,7 @@ import scss from './ItemSquare.module.scss';
 type ItemSquareProps = {
   contentType?: { type: 'image'; src: string; alt: string } | { type: 'text' };
   children?: ReactNode;
-  heading?: string;
+  heading?: string | ReactNode;
   pos: number;
   backgroundColor?: 'beige' | 'grey';
 };
@@ -27,7 +27,7 @@ function ItemSquare({
           <div className={scss.pos}>
             <NumberCircle number={pos} />
           </div>
-          <p className={scss.heading}>{heading}</p>
+          <div className={scss.heading}>{heading}</div>
         </div>
       )}
       {contentType.type === 'text' && (

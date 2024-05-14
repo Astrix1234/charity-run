@@ -1,0 +1,19 @@
+@import '../../stylesheets/mixins.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 500;
+
+  @include desktop-screen {
+    font-size: 46px;
+    margin-bottom: 4px;
+  }
+}
