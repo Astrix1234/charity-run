@@ -1,32 +1,42 @@
 import AmbassadorsAndLeadersHeading from '../AmbassadorsAndLeadersHeading/AmbassadorsAndLeadersHeading';
-import AmbassadorsList from '../AmbassadorsAndLeadersList/AmbassadorsAndLeadersList';
 import TrippleArrowDown from '../../Icons/TrippleArrowDown/TrippleArrowDown';
 import scss from './OurAmbassadorsAndLeaders.module.scss';
+import AmbassadorsAndLeaderContainer from '../AmbassadorsAndLeaderContainer/AmbassadorsAndLeaderContainer';
+import { useLanguageStore } from '../../Zustand/useLanguageStore';
+import translations from './translations';
 
 const ambassadorsList = [
   {
-    name: 'Jan Kowalski',
+    name: 'Adam Kszczot',
     role: { pl: 'Polski Sportowiec', eng: 'Polish Athlete' },
-    photo: './images/ambassadors/ambassador-1.jpeg',
+    photo: './images/ambassadors/adam-kszczot.jpeg',
   },
   {
-    name: 'Jan Nowacki',
+    name: 'Kamila Ściborek',
+    role: { pl: 'Polska Aktorka', eng: 'Polish Actress' },
+    photo: './images/ambassadors/kamila-sciborek.jpeg',
+  },
+];
+
+const leadersList = [
+  {
+    name: 'Adam Kszczot',
     role: { pl: 'Polski Sportowiec', eng: 'Polish Athlete' },
-    photo: './images/ambassadors/ambassador-2.jpeg',
+    photo: './images/ambassadors/adam-kszczot.jpeg',
   },
   {
-    name: 'Anna Nowak',
-    role: { pl: 'Lekarz', eng: 'Doctor' },
-    photo: './images/ambassadors/ambassador-3.jpeg',
-  },
-  {
-    name: 'Grażyna Kowalska',
-    role: { pl: 'Lekarz', eng: 'Doctor' },
-    photo: './images/ambassadors/ambassador-4.jpeg',
+    name: 'Emilia Petela',
+    role: {
+      pl: 'Mistzynia Świata Spartan Race',
+      eng: 'Spartan Race World Champion',
+    },
+    photo: './images/ambassadors/emilia-petela.jpeg',
   },
 ];
 
 function OurAmbassadorsAndLeaders() {
+  const { language } = useLanguageStore();
+  const t = translations[language];
   return (
     <section className={scss.container}>
       <div className={scss.heading}>
@@ -35,7 +45,16 @@ function OurAmbassadorsAndLeaders() {
           <TrippleArrowDown />
         </div>
       </div>
-      <AmbassadorsList list={ambassadorsList} />
+      <AmbassadorsAndLeaderContainer
+        type="ambassador"
+        headingText={t.ambassadors}
+        list={ambassadorsList}
+      />
+      <AmbassadorsAndLeaderContainer
+        type="leader"
+        headingText={t.leaders}
+        list={leadersList}
+      />
     </section>
   );
 }

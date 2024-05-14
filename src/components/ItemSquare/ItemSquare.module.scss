@@ -13,6 +13,7 @@
   z-index: -2;
   width: 100%;
   max-width: 474px;
+  z-index: 20;
 
   @include desktop-screen {
     padding: 36px 60px 20px;
@@ -47,20 +48,19 @@
     min-height: 12px;
 
     @include desktop-screen {
-      min-height: 73px;
+      min-height: 103px;
       padding-left: 35%;
     }
   }
 }
 
 .heading {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--black);
   margin-bottom: 14px;
   line-height: 1.4;
   white-space: pre-line;
-
   @include desktop-screen {
     font-size: 21px;
   }
@@ -81,17 +81,23 @@
 
 .content {
   flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
   width: 100%;
-  max-width: 260px;
+  max-width: 220px;
+  max-height: 220px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
+  align-self: center;
 
   @include desktop-screen {
     max-width: 330px;
+    max-height: 330px;
   }
 
   img {

@@ -16,3 +16,12 @@
     max-width: 1140px;
   }
 }
+
+.heading {
+  font-size: 12px;
+  font-weight: 600;
+
+  @include desktop-screen {
+    font-size: 18px;
+  }
+}
