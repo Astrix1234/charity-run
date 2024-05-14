@@ -23,9 +23,6 @@ function HomePageTimer() {
     minutes: 0,
   });
 
-  const formatTime = (time: number): string =>
-    time < 0 ? `0${time}` : time.toString();
-
   useEffect(() => {
     const calculateTimeRemaining = (): TimeRemaining => {
       const currentDate = new Date();
