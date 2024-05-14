@@ -1,4 +1,4 @@
-import AmbassadorsHeading from '../AmbassadorsHeading/AmbassadorsHeading';
+import AmbassadorsAndLeadersHeading from '../AmbassadorsAndLeadersHeading/AmbassadorsAndLeadersHeading';
 import AmbassadorsList from '../AmbassadorsList/AmbassadorsList';
 import TrippleArrowDown from '../../Icons/TrippleArrowDown/TrippleArrowDown';
 import scss from './OurAmbassadors.module.scss';
@@ -30,7 +30,7 @@ function OurAmbassadors() {
   return (
     <section className={scss.container}>
       <div className={scss.heading}>
-        <AmbassadorsHeading />
+        <AmbassadorsAndLeadersHeading />
         <div className={scss.arrow}>
           <TrippleArrowDown />
         </div>
