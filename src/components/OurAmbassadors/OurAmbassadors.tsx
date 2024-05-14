@@ -1,5 +1,5 @@
 import AmbassadorsAndLeadersHeading from '../AmbassadorsAndLeadersHeading/AmbassadorsAndLeadersHeading';
-import AmbassadorsList from '../AmbassadorsList/AmbassadorsList';
+import AmbassadorsList from '../AmbassadorsAndLeadersList/AmbassadorsAndLeadersList';
 import TrippleArrowDown from '../../Icons/TrippleArrowDown/TrippleArrowDown';
 import scss from './OurAmbassadors.module.scss';
 

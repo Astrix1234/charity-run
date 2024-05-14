@@ -1,12 +1,12 @@
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import ItemSquare from '../ItemSquare/ItemSquare';
-import scss from './AmbassadorsList.module.scss';
+import scss from './AmbassadorsAndLeadersList.module.scss';
 
-type AmbassadorsListProps = {
+type AmbassadorsAndLeadersListProps = {
   list: { name: string; role: { eng: string; pl: string }; photo: string }[];
 };
 
-function AmbassadorsList({ list }: AmbassadorsListProps) {
+function AmbassadorsAndLeadersList({ list }: AmbassadorsAndLeadersListProps) {
   const { language } = useLanguageStore();
 
   return (
@@ -29,4 +29,4 @@ function AmbassadorsList({ list }: AmbassadorsListProps) {
   );
 }
 
-export default AmbassadorsList;
+export default AmbassadorsAndLeadersList;
