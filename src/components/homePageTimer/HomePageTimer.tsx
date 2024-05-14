@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
 import scss from './HomePageTimer.module.scss';
-import translations from './translations';
+
 import {
   differenceInDays,
   differenceInHours,
   differenceInMinutes,
 } from 'date-fns';
+import translations from './translations';
 
 const eventDate = new Date('May 26, 2024 09:00:00');
 
