@@ -19,7 +19,7 @@ const RegistrationForRunPage = lazy(
   () => import('./pages/RegistrationForRunPage/RegistrationForRunPage')
 );
 const OurAmbassadorsPage = lazy(
-  () => import('./pages/OurAmbassadorsPage/OurAmbassadorsPage')
+  () => import('./pages/OurAmbassadorsAndLeadersPage/OurAmbassadorsAndLeadersPage')
 );
 const OurSponsorsPage = lazy(
   () => import('./pages/OurSponsorsPage/OurSponsorsPage')
