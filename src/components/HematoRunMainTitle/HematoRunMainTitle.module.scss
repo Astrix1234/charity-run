@@ -1,15 +1,40 @@
 @import '../../stylesheets/mixins.scss';
 
 .hematoTitles {
-  background-image: url('/images/background.png');
-  background-size: 200% 200%;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  padding-top: 63px;
+  &__patronsContainer {
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
 
-  @include desktop-screen {
-    margin-top: -20px;
-    padding-top: 83px;
+    @include desktop-screen {
+      max-width: 1440px;
+      padding: 10px 80px;
+      height: 100px;
+    }
+  }
+
+  &__patronsTitle {
+    font-weight: 500;
+
+    @include desktop-screen {
+      font-size: 26px;
+    }
+  }
+
+  &__containerMain {
+    background-image: url('/images/background.png');
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-top: 63px;
+
+    @include desktop-screen {
+      padding-top: 63px;
+    }
   }
 
   &__container {
