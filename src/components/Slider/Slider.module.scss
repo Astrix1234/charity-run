@@ -17,6 +17,7 @@
     height: 100%;
     z-index: 2;
   }
+
   &:before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
@@ -26,6 +27,7 @@
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   }
+
   &__wrapper {
     animation: slide 30s linear infinite;
     flex-shrink: 0;
@@ -48,6 +50,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -60,8 +63,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+
   .slider,
   .slider__reverse {
+
     &:after,
     &:before {
       width: 250px;
