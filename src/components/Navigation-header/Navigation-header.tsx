@@ -152,7 +152,7 @@ export const NavigationHeader = () => {
           className={`${scss['navigation__links']} ${scss['navigation__links--please-support']}`}
         >
           <li className={scss.navigation__link}>
-            <Link to="/support-donation">{t.becomeSponsor}</Link>
+            <Link to="/support-donors">{t.becomeSponsor}</Link>
           </li>
           <li className={scss.navigation__link}>
             <Link to="/support-donation">{t.makeDonation}</Link>
