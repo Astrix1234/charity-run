@@ -27,7 +27,7 @@ const leadersList = [
   {
     name: 'Emilia Petela',
     role: {
-      pl: 'Mistzynia Świata Spartan Race',
+      pl: 'Mistzyni Świata Spartan Race',
       eng: 'Spartan Race World Champion',
     },
     photo: './images/ambassadors/emilia-petela.jpeg',
