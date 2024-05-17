@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import SupportVolunteers from '../../components/SupportVolunteers/SupportVolunteers';
+import SupportVolunteers from '../../components/SupportVolunteersAll/SupportVolunteers/SupportVolunteers';
 
 export default function SupportVolunteersPage() {
   return (

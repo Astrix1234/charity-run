@@ -1,0 +1,233 @@
+@import '../../../stylesheets/mixins.scss';
+
+.hematoTitles {
+    &__patronsContainer {
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+
+        @include desktop-screen {
+            max-width: 1440px;
+            padding: 10px 80px;
+            height: 100px;
+        }
+    }
+
+    &__patronsTitle {
+        font-weight: 500;
+
+        @include desktop-screen {
+            font-size: 26px;
+        }
+    }
+
+    &__containerMain {
+        background-image: url('/images/background.png');
+        background-size: 200% 200%;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        padding-top: 63px;
+
+        @include desktop-screen {
+            padding-top: 63px;
+        }
+    }
+
+    &__container {
+        position: relative;
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        overflow: hidden;
+        height: 768px;
+
+        @include desktop-screen {
+            max-width: 1440px;
+            padding: 0 80px;
+        }
+    }
+
+    &__giveOthers {
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--light);
+        -webkit-text-stroke: 1.5px var(--dark);
+
+        @include desktop-screen {
+            font-size: var(--largeFontSize);
+            line-height: 46px;
+        }
+    }
+
+    &__titleContainer {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include desktop-screen {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__titleBegin {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 75px;
+        font-weight: 800;
+        color: var(--orange);
+
+        @include desktop-screen {
+            font-size: 90px;
+        }
+    }
+
+    &__foundation {
+        font-size: 12px;
+        margin-top: 15px;
+
+        @include desktop-screen {
+            font-size: 21px;
+            margin-top: 0;
+        }
+    }
+
+    &__date {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: var(--orange);
+        margin-top: 15px;
+
+        @include desktop-screen {
+            font-size: 50px;
+            margin-top: 8px;
+            line-height: 75px;
+        }
+    }
+
+    &__kmContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 19px;
+
+        @include desktop-screen {
+            gap: 20px;
+            margin-bottom: 39px;
+        }
+    }
+
+    &__km {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        color: var(--marine);
+
+        @include desktop-screen {
+            font-size: 50px;
+            line-height: 75px;
+        }
+    }
+
+    &__iconRoad {
+        scale: 0.4;
+
+        @include desktop-screen {
+            scale: 1;
+        }
+    }
+
+    &__logInContainer {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin: 10px 0 0 0;
+        font-size: 12px;
+        line-height: 29px;
+
+        @include desktop-screen {
+            margin: 16px 0 0 0;
+            font-size: var(--mediumFontSize);
+        }
+    }
+
+    &__logIn {
+        color: #1c5ca7;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        font-size: 16px;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+        }
+    }
+
+    &__illustrationContainer {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include desktop-screen {
+            right: 80px;
+        }
+    }
+
+    &__illustration {
+        width: 375px;
+        height: 254px;
+        background-image: url('/images/illustration.png');
+        background-size: cover;
+        transform: translateX(35%);
+        z-index: -1;
+
+        @include desktop-screen {
+            width: 612px;
+            height: 415px;
+            transform: translateX(0);
+        }
+    }
+
+    &__runWithUs {
+        font-weight: 500;
+        color: var(--orange);
+        line-height: 30px;
+
+        @include desktop-screen {
+            font-size: var(--largeFontSize);
+            line-height: 59px;
+        }
+    }
+
+    &__findOutMore {
+        color: var(--orange);
+        font-weight: 700;
+
+        line-height: 24px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../../stylesheets/mixins.scss';
+
+.row {
+  font-size: 14px;
+
+  @include desktop-screen {
+    font-size: 18px;
+  }
+}
+
+.text {
+  font-weight: 400;
+}
+
+.btn {
+  color: var(--marine);
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    text-decoration-line: underline;
+  }
+}

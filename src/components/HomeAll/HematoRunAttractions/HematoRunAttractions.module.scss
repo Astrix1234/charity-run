@@ -1,0 +1,89 @@
+@import '../../../stylesheets/mixins.scss';
+
+.attractions {
+  position: relative;
+  padding-top: 60px;
+
+  @include desktop-screen {
+    padding-top: 140px;
+  }
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop-screen {
+      padding: 0 80px;
+      max-width: 1440px;
+    }
+  }
+
+  &__containerItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 380px;
+    margin: 0 auto;
+
+    @include desktop-screen {
+      gap: 29px;
+      max-width: 1080px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 26px;
+    display: flex;
+    align-items: flex-end;
+    max-width: 290px;
+    gap: 10px;
+
+    @include desktop-screen {
+      padding-bottom: 140px;
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__iconBloodCell {
+    scale: 0.5;
+    transform-origin: left center;
+
+    @include desktop-screen {
+      scale: 1;
+    }
+  }
+
+
+
+  &__backgroundIcon {
+    display: none;
+
+    @include desktop-screen {
+      position: absolute;
+      top: 270px;
+      right: 0;
+      display: flex;
+    }
+  }
+}
+
+.attractions__header {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+
+  @include desktop-screen {
+    font-size: 54px;
+  }
+}
+
+.attractions__containerItems>li {
+  flex: 1 0 48%;
+  max-width: 48%;
+}

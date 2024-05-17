@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import RegistrationForRun from '../../components/RegistrationForRun/RegistrationForRun';
+import RegistrationForRun from '../../components/RegistrationForRunAll/RegistrationForRun/RegistrationForRun';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';

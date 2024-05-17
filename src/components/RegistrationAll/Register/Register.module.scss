@@ -1,0 +1,38 @@
+@import '../../../stylesheets/mixins.scss';
+
+.register {
+  width: 100%;
+  padding-top: 63px;
+  background-image: url('/images/background.png');
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  @include desktop-screen {
+
+    background-size: 200% 200%;
+
+    padding-top: 83px;
+    margin-top: -20px;
+
+  }
+
+  &__container {
+    position: relative;
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include desktop-screen {
+      padding: 0 80px;
+      max-width: 1440px;
+    }
+  }
+
+  &__link {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

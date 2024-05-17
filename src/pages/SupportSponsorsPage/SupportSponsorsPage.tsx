@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import SupportSponsor from '../../components/SupportSponsor/SupportSponsor';
+import SupportSponsor from '../../components/SupportSponsorAll/SupportSponsor/SupportSponsor';
 export default function SupporSponsorstPage() {
   return (
     <div>

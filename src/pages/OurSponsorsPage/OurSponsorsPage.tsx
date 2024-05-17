@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import OurSponsors from '../../components/OurSponsors/OurSponsors';
+import OurSponsors from '../../components/SponsorAll/OurSponsors/OurSponsors';
 
 export default function OurSponsorsPage() {
   return (

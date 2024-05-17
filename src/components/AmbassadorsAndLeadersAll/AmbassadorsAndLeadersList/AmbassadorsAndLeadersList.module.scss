@@ -1,0 +1,27 @@
+@import '../../../stylesheets/mixins.scss';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 32px 60px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 420px;
+
+  @include desktop-screen {
+    padding: 0 80px 140px;
+    max-width: 1140px;
+  }
+}
+
+.heading {
+  font-size: 12px;
+  font-weight: 600;
+
+  @include desktop-screen {
+    font-size: 18px;
+  }
+}

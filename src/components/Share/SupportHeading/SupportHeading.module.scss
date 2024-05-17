@@ -1,0 +1,36 @@
+@import '../../../stylesheets/mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 46px;
+
+  & svg {
+    width: 98px;
+    height: 38.058px;
+  }
+
+  @include desktop-screen {
+    margin-bottom: 136px;
+
+    & svg {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.heading {
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--marine);
+  margin-bottom: 18px;
+  font-size: 32px;
+
+  @include desktop-screen {
+    font-size: 90px;
+  }
+}
