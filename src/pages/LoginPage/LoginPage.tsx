@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import LoginComponent from '../../components/LoginComponent/LoginComponent';
+import LoginComponent from '../../components/LoginAll/LoginComponent/LoginComponent';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';

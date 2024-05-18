@@ -1,0 +1,59 @@
+@import '../../../stylesheets/mixins.scss';
+
+.supportVolunteersList {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include desktop-screen {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  & .item h1 {
+    top: 65px;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+
+    @include desktop-screen {
+      position: absolute;
+      top: 65px;
+      left: 200px;
+      font-size: 21px;
+      text-align: left;
+      padding-right: 25px;
+      margin: 0;
+      line-height: 39px;
+    }
+  }
+
+  & .item p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+    padding-top: 5px;
+    margin-top: 10px;
+
+
+    @include desktop-screen {
+      position: absolute;
+      left: 0;
+      text-align: left;
+      font-size: 21px;
+      padding-left: 80px;
+      padding-right: 80px;
+      text-align: left;
+      line-height: 30px;
+    }
+  }
+}

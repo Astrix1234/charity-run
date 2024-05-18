@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import OurAmbassadorsAndLeaders from '../../components/OurAmbassadorsAndLeaders/OurAmbassadorsAndLeaders';
+import OurAmbassadorsAndLeaders from '../../components/AmbassadorsAndLeadersAll/OurAmbassadorsAndLeaders/OurAmbassadorsAndLeaders';
 
 export default function OurAmbassadorsAndLeadersPage() {
   return (

@@ -1,0 +1,69 @@
+@import '../../../stylesheets/mixins.scss';
+
+.button {
+  width: 230px;
+  height: 54px;
+
+  @include desktop-screen {
+    width: 276px;
+    height: 65px;
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19.92px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--orange);
+    background: linear-gradient(180deg, #fd7616 11.28%, #f28505 100%);
+    color: var(--light);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--orange);
+      transform: translate(5.5px, -7px);
+      box-shadow: -2.5px 4px 0px 0px var(--dark);
+      background: linear-gradient(180deg, #ff9c27 11.28%, #f28505 100%);
+    }
+
+    @include desktop-screen {
+      gap: 24px;
+      border-radius: 24px;
+      font-size: 24px;
+
+      &:hover,
+      &:focus {
+        box-shadow: -5.5px 7px 0px 0px var(--dark);
+      }
+
+      & svg {
+        width: 33.2px;
+        height: 37.35px;
+      }
+    }
+  }
+
+
+  &__disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+      background-color: var(--orange);
+      transform: translate(0, -0);
+      box-shadow: none;
+      background: linear-gradient(180deg, #fd7616 11.28%, #f28505 100%);
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../stylesheets/mixins.scss';
+
+.togetherToTheGoal {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+
+  @include desktop-screen {
+    max-width: 1280px;
+  }
+
+  &__together {
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 16px;
+
+    @include desktop-screen {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 6px;
+    font-weight: 800;
+    color: var(--orange);
+
+    @include desktop-screen {
+      font-size: 90px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__foundation {
+    font-size: 16px;
+    max-width: 290px;
+
+    @include desktop-screen {
+      font-size: 21px;
+      max-width: 574px;
+    }
+  }
+}

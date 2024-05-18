@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Register } from '../../components/Register/Register';
+import { Register } from '../../components/RegistrationAll/Register/Register';
 
 export default function RegisterPage() {
   return (

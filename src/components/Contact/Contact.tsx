@@ -6,8 +6,8 @@ import { IconInstagram } from '../../Icons/IconInstagram/IconInstagram';
 import { IconLinkedIn } from '../../Icons/IconLinkedIn/IconLinkedIn';
 import { IconYouTube } from '../../Icons/IconYouTube/IconYouTube';
 import { useLanguageStore } from '../../Zustand/useLanguageStore';
-import { FoundationLogotype } from '../FoundationLogotype/FoundationLogotype';
-import SupportHand from '../SupportHand/SupportHand';
+import { FoundationLogotype } from '../Share/FoundationLogotype/FoundationLogotype';
+import SupportHand from '../Share/SupportHand/SupportHand';
 import scss from './Contact.module.scss';
 import translations from './translations';
 

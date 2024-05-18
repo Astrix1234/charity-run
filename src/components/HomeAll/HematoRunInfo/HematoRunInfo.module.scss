@@ -1,0 +1,120 @@
+@import '../../../stylesheets/mixins.scss';
+
+.runInfo {
+    padding: 60px 0 0 0;
+
+    @include desktop-screen {
+        padding: 140px 0 0 0;
+    }
+
+    &__container {
+        position: relative;
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+
+        @include desktop-screen {
+            max-width: 1440px;
+            padding: 0 80px;
+        }
+    }
+
+    &__titleContainer {
+        position: relative;
+    }
+
+    &__comment {
+        font-weight: 500;
+        margin-bottom: 8px;
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+            margin-bottom: 16px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 63px;
+
+        @include desktop-screen {
+            font-size: 64px;
+            margin-bottom: 53px;
+        }
+    }
+
+    &__underlines {
+        width: 231px;
+        height: 18px;
+        background-image: url('/images/underlines.png');
+        background-size: 100% 100%;
+        position: absolute;
+        top: 75px;
+
+        @include desktop-screen {
+            width: 382px;
+            height: 17px;
+            background-size: cover;
+            top: 115px;
+        }
+
+    }
+
+    &__text {
+        position: relative;
+        width: 100%;
+        max-width: 923px;
+        font-size: 12px;
+        text-align: justify;
+        line-height: 1.5;
+        height: 415px;
+        overflow: hidden;
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+            height: 485px;
+        }
+    }
+
+    &__developed {
+        height: auto;
+    }
+
+    &__paragraph {
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--orange);
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        margin-left: auto;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        @include desktop-screen {
+            font-size: var(--mediumFontSize);
+            margin-right: 360px;
+        }
+    }
+
+    &__runningHelp {
+        position: absolute;
+        width: 270px;
+        height: 538px;
+        background-image: url('/images/running-help.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 80px;
+        top: 50px;
+    }
+}

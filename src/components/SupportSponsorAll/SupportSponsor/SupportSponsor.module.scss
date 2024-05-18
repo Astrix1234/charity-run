@@ -1,0 +1,38 @@
+@import '../../../stylesheets/mixins.scss';
+
+.section {
+  position: relative;
+  width: auto;
+  padding-top: 63px;
+  background-image: url('/images/background.png');
+  background-size: 295% 295%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  @include desktop-screen {
+    padding-top: 83px;
+    margin-top: -20px;
+    background-size: 295% 295%;
+  }
+}
+
+.container {
+  padding: 0 20px; // zmiana szerokości paddingu dla urządzeń mobilnych
+  margin: 0 auto;
+  word-wrap: break-word;
+
+  @include desktop-screen {
+    padding: 0 80px; // oryginalny padding dla ekranów desktopowych
+    max-width: 1440px;
+  }
+
+  .heading {
+    max-width: 90%; // zmiana szerokości dla urządzeń mobilnych
+    align-items: center;
+    margin: 0 auto;
+
+    @include desktop-screen {
+      max-width: 72%; // oryginalna szerokość dla ekranów desktopowych
+    }
+  }
+}

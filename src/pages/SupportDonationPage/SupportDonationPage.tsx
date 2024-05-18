@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import SupportDonation from '../../components/SupportDonation/SupportDonation';
+import SupportDonation from '../../components/DonationAll/SupportDonation/SupportDonation';
 
 export default function SupportDonationPage() {
   return (

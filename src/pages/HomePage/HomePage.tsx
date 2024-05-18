@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { HematoRunMainTitle } from '../../components/HematoRunMainTitle/HematoRunMainTitle';
-import { HematoRunRoute } from '../../components/HematoRunRoute/HematoRunRoute';
-import { HematoRunInfo } from '../../components/HematoRunInfo/HematoRunInfo';
-import { HematoRunWhyIsItWorth } from '../../components/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
-import HematoFAQ from '../../components/HematoFAQ/HematoFAQ';
-import Attractions from '../../components/HematoRunAttractions/HematoRunAttractions';
-import GalleryCarousel from '../../components/GalleryCarousel/GalleryCarousel';
-import Sponsors from '../../components/Sponsors/Sponsors';
-import { Timetable } from '../../components/Timetable/Timetable';
+import { HematoRunMainTitle } from '../../components/HomeAll/HematoRunMainTitle/HematoRunMainTitle';
+import { HematoRunRoute } from '../../components/HomeAll/HematoRunRoute/HematoRunRoute';
+import { HematoRunInfo } from '../../components/HomeAll/HematoRunInfo/HematoRunInfo';
+import { HematoRunWhyIsItWorth } from '../../components/HomeAll/HematoRunWhyIsItWorth/HematoRunWhyIsItWorth';
+import HematoFAQ from '../../components/HomeAll/HematoFAQ/HematoFAQ';
+import Attractions from '../../components/HomeAll/HematoRunAttractions/HematoRunAttractions';
+import GalleryCarousel from '../../components/HomeAll/GalleryCarousel/GalleryCarousel';
+import Sponsors from '../../components/HomeAll/Sponsors/Sponsors';
+import { Timetable } from '../../components/Share/Timetable/Timetable';
 
 export default function HomePage() {
   const { hash } = useLocation();

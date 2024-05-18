@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ParticipantArea } from '../../components/ParticipantArea/ParticipantArea';
+import { ParticipantArea } from '../../components/ParticipantAreaAll/ParticipantArea/ParticipantArea';
 import { useIsLoginStore } from '../../Zustand/useIsLoginStore';
 import { useIsLoadingStore } from '../../Zustand/useIsLoadingStore';
 import { useParticipantUserDataStore } from '../../Zustand/useParticipantUserDataStore';

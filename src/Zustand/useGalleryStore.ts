@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { images } from '../components/Gallery/Images';
+import { images } from '../components/GalleryAll/Gallery/Images';
 
 interface GalleryState {
   page: number;

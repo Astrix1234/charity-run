@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import RestorePassword from '../../components/RestorePassword/RestorePassword';
+import RestorePassword from '../../components/PasswordRestoreAll/RestorePassword/RestorePassword';
 
 function RestorePasswordPage() {
   return (
