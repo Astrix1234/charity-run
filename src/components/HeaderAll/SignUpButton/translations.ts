@@ -1,9 +1,9 @@
 const translations = {
   PL: {
-    signUp: 'Zapisz się',
+    signUp: 'Zapisz się na bieg',
   },
   EN: {
-    signUp: 'Sign up',
+    signUp: 'Sign up for a run',
   },
 };
 

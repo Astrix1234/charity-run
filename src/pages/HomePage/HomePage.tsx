@@ -10,6 +10,7 @@ import Attractions from '../../components/HomeAll/HematoRunAttractions/HematoRun
 import GalleryCarousel from '../../components/HomeAll/GalleryCarousel/GalleryCarousel';
 import Sponsors from '../../components/HomeAll/Sponsors/Sponsors';
 import { Timetable } from '../../components/Share/Timetable/Timetable';
+import Patrons from '../../components/HomeAll/Patrons/Patrons';
 
 export default function HomePage() {
   const { hash } = useLocation();
@@ -30,6 +31,7 @@ export default function HomePage() {
         <title>Hemato Run</title>
       </Helmet>
       <HematoRunMainTitle />
+      <Patrons />
       <HematoRunInfo />
       <GalleryCarousel />
       <Timetable />
