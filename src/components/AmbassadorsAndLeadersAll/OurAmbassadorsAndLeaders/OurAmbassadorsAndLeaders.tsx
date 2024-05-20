@@ -27,11 +27,16 @@ const leadersList = [
   {
     name: 'Emilia Petela',
     role: {
-      pl: 'Mistzyni Świata Spartan Race',
+      pl: 'Mistrzyni Świata Spartan Race',
       eng: 'Spartan Race World Champion',
     },
     photo: './images/ambassadors/emilia-petela.jpeg',
   },
+  {
+    name: 'Dominika Stelmach',
+    role: { pl: 'Polska lekkoatletka', eng: 'Polish Athlete' },
+    photo: './images/ambassadors/dominika_stelmach.png',
+  }
 ];
 
 function OurAmbassadorsAndLeaders() {
