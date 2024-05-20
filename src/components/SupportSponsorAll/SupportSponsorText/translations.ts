@@ -3,7 +3,7 @@ const textContent = {
     title: 'Dołącz do Naszego Zespołu - Zostań Darczyńcą!',
     greeting: 'Drodzy Przyjaciele!',
     projectDescription:
-      'Jesteśmy niezwykle podekscytowani naszym nowym projektem – Bieg Charytatywny Fundacji Na Rzecz Pomocy Chorym Na Białaczki. Biegniemy, walczyć z nowotworami krwi, ale nasz wysiłek nie przyniesie efektów bez Waszego wsparcia!',
+      'Jesteśmy niezwykle podekscytowani naszym nowym projektem – Bieg Charytatywny Fundacji Na Rzecz Pomocy Chorym Na Białaczki. Biegniemy walczyć z nowotworami krwi, ale nasz wysiłek nie przyniesie efektów bez Waszego wsparcia!',
     whySponsor: 'Dlaczego warto zostać darczyńcą?',
     sponsorBenefits: {
       point1: '1.',
