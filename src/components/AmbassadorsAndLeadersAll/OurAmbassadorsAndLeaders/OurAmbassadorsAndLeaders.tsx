@@ -39,9 +39,6 @@ const leadersList = [
   }
 ];
 
-
-
-
 function OurAmbassadorsAndLeaders() {
   const { language } = useLanguageStore();
   const t = translations[language];
