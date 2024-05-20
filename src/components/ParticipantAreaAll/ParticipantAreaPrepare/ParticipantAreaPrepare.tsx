@@ -7,6 +7,7 @@ import { ParticipantAreaItemSquare } from '../ParticipantAreaItemSquare/Particip
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { useState } from 'react';
+import scss from '../../SupportVolunteersAll/SupportVolunteersList/SupportVolunteersList.module.scss';
 
 export const ParticipantAreaPrepare = () => {
   const { language } = useLanguageStore();
@@ -16,20 +17,19 @@ export const ParticipantAreaPrepare = () => {
   const onCloseModal = () => setOpen(false);
   return (
     <StyledPrepare as="section" id="before-run">
-      <ParticipantAreaItemSquare pos={1}>
-        <>
+      <div className={scss.supportVolunteersList}>
+        <ParticipantAreaItemSquare pos={1}>
+        <div className={scss.item}>
           <h1>/ {t.train}</h1>
-          <p>{t.trainLinks}</p>
           <p>
+            {t.trainLinks}<br/>
             <Link
               target="_blank"
               rel="noopener"
               to="https://bieganie.pl/plany-treningowe/"
             >
               {t.trainPlans}
-            </Link>
-          </p>
-          <p>
+            </Link><br/>
             <Link
               target="_blank"
               rel="noopener"
@@ -38,13 +38,12 @@ export const ParticipantAreaPrepare = () => {
               {t.trainStart}
             </Link>
           </p>
-        </>
+        </div>
       </ParticipantAreaItemSquare>
-      <ParticipantAreaItemSquare pos={2}>
-        <>
+        <ParticipantAreaItemSquare pos={2}>
+          <div className={scss.item}>
           <h1>/ {t.diet}</h1>
-          <p>{t.dietLinks}</p>
-          <p>
+          <p>{t.dietLinks}<br/>
             <Link
               target="_blank"
               rel="noopener"
@@ -52,8 +51,7 @@ export const ParticipantAreaPrepare = () => {
             >
               {t.dietEat}
             </Link>
-          </p>
-          <p>
+          <br/>
             <Link
               target="_blank"
               rel="noopener"
@@ -62,10 +60,10 @@ export const ParticipantAreaPrepare = () => {
               {t.dietRunner}
             </Link>
           </p>
-        </>
+        </div>
       </ParticipantAreaItemSquare>
-      <ParticipantAreaItemSquare pos={3}>
-        <>
+        <ParticipantAreaItemSquare pos={3}>
+          <div className={scss.item}>
           <h1>/ {t.hydration}</h1>
           <p>
             <Link
@@ -75,12 +73,12 @@ export const ParticipantAreaPrepare = () => {
             >
               {t.hydrationRun}
             </Link>
-          </p>
-          <p>{t.hydrationAdvice}</p>
-        </>
+          <br/>
+            {t.hydrationAdvice}</p>
+        </div>
       </ParticipantAreaItemSquare>
-      <ParticipantAreaItemSquare pos={4}>
-        <>
+        <ParticipantAreaItemSquare pos={4}>
+          <div className={scss.item}>
           <h1>/ {t.run}</h1>
           <p className="map" onClick={onOpenModal}>
             {t.runRoute}
@@ -97,10 +95,12 @@ export const ParticipantAreaPrepare = () => {
               className="modal"
               src="images/hematoRunRoute.webp"
               about="run route full size"
+              alt="route"
             />
           </Modal>
-        </>
+        </div>
       </ParticipantAreaItemSquare>
+      </div>
       <div className="foots foot0">
         <IconFoot />
       </div>

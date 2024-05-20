@@ -18,7 +18,7 @@ function SupportDonation() {
         />
         <SupportSubHeading
           content={{
-            pl: 'Wpłać darowiznę aby wesprzeć nas w organizacji wydarzenia',
+            pl: 'Wpłać darowiznę, aby wesprzeć nas w organizacji wydarzenia',
             eng: 'Make a donation to support us in organizing',
           }}
         />

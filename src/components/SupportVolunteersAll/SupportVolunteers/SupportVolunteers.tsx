@@ -13,8 +13,8 @@ function SupportVolunteers() {
         <div className={scss.heading}>
           <SupportHeading
             headingText={{
-              pl: 'Wesprzyj Fundację \n i zostań wolontariuszem',
-              eng: 'Support the foundation and become a volunteer',
+              pl: 'Wesprzyj Fundację \n i zostań Wolontariuszem',
+              eng: 'Support the foundation and become a Volunteer',
             }}
           />
         </div>
@@ -36,8 +36,8 @@ function SupportVolunteers() {
         <SupportVolunteersList />
         <SupportVolunteersHeading
           subText={{
-            pl: 'Kto może zostać wolontariuszem?',
-            eng: 'Who can become a volunteer?',
+            pl: 'Kto może zostać Wolontariuszem?',
+            eng: 'Who can become a Volunteer?',
           }}
         />
         <SupportVolunteersText />
