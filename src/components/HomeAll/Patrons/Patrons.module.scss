@@ -1,6 +1,6 @@
 @import '../../../stylesheets/mixins.scss';
 
-.sponsors {
+.patrons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
     gap: 12px;
     z-index: 1;
     margin: 0 auto 20px auto;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: relative;
   }
 
@@ -40,7 +40,7 @@
   }
 
   &__iconBlood {
-    position: absolute;
+    position: static;
     bottom: 0;
     right: 0;
 
@@ -123,7 +123,7 @@
 }
 
 @include desktop-screen {
-  .sponsors {
+  .patrons {
     padding-top: 80px;
     padding-bottom: 80px;
     overflow: visible;
