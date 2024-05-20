@@ -9,15 +9,14 @@ import { HematoSliderTitle } from '../HematoSliderTitle/HematoSliderTitle';
 import { useNavigate } from 'react-router';
 import { useIsLoginStore } from '../../../Zustand/useIsLoginStore';
 import HomePageTimer from '../homePageTimer/HomePageTimer';
-import { PartnersBar } from '../PartnersBar/PartnersBar';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 export const HematoRunMainTitle = () => {
   const { language } = useLanguageStore();
   const t = translations[language];
   const navigate = useNavigate();
   const { isLogin } = useIsLoginStore();
-  const isDesktop = useMediaQuery({ query: '(min-width: 1360px)' });
+  // const isDesktop = useMediaQuery({ query: '(min-width: 1360px)' });
 
   const handleClick = () => {
     isLogin ? navigate('/run-registration') : navigate('/register');
