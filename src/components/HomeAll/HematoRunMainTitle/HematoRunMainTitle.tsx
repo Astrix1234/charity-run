@@ -24,7 +24,6 @@ export const HematoRunMainTitle = () => {
   };
   return (
     <section id="home" className={scss.hematoTitles}>
-      {isDesktop && <PartnersBar />}
       <div className={scss.hematoTitles__containerMain}>
         <div className={scss.hematoTitles__container}>
           <HomePageTimer />
