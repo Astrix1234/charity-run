@@ -34,7 +34,7 @@ const leadersList = [
   },
   {
     name: 'Dominika Stelmach',
-    role: { pl: 'Polski Sportowiec', eng: 'Polish Athlete' },
+    role: { pl: 'Polska lekkoatletka', eng: 'Polish Athlete' },
     photo: './images/ambassadors/dominika_stelmach.png',
   }
 ];
