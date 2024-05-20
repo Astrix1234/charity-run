@@ -52,7 +52,7 @@ const Sponsors = () => {
 
   return (
     <>
-      <section className={scss.padding} id="our-sponsors"></section>
+      <section className={scss.padding} id="our-partners"></section>
       <section className={scss.sponsors}>
         <div aria-hidden="true" className={scss.sponsors__background}>
           <Wave />

@@ -33,7 +33,7 @@ const Patrons = () => {
 
   return (
     <>
-      <section className={scss.padding} id="our-sponsors"></section>
+      <section className={scss.padding} id="our-patrons"></section>
       <section className={scss.patrons}>
         <div className={scss.patrons__container}>
           <h2 className={scss.patrons__title}>{t.patronsTitle}</h2>
