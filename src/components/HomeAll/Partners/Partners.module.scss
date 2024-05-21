@@ -1,12 +1,12 @@
 @import '../../../stylesheets/mixins.scss';
 
-.sponsors {
+.partners {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     z-index: 1;
+    gap: 12px;
     margin: 0 auto 20px auto;
     justify-content: flex-end;
     position: relative;
@@ -39,7 +40,7 @@
   }
 
   &__iconBlood {
-    position: absolute;
+    position: static;
     bottom: 0;
     right: 0;
 
@@ -52,12 +53,13 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
   }
 
   &__box {
     padding: 4px 0;
+    height: 80px;
     background-color: var(--light);
     z-index: 1;
   }
@@ -115,9 +117,9 @@
 }
 
 @include desktop-screen {
-  .sponsors {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .partners {
+    padding-top: 160px;
+    padding-bottom: 160px;
     overflow: visible;
 
     &__background {
@@ -128,7 +130,7 @@
     }
 
     &__container {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     &__title {
@@ -147,10 +149,11 @@
     }
 
     &__wrapper {
-      gap: 80px;
+      gap: 60px;
     }
 
     &__box {
+      height: 100px;
       padding: 16px 0;
     }
 

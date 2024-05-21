@@ -8,7 +8,7 @@ import { HematoRunWhyIsItWorth } from '../../components/HomeAll/HematoRunWhyIsIt
 import HematoFAQ from '../../components/HomeAll/HematoFAQ/HematoFAQ';
 import Attractions from '../../components/HomeAll/HematoRunAttractions/HematoRunAttractions';
 import GalleryCarousel from '../../components/HomeAll/GalleryCarousel/GalleryCarousel';
-import Sponsors from '../../components/HomeAll/Sponsors/Sponsors';
+import Partners from '../../components/HomeAll/Partners/Partners';
 import { Timetable } from '../../components/Share/Timetable/Timetable';
 import Patrons from '../../components/HomeAll/Patrons/Patrons';
 
@@ -38,7 +38,7 @@ export default function HomePage() {
       <HematoRunRoute />
       <HematoRunWhyIsItWorth />
       <Attractions />
-      <Sponsors />
+      <Partners />
       <HematoFAQ />
     </div>
   );

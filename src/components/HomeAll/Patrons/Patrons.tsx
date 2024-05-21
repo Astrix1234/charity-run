@@ -4,12 +4,7 @@ import Slider from '../../Share/Slider/Slider';
 import scss from './Patrons.module.scss';
 import translations from './translations';
 import { honoraryLogos, mediaLogos, otherLogos } from './patronsLogos';
-
-interface PatronLogo {
-  id: number;
-  logo: string;
-  link: string;
-}
+import { PatronLogo } from '../../../types';
 
 const Patrons = () => {
   const { language } = useLanguageStore();
@@ -25,7 +20,7 @@ const Patrons = () => {
     return patronsLogos.map(logo => (
       <div className={scss.sponsors__logo} key={logo.id}>
         <a href={logo.link} target="_blank">
-          <img src={logo.logo} alt="patrons logo" />
+          <img src={logo.logo} alt="patron's logo" />
         </a>
       </div>
     ));
