@@ -1,6 +1,6 @@
 const translations = {
   PL: {
-    sponsorsTitle: 'Darczyńcy & Partnerzy',
+    sponsorsTitle: 'Partnerzy',
     seeSponsors: 'zobacz więcej',
     donor: 'DARCZYŃCY',
     partners: 'PARTNERZY',
@@ -8,7 +8,7 @@ const translations = {
     becomePartner: 'ZOSTAŃ PARTNEREM',
   },
   EN: {
-    sponsorsTitle: 'Donors & Partners',
+    sponsorsTitle: 'Partners',
     seeSponsors: 'see more',
     donor: 'DONORS',
     partners: 'PARTNERS',
