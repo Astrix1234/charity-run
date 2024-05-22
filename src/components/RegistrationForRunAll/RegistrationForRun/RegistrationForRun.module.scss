@@ -1,4 +1,7 @@
 @import '../../../stylesheets/mixins.scss';
+.form {
+  display: contents;
+}
 
 .registration {
   width: 100%;
@@ -96,13 +99,23 @@
   }
 
   &__radioList {
-    display: inline-flex;
-    align-items: flex-start;
-    text-align: center;
-    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    gap: 10px;
     line-height: 24px;
     letter-spacing: 0.019px;
     padding: 24px 0 8px 0;
+  }
+
+  &__checkboxList {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    gap: 10px;
+
   }
 
   &__label {
@@ -223,8 +236,17 @@
   }
 }
 
+.formikMessage2 {
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+
+  @include desktop-screen {
+    font-size: 16px;
+  }
+}
+
 .formikMessageStatement {
-  top: 85px;
   color: red;
   font-size: 12px;
   font-weight: 400;
@@ -239,6 +261,10 @@
 }
 
 input[type='radio'] {
+  margin-right: 12px;
+}
+
+input[type='checkbox'] {
   margin-right: 12px;
 }
 
