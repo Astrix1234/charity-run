@@ -31,10 +31,6 @@ export const ParticipantAreaData = () => {
           <p>03/ {t.phoneNumber}</p>
           {participantUserData && <p>{participantUserData.phone}</p>}
         </div>
-        <div>
-          <p>04/ {t.tShirt}</p>
-          {participantUserData && <p>{participantUserData.shirt}</p>}
-        </div>
         <Link className="password" to="/new-password">
           {t.password}
         </Link>
