@@ -6,6 +6,7 @@ const translations = {
     lastName: 'Nazwisko:',
     number: 'Numer telefonu:',
     email: 'Adres e-mail:',
+    team: 'Drużyna:',
     shirt: 'Rozmiar koszulki:',
     tshirtTypeFemale: 'Damska',
     tshirtTypeMale: 'Męska',
@@ -25,11 +26,17 @@ const translations = {
       ' za dziecko (płatność tylko za dzieci, które będą pobierać pakiet startowy. Koszulki dziecięce będą dostępne w rozmiarach 104 i 116).',
     costGeneral:
       'Opłata zawiera cenę pakietu startowego, w którego skład wchodzą: koszulka z logo Fundacji, numer startowy, woda.',
-    shirtGenderMap: {
-      Damska: 'Damska',
-      Męska: 'Męska',
-      Dziecięca: 'Dziecięca',
+    AgeMap: {
+      Pełnoletni: 'Pełnoletni',
+      Niepełnoletni: 'Niepełnoletni'
     },
+    RaceMap:{
+      Kapcie: 'Bieg w kapciach (10:45)',
+      MatkaIDziecko:'Bieg Mama&Dziecko (10:45)',
+      Bieg1KM: 'Bieg 1KM (11:00)',
+      Bieg5KM: 'Bieg 5KM (11:00)',
+      Spacer: 'Spacer (11:30)'
+    }
   },
 
   EN: {
@@ -40,6 +47,7 @@ const translations = {
     number: 'Phone number:',
     email: 'E-mail address:',
     shirt: 'T-shirt size:',
+    team: 'Team:',
     tshirtTypeFemale: 'Female',
     tshirtTypeMale: 'Male',
     tshirtTypeChild: 'Child',
@@ -58,11 +66,17 @@ const translations = {
       " per children (payment is only for children who will be receiving a starter pack. Children's shirts will be available in sizes 104 and 116).",
     costGeneral:
       "The fee includes the price of the starter pack, which includes: a T-shirt with the Foundation's logo, a race number, and water.",
-    shirtGenderMap: {
-      Damska: 'Female',
-      Męska: 'Male',
-      Dziecięca: 'Child',
+    AgeMap: {
+      Pełnoletni: 'Adult',
+      Niepełnoletni: 'Children'
     },
+    RaceMap:{
+      Kapcie: 'Running in slippers (10:45)',
+      MatkaIDziecko:'Mother&Children Run(10:45)',
+      Bieg1KM: 'Run 1KM (11:00)',
+      Bieg5KM: 'Run 5KM(11:00)',
+      Spacer: 'Walking (11:30)'
+    }
   },
 };
 

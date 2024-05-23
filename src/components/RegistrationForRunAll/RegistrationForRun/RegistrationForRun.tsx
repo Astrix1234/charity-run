@@ -1,5 +1,3 @@
-import SelectInput from '../../Share/SelectInput/SelectInput';
-import { FormikProps, FormikValues } from 'formik';
 import scss from './RegistrationForRun.module.scss';
 import { TogetherToTheGoal } from '../../Share/TogetherToTheGoal/TogetherToTheGoal';
 import { Button } from '../../Share/Button/Button';
@@ -8,19 +6,21 @@ import translations from './translations';
 import { useLanguageStore } from '../../../Zustand/useLanguageStore';
 import { validationSchema } from './validationSchema';
 import { useFormik } from 'formik';
-import { raceParticipantUserData } from '../../../Zustand/api';
-import { ShirtGender } from '../../../Zustand/api';
+import { Race, Age, raceParticipantUserData, userParticipation } from '../../../Zustand/api';
 import { useUserDataStore } from '../../../Zustand/useUserDataStore';
 import { Statements } from '../../LegalAll/Statements/Statements';
-import { userParticipation } from '../../../Zustand/api';
 import { useIsLoadingStore } from '../../../Zustand/useIsLoadingStore';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const shirtGenders: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
 
-const setShirtGenderValue = (value: string): ShirtGender | undefined => {
-  const allowedValues: ShirtGender[] = ['Damska', 'Męska', 'Dziecięca'];
+const Ages: Age[] = ['Pełnoletni', 'Niepełnoletni'];
+const Races : Race[]  = ['Kapcie','MatkaIDziecko','Bieg1KM','Bieg5KM','Spacer'];
+
+
+
+const setAgeValue = (value: string): Age | undefined => {
+  const allowedValues: Age[] = ['Pełnoletni', 'Niepełnoletni'];
   return allowedValues.find(type => type === value);
 };
 
@@ -31,7 +31,8 @@ export const RegisterForRun = () => {
   const t = translations[language];
   const { userData } = useUserDataStore();
 
-  const genderMap = t.shirtGenderMap;
+  const ageMap = t.AgeMap;
+  const raceMap = t.RaceMap;
 
   const [consent, setConsent] = useState(false);
   const [discountCode, setDiscountCode] = useState('');
@@ -60,12 +61,12 @@ export const RegisterForRun = () => {
       surname: '',
       phone: '',
       email: '',
+      adult: 'Pełnoletni',
+      team: '',
       language: language,
       km: '0',
-      shirt: 'rozmiar 36 (S)',
-      shirtGender: 'Damska',
       agreementStatements: consent,
-      raceID: '2024|Łódź',
+      raceID: [],
       userId: '',
     },
     validationSchema: validationSchema,
@@ -73,7 +74,7 @@ export const RegisterForRun = () => {
       const registerUserOnRun = async () => {
         const amount = isDiscountCodeValid
           ? MINIMUM_CHARGE_AMOUNT
-          : values.shirtGender === 'Dziecięca'
+          : values.adult === 'Niepełnoletni'
           ? 2000
           : 3000;
         try {
@@ -128,10 +129,11 @@ export const RegisterForRun = () => {
     if (isDiscountCodeValid) {
       return '0,00 PLN';
     }
-    return formik.values.shirtGender === 'Dziecięca'
+    return formik.values.adult === 'Niepełnoletni'
       ? '20,00 PLN'
       : '30,00 PLN';
   };
+
 
   return (
     <section className={scss.registration}>
@@ -140,13 +142,15 @@ export const RegisterForRun = () => {
           <TogetherToTheGoal />
           <div className={scss.registration__container}>
             <div className={scss.registration__windows}>
+              <div className={scss.registration__titleContainer}>
+                <p className={scss.registration__sectionTitle}>{t.button}</p>
+              </div>
               <form
-                className={scss.registration__form}
+                className={scss.form}
                 onSubmit={formik.handleSubmit}
               >
-                <div className={scss.registration__titleContainer}>
-                  <p className={scss.registration__sectionTitle}>{t.button}</p>
-                </div>
+                <div  className={scss.registration__form}
+                >
                 <label className={scss.registration__label} htmlFor="name">
                   {t.name}
                   <input
@@ -212,114 +216,176 @@ export const RegisterForRun = () => {
                     </div>
                   ) : null}
                 </label>
-                <div className={scss.registration__sizeList}>
-                  <SelectInput
-                    label={t.shirt}
-                    id="shirt"
-                    name="shirt"
-                    formik={formik as unknown as FormikProps<FormikValues>}
-                    shirtGender={formik.values.shirtGender}
+
+                <label className={scss.registration__label} htmlFor="email">
+                  {t.email}
+                  <input
+                    id="email"
+                    className={`${scss.registration__input} ${
+                      formik.touched.email && formik.errors.email
+                        ? scss.error
+                        : ''
+                    }`}
+                    type="text"
+                    name="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
                   />
-                </div>
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className={scss.formikMessage}>
+                      {formik.errors.email}
+                    </div>
+                  ) : null}
+                </label>
+
+                <label className={scss.registration__label} htmlFor="team">
+                  {t.team}
+                  <input
+                    id="team"
+                    className={`${scss.registration__input} ${
+                      formik.touched.team && formik.errors.team
+                        ? scss.error
+                        : ''
+                    }`}
+                    type="text"
+                    name="team"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.team}
+                  />
+                  {formik.touched.team && formik.errors.team ? (
+                    <div className={scss.formikMessage}>
+                      {formik.errors.team}
+                    </div>
+                  ) : null}
+                </label>
+
+
                 <div className={scss.registration__radioList}>
-                  {shirtGenders.map(gender => (
-                    <label key={gender}>
+                  <h3 className={scss.registration__label}>Jesteś osobą:</h3>
+                  {Ages.map(age => (
+                    <label key={age}>
                       <input
                         type="radio"
-                        name="shirtGender"
-                        value={gender}
-                        checked={formik.values.shirtGender === gender}
+                        name="adult"
+                        value={age}
+                        checked={formik.values.adult === age}
                         onChange={e => {
-                          const newValue = setShirtGenderValue(e.target.value);
+                          const newValue = setAgeValue(e.target.value);
                           if (newValue) {
-                            formik.setFieldValue('shirtGender', newValue);
+                            formik.setFieldValue('adult', newValue);
                           } else {
-                            console.warn('Invalid value for shirtGender');
+                            console.warn('Invalid value for adult');
                           }
                         }}
                       />
-                      {genderMap[gender]}
+                      {ageMap[age]}
                     </label>
                   ))}
                 </div>
-                <div className={scss.registration__summery}>
-                  <label
-                    className={scss.registration__label}
-                    htmlFor="discount"
-                  >
-                    {t.discount}
-                    <input
-                      id="discount"
-                      className={scss.registration__input}
-                      type="text"
-                      name="discount"
-                      onChange={e => setDiscountCode(e.target.value)}
-                      onBlur={handleDiscountCode}
-                    />
-                    {discountMessage && (
-                      <div className={scss.formikMessage}>
-                        {discountMessage}
+                <div className={scss.registration__checkboxList}>
+                  <h3 className={scss.registration__label}> Wybierz bieg (możesz wybrać wiele)</h3>
+                  {formik.errors.raceID && (
+                    <>
+                      <div className={scss.formikMessage2}>
+                        {formik.errors.raceID}
                       </div>
-                    )}
-                  </label>
-
-                  <button
-                    className={scss.registration__buttonDiscount}
-                    type="button"
-                    onClick={handleDiscountCode}
-                  >
-                    {t.payDiscount}
-                  </button>
-
-                  <div className={scss.registration__summeryToPay}>
-                    <p className={scss.registration__summeryToPayText}>
-                      {t.toPay}
-                    </p>
-                    <p className={scss.registration__summeryToPayCount}>
-                      {totalAmount()}
-                    </p>
-                  </div>
+                    </>
+                  )}
+                  {Races.map(race => (
+                    <label key={race}>
+                      <input
+                        type="checkbox"
+                        name="raceID"
+                        value={race}
+                        onChange={formik.handleChange}
+                      />
+                      {raceMap[race]}
+                    </label>
+                  ))}
                 </div>
-                <div className={scss.buttonContainer}>
-                  {!isDiscountCodeValid && <p>{t.statementPayment}</p>}
-                  <Button
-                    type="submit"
-                    content={t.button}
-                    disabled={!formik.isValid || !formik.dirty || !consent}
-                  />
-                  {formik.touched.agreementStatements &&
-                  formik.errors.agreementStatements ? (
-                    <div className={scss.formikMessageStatement}>
-                      {formik.errors.agreementStatements}
+                </div>
+                <div  className={scss.registration__form}>
+                  <div className={scss.registration__summery}>
+                    <label
+                      className={scss.registration__label}
+                      htmlFor="discount"
+                    >
+                      {t.discount}
+                      <input
+                        id="discount"
+                        className={scss.registration__input}
+                        type="text"
+                        name="discount"
+                        onChange={e => setDiscountCode(e.target.value)}
+                        onBlur={handleDiscountCode}
+                      />
+                      {discountMessage && (
+                        <div className={scss.formikMessage}>
+                          {discountMessage}
+                        </div>
+                      )}
+                    </label>
+
+                    <button
+                      className={scss.registration__buttonDiscount}
+                      type="button"
+                      onClick={handleDiscountCode}
+                    >
+                      {t.payDiscount}
+                    </button>
+
+                    <div className={scss.registration__summeryToPay}>
+                      <p className={scss.registration__summeryToPayText}>
+                        {t.toPay}
+                      </p>
+                      <p className={scss.registration__summeryToPayCount}>
+                        {totalAmount()}
+                      </p>
                     </div>
-                  ) : null}
+                  </div>
+                  <div className={scss.buttonContainer}>
+                    {!isDiscountCodeValid && <p>{t.statementPayment}</p>}
+                    <Button
+                      type="submit"
+                      content={t.button}
+                      disabled={!formik.isValid || !formik.dirty || !consent}
+                    />
+                    {formik.touched.agreementStatements &&
+                    formik.errors.agreementStatements ? (
+                      <div className={scss.formikMessageStatement}>
+                        {formik.errors.agreementStatements}
+                      </div>
+                    ) : null}
+                  </div>
+                <Statements consent={consent} handleIconClick={handleIconClick} />
+                <div className={scss.registration__instructions}>
+                  <p className={scss.registration__instructionsText}>
+                    {t.instructionsCost}
+                  </p>
+                  <p className={scss.registration__instructionsText}>
+                    <span
+                      className={scss.registration__instructionsTextHighlighted}
+                    >
+                      {t.cost1}
+                    </span>
+                    {t.costAdult}
+                  </p>
+                  <p className={scss.registration__instructionsText}>
+                    <span
+                      className={scss.registration__instructionsTextHighlighted}
+                    >
+                      {t.cost2}
+                    </span>
+                    {t.costChild}
+                  </p>
+                  <p className={scss.registration__instructionsText}>
+                    {t.costGeneral}
+                  </p>
                 </div>
-              </form>
-              <Statements consent={consent} handleIconClick={handleIconClick} />
-              <div className={scss.registration__instructions}>
-                <p className={scss.registration__instructionsText}>
-                  {t.instructionsCost}
-                </p>
-                <p className={scss.registration__instructionsText}>
-                  <span
-                    className={scss.registration__instructionsTextHighlighted}
-                  >
-                    {t.cost1}
-                  </span>
-                  {t.costAdult}
-                </p>
-                <p className={scss.registration__instructionsText}>
-                  <span
-                    className={scss.registration__instructionsTextHighlighted}
-                  >
-                    {t.cost2}
-                  </span>
-                  {t.costChild}
-                </p>
-                <p className={scss.registration__instructionsText}>
-                  {t.costGeneral}
-                </p>
               </div>
+              </form>
             </div>
           </div>
         </div>

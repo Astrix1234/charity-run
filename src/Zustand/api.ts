@@ -17,15 +17,16 @@ export interface raceParticipantUserData {
   phone: string;
   email: string;
   language: string;
-  shirt: string;
+  team?: string;
   km: string;
-  shirtGender: ShirtGender;
+  adult: Age;
   agreementStatements: boolean;
-  raceID?: string;
+  raceID?: Race[];
   userId?: string;
 }
 
-export type ShirtGender = 'Damska' | 'Męska' | 'Dziecięca';
+export type Age = 'Pełnoletni' | 'Niepełnoletni';
+export type Race = 'Kapcie' | 'MatkaIDziecko' | 'Bieg1KM' | 'Bieg5KM' | 'Spacer'
 
 export interface UserUpdateData {
   name?: string;
@@ -74,8 +75,7 @@ const getConfig = () => {
 
 export const register = async (userData: UserData) => {
   try {
-    const response = await axios.post(`${apiUrl}/users/signup`, userData);
-    return response;
+    return await axios.post(`${apiUrl}/users/signup`, userData);
   } catch (error) {
     const err = error as AxiosError;
     console.error('Error registering user:', err);
@@ -139,7 +139,7 @@ export const userParticipation = async (
   participantData: raceParticipantUserData
 ) => {
   try {
-    const response = await axios.post(
+    return await axios.post(
       `${apiUrl}/payment/participate`,
       {
         amount,
@@ -147,7 +147,6 @@ export const userParticipation = async (
       },
       getConfig()
     );
-    return response;
   } catch (error) {
     console.error('Error with user participation:', error);
     throw error;
@@ -156,11 +155,10 @@ export const userParticipation = async (
 
 export const getUserParticipation = async () => {
   try {
-    const response = await axios.get(
+    return await axios.get(
       `${apiUrl}/users/participant`,
       getConfig()
     );
-    return response;
   } catch (error) {
     console.error('Error getting participant:', error);
     throw error;
@@ -198,11 +196,10 @@ export const resetPassword = async (email: string) => {
 
 export const registerForDonation = async (amount: number, email: string) => {
   try {
-    const response = await axios.post(`${apiUrl}/payment/donation`, {
+    return await axios.post(`${apiUrl}/payment/donation`, {
       amount,
       email,
     });
-    return response;
   } catch (error) {
     console.error('Error with user participation:', error);
     throw error;
