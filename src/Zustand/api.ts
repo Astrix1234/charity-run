@@ -43,8 +43,7 @@ interface AxiosError extends Error {
   };
 }
 
-//export const apiUrl = 'https://charyty-run-backend.azurewebsites.net/api';
-export const apiUrl = "http://localhost:3000/api";
+export const apiUrl = 'https://charyty-run-backend.azurewebsites.net/api';
 
 const setAuthHeader = (token: string) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
